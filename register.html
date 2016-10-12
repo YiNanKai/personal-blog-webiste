@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>注册</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<link rel="stylesheet" type="text/css" href="css/styleforchoice.css" />
+        <link rel="stylesheet" type="text/css" href="css/demoforregister.css" />
+        <link rel="stylesheet" type="text/css" href="css/styleforregister.css" />
+		<script type="text/javascript" src="js/modernizr.custom.04022forregister.js"></script>
+		<!--[if lt IE 8]>
+			<style>
+				.af-wrapper{display:none;}
+				.ie-note{display:block;}
+			</style>
+		<![endif]-->
+    </head>
+    <body>
+        <div class="container">
+			<section class="af-wrapper">
+	            <h3>注册信息填写</h3>
+				<input id="af-showreq" class="af-show-input" type="checkbox" name="showreq" />
+				<label for="af-showreq" class="af-show">我只想填必须填的</label>
+				<form class="af-form" id="af-form" novalidate>
+					<div class="af-outer af-required">
+						<div class="af-inner">
+							<label for="user-name">账户：</label>
+							<input type="text" name="userName" id="user-name" required>
+						</div>
+					</div>
+					<div class="af-outer af-required">
+						<div class="af-inner">
+							<label for="password">密码：</label>
+							<input type="password" name="password" id="password" required>
+						</div>
+					</div>
+					<div class="af-outer af-required">
+						<div class="af-inner">
+							<label for="re-password">二次密码：</label>
+							<input type="password" name="re_password" id="re-password" required>
+						</div>
+					</div>
+					<div class="af-outer">
+						<div class="af-inner">
+							<label for="birthday">出生日期：</label>
+							<input type="date" name="birthday" id="birthday">
+						</div>
+					</div>
+
+					<div class="af-outer">
+						<div class="af-inner">
+							<label for="address">住址：</label>
+							<input type="text" name="address" id="address">
+						</div>
+					</div>
+					
+					<div class="af-outer af-required">
+						    <div class="af-inner">
+								<label for="gender">是否程序媛：</label>
+								<div class="switch demo3">
+									<input type="checkbox">
+									<label><i></i></label>
+								</div>
+							</div>
+					</div>
+					
+					<input type="submit" value="填完了" /> 
+				</form>
+			</section>
+        </div>
+    </body>
+</html>

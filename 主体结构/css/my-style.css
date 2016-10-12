@@ -1,0 +1,23 @@
+html{
+	height:100%;
+	
+}
+body{
+	height:100%;
+	overflow:auto;
+}
+section.wrapper{
+	margin-bottom:40px;
+}
+#container{
+	min-height:100%;
+	height:auto;
+	position:relative;
+}
+footer.site-footer{
+	position:absolute;
+	right:0;
+	left:0;
+	z-index:-1;
+	bottom:0;
+}
