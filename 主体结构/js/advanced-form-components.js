@@ -1,4 +1,4 @@
-if (top.location != location) {
+﻿if (top.location != location) {
     top.location.href = document.location.href;
 }
 $(function () {

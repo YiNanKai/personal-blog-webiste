@@ -1,4 +1,4 @@
-// JavaScript Document
+﻿// JavaScript Document
 lastScrollY=0;
 function heartBeat(){ 
 var diffY;

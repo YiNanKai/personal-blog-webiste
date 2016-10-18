@@ -1,4 +1,4 @@
-(function (e, t) {
+﻿(function (e, t) {
     var n, r, i = typeof t,
         o = e.location,
         a = e.document,

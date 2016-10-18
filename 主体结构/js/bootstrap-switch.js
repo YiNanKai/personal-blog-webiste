@@ -1,4 +1,4 @@
-! function ($) {
+﻿! function ($) {
     "use strict";
     $.fn['bootstrapSwitch'] = function (method) {
         var methods = {

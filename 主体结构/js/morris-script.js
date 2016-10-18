@@ -1,4 +1,4 @@
-Morris.Bar({
+﻿Morris.Bar({
     element: 'graph-bar',
     data: [
         {x: '2011 Q1', y: 3, z: 2, a: 3},

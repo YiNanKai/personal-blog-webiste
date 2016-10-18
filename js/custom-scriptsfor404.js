@@ -1,4 +1,4 @@
-// JavaScript Document
+﻿// JavaScript Document
 
 //prepare variables
 var degree = 0;

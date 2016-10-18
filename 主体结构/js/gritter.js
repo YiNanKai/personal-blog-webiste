@@ -1,4 +1,4 @@
-var Gritter = function () {
+﻿var Gritter = function () {
 
 'use strict';
 

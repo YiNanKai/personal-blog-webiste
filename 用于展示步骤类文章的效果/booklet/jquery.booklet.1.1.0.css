@@ -1,4 +1,4 @@
-/* @Booklet
+﻿/* @Booklet
 ----------------------------------------*/
 	.booklet           {width:800px; height:600px; position:relative; /*background:#fff;*/ margin:0 auto 10px;}
 	.booklet .b-page  {left:0; top:0; position:absolute; overflow:hidden; padding:0;}

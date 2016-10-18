@@ -1,4 +1,4 @@
-(function (e) {
+﻿(function (e) {
     var z = !1,
         E = !1,
         L = 5E3,

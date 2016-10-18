@@ -1,4 +1,4 @@
-if (window.google && window.google.maps) {
+﻿if (window.google && window.google.maps) {
     var GMaps = (function (global) {
         "use strict";
         var doc = document;

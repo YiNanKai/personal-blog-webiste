@@ -1,4 +1,4 @@
-(function( window, $, undefined ) {
+﻿(function( window, $, undefined ) {
 	
 	/*
 	* smartresize: debounced resize event for jQuery

@@ -1,4 +1,4 @@
-var TreeView = function () {
+﻿var TreeView = function () {
 
 
 'use strict';

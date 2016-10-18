@@ -1,4 +1,4 @@
-function countUp(count) {
+﻿function countUp(count) {
 
 'use strict';
 

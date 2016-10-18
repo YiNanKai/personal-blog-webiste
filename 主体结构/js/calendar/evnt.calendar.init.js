@@ -1,4 +1,4 @@
-// call this from the developer console and you can control both instances
+﻿// call this from the developer console and you can control both instances
 var calendars = {};
 
 $(document).ready( function() {

@@ -1,4 +1,4 @@
-var GoogleMaps = function () {
+﻿var GoogleMaps = function () {
 
 'use strict';
 

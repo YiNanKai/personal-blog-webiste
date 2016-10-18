@@ -1,4 +1,4 @@
-/*
+﻿/*
  * jQuery Booklet Plugin
  * Copyright (c) 2010 W. Grauvogel (http://builtbywill.com/)
  *

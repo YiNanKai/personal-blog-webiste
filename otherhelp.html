@@ -1,10 +1,10 @@
-<script>
+ï»¿<script>
 	function addFavorite2() {
 		var url = window.location;
 		var title = document.title;
 		var ua = navigator.userAgent.toLowerCase();
 		if (ua.indexOf("360se") > -1) {
-			alert("ÓÉÓÚ360ä¯ÀÀÆ÷¹¦ÄÜÏŞÖÆ£¬Çë°´ Ctrl+D ÊÖ¶¯ÊÕ²Ø£¡");
+			alert("ç”±äº360æµè§ˆå™¨åŠŸèƒ½é™åˆ¶ï¼Œè¯·æŒ‰ Ctrl+D æ‰‹åŠ¨æ”¶è—ï¼");
 		}
 		else if (ua.indexOf("msie 8") > -1) {
 			window.external.AddToFavoritesBar(url, title); //IE8
@@ -13,14 +13,14 @@
 		try{
 			window.external.addFavorite(url, title);
 		}catch(e){
-		alert('ÄúµÄä¯ÀÀÆ÷²»Ö§³Ö,Çë°´ Ctrl+D ÊÖ¶¯ÊÕ²Ø!');
+		alert('æ‚¨çš„æµè§ˆå™¨ä¸æ”¯æŒ,è¯·æŒ‰ Ctrl+D æ‰‹åŠ¨æ”¶è—!');
 		}
 		}
 		else if (window.sidebar) {
 			window.sidebar.addPanel(title, url, "");
 		}
 		else {
-			alert('ÄúµÄä¯ÀÀÆ÷²»Ö§³Ö,Çë°´ Ctrl+D ÊÖ¶¯ÊÕ²Ø!');
+			alert('æ‚¨çš„æµè§ˆå™¨ä¸æ”¯æŒ,è¯·æŒ‰ Ctrl+D æ‰‹åŠ¨æ”¶è—!');
 		}
 	}
 	
@@ -34,7 +34,7 @@
                                 netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
                         }
                         catch (e) {
-                                alert("´Ë²Ù×÷±»ä¯ÀÀÆ÷¾Ü¾ø£¡\nÇëÔÚä¯ÀÀÆ÷µØÖ·À¸ÊäÈë¡°about:config¡±²¢»Ø³µ\nÈ»ºó½« [signed.applets.codebase_principal_support]µÄÖµÉèÖÃÎª'true',Ë«»÷¼´¿É¡£");
+                                alert("æ­¤æ“ä½œè¢«æµè§ˆå™¨æ‹’ç»ï¼\nè¯·åœ¨æµè§ˆå™¨åœ°å€æ è¾“å…¥â€œabout:configâ€å¹¶å›è½¦\nç„¶åå°† [signed.applets.codebase_principal_support]çš„å€¼è®¾ç½®ä¸º'true',åŒå‡»å³å¯ã€‚");
                         }
                         var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
                         prefs.setCharPref('browser.startup.homepage',vrl);
@@ -43,6 +43,6 @@
 }
 </script>
 
-<a href="mailto:1633675284@qq.com">µç×ÓĞÅÏä</a>
-<a href=# onclick="javascript:addFavorite2()">¼ÓÈëÊÕ²Ø</a> 
-<a  href="#" onclick="SetHome(this,window.location)" >ÉèÎªÊ×Ò³</a>
+<a href="mailto:1633675284@qq.com">ç”µå­ä¿¡ç®±</a>
+<a href=# onclick="javascript:addFavorite2()">åŠ å…¥æ”¶è—</a> 
+<a  href="#" onclick="SetHome(this,window.location)" >è®¾ä¸ºé¦–é¡µ</a>

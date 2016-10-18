@@ -1,4 +1,4 @@
-var DraggablePortlet = function () {
+﻿var DraggablePortlet = function () {
 
 'use strict';
 

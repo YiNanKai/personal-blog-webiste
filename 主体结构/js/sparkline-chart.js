@@ -1,4 +1,4 @@
-var Script = function () {
+﻿var Script = function () {
 	$(".sparkline").each(function () {
         var $data = $(this).data();
         $data.valueSpots = {

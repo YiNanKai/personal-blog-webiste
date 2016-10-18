@@ -1,4 +1,4 @@
-var EditableTable = function () {
+﻿var EditableTable = function () {
 
 'use strict';
 

@@ -1,4 +1,4 @@
-var TaskList = function () {
+﻿var TaskList = function () {
 
 
 'use strict';

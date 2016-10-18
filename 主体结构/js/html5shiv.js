@@ -1,4 +1,4 @@
-(function (l, f) {
+﻿(function (l, f) {
     function m() {
         var a = e.elements;
         return "string" == typeof a ? a.split(" ") : a

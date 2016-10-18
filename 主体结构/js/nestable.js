@@ -1,4 +1,4 @@
-var Nestable = function () {
+﻿var Nestable = function () {
 
 'use strict';
 

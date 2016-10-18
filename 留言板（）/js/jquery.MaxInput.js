@@ -1,4 +1,4 @@
-(function($) {
+﻿(function($) {
 	
 	$.fn.maxinput = function(options) {
 		var opts = $.extend({}, $.fn.maxinput.defaults, options);

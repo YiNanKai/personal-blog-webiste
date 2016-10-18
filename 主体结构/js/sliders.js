@@ -1,4 +1,4 @@
-var Sliders = function () {
+﻿var Sliders = function () {
 
 'use strict';
 
