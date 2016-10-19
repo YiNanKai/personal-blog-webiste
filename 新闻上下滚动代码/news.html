@@ -6,22 +6,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>jQuery实现新闻列表滚动特效代码_js代码</title>
-<meta name="keywords" content="文字滚动,新闻列表,新闻滚动,上下滚动,新闻滚动js,新闻滚动代码,文字特效,文字代码,滚动文字代码,文字上下滚动,文字间歇滚动,文字左右滚动代码" />
-<meta name="description" content="jQuery实现新闻列表滚动特效代码，是一款基于bootstrap 3实现的响应式jQuery滚动新闻插件。" />
 <link rel="stylesheet" type="text/css" href="css/normalize.css" />
 <link rel="stylesheet" type="text/css" href="css/default.css">
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
 <link href="css/site.css" rel="stylesheet" type="text/css" />
-<!--[if IE]>
-	<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
-<![endif]-->
 </head>
 <body>
 <div class="htmleaf-container">
-  <header class="htmleaf-header bgcolor-10">
-    <h1>jQuery实现滚动新闻代码下载</h1>
-  </header>
   <div class="container mp30">
     <div class="row">
       <div class="col-md-4">
@@ -94,56 +86,6 @@
           <div class="panel-footer"> </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="panel panel-default">
-          <div class="panel-heading"> <span class="glyphicon glyphicon-list-alt"></span><b>News</b></div>
-          <div class="panel-body">
-            <div class="row">
-              <div class="col-xs-12">
-                <ul class="demo2">
-                  <li class="news-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... <a href="#">Read more...</a></li>
-                  <li class="news-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... <a href="#">Read more...</a></li>
-                  <li class="news-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... <a href="#">Read more...</a></li>
-                  <li class="news-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... <a href="#">Read more...</a></li>
-                  <li class="news-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... <a href="#">Read more...</a></li>
-                  <li class="news-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... <a href="#">Read more...</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="panel-footer"> </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="panel panel-default">
-          <div class="panel-heading"> <span class="glyphicon glyphicon-list-alt"></span><b>News</b></div>
-          <div class="panel-body">
-            <div class="row">
-              <div class="col-xs-12">
-                <ul id="demo3">
-                  <li class="news-item">Curabitur porttitor ante eget hendrerit adipiscing. Maecenas at magna accumsan,
-                    rhoncus neque id, fringilla dolor. <a href="#">Read more...</a></li>
-                  <li class="news-item">Curabitur porttitor ante eget hendrerit adipiscing. Maecenas at magna accumsan,
-                    rhoncus neque id, fringilla dolor. <a href="#">Read more...</a></li>
-                  <li class="news-item">Praesent ornare nisl lorem, ut condimentum lectus gravida ut. Ut velit nunc, vehicula
-                    volutpat laoreet vel, consequat eu mauris. <a href="#">Read more...</a></li>
-                  <li class="news-item">Nunc ultrices tortor eu massa placerat posuere. Vivamus viverra sagittis nunc. Nunc
-                    et imperdiet magna. Mauris sed eros nulla. <a href="#">Read more...</a></li>
-                  <li class="news-item">Morbi sodales tellus sit amet leo congue bibendum. Ut non mauris eu neque fermentum
-                    pharetra. <a href="#">Read more...</a></li>
-                  <li class="news-item">In pharetra suscipit orci sed viverra. Praesent at sollicitudin tortor, id sagittis
-                    magna. Fusce massa sem, bibendum id. <a href="#">Read more...</a> </li>
-                  <li class="news-item">Maecenas nec ligula sed est suscipit aliquet sed eget ipsum. Suspendisse id auctor
-                    nibh. Ut porttitor volutpat augue, non sodales odio dignissi id. <a href="#">Read more...</a></li>
-                  <li class="news-item">Onec bibendum consectetur diam, nec euismod urna venenatis eget. Cras consequat
-                    convallis leo. <a href="#">Read more...</a> </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="panel-footer"> </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>
@@ -161,31 +103,7 @@
                 //console.log(this);
             }
         });
-		
-		$(".demo2").bootstrapNews({
-            newsPerPage: 4,
-            autoplay: true,
-			pauseOnHover: true,
-			navigation: false,
-            direction: 'down',
-            newsTickerInterval: 2500,
-            onToDo: function () {
-               //console.log(this);
-            }
-        });
-
-        $("#demo3").bootstrapNews({
-            newsPerPage: 3,
-            autoplay: false,            
-            onToDo: function () {
-                //console.log(this);
-            }
-        });
     });
 </script>
-<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
-  <p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
-  <p>来源：<a href="http://www.jsdaima.com/" target="_blank">js代码</a></p>
-</div>
 </body>
 </html>
