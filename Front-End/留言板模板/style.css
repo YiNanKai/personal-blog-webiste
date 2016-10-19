@@ -1,0 +1,93 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #efefef;
+}
+
+.comment-list-item {
+	list-style: none;
+}
+
+.comment-container {
+	position: relative;
+	padding: 10px;
+	border-top: 1px solid #ccc;
+}
+
+.user-avatar-container {
+	float: left;
+}
+
+.user-avatar {
+	width: 40px;
+}
+
+.comment-body {
+	padding-left: 60px;
+}
+
+.comment-header {
+	color: #37CF56;
+}
+
+.user-comment {
+	margin: 5px 0;
+	color: #545454;
+}
+
+.comment-footer {
+	color: #999;
+	font-size: 13px;
+	margin-top: 10px;
+}
+
+.comment-footer a {
+	text-decoration: none;
+	color: inherit;
+	margin-right: 5px;
+}
+
+.comment-footer .report {
+	display: none;
+}
+
+.comment-footer a:hover {
+	color: #666;
+}
+
+.comment-footer a:hover .icon {
+	opacity: 1;
+}
+
+.comment-footer:hover .report {
+	display: inline;
+}
+
+.comment-footer .icon {
+	opacity: 0.6;
+	display: inline-block;
+	width: 18px;
+	height: 13px;
+	background: url(sprites.png);
+	margin-right: -10px;
+}
+
+.comment-footer .icon-reply {
+	background-position: 0 -103px;
+}
+
+.comment-footer .icon-star {
+	background-position: 0 -116px;
+}
+
+.comment-footer .icon-stared {
+	background-position: 0 -130px;
+}
+
+.comment-footer .icon-relay {
+	background-position: 0 -233px;
+}
+
+.comment-footer .icon-report {
+	background-position: 0 -187px;
+}
