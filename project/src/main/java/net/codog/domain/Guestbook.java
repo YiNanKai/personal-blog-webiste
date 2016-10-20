@@ -13,7 +13,7 @@ import lombok.ToString;
 @ToString
 @Setter
 @Getter
-public class GuestBook {
+public class Guestbook {
     private Integer guestbookContent;
 
     private Date guestbookTime;

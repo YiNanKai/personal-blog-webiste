@@ -2,11 +2,9 @@ package net.codog.dao;
 
 import org.apache.ibatis.annotations.Mapper;
 
-import net.codog.domain.GuestBook;
+import net.codog.domain.Guestbook;
 
 @Mapper
 public interface GuestBookMapper {
-    int insert(GuestBook record);
-
-    int insertSelective(GuestBook record);
+	
 }
