@@ -19,11 +19,13 @@ import lombok.ToString;
 @Getter
 public class Message {
 	//自增id
-    private Integer message_id;
+    private Integer messageId;
     //消息题目
     private String messageTitie;
     //消息内容
     private String messageContent;
     //发布时间
     private Date messageSendTime;
+    //消息是否阅读,0代表未读,1代表读,默认为0
+    private Integer messageIsRead;
 }
