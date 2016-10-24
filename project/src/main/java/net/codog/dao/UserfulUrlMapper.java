@@ -16,11 +16,11 @@ public interface UserfulUrlMapper {
 	
 	//@Select("select * from userful_url")
 	@SelectProvider(type = SelectSqlProvider.class,method = "selectSql")
-    List<UserfulUrl> selectAll(@Param("tableName")String tableName,@Param("start")Integer start,@Param("end")Integer end);
+    public List<UserfulUrl> selectAll(@Param("tableName")String tableName,@Param("start")Integer start,@Param("end")Integer end);
 	
 	@Insert("insert into userful_url values(#{userfulUrlLink},#{userfulUrlName},#{userfulUrlDesc})")
-    void insertOne(UserfulUrl userfulUrl);
+    public void insertOne(UserfulUrl userfulUrl);
 	
 	@Select("select count(*) from userful_url")
-	int selectCount();
+	public int selectCount();
 }

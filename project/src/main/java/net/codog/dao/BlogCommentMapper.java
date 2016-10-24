@@ -14,8 +14,8 @@ import net.codog.domain.BlogComment;
 public interface BlogCommentMapper {
 	
 	@SelectProvider(type = SelectSqlProvider.class,method = "selectSql")
-    List<BlogComment> selectAll(@Param("tableName")String tableName,@Param("start")Integer start,@Param("end")Integer end);
+    public List<BlogComment> selectAll(@Param("tableName")String tableName,@Param("start")Integer start,@Param("end")Integer end);
 	
 	@Select("select count(*) from blog_comment")
-	int selectCount();
+	public int selectCount();
 }

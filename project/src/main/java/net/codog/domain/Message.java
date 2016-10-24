@@ -28,4 +28,6 @@ public class Message {
     private Date messageSendTime;
     //消息是否阅读,0代表未读,1代表读,默认为0
     private Integer messageIsRead;
+    //用户id
+    private Integer userBasicInformationId;
 }

@@ -9,5 +9,5 @@ import net.codog.domain.UserContactInformation;
 public interface UserContactInformationMapper {
     
 	@Insert("insert into user_contact_information values(#{userContactInformationQq},#{userContactInformationWeixin},#{userContactInformationWeibo},#{userContactInformationEmail},#{userContactInformationPhone},#{userContactInformationGithub},#{userContactInformationBlog},#{userContactInformationOther})")
-    void insertOne(UserContactInformation userContactInformation);
+    public void insertOne(UserContactInformation userContactInformation);
 }

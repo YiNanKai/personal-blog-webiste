@@ -16,17 +16,17 @@ import org.springframework.stereotype.Service;
 public class NewsService {
     
 	@Autowired
-	NewsMapper newsMapper;
+	private NewsMapper newsMapper;
 	
-	List<News> getAllNews(Integer start,Integer end){
+	public List<News> getAllNews(Integer start,Integer end){
 		return newsMapper.selectAll("news", start, end);
 	}
 
-    void addANews(News news){
+    public void addANews(News news){
     	newsMapper.insertOne(news);
     }
 	
-	int getNewsCount(){
+	public int getNewsCount(){
 		return newsMapper.selectCount();
 	}
 }

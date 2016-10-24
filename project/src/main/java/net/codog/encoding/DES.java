@@ -6,7 +6,11 @@ import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
 
-
+/**
+* @author 王文涵 
+* @date 2016年10月24日
+* <p>Description: DES加密解密</p>
+ */
 public class DES {
 	
     private static final byte[] DES_KEY = { 21, 1, -110, 82, -32, -85, -128, -65 };  

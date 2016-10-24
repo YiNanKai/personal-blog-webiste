@@ -14,18 +14,19 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UserService {
-	@Autowired
-	UserShowDetailMapper userShowDetailMapper;
 	
 	@Autowired
-	UserPermissionMapper userPermissionMapper;
+	private UserShowDetailMapper userShowDetailMapper;
 	
-	UserShowDetail getUserShowDetailByUserBasicInformationId(Integer userBasicInformationId){
+	@Autowired
+	private UserPermissionMapper userPermissionMapper;
+	
+	public UserShowDetail getUserShowDetailByUserBasicInformationId(Integer userBasicInformationId){
 		return userShowDetailMapper.selectUserShowDetailByUserBasicInformationId(userBasicInformationId);
 	}
 	
 	//判断用户请求的url是否符合正则表达式
-	boolean isHasPermission(Integer userBasicInformationId,String url){	
+	public boolean isHasPermission(Integer userBasicInformationId,String url){	
 		return (url.matches(userPermissionMapper.selectByUserBasicInformationId(userBasicInformationId).getPermissionUrl()));
 	}
 }

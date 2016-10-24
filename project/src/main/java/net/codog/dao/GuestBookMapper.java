@@ -13,8 +13,8 @@ import net.codog.domain.Guestbook;
 @Mapper
 public interface GuestBookMapper {
 	@SelectProvider(type = SelectSqlProvider.class,method = "selectSql")
-    List<Guestbook> selectAll(@Param("tableName")String tableName,@Param("start")Integer start,@Param("end")Integer end);
+    public List<Guestbook> selectAll(@Param("tableName")String tableName,@Param("start")Integer start,@Param("end")Integer end);
 	
 	@Select("select count(*) from guestbook")
-	int selectCount();
+	public int selectCount();
 }

@@ -16,13 +16,13 @@ import org.springframework.stereotype.Service;
 public class GuestbookService {
     
 	@Autowired
-	GuestBookMapper guestBookMapper;
+	private GuestBookMapper guestBookMapper;
 	
-	List<Guestbook> getAllGuestbook(Integer start,Integer end){
+	public List<Guestbook> getAllGuestbook(Integer start,Integer end){
 		return guestBookMapper.selectAll("guestbook", start, end);
 	}
 	
-	int getGuestbookCount(){
+	public int getGuestbookCount(){
 		return guestBookMapper.selectCount();
 	}
 }

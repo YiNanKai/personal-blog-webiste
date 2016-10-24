@@ -16,11 +16,11 @@ public interface UserfulFileMapper {
 	
 	//@Select("select * from userful_file")
 	@SelectProvider(type = SelectSqlProvider.class,method = "selectSql")
-    List<UserfulFile> selectAll(@Param("tableName")String tableName,@Param("start")Integer start,@Param("end")Integer end);
+    public List<UserfulFile> selectAll(@Param("tableName")String tableName,@Param("start")Integer start,@Param("end")Integer end);
 	
 	@Insert("insert into userful_file values(#{userfulUrlLink},#{userfulUrlName},#{userfulUrlDesc})")
-    void insertOne(UserfulFile userfulfile);
+    public void insertOne(UserfulFile userfulfile);
 	
 	@Select("select count(*) from userful_file")
-	int selectCount();
+	public int selectCount();
 }

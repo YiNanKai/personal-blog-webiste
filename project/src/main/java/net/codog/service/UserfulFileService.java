@@ -17,16 +17,17 @@ import org.springframework.stereotype.Service;
 public class UserfulFileService {
 
 	@Autowired
-	UserfulFileMapper userfulFileMapper;
-    List<UserfulFile> getAllUserfulFile(Integer start,Integer end){
+	private UserfulFileMapper userfulFileMapper;
+	
+    public List<UserfulFile> getAllUserfulFile(Integer start,Integer end){
     	return userfulFileMapper.selectAll("userful_file", start, end);
     }
 	
-    void addAUserfulFile(UserfulFile userfulfile){
+    public void addAUserfulFile(UserfulFile userfulfile){
     	userfulFileMapper.insertOne(userfulfile);
     }
 	
-	int getUserfulFileCount(){
+	public int getUserfulFileCount(){
 		return userfulFileMapper.selectCount();
 	}
 }

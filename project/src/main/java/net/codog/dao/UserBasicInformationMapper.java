@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Mapper;
 public interface UserBasicInformationMapper {
 	
 	@Insert("insert into user_basic_information values(#{userBasicInformationId},#{userBasicInformationBirthday},#{userBasicInformationGender},#{userBasicInformationAddress},#{userBasicInformationRegisterTime})")
-    void insertOne(UserBasicInformation userBasicInformation);
+    public void insertOne(UserBasicInformation userBasicInformation);
 	
 	
 }

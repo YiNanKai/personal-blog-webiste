@@ -4,8 +4,6 @@ import java.util.List;
 
 import net.codog.dao.MessageMapper;
 import net.codog.domain.Message;
-import net.codog.domain.News;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,21 +16,21 @@ import org.springframework.stereotype.Service;
 public class MessageService {
 	
 	@Autowired
-	MessageMapper messageMapper;
+	private MessageMapper messageMapper;
 	
-    List<Message> getAllMessages(Integer start,Integer end){
+    public List<Message> getAllMessages(Integer start,Integer end){
     	return messageMapper.selectAll("message", start, end);
     }
 	
-    void addAMessage(News news){
-    	messageMapper.insertOne(news);
+    public void addAMessage(Message message){
+    	messageMapper.insertOne(message);
     }
 	
-	int getMessageCount(){
-		return messageMapper.selectCount();
+	public int getMessageCount(Integer userBasicInformationId){
+		return messageMapper.selectCount(userBasicInformationId);
 	}
 	
-    List<Message> getMessageByIsRead(Integer start,Integer end,Integer messageIsRead){
-    	return messageMapper.selectMessageByIsRead(start, end, messageIsRead);
+    public List<Message> getMessageByIsRead(Integer start,Integer end,Integer messageIsRead,Integer userBasicInformationId){
+    	return messageMapper.selectMessageByIsRead(start, end, messageIsRead,userBasicInformationId);
     }
 }

@@ -2,7 +2,11 @@ package net.codog.encoding;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
- 
+/**
+* @author 王文涵 
+* @date 2016年10月24日
+* <p>Description: MD5加密</p>
+ */
 public class MD5 {
     
 	public static String getMD5(String input) {

@@ -19,28 +19,28 @@ import org.springframework.stereotype.Service;
 public class BlogService {
 	
 	@Autowired
-	BlogMapper blogMapper;
+	private BlogMapper blogMapper;
 	
 	@Autowired
-	BlogCommentMapper blogCommentMapper;
+	private BlogCommentMapper blogCommentMapper;
 	
-    List<Blog> getAllBlogs(Integer start,Integer end){
+    public List<Blog> getAllBlogs(Integer start,Integer end){
     	return blogMapper.selectAll("blog", start, end);
     }
 	
-	Blog getBlogByBlogId(Integer blogId){
+	public Blog getBlogByBlogId(Integer blogId){
 		return blogMapper.selectBlogByBlogId(blogId);
 	}
 	
-	int getBlogCount(){
+	public int getBlogCount(){
 		return blogMapper.selectCount();
 	}
 	
-    List<BlogComment> getAllBlogComments(Integer start,Integer end){
+    public List<BlogComment> getAllBlogComments(Integer start,Integer end){
     	return blogCommentMapper.selectAll("blog_comment", start, end);
     }
     
-    int getBlogCommentCount(){
+    public int getBlogCommentCount(){
     	return blogCommentMapper.selectCount();
     }
 }

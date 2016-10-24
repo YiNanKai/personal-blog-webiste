@@ -13,12 +13,13 @@ import net.codog.domain.News;
 
 @Mapper
 public interface NewsMapper {
+	
 	@SelectProvider(type = SelectSqlProvider.class,method = "selectSql")
-    List<News> selectAll(@Param("tableName")String tableName,@Param("start")Integer start,@Param("end")Integer end);
+    public List<News> selectAll(@Param("tableName")String tableName,@Param("start")Integer start,@Param("end")Integer end);
 
 	@Insert("insert into news values(#{newsTitle},#{newsContent},#{newsPublishTime},#{newsModifyTime},#{newsUrl},#{newsTypeName})")
-    void insertOne(News news);
+    public void insertOne(News news);
 	
 	@Select("select count(*) from news")
-	int selectCount();
+	public int selectCount();
 }

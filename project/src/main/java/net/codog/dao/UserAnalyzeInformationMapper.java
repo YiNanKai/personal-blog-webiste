@@ -9,5 +9,5 @@ import net.codog.domain.UserAnalyzeInformation;
 public interface UserAnalyzeInformationMapper {
 
 	@Insert("insert into user_analyze_information values(#{userBasicInformationId},#{userExtraInformationIp},#{userExtraInformationAgent},#{userExtraInformationRefer},#{userAnalyzeInformationLoginTime},#{userAnalyzeInformationLogoutTime})")
-    void insertOne(UserAnalyzeInformation userAnalyzeInformation);
+    public void insertOne(UserAnalyzeInformation userAnalyzeInformation);
 }

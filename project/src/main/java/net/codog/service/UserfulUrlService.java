@@ -17,17 +17,17 @@ import org.springframework.stereotype.Service;
 public class UserfulUrlService {
 
 	@Autowired
-	UserfulUrlMapper userfulUrlMapper;
+	private UserfulUrlMapper userfulUrlMapper;
 	
-	List<UserfulUrl> getAllUserfulUrl(Integer start,Integer end){
+	public List<UserfulUrl> getAllUserfulUrl(Integer start,Integer end){
 		return userfulUrlMapper.selectAll("userful_url", start, end);
 	}
 		
-	void addAUserfulUrl(UserfulUrl userfulUrl){
+	public void addAUserfulUrl(UserfulUrl userfulUrl){
 		userfulUrlMapper.insertOne(userfulUrl);
 	}
 	
-	int getUserfulUrlCount(){
+	public int getUserfulUrlCount(){
 		return userfulUrlMapper.selectCount();
 	}
 }

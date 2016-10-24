@@ -14,11 +14,11 @@ import org.apache.ibatis.annotations.SelectProvider;
 public interface BlogMapper {
 	
 	@SelectProvider(type = SelectSqlProvider.class,method = "selectSql")
-    List<Blog> selectAll(@Param("tableName")String tableName,@Param("start")Integer start,@Param("end")Integer end);
+    public List<Blog> selectAll(@Param("tableName")String tableName,@Param("start")Integer start,@Param("end")Integer end);
 	
 	@Select("select * from blog where blog_id = #{blogId}")
-	Blog selectBlogByBlogId(@Param("blogId")Integer blogId);
+	public Blog selectBlogByBlogId(@Param("blogId")Integer blogId);
 	
 	@Select("select count(*) from blog")
-	int selectCount();
+	public int selectCount();
 }
