@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.SelectProvider;
 
 import net.codog.dao.selectsql.SelectSqlProvider;
@@ -15,4 +16,6 @@ public interface BlogCommentMapper {
 	@SelectProvider(type = SelectSqlProvider.class,method = "selectSql")
     List<BlogComment> selectAll(@Param("tableName")String tableName,@Param("start")Integer start,@Param("end")Integer end);
 	
+	@Select("select count(*) from blog_comment")
+	int selectCount();
 }

@@ -18,7 +18,7 @@ public class SelectSqlProvider {
     }
 	
 	public String selectMessageByIsRead(Map<String, Object> para){
-		String result = "select * from " + para.get("tableName") + " where 1";
+		String result = "select * from message where 1";
         //用于分页
 		if(para.get("messageIsRead") != null){
 			result += " and message_isread = " + para.get("messageIsRead");

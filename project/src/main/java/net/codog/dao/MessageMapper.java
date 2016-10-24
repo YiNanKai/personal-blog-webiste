@@ -24,5 +24,5 @@ public interface MessageMapper {
 	int selectCount();
 	
 	@SelectProvider(type = SelectSqlProvider.class,method = "selectMessageByIsRead")
-    List<Message> selectMessageByIsRead(@Param("tableName")String tableName,@Param("start")Integer start,@Param("end")Integer end,@Param("messageIsRead")Integer messageIsRead);
+    List<Message> selectMessageByIsRead(@Param("start")Integer start,@Param("end")Integer end,@Param("messageIsRead")Integer messageIsRead);
 }
