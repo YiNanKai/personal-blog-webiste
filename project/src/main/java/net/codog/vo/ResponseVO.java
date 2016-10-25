@@ -1,6 +1,7 @@
 package net.codog.vo;
 
 import lombok.AllArgsConstructor;
+//import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -16,6 +17,7 @@ import lombok.ToString;
 @ToString
 @Setter
 @Getter
+//@Builder(builderMethodName="buildResponseVO")
 public class ResponseVO<T> {
 
 	//是否成功

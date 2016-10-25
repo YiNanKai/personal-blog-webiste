@@ -32,7 +32,7 @@ public class SelectSqlProvider {
 	 * @return 查询的sql
 	 */
 	public String selectMessageByIsRead(Map<String, Object> para){
-		String result = "select * from message where user_basic_information_id = " + para.get("userBasicInformation");
+		String result = "select * from message where user_basic_information_id = " + para.get("userBasicInformationId");
         //用于分页
 		if(para.get("messageIsRead") != null){
 			result += " and message_isread = " + para.get("messageIsRead");
