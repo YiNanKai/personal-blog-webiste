@@ -12,6 +12,16 @@
 		<link href="assets/morris.js-0.4.3/morris.css" rel="stylesheet">
 		<link href="css/clndr.css" rel="stylesheet">
 		<link href="css/my-style.css" rel="stylesheet">
+		<!--login-->
+		<link rel="stylesheet" type="text/css" href="css/styleforlogin.css" />
+		<script src="js/modernizr.custom.63321forlogin.js"></script>
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script>
+		function showLoginForm(){
+			$("#loginform").toggle(600)
+		}
+		</script>
+		<!--login-->
   </head>
   <body>
     <section id="container">
@@ -371,10 +381,10 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="javascript:showLoginForm()">
                     <i class="fa fa-bell-o">
                     </i>
-                    Notification
+                    登录
                   </a>
                 </li>
                 <li>
@@ -847,6 +857,23 @@
         </section>
 		<!-- END WRAPPER  -->
       </section>
+	  <div class="container" id="login">				
+			<section class="main" id="loginform" style="display:none">	
+				<form class="form-1">
+					<p class="field">
+						<input type="text" name="login" placeholder="Username or email">
+						<i class="icon-user icon-large"></i>
+					</p>
+						<p class="field">
+							<input type="password" name="password" placeholder="Password">
+							<i class="icon-lock icon-large"></i>
+					</p>
+					<p class="submit">
+						<button type="submit" name="submit"><i class="icon-arrow-right icon-large"></i></button>
+					</p>
+				</form>
+			</section>
+	  </div>
       <footer class="site-footer">
         <div class="text-center">
           2013 &copy; Olive Admin by 
@@ -880,7 +907,7 @@
     <script src="assets/jquery-knob/js/jquery.knob.js" ></script>
     <script >
       $(".knob").knob();
-    </script>
+    </script>	
   </body>
 </html>
 
