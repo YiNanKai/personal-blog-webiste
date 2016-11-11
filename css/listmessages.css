@@ -68,7 +68,7 @@ body {
 	display: inline-block;
 	width: 18px;
 	height: 13px;
-	background: url(sprites.png);
+	background: url(../images/sprites.png);
 	margin-right: -10px;
 }
 
