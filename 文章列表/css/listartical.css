@@ -1,10 +1,20 @@
+*{
+	margin: 0;
+	padding: 0px;
+}
+ul{
+	margin-top: 20px;
+	padding:5px 25px;
+}
 .article-container {
+	box-sizing: border-box;
 	list-style: none;
-	padding: 25px;
 	margin-bottom: 20px;
-	width: 670px;
+	width: 100%;
 	border: 1px solid #ccc;
 	zoom: 1;
+	padding: 5px;
+	position: relative;
 }
 
 .article-container:hover {
@@ -21,6 +31,8 @@
 .article-content {
 	display: inline-block;
 	padding-left: 10px;
+	position: absolute;
+	padding:0 30px;
 }
 
 .article-info {
@@ -46,7 +58,6 @@
 .article-abstract {
 	display: block;
 	display: -webkit-box;
-	max-width: 430px;
 	max-height: 50px;
 	font-size: 14px;
 	line-height: 1.2;
@@ -54,4 +65,9 @@
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+.panel{
+	padding:0 25px;
+	width: 100%;
+	box-sizing: border-box;
 }
