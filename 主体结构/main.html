@@ -21,6 +21,11 @@
   }
   </script>
   <!--login-->
+  <link rel="stylesheet" type="text/css" href="../themes/default/easyui.css">
+  <link rel="stylesheet" type="text/css" href="../themes/icon.css">
+  <link rel="stylesheet" type="text/css" href="../css/demo.css">
+  <!--<script type="text/javascript" src="js/jquery.min.js"></script>-->
+  <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
 </head>
 
 <body>
@@ -242,9 +247,19 @@
       <!-- START USER LOGIN DROPDOWN  -->
       <div class="top-nav ">
         <ul class="nav pull-right top-menu">
-          <li>
+          <!--<li>
             <input type="text" class="form-control search" placeholder="Search">
-          </li>
+          </li>-->
+		  <input class="easyui-searchbox" data-options="prompt:'Please Input Value',menu:'#mm',searcher:doSearch" style="width:300px"></input>
+		  <div id="mm">
+		  <div data-options="name:'all',iconCls:'icon-ok'">All News</div>
+		  <div data-options="name:'sports'">Sports News</div>
+	      </div>
+		  <script>
+			function doSearch(value,name){
+				alert('You input: ' + value+'('+name+')');
+			}
+		  </script>
           <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
               <img alt="" src="img/avatar1_small.jpg">
