@@ -1,5 +1,4 @@
-﻿<script>
-	function addFavorite2() {
+﻿	function addFavorite2() {
 		var url = window.location;
 		var title = document.title;
 		var ua = navigator.userAgent.toLowerCase();
@@ -41,8 +40,3 @@
                  }
         }
 }
-</script>
-
-<a href="mailto:1633675284@qq.com">电子信箱</a>
-<a href=# onclick="javascript:addFavorite2()">加入收藏</a> 
-<a  href="#" onclick="SetHome(this,window.location)" >设为首页</a>
