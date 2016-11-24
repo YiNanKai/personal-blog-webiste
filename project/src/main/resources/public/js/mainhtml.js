@@ -4,11 +4,13 @@
         $('#nav-accordion li').click(function() {
             var $this = $(this),
             _clickTab = $this.find('a').attr('target');
-            $.get(_clickTab,
+            $("#realcontent object").attr("data",_clickTab);
+            /*$.get(_clickTab,
             function(data) {
 				console.log(data);
-                $("#iframe").html(data);
-            });
+                //$("#iframe").html(data);
+				$("#iframe").load(data);
+            });*/
         });
     });
     
