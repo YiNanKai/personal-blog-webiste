@@ -9,12 +9,6 @@
             	return;
             }
             $("#realcontent object").attr("data",_clickTab);
-            /*$.get(_clickTab,
-            function(data) {
-				console.log(data);
-                //$("#iframe").html(data);
-				$("#iframe").load(data);
-            });*/
         });
     });
     

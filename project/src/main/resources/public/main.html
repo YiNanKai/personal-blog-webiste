@@ -2,665 +2,376 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>首页</title>
-  <script src="js/otherhelp.js"></script>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/bootstrap-reset.css" rel="stylesheet">
-  <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
-  <link href="css/styleformain.css" rel="stylesheet">
-  <link href="css/style-responsiveformain.css" rel="stylesheet">
-  <link href="css/my-styleformain.css" rel="stylesheet">
-  <!--login-->
-  <link rel="stylesheet" type="text/css" href="css/styleforlogin.css" />
-  <script src="js/jquery-1.8.3.min.js"></script>
-  <script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>首页</title>
+<script src="js/otherhelp.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap-reset.css" rel="stylesheet">
+<link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+<link href="css/styleformain.css" rel="stylesheet">
+<link href="css/style-responsiveformain.css" rel="stylesheet">
+<link href="css/my-styleformain.css" rel="stylesheet">
+<link rel="shortcut icon" href="images/icon.ico">
+<!--login-->
+<link rel="stylesheet" type="text/css" href="css/styleforlogin.css" />
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
   function showLoginForm() {
     $("#loginform").toggle(600)
     
   }
   </script>
-  <!--login-->
-  <link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
-  <link rel="stylesheet" type="text/css" href="themes/icon.css">
-  <link rel="stylesheet" type="text/css" href="css/demoforeasyui.css">
-  <!--<script type="text/javascript" src="js/jquery.min.js"></script>-->
-  <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+<!--login-->
+<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="themes/icon.css">
+<link rel="stylesheet" type="text/css" href="css/demoforeasyui.css">
+<!--<script type="text/javascript" src="js/jquery.min.js"></script>-->
+<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
 </head>
 
 <body>
-  <section id="container">
-    <header class="header white-bg">
-      <div class="sidebar-toggle-box">
-        <div data-placement="right" class="fa fa-bars tooltips">
-        </div>
-      </div>
-      <a target="index.html" class="logo">
-			编程狗
-          <span>
-            Code Dog
-          </span>
-        </a>
-      <nav class="nav notify-row" id="top_menu">
-        <ul class="nav top-menu">
-          <li class="dropdown">
-           <a data-toggle="dropdown" class="dropdown-toggle" target="#">
-              <i class="fa fa-envelope-o">
-                </i>
-              <span class="badge bg-important">
-                  5
-                </span>
-            </a>
-            <ul class="dropdown-menu extended tasks-bar">
-              <li class="notify-arrow notify-arrow-blue">
-              </li>
-              <li>
-                <p class="blue">
-                  You have 6 pending tasks
-                </p>
-              </li>
-              <li>
-                <a target="#">
-                  <div class="task-info">
-                    <div class="desc">
-                      Dashboard v1.3
-                    </div>
-                    <div class="percent">
-                      40%
-                    </div>
-                  </div>
-                  <div class="progress progress-striped">
-                    <div class="progress-bar progress-bar-success set-40" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-                      <span class="sr-only">
-                          40% Complete (success)
-                        </span>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a target="#">
-                  <div class="task-info">
-                    <div class="desc">
-                      Database Update
-                    </div>
-                    <div class="percent">
-                      60%
-                    </div>
-                  </div>
-                  <div class="progress progress-striped">
-                    <div class="progress-bar progress-bar-warning set-60" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-                      <span class="sr-only">
-                          60% Complete (warning)
-                        </span>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a target="#">
-                  <div class="task-info">
-                    <div class="desc">
-                      Iphone Development
-                    </div>
-                    <div class="percent">
-                      87%
-                    </div>
-                  </div>
-                  <div class="progress progress-striped">
-                    <div class="progress-bar progress-bar-info set-87" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                      <span class="sr-only">
-                          87% Complete
-                        </span>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a target="#">
-                  <div class="task-info">
-                    <div class="desc">
-                      Mobile App
-                    </div>
-                    <div class="percent">
-                      33%
-                    </div>
-                  </div>
-                  <div class="progress progress-striped">
-                    <div class="progress-bar progress-bar-danger set-33" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                      <span class="sr-only">
-                          33% Complete (danger)
-                        </span>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a target="#">
-                  <div class="task-info">
-                    <div class="desc">
-                      Dashboard v1.3
-                    </div>
-                    <div class="percent">
-                      45%
-                    </div>
-                  </div>
-                  <div class="progress progress-striped active">
-                    <div class="progress-bar set-45" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
-                      <span class="sr-only">
-                          45% Complete
-                        </span>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="external">
-                <a target="#">
-                    See All Tasks
-                  </a>
-              </li>
-            </ul>
-          </li>
+	<section id="container">
+		<header class="header white-bg">
+			<div class="sidebar-toggle-box">
+				<div data-placement="right" class="fa fa-bars tooltips"></div>
+			</div>
+			<a target="index.html" class="logo"> 编程狗 <span> Code Dog </span>
+			</a>
+			<nav class="nav notify-row" id="top_menu">
+				<ul class="nav top-menu">
+					<li class="dropdown"><a data-toggle="dropdown"
+						class="dropdown-toggle" target="#"> <i
+							class="fa fa-envelope-o"> </i> <span class="badge bg-important">
+								5 </span>
+					</a>
+						<ul class="dropdown-menu extended tasks-bar">
+							<li class="notify-arrow notify-arrow-blue"></li>
+							<li>
+								<p class="blue">You have 6 pending tasks</p>
+							</li>
+							<li><a target="#">
+									<div class="task-info">
+										<div class="desc">Dashboard v1.3</div>
+										<div class="percent">40%</div>
+									</div>
+									<div class="progress progress-striped">
+										<div class="progress-bar progress-bar-success set-40"
+											role="progressbar" aria-valuenow="40" aria-valuemin="0"
+											aria-valuemax="100">
+											<span class="sr-only"> 40% Complete (success) </span>
+										</div>
+									</div>
+							</a></li>
+							<li><a target="#">
+									<div class="task-info">
+										<div class="desc">Database Update</div>
+										<div class="percent">60%</div>
+									</div>
+									<div class="progress progress-striped">
+										<div class="progress-bar progress-bar-warning set-60"
+											role="progressbar" aria-valuenow="60" aria-valuemin="0"
+											aria-valuemax="100">
+											<span class="sr-only"> 60% Complete (warning) </span>
+										</div>
+									</div>
+							</a></li>
+							<li><a target="#">
+									<div class="task-info">
+										<div class="desc">Iphone Development</div>
+										<div class="percent">87%</div>
+									</div>
+									<div class="progress progress-striped">
+										<div class="progress-bar progress-bar-info set-87"
+											role="progressbar" aria-valuenow="20" aria-valuemin="0"
+											aria-valuemax="100">
+											<span class="sr-only"> 87% Complete </span>
+										</div>
+									</div>
+							</a></li>
+							<li><a target="#">
+									<div class="task-info">
+										<div class="desc">Mobile App</div>
+										<div class="percent">33%</div>
+									</div>
+									<div class="progress progress-striped">
+										<div class="progress-bar progress-bar-danger set-33"
+											role="progressbar" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100">
+											<span class="sr-only"> 33% Complete (danger) </span>
+										</div>
+									</div>
+							</a></li>
+							<li><a target="#">
+									<div class="task-info">
+										<div class="desc">Dashboard v1.3</div>
+										<div class="percent">45%</div>
+									</div>
+									<div class="progress progress-striped active">
+										<div class="progress-bar set-45" role="progressbar"
+											aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+											<span class="sr-only"> 45% Complete </span>
+										</div>
+									</div>
+							</a></li>
+							<li class="external"><a target="#"> See All Tasks </a></li>
+						</ul></li>
 
-          <li id="header_notification_bar" class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" target="#">
-              <i class="fa fa-bell-o">
-                </i>
-              <span class="badge bg-warning">
-                  7
-                </span>
-            </a>
-            <ul class="dropdown-menu extended notification">
-              <li class="notify-arrow notify-arrow-blue">
-              </li>
-              <li>
-                <p class="blue">
-                  You have 7 new notifications
-                </p>
-              </li>
-              <li>
-                <a target="#">
-                  <span class="label label-danger">
-                      <i class="fa fa-bolt">
-                      </i>
-                    </span> Server #3 overloaded.
-                  <span class="small italic">
-                      34 mins
-                    </span>
-                </a>
-              </li>
-              <li>
-                <a target="#">
-                  <span class="label label-warning">
-                      <i class="fa fa-bell">
-                      </i>
-                    </span> Server #10 not respoding.
-                  <span class="small italic">
-                      1 Hours
-                    </span>
-                </a>
-              </li>
-              <li>
-                <a target="#">
-                  <span class="label label-danger">
-                      <i class="fa fa-bolt">
-                      </i>
-                    </span> Database overloaded 24%.
-                  <span class="small italic">
-                      4 hrs
-                    </span>
-                </a>
-              </li>
-              <li>
-                <a target="#">
-                  <span class="label label-success">
-                      <i class="fa fa-plus">
-                      </i>
-                    </span> New user registered.
-                  <span class="small italic">
-                      Just now
-                    </span>
-                </a>
-              </li>
-              <li>
-                <a target="#">
-                  <span class="label label-primary">
-                      <i class="fa fa-bullhorn">
-                      </i>
-                    </span> Application error.
-                  <span class="small italic">
-                      10 mins
-                    </span>
-                </a>
-              </li>
-              <li>
-                <a target="#">
-                    See all notifications
-                  </a>
-              </li>
-            </ul>
-          </li>
-          <!-- END NOTIFY NOTIFICATION BAR -->
-        </ul>
-      </nav>
-      <!-- END HEADER NAV -->
-      <!-- START USER LOGIN DROPDOWN  -->
-      <div class="top-nav ">
-        <ul class="nav pull-right top-menu">
-          <!--<li>
+					<li id="header_notification_bar" class="dropdown"><a
+						data-toggle="dropdown" class="dropdown-toggle" target="#"> <i
+							class="fa fa-bell-o"> </i> <span class="badge bg-warning">
+								7 </span>
+					</a>
+						<ul class="dropdown-menu extended notification">
+							<li class="notify-arrow notify-arrow-blue"></li>
+							<li>
+								<p class="blue">You have 7 new notifications</p>
+							</li>
+							<li><a target="#"> <span class="label label-danger">
+										<i class="fa fa-bolt"> </i>
+								</span> Server #3 overloaded. <span class="small italic"> 34
+										mins </span>
+							</a></li>
+							<li><a target="#"> <span class="label label-warning">
+										<i class="fa fa-bell"> </i>
+								</span> Server #10 not respoding. <span class="small italic"> 1
+										Hours </span>
+							</a></li>
+							<li><a target="#"> <span class="label label-danger">
+										<i class="fa fa-bolt"> </i>
+								</span> Database overloaded 24%. <span class="small italic"> 4
+										hrs </span>
+							</a></li>
+							<li><a target="#"> <span class="label label-success">
+										<i class="fa fa-plus"> </i>
+								</span> New user registered. <span class="small italic"> Just
+										now </span>
+							</a></li>
+							<li><a target="#"> <span class="label label-primary">
+										<i class="fa fa-bullhorn"> </i>
+								</span> Application error. <span class="small italic"> 10 mins </span>
+							</a></li>
+							<li><a target="#"> See all notifications </a></li>
+						</ul></li>
+					<!-- END NOTIFY NOTIFICATION BAR -->
+				</ul>
+			</nav>
+			<!-- END HEADER NAV -->
+			<!-- START USER LOGIN DROPDOWN  -->
+			<div class="top-nav ">
+				<ul class="nav pull-right top-menu">
+					<!--<li>
             <input type="text" class="form-control search" placeholder="Search">
           </li>-->
-		  <input class="easyui-searchbox" data-options="prompt:'Please Input Value',menu:'#mm',searcher:doSearch" style="width:300px"></input>
-		  <div id="mm">
-		  <div data-options="name:'all',iconCls:'icon-ok'">All News</div>
-		  <div data-options="name:'sports'">Sports News</div>
-	      </div>
-		  <script>
+					<input class="easyui-searchbox"
+						data-options="prompt:'Please Input Value',menu:'#mm',searcher:doSearch"
+						style="width: 300px"></input>
+					<div id="mm">
+						<div data-options="name:'all',iconCls:'icon-ok'">All News</div>
+						<div data-options="name:'sports'">Sports News</div>
+					</div>
+					<script>
 			function doSearch(value,name){
 				alert('You input: ' + value+'('+name+')');
 			}
 		  </script>
-          <li class="dropdown" style="float: none;display: inline-block;">
-            <a data-toggle="dropdown" class="dropdown-toggle" target="#">
-              <img alt="" src="img/avatar1_small.jpg">
-              <span class="username">
-                  Pruthvi
-                </span>
-              <b class="caret">
-                </b>
-            </a>
-            <ul class="dropdown-menu extended logout">
-              <li class="log-arrow-up">
-              </li>
-              <li>
-                <a target="#">
-                  <i class=" fa fa-suitcase">
-                    </i> 个人信息
-                </a>
-              </li>
-              <li>
-                <a target="#">
-                  <i class="fa fa-cog">
-                    </i> Settings
-                </a>
-              </li>
-              <li>
-                <a target="javascript:showLoginForm()">
-                  <i class="fa fa-bell-o">
-                    </i> 登录
-                </a>
-              </li>
-              <li>
-                <a target="login.html">
-                  <i class="fa fa-key">
-                    </i> 注册
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <!-- END USER LOGIN DROPDOWN  -->
-    </header>
-    <!-- END HEADER -->
-    <!-- BEGIN SIDEBAR -->
-    <aside style="z-index:1001">
-      <div id="sidebar" class="nav-collapse">
-        <ul class="sidebar-menu" id="nav-accordion">
-          <li>
-            <a target="indexpage.html" class="active">
-              <i class="fa fa-dashboard">
-                </i>
-              <span>
-                  首页
-                </span>
-            </a>
-          </li>
-          <li class="sub-menu">
-            <a target="javascript:;">
-              <i class="fa fa-code">
-                </i>
-              <span>
-                  博客
-                </span>
-              <span class="label label-info span-sidebar">
-                  7
-                </span>
-            </a>
-            <ul class="sub">
-              <li>
-                <a target="boxed_page.html">
-                    java
-                </a>
-              </li>
-              <li>
-                <a target="horizontal_menu.html">
-                    大数据
-                </a>
-              </li>
-              <li>
-                <a target="language_switch_bar.html">
-                    前端
-                </a>
-              </li>
-              <li>
-                <a target="language_switch_bar.html">
-                    Cocos2d
-                </a>
-              </li>
-			  <li>
-                <a target="language_switch_bar.html">
-                    Linux Shell
-                </a>
-              </li>
-			  <li>
-                <a target="language_switch_bar.html">
-                    爬虫
-                </a>
-              </li>
-			  <li>
-                <a target="language_switch_bar.html">
-                    Docker
-                </a>
-              </li>
-            </ul>
-          </li>
-		  
-		  <li>
-            <a target="index.html" class="active">
-              <i class="fa fa-caret-square-o-right">
-                </i>
-              <span>
-                  视频
-                </span>
-            </a>
-          </li>
-		  
-		  <li class="sub-menu">
-            <a target="javascript:;">
-              <i class="fa fa-indent">
-                </i>
-              <span>
-                  大学课程
-                </span>
-              <span class="label label-primary span-sidebar">
-                  5
-                </span>
-            </a>
-            <ul class="sub">
-              <li>
-                <a target="boxed_page.html">
-                    设计模式
-                </a>
-              </li>
-              <li>
-                <a target="horizontal_menu.html">
-                    数据库
-                </a>
-              </li>
-              <li>
-                <a target="language_switch_bar.html">
-                    数据结构
-                </a>
-              </li>
-              <li>
-                <a target="language_switch_bar.html">
-                    计算机网络
-                </a>
-              </li>
-			  <li>
-                <a target="language_switch_bar.html">
-                    操作系统
-                </a>
-              </li>
-            </ul>
-          </li>
-		  
-		  
-		  <li class="sub-menu">
-            <a target="javascript:;">
-              <i class="fa fa-gamepad">
-                </i>
-              <span>
-                  娱乐
-                </span>
-              <span class="label label-success span-sidebar">
-                  3
-               </span>
-            </a>
-            <ul class="sub">
-              <li>
-                <a target="boxed_page.html">
-                    游戏试玩
-                </a>
-              </li>
-              <li>
-                <a target="a.html">
-                    三国杀视频
-                </a>
-              </li>
-              <li>
-                <a target="language_switch_bar.html">
-                    台球视频
-                </a>
-              </li>
-            </ul>
-          </li>
-		  
-		  <li class="sub-menu">
-            <a target="javascript:;">
-              <i class="fa fa-cloud-download">
-                </i>
-              <span>
-                  有用连接
-                </span>
-              <span class="label label-warning span-sidebar">
-                  4
-                </span>
-            </a>
-            <ul class="sub">
-              <li>
-                <a target="boxed_page.html">
-                    软件下载
-                </a>
-              </li>
-              <li>
-                <a target="horizontal_menu.html">
-                    源码下载
-                </a>
-              </li>
-              <li>
-                <a target="language_switch_bar.html">
-                    电子书下载
-                </a>
-              </li>
-			  <li>
-                <a target="language_switch_bar.html">
-                    教学视频下载
-                </a>
-              </li>
-            </ul>
-          </li>
-		  
-		   <li class="sub-menu">
-            <a target="javascript:;">
-              <i class="fa fa-cny">
-                </i>
-              <span>
-                  一起
-                </span>
-              <span class="label label-warning span-sidebar">
-                  4
-                </span>
-            </a>
-            <ul class="sub">
-              <li>
-                <a target="boxed_page.html">
-                    投稿
-                </a>
-              </li>
-              <li>
-                <a target="horizontal_menu.html">
-                    推荐网址
-                </a>
-              </li>
-              <li>
-                <a target="language_switch_bar.html">
-                    基情赞助
-                </a>
-              </li>
-			  <li>
-                <a target="language_switch_bar.html">
-                    发表需求
-                </a>
-              </li>
-            </ul>
-          </li>
-		  
-		  
-		  <li class="sub-menu">
-            <a target="javascript:;">
-              <i class="fa fa-info">
-                </i>
-              <span>
-                  关于
-                </span>
-              <span class="label label-inverse span-sidebar">
-                  3
-                </span>
-            </a>
-            <ul class="sub">
-              <li>
-                <a target="boxed_page.html">
-                    自己
-                </a>
-              </li>
-              <li>
-                <a target="horizontal_menu.html">
-                    同伴
-                </a>
-              </li>
-              <li>
-                <a target="language_switch_bar.html">
-                    捐赠者
-                </a>
-              </li>
-            </ul>
-          </li>
-		  
-		  <li class="sub-menu">
-            <a target="javascript:;">
-              <i class="fa fa-thumbs-up">
-                </i>
-              <span>
-                  其他
-                </span>
-              <span class="label label-success span-sidebar">
-                  4
-                </span>
-            </a>
-            <ul class="sub">
-              <li>
-                <a target="boxed_page.html">
-                    留言板
-                </a>
-              </li>
-              <li>
-                <a href="mailto:1633675284@qq.com">
-                    意见反馈
-                </a>
-              </li>
-			  <li>
-                <a href="#" onclick="javascript:addFavorite2()">
-                    加入收藏
-                </a>
-              </li>
-			  <li>
-                <a href="#" onclick="SetHome(this,window.location)">
-                    设为首页
-                </a>
-              </li>
-            </ul>
-          </li>
-		  
-		  
-        </ul>
-      </div>
-    </aside>
-    
-    <!--<section id="main-content">
+					<li class="dropdown" style="float: none; display: inline-block;">
+						<a data-toggle="dropdown" class="dropdown-toggle" target="#">
+							<img alt="" src="img/avatar1_small.jpg"> <span
+							class="username"> Pruthvi </span> <b class="caret"> </b>
+					</a>
+						<ul class="dropdown-menu extended logout">
+							<li class="log-arrow-up"></li>
+							<li><a target="#"> <i class=" fa fa-suitcase"> </i> 个人信息
+							</a></li>
+							<li><a target="#"> <i class="fa fa-cog"> </i> Settings
+							</a></li>
+							<li><a target="javascript:showLoginForm()"> <i
+									class="fa fa-bell-o"> </i> 登录
+							</a></li>
+							<li><a target="login.html"> <i class="fa fa-key"> </i>
+									注册
+							</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- END USER LOGIN DROPDOWN  -->
+		</header>
+		<!-- END HEADER -->
+		<!-- BEGIN SIDEBAR -->
+		<aside>
+			<div id="sidebar" class="nav-collapse">
+				<ul class="sidebar-menu" id="nav-accordion">
+					<li><a target="indexpage.html" class="active"> <i
+							class="fa fa-dashboard"> </i> <span> 首页 </span>
+					</a></li>
+					<li class="sub-menu"><a target="javascript:;"> <i
+							class="fa fa-code"> </i> <span> 博客 </span> <span
+							class="label label-info span-sidebar"> 7 </span>
+					</a>
+						<ul class="sub">
+							<li><a target="boxed_page.html"> java </a></li>
+							<li><a target="horizontal_menu.html"> 大数据 </a></li>
+							<li><a target="language_switch_bar.html"> 前端 </a></li>
+							<li><a target="language_switch_bar.html"> Cocos2d </a></li>
+							<li><a target="language_switch_bar.html"> Linux Shell </a></li>
+							<li><a target="language_switch_bar.html"> 爬虫 </a></li>
+							<li><a target="language_switch_bar.html"> Docker </a></li>
+						</ul></li>
+
+					<li><a target="index.html" class="active"> <i
+							class="fa fa-caret-square-o-right"> </i> <span> 视频 </span>
+					</a></li>
+
+					<li class="sub-menu"><a target="javascript:;"> <i
+							class="fa fa-indent"> </i> <span> 大学课程 </span> <span
+							class="label label-primary span-sidebar"> 5 </span>
+					</a>
+						<ul class="sub">
+							<li><a target="boxed_page.html"> 设计模式 </a></li>
+							<li><a target="horizontal_menu.html"> 数据库 </a></li>
+							<li><a target="language_switch_bar.html"> 数据结构 </a></li>
+							<li><a target="language_switch_bar.html"> 计算机网络 </a></li>
+							<li><a target="language_switch_bar.html"> 操作系统 </a></li>
+						</ul></li>
+
+
+					<li class="sub-menu"><a target="javascript:;"> <i
+							class="fa fa-gamepad"> </i> <span> 娱乐 </span> <span
+							class="label label-success span-sidebar"> 3 </span>
+					</a>
+						<ul class="sub">
+							<li><a target="boxed_page.html"> 游戏试玩 </a></li>
+							<li><a target="a.html"> 三国杀视频 </a></li>
+							<li><a target="language_switch_bar.html"> 台球视频 </a></li>
+						</ul></li>
+
+					<li class="sub-menu"><a target="javascript:;"> <i
+							class="fa fa-cloud-download"> </i> <span> 有用连接 </span> <span
+							class="label label-warning span-sidebar"> 4 </span>
+					</a>
+						<ul class="sub">
+							<li><a target="listresources.html"> 软件下载 </a></li>
+							<li><a target="horizontal_menu.html"> 源码下载 </a></li>
+							<li><a target="language_switch_bar.html"> 电子书下载 </a></li>
+							<li><a target="language_switch_bar.html"> 教学视频下载 </a></li>
+						</ul></li>
+
+					<li class="sub-menu"><a target="javascript:;"> <i
+							class="fa fa-cny"> </i> <span> 一起 </span> <span
+							class="label label-warning span-sidebar"> 4 </span>
+					</a>
+						<ul class="sub">
+							<li><a target="boxed_page.html"> 投稿 </a></li>
+							<li><a target="horizontal_menu.html"> 推荐网址 </a></li>
+							<li><a target="language_switch_bar.html"> 基情赞助 </a></li>
+							<li><a target="language_switch_bar.html"> 发表需求 </a></li>
+						</ul></li>
+
+
+					<li class="sub-menu"><a target="javascript:;"> <i
+							class="fa fa-info"> </i> <span> 关于 </span> <span
+							class="label label-inverse span-sidebar"> 3 </span>
+					</a>
+						<ul class="sub">
+							<li><a target="boxed_page.html"> 自己 </a></li>
+							<li><a target="horizontal_menu.html"> 同伴 </a></li>
+							<li><a target="language_switch_bar.html"> 捐赠者 </a></li>
+						</ul></li>
+
+					<li class="sub-menu"><a target="javascript:;"> <i
+							class="fa fa-thumbs-up"> </i> <span> 其他 </span> <span
+							class="label label-success span-sidebar"> 4 </span>
+					</a>
+						<ul class="sub">
+							<li><a target="boxed_page.html"> 留言板 </a></li>
+							<li><a href="mailto:1633675284@qq.com"> 意见反馈 </a></li>
+							<li><a href="#" onclick="javascript:addFavorite2()">
+									加入收藏 </a></li>
+							<li><a href="#" onclick="SetHome(this,window.location)">
+									设为首页 </a></li>
+						</ul></li>
+
+
+				</ul>
+			</div>
+		</aside>
+
+		<!--<section id="main-content">
       <section class="wrapper">
       </section>
     </section>
 	<div id="iframe">
 	</div>-->
-	<!-- <section id="main-content">
+		<!-- <section id="main-content">
       <section class="wrapper">
 	  <div id="iframe" style="all:initial">
 		hehehehehe
 	  </div>
       </section>
     </section> -->
-    
-	
-	
-    <div class="container" id="login">
-      <section class="main" id="loginform" style="display:none">
-        <form class="form-1">
-          <p class="field">
-            <input type="text" name="login" placeholder="Username or email">
-            <i class="icon-user icon-large"></i>
-          </p>
-          <p class="field">
-            <input type="password" name="password" placeholder="Password">
-            <i class="icon-lock icon-large"></i>
-          </p>
-          <p class="submit">
-            <button type="submit" name="submit"><i class="icon-arrow-right icon-large"></i></button>
-          </p>
-        </form>
-      </section>
-    </div>
-    
-    <div id="realcontent">
-    	<object data="listartical.html" type="text/html"  style="z-index:-1;position:absolute;height:100%;width:100%">
-    	</object>
-    </div>
-    
-    <!-- <image src="images/1.jpg" width="100%" heigth="100%"></image> -->
-     <footer class="site-footer">
-      <div class="text-center">
-        2016 &copy; 
-        <a href="www.codog.net">
-            www.codog.net
-          </a>
-        <a href="#" class="go-top">
-          <i class="fa fa-angle-up">
-            </i>
-        </a>
-      </div>
-    </footer>
-     
-  </section>
-  
 
-    
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/mainhtml.js"></script>
-  <script src="js/jquery.dcjqaccordion.2.7.js"></script>
-  <script src="js/jquery.scrollTo.min.js"></script>
-  <script src="js/jquery.nicescroll.js"></script>
-  <script src="js/respond.min.js"></script>
-  <script src="js/common-scripts.js"></script>
-  <script src="js/underscore-min.js"></script>
-  <script src="assets/jquery-knob/js/jquery.knob.js"></script>
-  <script src="js/modernizr.custom.63321forlogin.js"></script>
-  <script src="js/jquery.bootstrap.newsbox.min.js"></script>
-  <script>
+
+
+		<div class="container" id="login">
+			<section class="main" id="loginform" style="display: none">
+				<form class="form-1">
+					<p class="field">
+						<input type="text" name="login" placeholder="Username or email">
+						<i class="icon-user icon-large"></i>
+					</p>
+					<p class="field">
+						<input type="password" name="password" placeholder="Password">
+						<i class="icon-lock icon-large"></i>
+					</p>
+					<p class="submit">
+						<button type="submit" name="submit">
+							<i class="icon-arrow-right icon-large"></i>
+						</button>
+					</p>
+				</form>
+			</section>
+		</div>
+		<section id="main-content">
+			<section class="wrapper">
+				<div id="realcontent">
+					<object data="listartical.html" type="text/html"
+						style="display: block; float: left; width: 100%; height: 100vh">
+					</object>
+				</div>
+			</section>
+		</section>
+
+
+		<!-- <image src="images/1.jpg" width="100%" heigth="100%"></image> -->
+		<footer class="site-footer">
+			<div class="text-center">
+				2016 &copy; <a href="www.codog.net"> www.codog.net </a> <a href="#"
+					class="go-top"> <i class="fa fa-angle-up"> </i>
+				</a>
+			</div>
+		</footer>
+
+	</section>
+
+
+
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/mainhtml.js"></script>
+	<script src="js/jquery.dcjqaccordion.2.7.js"></script>
+	<script src="js/jquery.scrollTo.min.js"></script>
+	<script src="js/jquery.nicescroll.js"></script>
+	<script src="js/respond.min.js"></script>
+	<script src="js/common-scripts.js"></script>
+	<script src="js/underscore-min.js"></script>
+	<script src="assets/jquery-knob/js/jquery.knob.js"></script>
+	<script src="js/modernizr.custom.63321forlogin.js"></script>
+	<script src="js/jquery.bootstrap.newsbox.min.js"></script>
+	<script>
   $(".knob").knob();
   </script>
-  
+
 </body>
 
 </html>
