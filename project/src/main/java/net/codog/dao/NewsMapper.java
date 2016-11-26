@@ -22,4 +22,5 @@ public interface NewsMapper {
 	
 	@Select("select count(*) from news")
 	public int selectCount();
+
 }

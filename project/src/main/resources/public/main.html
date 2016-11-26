@@ -42,76 +42,17 @@
 				<ul class="nav top-menu">
 					<li class="dropdown"><a data-toggle="dropdown"
 						class="dropdown-toggle" target="#"> <i
-							class="fa fa-envelope-o"> </i> <span class="badge bg-important">
-								5 </span>
+							class="fa fa-envelope-o"> </i> <span id="newscount" class="badge bg-important">
+								</span>
 					</a>
-						<ul class="dropdown-menu extended tasks-bar">
+						<ul class="dropdown-menu extended tasks-bar" id="newslist">
 							<li class="notify-arrow notify-arrow-blue"></li>
 							<li>
-								<p class="blue">You have 6 pending tasks</p>
+								<p class="blue" id="newscountdesc"></p>
 							</li>
 							<li><a target="#">
 									<div class="task-info">
 										<div class="desc">Dashboard v1.3</div>
-										<div class="percent">40%</div>
-									</div>
-									<div class="progress progress-striped">
-										<div class="progress-bar progress-bar-success set-40"
-											role="progressbar" aria-valuenow="40" aria-valuemin="0"
-											aria-valuemax="100">
-											<span class="sr-only"> 40% Complete (success) </span>
-										</div>
-									</div>
-							</a></li>
-							<li><a target="#">
-									<div class="task-info">
-										<div class="desc">Database Update</div>
-										<div class="percent">60%</div>
-									</div>
-									<div class="progress progress-striped">
-										<div class="progress-bar progress-bar-warning set-60"
-											role="progressbar" aria-valuenow="60" aria-valuemin="0"
-											aria-valuemax="100">
-											<span class="sr-only"> 60% Complete (warning) </span>
-										</div>
-									</div>
-							</a></li>
-							<li><a target="#">
-									<div class="task-info">
-										<div class="desc">Iphone Development</div>
-										<div class="percent">87%</div>
-									</div>
-									<div class="progress progress-striped">
-										<div class="progress-bar progress-bar-info set-87"
-											role="progressbar" aria-valuenow="20" aria-valuemin="0"
-											aria-valuemax="100">
-											<span class="sr-only"> 87% Complete </span>
-										</div>
-									</div>
-							</a></li>
-							<li><a target="#">
-									<div class="task-info">
-										<div class="desc">Mobile App</div>
-										<div class="percent">33%</div>
-									</div>
-									<div class="progress progress-striped">
-										<div class="progress-bar progress-bar-danger set-33"
-											role="progressbar" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100">
-											<span class="sr-only"> 33% Complete (danger) </span>
-										</div>
-									</div>
-							</a></li>
-							<li><a target="#">
-									<div class="task-info">
-										<div class="desc">Dashboard v1.3</div>
-										<div class="percent">45%</div>
-									</div>
-									<div class="progress progress-striped active">
-										<div class="progress-bar set-45" role="progressbar"
-											aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
-											<span class="sr-only"> 45% Complete </span>
-										</div>
 									</div>
 							</a></li>
 							<li class="external"><a target="#"> See All Tasks </a></li>
@@ -167,8 +108,8 @@
 						data-options="prompt:'Please Input Value',menu:'#mm',searcher:doSearch"
 						style="width: 300px"></input>
 					<div id="mm">
-						<div data-options="name:'all',iconCls:'icon-ok'">All News</div>
-						<div data-options="name:'sports'">Sports News</div>
+						<div data-options="name:'all',iconCls:'icon-ok'">所有</div>
+						<div data-options="name:'sports'">博客</div>
 					</div>
 					<script>
 			function doSearch(value,name){
@@ -180,17 +121,13 @@
 							<img alt="" src="img/avatar1_small.jpg"> <span
 							class="username"> Pruthvi </span> <b class="caret"> </b>
 					</a>
-						<ul class="dropdown-menu extended logout">
+						<ul class="dropdown-menu extended logout" id="registerli">
 							<li class="log-arrow-up"></li>
-							<li><a target="#"> <i class=" fa fa-suitcase"> </i> 个人信息
-							</a></li>
-							<li><a target="#"> <i class="fa fa-cog"> </i> Settings
-							</a></li>
-							<li><a target="javascript:showLoginForm()"> <i
+							<li><a href="javascript:showLoginForm()"> <i
 									class="fa fa-bell-o"> </i> 登录
 							</a></li>
-							<li><a target="login.html"> <i class="fa fa-key"> </i>
-									注册
+							<li><a target="register.html"> <i class="fa fa-key">
+								</i> 注册
 							</a></li>
 						</ul>
 					</li>
@@ -275,7 +212,7 @@
 							class="label label-inverse span-sidebar"> 3 </span>
 					</a>
 						<ul class="sub">
-							<li><a target="boxed_page.html"> 自己 </a></li>
+							<li><a target="profile.html"> 自己 </a></li>
 							<li><a target="horizontal_menu.html"> 同伴 </a></li>
 							<li><a target="language_switch_bar.html"> 捐赠者 </a></li>
 						</ul></li>

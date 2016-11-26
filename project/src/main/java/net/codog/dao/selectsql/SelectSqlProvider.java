@@ -23,7 +23,7 @@ public class SelectSqlProvider {
         if(para.get("start") != null && para.get("end") != null){
         	result += " limit " + para.get("start") + "," + para.get("end");
         }
-        log.debug("sql is " + result);
+        log.info("sql is " + result);
 		return result;
     }
 	
@@ -40,7 +40,7 @@ public class SelectSqlProvider {
         if(para.get("start") != null && para.get("end") != null){
         	result += " limit " + para.get("start") + "," + para.get("end");
         }
-        log.debug("sql is " + result);
+        log.info("sql is " + result);
 		return result;
 	}
 }

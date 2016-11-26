@@ -29,4 +29,18 @@ public class NewsController {
 		log.info("news测试通过");
 		return newsList;
 	}
+	
+	@RequestMapping(value="/getnewscount",method=RequestMethod.POST)
+	public int getNewsCount(){
+		int newsCount = newsService.getNewsCount();
+		log.info("新闻的数量是" + newsCount);
+		return newsCount;
+	}
+	
+	@RequestMapping(value="/getnewslist",method=RequestMethod.POST)
+	public List<News> getNewsList(){
+		List<News> newsList = newsService.getAllNews(null, null);
+		log.info("获取的全部新闻是" + newsList.toString());
+		return newsList;
+	}
 }

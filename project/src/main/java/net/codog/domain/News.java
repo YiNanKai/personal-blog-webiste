@@ -19,17 +19,18 @@ import lombok.ToString;
 @Getter
 public class News {
 	//自增id
-    private Integer newsId;
+    private Integer news_id;
     //新闻题目
-    private String newsTitle;
+    private String news_title;
     //新闻url
-    private String newsContent;
+    private String news_content;
     //新闻发布时间
-    private Date newsPublishTime;
+    private Date news_publish_time;
     //新闻修改时间
-    private Date newsModifyTime;
+    private Date news_modify_time;
     //爬取的新闻的地址
-    private String newsUrl;
+    private String news_url;
     //新闻类型的名称
-    private Integer newsTypeName;
+    //private Integer newsTypeName;
+    private Integer news_type;
 }
