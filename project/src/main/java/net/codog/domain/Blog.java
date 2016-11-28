@@ -1,7 +1,5 @@
 package net.codog.domain;
 
-import java.util.Date;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,25 +17,26 @@ import lombok.ToString;
 @Getter
 public class Blog {
 	//自增id
-    private Integer blogId;
+    private Integer blog_id;
     //博客题目
-    private String blogTitle;
+    private String blog_title;
     //博客url
-    private String blogContent;
+    private String blog_content;
     //博客摘要
-    private String blogSubcontent;
+    private String blog_subcontent;
     //博客的阅读量
-    private Integer blogReadCount;
+    private Integer blog_read_count;
     //博客首次上线时间
-    private Date blogPublishTime;
+    private String blog_publish_time;
     //博客修改时间
-    private Date blogModifyTime;
+    private String blog_modify_time;
     //文章差评数
-    private Integer blogPoorComment;
+    private Integer blog_poor_comment;
     //文章好评
-    private Integer blogGoodCpmment;
+    private Integer blog_good_comment;
     //blog的发布者,默认是管理员
-    private String blogPublisher;
+    private String blog_publisher;
     //blog类型名称
-    private Integer blogTypeName;
+    private String blog_type_name;
+   
 }

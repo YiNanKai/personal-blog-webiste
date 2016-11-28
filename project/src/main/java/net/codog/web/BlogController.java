@@ -4,12 +4,15 @@ import java.util.List;
 
 import lombok.extern.slf4j.Slf4j;
 import net.codog.domain.Blog;
+import net.codog.domain.BlogCategory;
+import net.codog.service.BlogCategoryService;
 import net.codog.service.BlogService;
 import net.codog.vo.ResponseVO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -24,6 +27,19 @@ public class BlogController {
 	
 	@Autowired
 	BlogService blogService; 
+	
+	@Autowired
+	BlogCategoryService blogCategoryService; 
+	
+	@RequestMapping(value="/getblogcategories",method=RequestMethod.POST)
+	public List<BlogCategory> getBlogCategories(@RequestParam("isSchool") Integer isSchool){
+		return blogCategoryService.getAllBlogCategories(isSchool);
+	}
+	
+	@RequestMapping(value="/getblogs",method=RequestMethod.POST)
+	public List<Blog> getBlogs(){
+		return blogService.getAllBlogs(null, null);
+	}
 	
 	@RequestMapping(value="/test",method=RequestMethod.GET)
 	public ResponseVO<List<Blog>> test(){

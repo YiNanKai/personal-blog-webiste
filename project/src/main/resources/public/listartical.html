@@ -10,15 +10,19 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="js/easyui-lang-zh_CN.js"></script>
+
 </head>
 <body>
-	<ul>
+		<input id="ec" class="easyui-combobox" style="width: 25%" />
+		<script type="text/javascript" src="js/articalhtml.js"></script>
+	<ul id="articallist">
 		<li class="article-container">
+		    
 			<div class="article-img">
 				<img src="images/aa.jpg">
 			</div>
 			<div class="article-content">
-				<h3 class="article-header">an article</h3>
+				<h3 class="article-header"><a href="www.baidu.com" target="_blank">hahaha</a></h3>
 				<div class="article-info">
 					<span class="article-author"> <a href="#"> <img
 							class="article-author-avatar" src="images/lena.jpg"> <span
@@ -33,30 +37,12 @@
 					alblbal ba lbla bll abbal alb lab</div>
 			</div>
 		</li>
-		<li class="article-container">
-			<div class="article-img">
-				<img src="images/aa.jpg">
-			</div>
-			<div class="article-content">
-				<h3 class="article-header">an article</h3>
-				<div class="article-info">
-					<span class="article-author"> <a href="#"> <img
-							class="article-author-avatar" src="images/lena.jpg"> <span
-							class="article-author-name">wangwenhan</span>
-					</a>
-					</span> <span class="article-publish-time">发布时间 2016-01-01 10:00:00</span>
-					<span class="article-classify">分类：Java</span>
-				</div>
-				<div class="article-abstract">ba lab alab alb abal ba lba l ba
-					lab alab alb abal ba lba ba lab alab alb abal ba lba ba lab alab
-					alb abal ba lba balb albalb la bl a ba lbal b ab lab la blabal
-					alblbal ba lbla bll abbal alb lab</div>
-			</div>
-		</li>
+		
 	</ul>
 
 	<div class="easyui-panel">
 		<div class="easyui-pagination" data-options="total:114"></div>
 	</div>
+
 </body>
 </html>

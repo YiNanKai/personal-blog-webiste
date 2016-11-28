@@ -43,4 +43,22 @@ public class SelectSqlProvider {
         log.info("sql is " + result);
 		return result;
 	}
+	
+	public String selectBlogs(Map<String, Object> para){
+		String result = "select blog.*,blog_type.blog_type_name from blog left join blog_type on blog.blog_type_id = blog_type.blog_type_id";
+        if(para.get("start") != null && para.get("end") != null){
+        	result += " limit " + para.get("start") + "," + para.get("end");
+        }
+        log.info("sql is " + result);
+		return result;
+	}
+	
+	public String selectGameVideos(Map<String, Object> para){
+		String result = "select game_video.*,game_video_type.game_video_type_name from game_video left join game_video_type on game_video.game_video_type_id = game_video_type.game_video_type_id";
+        if(para.get("start") != null && para.get("end") != null){
+        	result += " limit " + para.get("start") + "," + para.get("end");
+        }
+        log.info("sql is " + result);
+		return result;
+	}
 }
