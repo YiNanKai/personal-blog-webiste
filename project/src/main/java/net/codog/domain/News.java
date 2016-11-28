@@ -3,10 +3,8 @@ package net.codog.domain;
 import java.util.Date;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
 /**
 * @author 王文涵 
 * @date 2016年10月20日
@@ -14,9 +12,7 @@ import lombok.ToString;
  */
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
-@Setter
-@Getter
+@Data
 public class News {
 	//自增id
     private Integer news_id;

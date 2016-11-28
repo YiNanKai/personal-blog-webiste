@@ -17,11 +17,11 @@
 <link rel="stylesheet" type="text/css" href="css/styleforlogin.css" />
 <script src="js/jquery-1.8.3.min.js"></script>
 <script>
-  function showLoginForm() {
-    $("#loginform").toggle(600)
-    
-  }
-  </script>
+	function showLoginForm() {
+		$("#loginform").toggle(600)
+
+	}
+</script>
 <!--login-->
 <link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
 <link rel="stylesheet" type="text/css" href="themes/icon.css">
@@ -42,8 +42,8 @@
 				<ul class="nav top-menu">
 					<li class="dropdown"><a data-toggle="dropdown"
 						class="dropdown-toggle" target="#"> <i
-							class="fa fa-envelope-o"> </i> <span id="newscount" class="badge bg-important">
-								</span>
+							class="fa fa-envelope-o"> </i> <span id="newscount"
+							class="badge bg-important"> </span>
 					</a>
 						<ul class="dropdown-menu extended tasks-bar" id="newslist">
 							<li class="notify-arrow notify-arrow-blue"></li>
@@ -101,21 +101,16 @@
 			<!-- START USER LOGIN DROPDOWN  -->
 			<div class="top-nav ">
 				<ul class="nav pull-right top-menu">
-					<!--<li>
-            <input type="text" class="form-control search" placeholder="Search">
-          </li>-->
-					<input class="easyui-searchbox"
-						data-options="prompt:'Please Input Value',menu:'#mm',searcher:doSearch"
-						style="width: 300px"></input>
+					<input id="ss" style="width: 400vw"></input>
 					<div id="mm">
-						<div data-options="name:'all',iconCls:'icon-ok'">所有</div>
-						<div data-options="name:'sports'">博客</div>
+						<div id="allcategories"
+							data-options="name:'all',iconCls:'icon-ok'">所有</div>
 					</div>
-					<script>
+					<!-- <script>
 			function doSearch(value,name){
 				alert('You input: ' + value+'('+name+')');
 			}
-		  </script>
+		  </script> -->
 					<li class="dropdown" style="float: none; display: inline-block;">
 						<a data-toggle="dropdown" class="dropdown-toggle" target="#">
 							<img alt="" src="img/avatar1_small.jpg"> <span
@@ -306,8 +301,8 @@
 	<script src="js/modernizr.custom.63321forlogin.js"></script>
 	<script src="js/jquery.bootstrap.newsbox.min.js"></script>
 	<script>
-  $(".knob").knob();
-  </script>
+		$(".knob").knob();
+	</script>
 
 </body>
 

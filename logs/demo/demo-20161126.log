@@ -1,0 +1,849 @@
+2016-11-26 15:55:19 [main] INFO  net.codog.ProjectApplication - Starting ProjectApplication on wenhanwang with PID 5148 (started by CreditEase in E:\我的项目\GitHub\personal-blog-webiste\project)
+2016-11-26 15:55:19 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2016-11-26 15:55:20 [main] INFO  net.codog.ProjectApplication - The following profiles are active: prod
+2016-11-26 15:55:22 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 15:55:22 CST 2016]; root of context hierarchy
+2016-11-26 15:55:24 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ddb1195d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-26 15:55:25 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2016-11-26 15:55:25 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2016-11-26 15:55:25 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-11-26 15:55:25 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2016-11-26 15:55:25 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3009 ms
+2016-11-26 15:55:25 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-26 15:55:25 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-26 15:55:25 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-26 15:55:25 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-26 15:55:25 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-26 15:55:26 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 15:55:22 CST 2016]; root of context hierarchy
+2016-11-26 15:55:26 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Blog>> net.codog.web.BlogController.test()
+2016-11-26 15:55:26 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/guestbook/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Guestbook>> net.codog.web.GuestbookController.test()
+2016-11-26 15:55:26 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Message>> net.codog.web.MessageController.test()
+2016-11-26 15:55:26 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.test()
+2016-11-26 15:55:26 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<net.codog.view.UserShowDetail> net.codog.web.UserController.test()
+2016-11-26 15:55:26 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userfile/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulFile>> net.codog.web.UserfulFileController.test()
+2016-11-26 15:55:26 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userurl/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulUrl>> net.codog.web.UserfulUrlController.test()
+2016-11-26 15:55:26 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-26 15:55:26 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-26 15:55:26 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 15:55:26 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 15:55:26 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 15:55:26 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-26 15:55:27 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-11-26 15:55:27 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2016-11-26 15:55:27 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8080]
+2016-11-26 15:55:27 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2016-11-26 15:55:27 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2016-11-26 15:55:27 [main] INFO  net.codog.ProjectApplication - Started ProjectApplication in 8.117 seconds (JVM running for 9.17)
+2016-11-26 15:56:25 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-26 15:56:25 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-26 15:56:25 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 41 ms
+2016-11-26 18:27:39 [main] INFO  net.codog.ProjectApplication - Starting ProjectApplication on wenhanwang with PID 5168 (started by CreditEase in E:\我的项目\GitHub\personal-blog-webiste\project)
+2016-11-26 18:27:39 [main] INFO  net.codog.ProjectApplication - The following profiles are active: prod
+2016-11-26 18:27:39 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2016-11-26 18:27:39 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 18:27:39 CST 2016]; root of context hierarchy
+2016-11-26 18:27:41 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f9180180] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-26 18:27:41 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2016-11-26 18:27:41 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2016-11-26 18:27:41 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-11-26 18:27:42 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2016-11-26 18:27:42 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2288 ms
+2016-11-26 18:27:42 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-26 18:27:42 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-26 18:27:42 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-26 18:27:42 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-26 18:27:42 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-26 18:27:43 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 18:27:39 CST 2016]; root of context hierarchy
+2016-11-26 18:27:43 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Blog>> net.codog.web.BlogController.test()
+2016-11-26 18:27:43 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/guestbook/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Guestbook>> net.codog.web.GuestbookController.test()
+2016-11-26 18:27:43 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Message>> net.codog.web.MessageController.test()
+2016-11-26 18:27:43 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.test()
+2016-11-26 18:27:43 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<net.codog.view.UserShowDetail> net.codog.web.UserController.test()
+2016-11-26 18:27:43 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userfile/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulFile>> net.codog.web.UserfulFileController.test()
+2016-11-26 18:27:43 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userurl/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulUrl>> net.codog.web.UserfulUrlController.test()
+2016-11-26 18:27:43 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-26 18:27:43 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-26 18:27:43 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 18:27:43 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 18:27:43 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 18:27:43 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-26 18:27:44 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-11-26 18:27:44 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2016-11-26 18:27:44 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8080]
+2016-11-26 18:27:44 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2016-11-26 18:27:44 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2016-11-26 18:27:44 [main] INFO  net.codog.ProjectApplication - Started ProjectApplication in 6.069 seconds (JVM running for 7.202)
+2016-11-26 18:27:54 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-26 18:27:54 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-26 18:27:54 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2016-11-26 19:48:34 [main] INFO  net.codog.ProjectApplication - Starting ProjectApplication on wenhanwang with PID 7932 (started by CreditEase in E:\我的项目\GitHub\personal-blog-webiste\project)
+2016-11-26 19:48:34 [main] INFO  net.codog.ProjectApplication - The following profiles are active: prod
+2016-11-26 19:48:34 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 19:48:34 CST 2016]; root of context hierarchy
+2016-11-26 19:48:35 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2016-11-26 19:48:35 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ca72680b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-26 19:48:36 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2016-11-26 19:48:36 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2016-11-26 19:48:36 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-11-26 19:48:36 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2016-11-26 19:48:36 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2470 ms
+2016-11-26 19:48:36 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-26 19:48:36 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-26 19:48:36 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-26 19:48:36 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-26 19:48:36 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-26 19:48:37 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 19:48:34 CST 2016]; root of context hierarchy
+2016-11-26 19:48:37 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Blog>> net.codog.web.BlogController.test()
+2016-11-26 19:48:37 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/guestbook/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Guestbook>> net.codog.web.GuestbookController.test()
+2016-11-26 19:48:37 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Message>> net.codog.web.MessageController.test()
+2016-11-26 19:48:37 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.test()
+2016-11-26 19:48:37 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<net.codog.view.UserShowDetail> net.codog.web.UserController.test()
+2016-11-26 19:48:37 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userfile/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulFile>> net.codog.web.UserfulFileController.test()
+2016-11-26 19:48:37 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userurl/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulUrl>> net.codog.web.UserfulUrlController.test()
+2016-11-26 19:48:37 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-26 19:48:37 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-26 19:48:37 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 19:48:37 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 19:48:37 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 19:48:37 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-26 19:48:38 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-11-26 19:48:38 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2016-11-26 19:48:38 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8080]
+2016-11-26 19:48:38 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2016-11-26 19:48:38 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2016-11-26 19:48:38 [main] INFO  net.codog.ProjectApplication - Started ProjectApplication in 5.145 seconds (JVM running for 5.988)
+2016-11-26 19:48:53 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-26 19:48:53 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-26 19:48:53 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2016-11-26 21:35:39 [main] INFO  net.codog.ProjectApplication - Starting ProjectApplication on wenhanwang with PID 412 (started by CreditEase in E:\我的项目\GitHub\personal-blog-webiste\project)
+2016-11-26 21:35:39 [main] INFO  net.codog.ProjectApplication - The following profiles are active: prod
+2016-11-26 21:35:40 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2016-11-26 21:35:41 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 21:35:41 CST 2016]; root of context hierarchy
+2016-11-26 21:35:42 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c870092a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-26 21:35:43 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2016-11-26 21:35:43 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2016-11-26 21:35:43 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-11-26 21:35:43 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2016-11-26 21:35:43 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2108 ms
+2016-11-26 21:35:43 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-26 21:35:43 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-26 21:35:43 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-26 21:35:43 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-26 21:35:43 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-26 21:35:44 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 21:35:41 CST 2016]; root of context hierarchy
+2016-11-26 21:35:44 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Blog>> net.codog.web.BlogController.test()
+2016-11-26 21:35:44 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/guestbook/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Guestbook>> net.codog.web.GuestbookController.test()
+2016-11-26 21:35:44 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Message>> net.codog.web.MessageController.test()
+2016-11-26 21:35:44 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.test()
+2016-11-26 21:35:44 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewscount],methods=[POST]}" onto public int net.codog.web.NewsController.getNewsCount()
+2016-11-26 21:35:44 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<net.codog.view.UserShowDetail> net.codog.web.UserController.test()
+2016-11-26 21:35:44 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userfile/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulFile>> net.codog.web.UserfulFileController.test()
+2016-11-26 21:35:44 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userurl/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulUrl>> net.codog.web.UserfulUrlController.test()
+2016-11-26 21:35:44 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-26 21:35:44 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-26 21:35:44 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 21:35:44 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 21:35:44 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 21:35:44 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-26 21:35:45 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-11-26 21:35:45 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2016-11-26 21:35:45 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8080]
+2016-11-26 21:35:45 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2016-11-26 21:35:45 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2016-11-26 21:35:45 [main] INFO  net.codog.ProjectApplication - Started ProjectApplication in 5.645 seconds (JVM running for 6.459)
+2016-11-26 21:35:54 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-26 21:35:54 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-26 21:35:54 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2016-11-26 21:41:47 [main] INFO  net.codog.ProjectApplication - Starting ProjectApplication on wenhanwang with PID 8496 (started by CreditEase in E:\我的项目\GitHub\personal-blog-webiste\project)
+2016-11-26 21:41:47 [main] INFO  net.codog.ProjectApplication - The following profiles are active: prod
+2016-11-26 21:41:47 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 21:41:47 CST 2016]; root of context hierarchy
+2016-11-26 21:41:48 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2016-11-26 21:41:49 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cd377d7e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-26 21:41:50 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2016-11-26 21:41:50 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2016-11-26 21:41:50 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-11-26 21:41:50 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2016-11-26 21:41:50 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3268 ms
+2016-11-26 21:41:50 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-26 21:41:50 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-26 21:41:50 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-26 21:41:50 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-26 21:41:50 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-26 21:41:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 21:41:47 CST 2016]; root of context hierarchy
+2016-11-26 21:41:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Blog>> net.codog.web.BlogController.test()
+2016-11-26 21:41:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/guestbook/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Guestbook>> net.codog.web.GuestbookController.test()
+2016-11-26 21:41:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Message>> net.codog.web.MessageController.test()
+2016-11-26 21:41:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.test()
+2016-11-26 21:41:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewscount],methods=[POST]}" onto public int net.codog.web.NewsController.getNewsCount()
+2016-11-26 21:41:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewslist],methods=[POST]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.getNewsList()
+2016-11-26 21:41:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<net.codog.view.UserShowDetail> net.codog.web.UserController.test()
+2016-11-26 21:41:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userfile/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulFile>> net.codog.web.UserfulFileController.test()
+2016-11-26 21:41:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userurl/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulUrl>> net.codog.web.UserfulUrlController.test()
+2016-11-26 21:41:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-26 21:41:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-26 21:41:51 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 21:41:51 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 21:41:51 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 21:41:51 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-26 21:41:52 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-11-26 21:41:52 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2016-11-26 21:41:52 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8080]
+2016-11-26 21:41:52 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2016-11-26 21:41:52 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2016-11-26 21:41:52 [main] INFO  net.codog.ProjectApplication - Started ProjectApplication in 5.968 seconds (JVM running for 7.826)
+2016-11-26 21:41:59 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-26 21:41:59 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-26 21:41:59 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2016-11-26 21:59:31 [main] INFO  net.codog.ProjectApplication - Starting ProjectApplication on wenhanwang with PID 6252 (started by CreditEase in E:\我的项目\GitHub\personal-blog-webiste\project)
+2016-11-26 21:59:31 [main] INFO  net.codog.ProjectApplication - The following profiles are active: prod
+2016-11-26 21:59:31 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2016-11-26 21:59:32 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 21:59:32 CST 2016]; root of context hierarchy
+2016-11-26 21:59:34 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4f4e7b74] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-26 21:59:35 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2016-11-26 21:59:35 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2016-11-26 21:59:35 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-11-26 21:59:35 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2016-11-26 21:59:35 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3301 ms
+2016-11-26 21:59:36 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-26 21:59:36 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-26 21:59:36 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-26 21:59:36 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-26 21:59:36 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-26 21:59:36 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 21:59:32 CST 2016]; root of context hierarchy
+2016-11-26 21:59:36 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Blog>> net.codog.web.BlogController.test()
+2016-11-26 21:59:36 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/guestbook/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Guestbook>> net.codog.web.GuestbookController.test()
+2016-11-26 21:59:36 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Message>> net.codog.web.MessageController.test()
+2016-11-26 21:59:36 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.test()
+2016-11-26 21:59:36 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewscount],methods=[POST]}" onto public int net.codog.web.NewsController.getNewsCount()
+2016-11-26 21:59:36 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewslist],methods=[POST]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.getNewsList()
+2016-11-26 21:59:36 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<net.codog.view.UserShowDetail> net.codog.web.UserController.test()
+2016-11-26 21:59:36 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userfile/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulFile>> net.codog.web.UserfulFileController.test()
+2016-11-26 21:59:36 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userurl/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulUrl>> net.codog.web.UserfulUrlController.test()
+2016-11-26 21:59:36 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-26 21:59:36 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-26 21:59:36 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 21:59:36 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 21:59:37 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 21:59:37 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-26 21:59:37 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-11-26 21:59:37 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2016-11-26 21:59:37 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8080]
+2016-11-26 21:59:37 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2016-11-26 21:59:37 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2016-11-26 21:59:37 [main] INFO  net.codog.ProjectApplication - Started ProjectApplication in 6.987 seconds (JVM running for 7.803)
+2016-11-26 21:59:41 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-26 21:59:41 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-26 21:59:41 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2016-11-26 22:00:11 [main] INFO  net.codog.ProjectApplication - Starting ProjectApplication on wenhanwang with PID 8284 (started by CreditEase in E:\我的项目\GitHub\personal-blog-webiste\project)
+2016-11-26 22:00:11 [main] INFO  net.codog.ProjectApplication - The following profiles are active: prod
+2016-11-26 22:00:11 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2016-11-26 22:00:11 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 22:00:11 CST 2016]; root of context hierarchy
+2016-11-26 22:00:12 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e693e4eb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-26 22:00:13 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2016-11-26 22:00:13 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2016-11-26 22:00:13 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-11-26 22:00:13 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2016-11-26 22:00:13 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2107 ms
+2016-11-26 22:00:13 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-26 22:00:13 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-26 22:00:13 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-26 22:00:13 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-26 22:00:13 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-26 22:00:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 22:00:11 CST 2016]; root of context hierarchy
+2016-11-26 22:00:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Blog>> net.codog.web.BlogController.test()
+2016-11-26 22:00:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/guestbook/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Guestbook>> net.codog.web.GuestbookController.test()
+2016-11-26 22:00:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Message>> net.codog.web.MessageController.test()
+2016-11-26 22:00:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.test()
+2016-11-26 22:00:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewscount],methods=[POST]}" onto public int net.codog.web.NewsController.getNewsCount()
+2016-11-26 22:00:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewslist],methods=[POST]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.getNewsList()
+2016-11-26 22:00:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<net.codog.view.UserShowDetail> net.codog.web.UserController.test()
+2016-11-26 22:00:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userfile/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulFile>> net.codog.web.UserfulFileController.test()
+2016-11-26 22:00:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userurl/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulUrl>> net.codog.web.UserfulUrlController.test()
+2016-11-26 22:00:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-26 22:00:14 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-26 22:00:14 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:00:14 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:00:14 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:00:14 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-26 22:00:15 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-11-26 22:00:15 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2016-11-26 22:00:15 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8080]
+2016-11-26 22:00:15 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2016-11-26 22:00:15 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2016-11-26 22:00:15 [main] INFO  net.codog.ProjectApplication - Started ProjectApplication in 4.782 seconds (JVM running for 5.533)
+2016-11-26 22:00:30 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-26 22:00:30 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-26 22:00:30 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+2016-11-26 22:01:47 [main] INFO  net.codog.ProjectApplication - Starting ProjectApplication on wenhanwang with PID 6956 (started by CreditEase in E:\我的项目\GitHub\personal-blog-webiste\project)
+2016-11-26 22:01:47 [main] INFO  net.codog.ProjectApplication - The following profiles are active: prod
+2016-11-26 22:01:48 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2016-11-26 22:01:49 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 22:01:49 CST 2016]; root of context hierarchy
+2016-11-26 22:01:50 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4f4e7b74] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-26 22:01:51 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2016-11-26 22:01:51 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2016-11-26 22:01:51 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-11-26 22:01:51 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2016-11-26 22:01:51 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2462 ms
+2016-11-26 22:01:51 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-26 22:01:51 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-26 22:01:51 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-26 22:01:51 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-26 22:01:51 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-26 22:01:52 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 22:01:49 CST 2016]; root of context hierarchy
+2016-11-26 22:01:52 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Blog>> net.codog.web.BlogController.test()
+2016-11-26 22:01:52 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/guestbook/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Guestbook>> net.codog.web.GuestbookController.test()
+2016-11-26 22:01:52 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Message>> net.codog.web.MessageController.test()
+2016-11-26 22:01:52 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.test()
+2016-11-26 22:01:52 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewscount],methods=[POST]}" onto public int net.codog.web.NewsController.getNewsCount()
+2016-11-26 22:01:52 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewslist],methods=[POST]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.getNewsList()
+2016-11-26 22:01:52 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<net.codog.view.UserShowDetail> net.codog.web.UserController.test()
+2016-11-26 22:01:52 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userfile/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulFile>> net.codog.web.UserfulFileController.test()
+2016-11-26 22:01:52 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userurl/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulUrl>> net.codog.web.UserfulUrlController.test()
+2016-11-26 22:01:52 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-26 22:01:52 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-26 22:01:52 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:01:52 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:01:52 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:01:52 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-26 22:01:53 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-11-26 22:01:53 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2016-11-26 22:01:53 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8080]
+2016-11-26 22:01:53 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2016-11-26 22:01:54 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2016-11-26 22:01:54 [main] INFO  net.codog.ProjectApplication - Started ProjectApplication in 6.936 seconds (JVM running for 7.815)
+2016-11-26 22:02:27 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-26 22:02:27 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-26 22:02:27 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+2016-11-26 22:03:48 [main] INFO  net.codog.ProjectApplication - Starting ProjectApplication on wenhanwang with PID 7916 (started by CreditEase in E:\我的项目\GitHub\personal-blog-webiste\project)
+2016-11-26 22:03:48 [main] INFO  net.codog.ProjectApplication - The following profiles are active: prod
+2016-11-26 22:03:48 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 22:03:48 CST 2016]; root of context hierarchy
+2016-11-26 22:03:49 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2016-11-26 22:03:50 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cd377d7e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-26 22:03:51 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2016-11-26 22:03:51 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2016-11-26 22:03:51 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-11-26 22:03:52 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2016-11-26 22:03:52 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3538 ms
+2016-11-26 22:03:52 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-26 22:03:52 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-26 22:03:52 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-26 22:03:52 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-26 22:03:52 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-26 22:03:52 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 22:03:48 CST 2016]; root of context hierarchy
+2016-11-26 22:03:53 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Blog>> net.codog.web.BlogController.test()
+2016-11-26 22:03:53 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/guestbook/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Guestbook>> net.codog.web.GuestbookController.test()
+2016-11-26 22:03:53 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Message>> net.codog.web.MessageController.test()
+2016-11-26 22:03:53 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.test()
+2016-11-26 22:03:53 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewscount],methods=[POST]}" onto public int net.codog.web.NewsController.getNewsCount()
+2016-11-26 22:03:53 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewslist],methods=[POST]}" onto public java.util.List<net.codog.domain.News> net.codog.web.NewsController.getNewsList()
+2016-11-26 22:03:53 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<net.codog.view.UserShowDetail> net.codog.web.UserController.test()
+2016-11-26 22:03:53 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userfile/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulFile>> net.codog.web.UserfulFileController.test()
+2016-11-26 22:03:53 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userurl/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulUrl>> net.codog.web.UserfulUrlController.test()
+2016-11-26 22:03:53 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-26 22:03:53 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-26 22:03:53 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:03:53 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:03:53 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:03:53 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-26 22:03:53 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-11-26 22:03:53 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2016-11-26 22:03:53 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8080]
+2016-11-26 22:03:54 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2016-11-26 22:03:54 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2016-11-26 22:03:54 [main] INFO  net.codog.ProjectApplication - Started ProjectApplication in 6.225 seconds (JVM running for 7.083)
+2016-11-26 22:04:13 [http-nio-8080-exec-1] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1472202047,1474180035] that contained an invalid cookie. That cookie will be ignored.Note: further occurrences of this error will be logged at DEBUG level.
+2016-11-26 22:04:13 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-26 22:04:13 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-26 22:04:13 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+2016-11-26 22:07:05 [main] INFO  net.codog.ProjectApplication - Starting ProjectApplication on wenhanwang with PID 8840 (started by CreditEase in E:\我的项目\GitHub\personal-blog-webiste\project)
+2016-11-26 22:07:05 [main] INFO  net.codog.ProjectApplication - The following profiles are active: prod
+2016-11-26 22:07:05 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 22:07:05 CST 2016]; root of context hierarchy
+2016-11-26 22:07:07 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2016-11-26 22:07:08 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5d22304d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-26 22:07:09 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2016-11-26 22:07:09 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2016-11-26 22:07:09 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-11-26 22:07:09 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2016-11-26 22:07:09 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3491 ms
+2016-11-26 22:07:09 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-26 22:07:09 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-26 22:07:09 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-26 22:07:09 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-26 22:07:09 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-26 22:07:10 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 22:07:05 CST 2016]; root of context hierarchy
+2016-11-26 22:07:10 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Blog>> net.codog.web.BlogController.test()
+2016-11-26 22:07:10 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/guestbook/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Guestbook>> net.codog.web.GuestbookController.test()
+2016-11-26 22:07:10 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Message>> net.codog.web.MessageController.test()
+2016-11-26 22:07:10 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.test()
+2016-11-26 22:07:10 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewscount],methods=[POST]}" onto public int net.codog.web.NewsController.getNewsCount()
+2016-11-26 22:07:10 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewslist],methods=[POST]}" onto public java.util.List<net.codog.domain.News> net.codog.web.NewsController.getNewsList()
+2016-11-26 22:07:10 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<net.codog.view.UserShowDetail> net.codog.web.UserController.test()
+2016-11-26 22:07:10 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userfile/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulFile>> net.codog.web.UserfulFileController.test()
+2016-11-26 22:07:10 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userurl/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulUrl>> net.codog.web.UserfulUrlController.test()
+2016-11-26 22:07:10 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-26 22:07:10 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-26 22:07:10 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:07:10 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:07:10 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:07:10 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-26 22:07:11 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-11-26 22:07:11 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2016-11-26 22:07:11 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8080]
+2016-11-26 22:07:11 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2016-11-26 22:07:11 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2016-11-26 22:07:11 [main] INFO  net.codog.ProjectApplication - Started ProjectApplication in 6.095 seconds (JVM running for 6.952)
+2016-11-26 22:07:24 [http-nio-8080-exec-2] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1472202047,1474180035] that contained an invalid cookie. That cookie will be ignored.Note: further occurrences of this error will be logged at DEBUG level.
+2016-11-26 22:07:24 [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-26 22:07:24 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-26 22:07:24 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2016-11-26 22:07:24 [http-nio-8080-exec-4] INFO  net.codog.web.NewsController - 获取的全部新闻是[null, null]
+2016-11-26 22:10:27 [main] INFO  net.codog.ProjectApplication - Starting ProjectApplication on wenhanwang with PID 5776 (started by CreditEase in E:\我的项目\GitHub\personal-blog-webiste\project)
+2016-11-26 22:10:27 [main] INFO  net.codog.ProjectApplication - The following profiles are active: prod
+2016-11-26 22:10:27 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2016-11-26 22:10:27 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 22:10:27 CST 2016]; root of context hierarchy
+2016-11-26 22:10:28 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e693e4eb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-26 22:10:29 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2016-11-26 22:10:29 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2016-11-26 22:10:29 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-11-26 22:10:29 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2016-11-26 22:10:29 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2207 ms
+2016-11-26 22:10:29 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-26 22:10:29 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-26 22:10:29 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-26 22:10:29 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-26 22:10:29 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-26 22:10:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 22:10:27 CST 2016]; root of context hierarchy
+2016-11-26 22:10:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Blog>> net.codog.web.BlogController.test()
+2016-11-26 22:10:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/guestbook/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Guestbook>> net.codog.web.GuestbookController.test()
+2016-11-26 22:10:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Message>> net.codog.web.MessageController.test()
+2016-11-26 22:10:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.test()
+2016-11-26 22:10:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewscount],methods=[POST]}" onto public int net.codog.web.NewsController.getNewsCount()
+2016-11-26 22:10:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewslist],methods=[POST]}" onto public java.util.List<net.codog.domain.News> net.codog.web.NewsController.getNewsList()
+2016-11-26 22:10:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<net.codog.view.UserShowDetail> net.codog.web.UserController.test()
+2016-11-26 22:10:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userfile/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulFile>> net.codog.web.UserfulFileController.test()
+2016-11-26 22:10:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userurl/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulUrl>> net.codog.web.UserfulUrlController.test()
+2016-11-26 22:10:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-26 22:10:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-26 22:10:30 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:10:30 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:10:30 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:10:30 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-26 22:10:31 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-11-26 22:10:31 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2016-11-26 22:10:31 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8080]
+2016-11-26 22:10:31 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2016-11-26 22:10:31 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2016-11-26 22:10:31 [main] INFO  net.codog.ProjectApplication - Started ProjectApplication in 5.173 seconds (JVM running for 6.084)
+2016-11-26 22:10:39 [http-nio-8080-exec-1] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1472202047,1474180035] that contained an invalid cookie. That cookie will be ignored.Note: further occurrences of this error will be logged at DEBUG level.
+2016-11-26 22:10:39 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-26 22:10:39 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-26 22:10:39 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 48 ms
+2016-11-26 22:10:40 [http-nio-8080-exec-3] INFO  net.codog.service.NewsService - start is null,end is null
+2016-11-26 22:10:40 [http-nio-8080-exec-3] INFO  net.codog.dao.selectsql.SelectSqlProvider - sql is select * from news where 1
+2016-11-26 22:10:40 [http-nio-8080-exec-3] INFO  net.codog.web.NewsController - 获取的全部新闻是[null, null]
+2016-11-26 22:14:51 [http-nio-8080-exec-4] INFO  net.codog.service.NewsService - start is null,end is null
+2016-11-26 22:14:51 [http-nio-8080-exec-4] INFO  net.codog.dao.selectsql.SelectSqlProvider - sql is select * from news where 1
+2016-11-26 22:14:51 [http-nio-8080-exec-4] INFO  net.codog.web.NewsController - 获取的全部新闻是[null, null]
+2016-11-26 22:20:59 [main] INFO  net.codog.ProjectApplication - Starting ProjectApplication on wenhanwang with PID 6820 (started by CreditEase in E:\我的项目\GitHub\personal-blog-webiste\project)
+2016-11-26 22:20:59 [main] INFO  net.codog.ProjectApplication - The following profiles are active: prod
+2016-11-26 22:21:00 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 22:21:00 CST 2016]; root of context hierarchy
+2016-11-26 22:21:01 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2016-11-26 22:21:02 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cd377d7e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-26 22:21:03 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2016-11-26 22:21:03 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2016-11-26 22:21:03 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-11-26 22:21:03 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2016-11-26 22:21:03 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3352 ms
+2016-11-26 22:21:03 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-26 22:21:03 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-26 22:21:03 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-26 22:21:03 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-26 22:21:03 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-26 22:21:04 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 22:21:00 CST 2016]; root of context hierarchy
+2016-11-26 22:21:04 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Blog>> net.codog.web.BlogController.test()
+2016-11-26 22:21:04 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/guestbook/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Guestbook>> net.codog.web.GuestbookController.test()
+2016-11-26 22:21:04 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Message>> net.codog.web.MessageController.test()
+2016-11-26 22:21:04 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.test()
+2016-11-26 22:21:04 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewscount],methods=[POST]}" onto public int net.codog.web.NewsController.getNewsCount()
+2016-11-26 22:21:04 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewslist],methods=[POST]}" onto public java.util.List<net.codog.domain.News> net.codog.web.NewsController.getNewsList()
+2016-11-26 22:21:04 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<net.codog.view.UserShowDetail> net.codog.web.UserController.test()
+2016-11-26 22:21:04 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userfile/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulFile>> net.codog.web.UserfulFileController.test()
+2016-11-26 22:21:04 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userurl/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulUrl>> net.codog.web.UserfulUrlController.test()
+2016-11-26 22:21:04 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-26 22:21:04 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-26 22:21:04 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:21:04 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:21:04 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:21:04 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-26 22:21:05 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-11-26 22:21:05 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2016-11-26 22:21:05 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8080]
+2016-11-26 22:21:05 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2016-11-26 22:21:05 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2016-11-26 22:21:05 [main] INFO  net.codog.ProjectApplication - Started ProjectApplication in 5.819 seconds (JVM running for 6.632)
+2016-11-26 22:21:12 [http-nio-8080-exec-1] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1472202047,1474180035] that contained an invalid cookie. That cookie will be ignored.Note: further occurrences of this error will be logged at DEBUG level.
+2016-11-26 22:21:12 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-26 22:21:12 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-26 22:21:12 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2016-11-26 22:21:13 [http-nio-8080-exec-3] INFO  net.codog.service.NewsService - start is null,end is null
+2016-11-26 22:21:13 [http-nio-8080-exec-3] INFO  net.codog.dao.selectsql.SelectSqlProvider - sql is select * from news where 1
+2016-11-26 22:21:13 [http-nio-8080-exec-3] INFO  net.codog.web.NewsController - 获取的全部新闻是[null, null]
+2016-11-26 22:28:00 [main] INFO  net.codog.ProjectApplication - Starting ProjectApplication on wenhanwang with PID 528 (started by CreditEase in E:\我的项目\GitHub\personal-blog-webiste\project)
+2016-11-26 22:28:00 [main] INFO  net.codog.ProjectApplication - The following profiles are active: prod
+2016-11-26 22:28:00 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2016-11-26 22:28:00 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 22:28:00 CST 2016]; root of context hierarchy
+2016-11-26 22:28:02 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$26dfa627] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-26 22:28:02 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2016-11-26 22:28:02 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2016-11-26 22:28:02 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-11-26 22:28:03 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2016-11-26 22:28:03 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2201 ms
+2016-11-26 22:28:03 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-26 22:28:03 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-26 22:28:03 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-26 22:28:03 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-26 22:28:03 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-26 22:28:03 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 22:28:00 CST 2016]; root of context hierarchy
+2016-11-26 22:28:04 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Blog>> net.codog.web.BlogController.test()
+2016-11-26 22:28:04 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/guestbook/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Guestbook>> net.codog.web.GuestbookController.test()
+2016-11-26 22:28:04 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Message>> net.codog.web.MessageController.test()
+2016-11-26 22:28:04 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.test()
+2016-11-26 22:28:04 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewscount],methods=[POST]}" onto public int net.codog.web.NewsController.getNewsCount()
+2016-11-26 22:28:04 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewslist],methods=[POST]}" onto public java.util.List<net.codog.domain.News> net.codog.web.NewsController.getNewsList()
+2016-11-26 22:28:04 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<net.codog.view.UserShowDetail> net.codog.web.UserController.test()
+2016-11-26 22:28:04 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userfile/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulFile>> net.codog.web.UserfulFileController.test()
+2016-11-26 22:28:04 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userurl/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulUrl>> net.codog.web.UserfulUrlController.test()
+2016-11-26 22:28:04 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-26 22:28:04 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-26 22:28:04 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:28:04 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:28:04 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:28:04 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-26 22:28:04 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-11-26 22:28:04 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2016-11-26 22:28:04 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8080]
+2016-11-26 22:28:04 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2016-11-26 22:28:04 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2016-11-26 22:28:05 [main] INFO  net.codog.ProjectApplication - Started ProjectApplication in 4.849 seconds (JVM running for 5.667)
+2016-11-26 22:28:10 [http-nio-8080-exec-1] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1472202047,1474180035] that contained an invalid cookie. That cookie will be ignored.Note: further occurrences of this error will be logged at DEBUG level.
+2016-11-26 22:28:10 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-26 22:28:10 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-26 22:28:10 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+2016-11-26 22:28:10 [http-nio-8080-exec-4] INFO  net.codog.service.NewsService - start is null,end is null
+2016-11-26 22:28:11 [http-nio-8080-exec-4] INFO  net.codog.web.NewsController - 获取的全部新闻是[null, null]
+2016-11-26 22:32:06 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2016-11-26 22:32:07 [main] INFO  net.codog.ProjectApplication - Starting ProjectApplication on wenhanwang with PID 7412 (started by CreditEase in E:\我的项目\GitHub\personal-blog-webiste\project)
+2016-11-26 22:32:07 [main] INFO  net.codog.ProjectApplication - The following profiles are active: prod
+2016-11-26 22:32:08 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 22:32:08 CST 2016]; root of context hierarchy
+2016-11-26 22:32:09 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9aca4bf5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-26 22:32:10 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2016-11-26 22:32:10 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2016-11-26 22:32:10 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-11-26 22:32:10 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2016-11-26 22:32:10 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2342 ms
+2016-11-26 22:32:10 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-26 22:32:10 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-26 22:32:10 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-26 22:32:10 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-26 22:32:10 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-26 22:32:11 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 22:32:08 CST 2016]; root of context hierarchy
+2016-11-26 22:32:11 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Blog>> net.codog.web.BlogController.test()
+2016-11-26 22:32:11 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/guestbook/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Guestbook>> net.codog.web.GuestbookController.test()
+2016-11-26 22:32:11 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Message>> net.codog.web.MessageController.test()
+2016-11-26 22:32:11 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.test()
+2016-11-26 22:32:11 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewscount],methods=[POST]}" onto public int net.codog.web.NewsController.getNewsCount()
+2016-11-26 22:32:11 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewslist],methods=[POST]}" onto public java.util.List<net.codog.domain.News> net.codog.web.NewsController.getNewsList()
+2016-11-26 22:32:11 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<net.codog.view.UserShowDetail> net.codog.web.UserController.test()
+2016-11-26 22:32:11 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userfile/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulFile>> net.codog.web.UserfulFileController.test()
+2016-11-26 22:32:11 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userurl/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulUrl>> net.codog.web.UserfulUrlController.test()
+2016-11-26 22:32:11 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-26 22:32:11 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-26 22:32:11 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:32:11 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:32:11 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:32:11 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-26 22:32:12 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-11-26 22:32:12 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2016-11-26 22:32:12 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8080]
+2016-11-26 22:32:12 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2016-11-26 22:32:12 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2016-11-26 22:32:12 [main] INFO  net.codog.ProjectApplication - Started ProjectApplication in 5.922 seconds (JVM running for 6.745)
+2016-11-26 22:32:17 [http-nio-8080-exec-1] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1472202047,1474180035] that contained an invalid cookie. That cookie will be ignored.Note: further occurrences of this error will be logged at DEBUG level.
+2016-11-26 22:32:17 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-26 22:32:17 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-26 22:32:17 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2016-11-26 22:32:17 [http-nio-8080-exec-3] INFO  net.codog.service.NewsService - start is null,end is null
+2016-11-26 22:32:18 [http-nio-8080-exec-3] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2016-11-26 22:32:18 [http-nio-8080-exec-3] INFO  org.springframework.jdbc.support.SQLErrorCodesFactory - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2016-11-26 22:32:18 [http-nio-8080-exec-3] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'website.news1' doesn't exist
+### The error may exist in net/codog/dao/NewsMapper.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select * from news1
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'website.news1' doesn't exist
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'website.news1' doesn't exist] with root cause
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'website.news1' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_91]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[?:1.8.0_91]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[?:1.8.0_91]
+	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[?:1.8.0_91]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:942) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3966) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3902) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2526) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2673) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2549) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141) ~[mybatis-3.4.0.jar:3.4.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_91]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_91]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_91]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_91]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434) ~[mybatis-spring-1.3.0.jar:1.3.0]
+	at com.sun.proxy.$Proxy69.selectList(Unknown Source) ~[?:?]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:231) ~[mybatis-spring-1.3.0.jar:1.3.0]
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:128) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53) ~[mybatis-3.4.0.jar:3.4.0]
+	at com.sun.proxy.$Proxy80.selectAllNews(Unknown Source) ~[?:?]
+	at net.codog.service.NewsService.getAllNews(NewsService.java:25) ~[classes/:?]
+	at net.codog.web.NewsController.getNewsList(NewsController.java:42) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_91]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_91]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_91]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_91]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_91]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_91]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_91]
+2016-11-26 22:33:17 [main] INFO  net.codog.ProjectApplication - Starting ProjectApplication on wenhanwang with PID 7812 (started by CreditEase in E:\我的项目\GitHub\personal-blog-webiste\project)
+2016-11-26 22:33:17 [main] INFO  net.codog.ProjectApplication - The following profiles are active: prod
+2016-11-26 22:33:17 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2016-11-26 22:33:17 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 22:33:17 CST 2016]; root of context hierarchy
+2016-11-26 22:33:19 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e6633d19] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-26 22:33:19 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2016-11-26 22:33:19 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2016-11-26 22:33:19 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-11-26 22:33:19 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2016-11-26 22:33:19 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2384 ms
+2016-11-26 22:33:20 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-26 22:33:20 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-26 22:33:20 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-26 22:33:20 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-26 22:33:20 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-26 22:33:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 22:33:17 CST 2016]; root of context hierarchy
+2016-11-26 22:33:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Blog>> net.codog.web.BlogController.test()
+2016-11-26 22:33:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/guestbook/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Guestbook>> net.codog.web.GuestbookController.test()
+2016-11-26 22:33:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Message>> net.codog.web.MessageController.test()
+2016-11-26 22:33:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.test()
+2016-11-26 22:33:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewscount],methods=[POST]}" onto public int net.codog.web.NewsController.getNewsCount()
+2016-11-26 22:33:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewslist],methods=[POST]}" onto public java.util.List<net.codog.domain.News> net.codog.web.NewsController.getNewsList()
+2016-11-26 22:33:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<net.codog.view.UserShowDetail> net.codog.web.UserController.test()
+2016-11-26 22:33:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userfile/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulFile>> net.codog.web.UserfulFileController.test()
+2016-11-26 22:33:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userurl/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulUrl>> net.codog.web.UserfulUrlController.test()
+2016-11-26 22:33:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-26 22:33:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-26 22:33:20 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:33:20 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:33:21 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:33:21 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-26 22:33:21 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-11-26 22:33:21 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2016-11-26 22:33:21 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8080]
+2016-11-26 22:33:21 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2016-11-26 22:33:21 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2016-11-26 22:33:21 [main] INFO  net.codog.ProjectApplication - Started ProjectApplication in 5.006 seconds (JVM running for 5.803)
+2016-11-26 22:33:28 [http-nio-8080-exec-1] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1472202047,1474180035] that contained an invalid cookie. That cookie will be ignored.Note: further occurrences of this error will be logged at DEBUG level.
+2016-11-26 22:33:28 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-26 22:33:28 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-26 22:33:28 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms
+2016-11-26 22:33:28 [http-nio-8080-exec-2] INFO  net.codog.service.NewsService - start is null,end is null
+2016-11-26 22:33:29 [http-nio-8080-exec-2] INFO  net.codog.web.NewsController - 获取的全部新闻是[null]
+2016-11-26 22:35:08 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2016-11-26 22:35:08 [main] INFO  net.codog.ProjectApplication - Starting ProjectApplication on wenhanwang with PID 8348 (started by CreditEase in E:\我的项目\GitHub\personal-blog-webiste\project)
+2016-11-26 22:35:08 [main] INFO  net.codog.ProjectApplication - The following profiles are active: prod
+2016-11-26 22:35:10 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 22:35:10 CST 2016]; root of context hierarchy
+2016-11-26 22:35:11 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c259d63a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-26 22:35:12 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2016-11-26 22:35:12 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2016-11-26 22:35:12 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-11-26 22:35:12 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2016-11-26 22:35:12 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2096 ms
+2016-11-26 22:35:12 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-26 22:35:12 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-26 22:35:12 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-26 22:35:12 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-26 22:35:12 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-26 22:35:13 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 22:35:10 CST 2016]; root of context hierarchy
+2016-11-26 22:35:13 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Blog>> net.codog.web.BlogController.test()
+2016-11-26 22:35:13 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/guestbook/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Guestbook>> net.codog.web.GuestbookController.test()
+2016-11-26 22:35:13 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Message>> net.codog.web.MessageController.test()
+2016-11-26 22:35:13 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.test()
+2016-11-26 22:35:13 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewscount],methods=[POST]}" onto public int net.codog.web.NewsController.getNewsCount()
+2016-11-26 22:35:13 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewslist],methods=[POST]}" onto public java.util.List<net.codog.domain.News> net.codog.web.NewsController.getNewsList()
+2016-11-26 22:35:13 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<net.codog.view.UserShowDetail> net.codog.web.UserController.test()
+2016-11-26 22:35:13 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userfile/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulFile>> net.codog.web.UserfulFileController.test()
+2016-11-26 22:35:13 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userurl/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulUrl>> net.codog.web.UserfulUrlController.test()
+2016-11-26 22:35:13 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-26 22:35:13 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-26 22:35:13 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:35:13 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:35:13 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:35:13 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-26 22:35:14 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-11-26 22:35:14 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2016-11-26 22:35:14 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8080]
+2016-11-26 22:35:14 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2016-11-26 22:35:14 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2016-11-26 22:35:14 [main] INFO  net.codog.ProjectApplication - Started ProjectApplication in 6.704 seconds (JVM running for 7.502)
+2016-11-26 22:35:18 [http-nio-8080-exec-1] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1472202047,1474180035] that contained an invalid cookie. That cookie will be ignored.Note: further occurrences of this error will be logged at DEBUG level.
+2016-11-26 22:35:18 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-26 22:35:18 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-26 22:35:18 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2016-11-26 22:35:18 [http-nio-8080-exec-3] INFO  net.codog.service.NewsService - start is null,end is null
+2016-11-26 22:35:19 [http-nio-8080-exec-3] INFO  net.codog.web.NewsController - 获取的全部新闻是[null]
+2016-11-26 22:39:53 [main] INFO  net.codog.ProjectApplication - Starting ProjectApplication on wenhanwang with PID 6272 (started by CreditEase in E:\我的项目\GitHub\personal-blog-webiste\project)
+2016-11-26 22:39:53 [main] INFO  net.codog.ProjectApplication - The following profiles are active: prod
+2016-11-26 22:39:53 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 22:39:53 CST 2016]; root of context hierarchy
+2016-11-26 22:39:54 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2016-11-26 22:39:55 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$619e3ebb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-26 22:39:56 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2016-11-26 22:39:56 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2016-11-26 22:39:56 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-11-26 22:39:56 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2016-11-26 22:39:56 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2853 ms
+2016-11-26 22:39:56 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-26 22:39:56 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-26 22:39:56 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-26 22:39:56 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-26 22:39:56 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-26 22:39:57 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 22:39:53 CST 2016]; root of context hierarchy
+2016-11-26 22:39:57 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Blog>> net.codog.web.BlogController.test()
+2016-11-26 22:39:57 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/guestbook/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Guestbook>> net.codog.web.GuestbookController.test()
+2016-11-26 22:39:57 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Message>> net.codog.web.MessageController.test()
+2016-11-26 22:39:57 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.test()
+2016-11-26 22:39:57 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewscount],methods=[POST]}" onto public int net.codog.web.NewsController.getNewsCount()
+2016-11-26 22:39:57 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewslist],methods=[POST]}" onto public java.util.List<net.codog.domain.News> net.codog.web.NewsController.getNewsList()
+2016-11-26 22:39:57 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<net.codog.view.UserShowDetail> net.codog.web.UserController.test()
+2016-11-26 22:39:57 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userfile/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulFile>> net.codog.web.UserfulFileController.test()
+2016-11-26 22:39:57 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userurl/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulUrl>> net.codog.web.UserfulUrlController.test()
+2016-11-26 22:39:57 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-26 22:39:57 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-26 22:39:57 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:39:57 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:39:57 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:39:58 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-26 22:39:58 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-11-26 22:39:58 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2016-11-26 22:39:58 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8080]
+2016-11-26 22:39:58 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2016-11-26 22:39:58 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2016-11-26 22:39:58 [main] INFO  net.codog.ProjectApplication - Started ProjectApplication in 5.793 seconds (JVM running for 6.599)
+2016-11-26 22:40:16 [http-nio-8080-exec-1] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1472202047,1474180035] that contained an invalid cookie. That cookie will be ignored.Note: further occurrences of this error will be logged at DEBUG level.
+2016-11-26 22:40:16 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-26 22:40:16 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-26 22:40:16 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+2016-11-26 22:40:16 [http-nio-8080-exec-3] INFO  net.codog.service.NewsService - start is null,end is null
+2016-11-26 22:40:16 [http-nio-8080-exec-3] INFO  net.codog.web.NewsController - 获取的全部新闻是[News(news_id=1, news_title=news1, news_content=this is news, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null), News(news_id=2, news_title=news2, news_content=this is news2, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null)]
+2016-11-26 22:42:09 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2016-11-26 22:42:10 [main] INFO  net.codog.ProjectApplication - Starting ProjectApplication on wenhanwang with PID 7848 (started by CreditEase in E:\我的项目\GitHub\personal-blog-webiste\project)
+2016-11-26 22:42:10 [main] INFO  net.codog.ProjectApplication - The following profiles are active: prod
+2016-11-26 22:42:10 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 22:42:10 CST 2016]; root of context hierarchy
+2016-11-26 22:42:11 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dc898557] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-26 22:42:12 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2016-11-26 22:42:12 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2016-11-26 22:42:12 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-11-26 22:42:12 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2016-11-26 22:42:12 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2143 ms
+2016-11-26 22:42:12 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-26 22:42:12 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-26 22:42:12 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-26 22:42:12 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-26 22:42:12 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-26 22:42:13 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5562c41e: startup date [Sat Nov 26 22:42:10 CST 2016]; root of context hierarchy
+2016-11-26 22:42:13 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Blog>> net.codog.web.BlogController.test()
+2016-11-26 22:42:13 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/guestbook/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Guestbook>> net.codog.web.GuestbookController.test()
+2016-11-26 22:42:13 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Message>> net.codog.web.MessageController.test()
+2016-11-26 22:42:13 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.test()
+2016-11-26 22:42:13 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewscount],methods=[POST]}" onto public int net.codog.web.NewsController.getNewsCount()
+2016-11-26 22:42:13 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewslist],methods=[POST]}" onto public java.util.List<net.codog.domain.News> net.codog.web.NewsController.getNewsList()
+2016-11-26 22:42:13 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<net.codog.view.UserShowDetail> net.codog.web.UserController.test()
+2016-11-26 22:42:13 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userfile/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulFile>> net.codog.web.UserfulFileController.test()
+2016-11-26 22:42:13 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userurl/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulUrl>> net.codog.web.UserfulUrlController.test()
+2016-11-26 22:42:13 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-26 22:42:13 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-26 22:42:13 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:42:13 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:42:13 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-26 22:42:13 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-26 22:42:14 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-11-26 22:42:14 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2016-11-26 22:42:14 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8080]
+2016-11-26 22:42:14 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2016-11-26 22:42:14 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2016-11-26 22:42:14 [main] INFO  net.codog.ProjectApplication - Started ProjectApplication in 5.685 seconds (JVM running for 6.537)
+2016-11-26 22:42:41 [http-nio-8080-exec-1] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1472202047,1474180035] that contained an invalid cookie. That cookie will be ignored.Note: further occurrences of this error will be logged at DEBUG level.
+2016-11-26 22:42:41 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-26 22:42:41 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-26 22:42:41 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2016-11-26 22:42:42 [http-nio-8080-exec-2] INFO  net.codog.service.NewsService - start is null,end is null
+2016-11-26 22:42:42 [http-nio-8080-exec-2] INFO  net.codog.dao.selectsql.SelectSqlProvider - sql is select * from news where 1
+2016-11-26 22:42:42 [http-nio-8080-exec-2] INFO  net.codog.web.NewsController - 获取的全部新闻是[News(news_id=1, news_title=news1, news_content=this is news, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null), News(news_id=2, news_title=news2, news_content=this is news2, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null)]
+2016-11-26 22:43:27 [http-nio-8080-exec-8] INFO  net.codog.service.NewsService - start is null,end is null
+2016-11-26 22:43:27 [http-nio-8080-exec-8] INFO  net.codog.dao.selectsql.SelectSqlProvider - sql is select * from news where 1
+2016-11-26 22:43:27 [http-nio-8080-exec-8] INFO  net.codog.web.NewsController - 获取的全部新闻是[News(news_id=1, news_title=news1, news_content=this is news, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null), News(news_id=2, news_title=news2, news_content=this is news2, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null)]
