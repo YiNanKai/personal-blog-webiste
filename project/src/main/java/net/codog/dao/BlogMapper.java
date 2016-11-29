@@ -23,6 +23,6 @@ public interface BlogMapper {
 	public int selectCount();
 	
 	@SelectProvider(type = SelectSqlProvider.class,method = "selectBlogs")
-    public List<Blog> selectAll(@Param("start")Integer start,@Param("end")Integer end);
+    public List<Blog> selectAll(@Param("start")Integer start,@Param("end")Integer end,@Param("isSchool") Integer isSchool);
 	
 }

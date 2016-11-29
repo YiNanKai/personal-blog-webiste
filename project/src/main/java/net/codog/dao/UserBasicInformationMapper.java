@@ -11,5 +11,4 @@ public interface UserBasicInformationMapper {
 	@Insert("insert into user_basic_information values(#{userBasicInformationId},#{userBasicInformationBirthday},#{userBasicInformationGender},#{userBasicInformationAddress},#{userBasicInformationRegisterTime})")
     public void insertOne(UserBasicInformation userBasicInformation);
 	
-	
 }

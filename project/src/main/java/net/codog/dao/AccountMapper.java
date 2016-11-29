@@ -14,4 +14,7 @@ public interface AccountMapper {
 	@Select("select * from account where account_user_name = #{userName} and password = #{password}")
     public List<Account> selectByUserNameAndPassword(@Param("userName")String userName,@Param("password")String passport);
 
+	@Select("insert into account values(#{account_user_name},#{account_password},#{account_isonline},#{user_basic_information_job_id})")
+    public void insertOne(Account account);
+
 }

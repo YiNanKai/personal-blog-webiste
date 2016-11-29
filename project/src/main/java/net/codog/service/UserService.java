@@ -1,5 +1,9 @@
 package net.codog.service;
 
+import net.codog.dao.AccountMapper;
+import net.codog.dao.UserBasicInformationMapper;
+import net.codog.domain.Account;
+import net.codog.domain.UserBasicInformation;
 import net.codog.view.UserShowDetail;
 import net.codog.view.dao.UserPermissionMapper;
 import net.codog.view.dao.UserShowDetailMapper;
@@ -21,6 +25,12 @@ public class UserService {
 	@Autowired
 	private UserPermissionMapper userPermissionMapper;
 	
+	@Autowired
+	private UserBasicInformationMapper userBasicInformationMapper;
+	
+	@Autowired
+	private AccountMapper accountMapper;
+	
 	public UserShowDetail getUserShowDetailByUserBasicInformationId(Integer userBasicInformationId){
 		return userShowDetailMapper.selectUserShowDetailByUserBasicInformationId(userBasicInformationId);
 	}
@@ -28,5 +38,12 @@ public class UserService {
 	//判断用户请求的url是否符合正则表达式
 	public boolean isHasPermission(Integer userBasicInformationId,String url){	
 		return (url.matches(userPermissionMapper.selectByUserBasicInformationId(userBasicInformationId).getPermissionUrl()));
+	}
+	
+	public void addUser(UserBasicInformation userBasicInformation){
+		userBasicInformationMapper.insertOne(userBasicInformation);
+	}
+	public void addAccount(Account account){
+		accountMapper.insertOne(account);
 	}
 }

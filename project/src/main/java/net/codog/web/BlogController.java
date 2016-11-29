@@ -7,8 +7,6 @@ import net.codog.domain.Blog;
 import net.codog.domain.BlogCategory;
 import net.codog.service.BlogCategoryService;
 import net.codog.service.BlogService;
-import net.codog.vo.ResponseVO;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,48 +14,39 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
-* @author 王文涵 
-* @date 2016年10月24日
-* <p>Description: 博客的controller层，用来处理博客界面</p>
+ * @author 王文涵
+ * @date 2016年10月24日
+ *       <p>
+ *       Description: 博客的controller层，用来处理博客界面
+ *       </p>
  */
 @RestController
 @RequestMapping("/blog")
 @Slf4j
 public class BlogController {
-	
+
 	@Autowired
-	BlogService blogService; 
-	
+	BlogService blogService;
+
 	@Autowired
-	BlogCategoryService blogCategoryService; 
-	
-	@RequestMapping(value="/getblogcategories",method=RequestMethod.POST)
-	public List<BlogCategory> getBlogCategories(@RequestParam("isSchool") Integer isSchool){
+	BlogCategoryService blogCategoryService;
+
+	@RequestMapping(value = "/getblogcategories", method = RequestMethod.POST)
+	public List<BlogCategory> getBlogCategories(
+			@RequestParam("isSchool") Integer isSchool) {
 		return blogCategoryService.getAllBlogCategories(isSchool);
 	}
-	
-	@RequestMapping(value="/getblogs",method=RequestMethod.POST)
-	public List<Blog> getBlogs(){
-		return blogService.getAllBlogs(null, null);
+
+	@RequestMapping(value = "/getblogs", method = RequestMethod.POST)
+	public List<Blog> getBlogs(@RequestParam("start") Integer start,
+			@RequestParam("end") Integer end,
+			@RequestParam("isSchool") Integer isSchool) {
+		log.info("start:" + start + ",end:" + end + ",isSchool" + isSchool);
+		return blogService.getAllBlogs(start, end, isSchool);
 	}
-	
-	@RequestMapping(value="/test",method=RequestMethod.GET)
-	public ResponseVO<List<Blog>> test(){
-		int start = 0;
-		int end = 2;
-		//build方法测试 
-		/*ResponseVO<Object> res = ResponseVO.buildResponseVO().
-		isSuccess(true).
-		errorMessage("hahaha").
-		object(blogService.getAllBlogs(start, end)).
-		build();*/
-		
-		ResponseVO<List<Blog>> blogList = new ResponseVO<>(true,"",blogService.getAllBlogs(start, end));
-		blogService.getAllBlogComments(start, end);
-		blogService.getBlogByBlogId(1);
-		blogService.getBlogCommentCount();
-		blogService.getBlogCount();
-		log.info("blog测试通过");
-		return blogList;
+
+	@RequestMapping(value = "/getblogcount", method = RequestMethod.POST)
+	public Integer getBlogCount() {
+		return blogService.getBlogCount();
 	}
 }

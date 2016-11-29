@@ -45,7 +45,7 @@ public class SelectSqlProvider {
 	}
 	
 	public String selectBlogs(Map<String, Object> para){
-		String result = "select blog.*,blog_type.blog_type_name from blog left join blog_type on blog.blog_type_id = blog_type.blog_type_id";
+		String result = "select blog.*,blog_type.blog_type_name from blog left join blog_type on blog.blog_type_id = blog_type.blog_type_id left join blog_category on blog.blog_category_id = blog_category.blog_category_id where blog_category.blog_category_isSchool=" + para.get("isSchool");
         if(para.get("start") != null && para.get("end") != null){
         	result += " limit " + para.get("start") + "," + para.get("end");
         }

@@ -24,8 +24,8 @@ public class BlogService {
 	@Autowired
 	private BlogCommentMapper blogCommentMapper;
 	
-    public List<Blog> getAllBlogs(Integer start,Integer end){
-    	return blogMapper.selectAll(start, end);
+    public List<Blog> getAllBlogs(Integer start,Integer end,Integer isSchool){
+    	return blogMapper.selectAll(start, end,isSchool);
     }
 	
 	public Blog getBlogByBlogId(Integer blogId){
