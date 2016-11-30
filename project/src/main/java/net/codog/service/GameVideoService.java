@@ -16,4 +16,8 @@ public class GameVideoService {
 	public List<GameVideo> getAllGameVideos(Integer start,Integer end){
 		return gameVideoMapper.selectAll(start, end);
 	}
+	
+	public Integer getGameVideosCount(){
+		return gameVideoMapper.selectCount();
+	}
 }

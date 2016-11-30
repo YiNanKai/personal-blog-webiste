@@ -14,15 +14,15 @@
 <link rel="stylesheet" type="text/css" href="themes/default/easyui.css" />
 <link rel="stylesheet" type="text/css" href="themes/icon.css" />
 <link rel="stylesheet" type="text/css" href="css/demoforeasyui.css" />
-<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="js/easyui-lang-zh_CN.js"></script>
 </head>
 <body>
 
 	<div class="wrapper">
-	<input class="easyui-combobox" style="width:25%"
-		data-options="
+		<input class="easyui-combobox" style="width: 25%"
+			data-options="
 			showItemIcon: true,
 			data: [
 				{value:'code',text:'源码',iconCls:'icon-code'},
@@ -35,6 +35,7 @@
 		" />
 		<div class="line"></div>
 		<div id="content" class="content">
+			
 			<div class="item">
 				<div class="thumb_wrapper">
 					<div class="thumb">
@@ -68,48 +69,18 @@
 
 			<div class="clear"></div>
 			<div class="line"></div>
-
-			<div class="item">
-				<div class="thumb_wrapper">
-					<div class="thumb">
-						<ul>
-							<li><a rev="group2"
-								rel="zoomHeight:200, zoomWidth:400, adjustX: 10, adjustY:-4, position:'body'"
-								class='cloud-zoom' href="images/knowapp1.jpg"><img
-									src="images/thumbs/knowapp1.jpg" alt="Knowapp 1" /></a></li>
-							<li><a rev="group2"
-								rel="zoomHeight:200, zoomWidth:400, adjustX: 10, adjustY:-4, position:'body'"
-								class='cloud-zoom' href="images/knowapp2.jpg"><img
-									src="images/thumbs/knowapp2.jpg" alt="Knowapp 2" /></a></li>
-							<li><a rev="group2"
-								rel="zoomHeight:200, zoomWidth:400, adjustX: 10, adjustY:-4, position:'body'"
-								class='cloud-zoom' href="images/knowapp3.jpg"><img
-									src="images/thumbs/knowapp3.jpg" alt="Knowapp 3" /></a></li>
-						</ul>
-					</div>
-					<a class="prev" href="#"></a> <a class="next" href="#"></a> <span>Hover
-						to zoom, click to view</span>
-				</div>
-				<div class="description">
-					<h2>Know!</h2>
-					<p>Track and share status of just about anything. Know!
-						simplifies the time-consuming task of relaying the state of
-						projects by consolidating information into easy-to-follow
-						dashboards.</p>
-					<a href="http://www.knowapp.com/">http://www.knowapp.com/</a>
-				</div>
-			</div>
-			<div class="clear"></div>
-			<div class="line"></div>
-			<div class="easyui-panel">
-				<div class="easyui-pagination" data-options="total:114"></div>
-			</div>
+			
 		</div>
+		
 	</div>
+	<div class="easyui-panel">
+				<div id="ep"></div>
+			</div>
+		<script type="text/javascript" src="js/videohtml.js"></script>
 
 	<!-- The JavaScript -->
-	<script type="text/javascript"
-		src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+	<!-- <script type="text/javascript"
+		src="http://code.jquery.com/jquery-1.4.4.min.js"></script>  -->
 	<script type="text/javascript" src="fancybox/jquery.easing-1.3.pack.js"></script>
 	<script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.js"></script>
 	<script type="text/javascript" src="cloud-zoom/cloud-zoom.1.0.2.js"></script>
