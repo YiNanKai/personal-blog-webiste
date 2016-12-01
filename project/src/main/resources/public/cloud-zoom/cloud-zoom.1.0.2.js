@@ -8,7 +8,8 @@
 (function ($) {
 
     $(document).ready(function () {
-        $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
+    	//console.log("cloud-zoom");
+        //$('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
     });
 
     function format(str) {
