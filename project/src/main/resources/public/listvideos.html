@@ -35,7 +35,6 @@
 		" />
 		<div class="line"></div>
 		<div id="content" class="content">
-			
 			<div class="item">
 				<div class="thumb_wrapper">
 					<div class="thumb">
@@ -69,18 +68,15 @@
 
 			<div class="clear"></div>
 			<div class="line"></div>
-			
-		</div>
-		
-	</div>
-	<div class="easyui-panel">
-				<div id="ep"></div>
-			</div>
-		<script type="text/javascript" src="js/videohtml.js"></script>
 
-	<!-- The JavaScript -->
-	<!-- <script type="text/javascript"
-		src="http://code.jquery.com/jquery-1.4.4.min.js"></script>  -->
+		</div>
+	</div>
+
+	<div class="easyui-panel">
+		<div id="ep"></div>
+	</div>
+	<script type="text/javascript" src="js/videohtml.js"></script>
+	<script type="text/javascript" src="js/bower.js"></script>
 	<script type="text/javascript" src="fancybox/jquery.easing-1.3.pack.js"></script>
 	<script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.js"></script>
 	<script type="text/javascript" src="cloud-zoom/cloud-zoom.1.0.2.js"></script>
@@ -99,7 +95,6 @@
 				'cyclic' : true,
 				'easingIn' : 'easeInOutExpo'
 			});
-
 			/*
 			because the cloud zoom plugin draws a mousetrap
 			div on top of the image, the fancybox click needs
@@ -108,10 +103,9 @@
 			We know the mousetrap div is inserted after
 			the <a> we want to click:
 			 */
-			$("#content .mousetrap").live('click', function() {
-				$(this).prev().trigger('click');
+			$('body').on('click', '#content .mousetrap', function() {
+					$(this).prev().trigger('click');
 			});
-
 			/*
 			the content element;
 			each list item / group with several images
@@ -125,6 +119,7 @@
 			 */
 			$thumb_list
 					.each(function() {
+						console.log("yes,execute function")
 						var $this_list = $(this), total_w = 0, loaded = 0,
 						//preload all the images first
 						$images = $this_list.find('img'), total_images = $images.length;
@@ -152,9 +147,7 @@
 																			'width',
 																			total_w
 																					+ 'px');
-
 															//next / prev events
-
 															$this_list
 																	.parent()
 																	.siblings(
@@ -173,7 +166,6 @@
 																								.children(
 																										':first')
 																								.width();
-
 																				$this_list
 																						.data(
 																								'current',
@@ -204,7 +196,6 @@
 																								.children(
 																										':first')
 																								.width();
-
 																				$this_list
 																						.data(
 																								'current',

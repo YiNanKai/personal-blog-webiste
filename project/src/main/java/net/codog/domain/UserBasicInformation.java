@@ -17,6 +17,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 public class UserBasicInformation {
+	
 	private String user_basic_information_id;
 
 	private String user_basic_information_birthday;

@@ -1,5 +1,7 @@
 package net.codog.web;
 
+import java.time.LocalDateTime;
+
 import javax.servlet.http.HttpServletRequest;
 
 import lombok.extern.slf4j.Slf4j;
@@ -30,8 +32,8 @@ public class UserController {
 	@RequestMapping(value="/register",method=RequestMethod.POST)
 	public ResponseVO<String> register(HttpServletRequest request,@RequestParam("account_user_name")String account_user_name,@RequestParam("account_password")String account_password ){
 		ResponseVO<String> result = new ResponseVO<String>();
-	    
-		String id = request.getLocalAddr();
+	    LocalDateTime ldt = LocalDateTime.now();
+		String id = request.getRemoteHost()  + ldt.getYear() + ldt.getMonth() + ldt.getDayOfMonth();
 		log.info("ip is " + id);
 		UserBasicInformation userBasicInformation = UserBasicInformation.builder()
 				.job_id(1)
@@ -39,8 +41,8 @@ public class UserController {
 				.user_basic_information_id("" + id)
 				.build();
 		Account account = new Account(id, account_user_name, account_password, true);
-		//userService.addUser(userBasicInformation);
-		//userService.addAccount(account);
+		userService.addUser(userBasicInformation);
+		userService.addAccount(account);
 		return result;
 	}
 
