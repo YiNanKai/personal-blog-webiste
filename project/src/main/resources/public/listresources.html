@@ -14,7 +14,7 @@
 <link rel="stylesheet" type="text/css" href="themes/default/easyui.css" />
 <link rel="stylesheet" type="text/css" href="themes/icon.css" />
 <link rel="stylesheet" type="text/css" href="css/demoforeasyui.css" />
-<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="js/easyui-lang-zh_CN.js"></script>
 </head>
@@ -41,15 +41,15 @@
 						<ul>
 							<li><a rev="group1"
 								rel="zoomHeight:200, zoomWidth:400, adjustX: 10, adjustY:-4, position:'body'"
-								class='cloud-zoom' href="images/formstack1.jpg"><img
+								class="cloud-zoom" href="images/formstack1.jpg"><img
 									src="images/thumbs/formstack1.jpg" alt="Formstack 1" /></a></li>
 							<li><a rev="group1"
 								rel="zoomHeight:200, zoomWidth:400, adjustX: 10, adjustY:-4, position:'body'"
-								class='cloud-zoom' href="images/formstack2.jpg"><img
+								class="cloud-zoom" href="images/formstack2.jpg"><img
 									src="images/thumbs/formstack2.jpg" alt="Formstack 2" /></a></li>
 							<li><a rev="group1"
 								rel="zoomHeight:200, zoomWidth:400, adjustX: 10, adjustY:-4, position:'body'"
-								class='cloud-zoom' href="images/formstack3.jpg"><img
+								class="cloud-zoom" href="images/formstack3.jpg"><img
 									src="images/thumbs/formstack3.jpg" alt="Formstack 3" /></a></li>
 						</ul>
 					</div>
@@ -69,192 +69,16 @@
 			<div class="clear"></div>
 			<div class="line"></div>
 
-			<div class="item">
-				<div class="thumb_wrapper">
-					<div class="thumb">
-						<ul>
-							<li><a rev="group2"
-								rel="zoomHeight:200, zoomWidth:400, adjustX: 10, adjustY:-4, position:'body'"
-								class='cloud-zoom' href="images/knowapp1.jpg"><img
-									src="images/thumbs/knowapp1.jpg" alt="Knowapp 1" /></a></li>
-							<li><a rev="group2"
-								rel="zoomHeight:200, zoomWidth:400, adjustX: 10, adjustY:-4, position:'body'"
-								class='cloud-zoom' href="images/knowapp2.jpg"><img
-									src="images/thumbs/knowapp2.jpg" alt="Knowapp 2" /></a></li>
-							<li><a rev="group2"
-								rel="zoomHeight:200, zoomWidth:400, adjustX: 10, adjustY:-4, position:'body'"
-								class='cloud-zoom' href="images/knowapp3.jpg"><img
-									src="images/thumbs/knowapp3.jpg" alt="Knowapp 3" /></a></li>
-						</ul>
-					</div>
-					<a class="prev" href="#"></a> <a class="next" href="#"></a> <span>Hover
-						to zoom, click to view</span>
-				</div>
-				<div class="description">
-					<h2>Know!</h2>
-					<p>Track and share status of just about anything. Know!
-						simplifies the time-consuming task of relaying the state of
-						projects by consolidating information into easy-to-follow
-						dashboards.</p>
-					<a href="http://www.knowapp.com/">http://www.knowapp.com/</a>
-				</div>
-			</div>
-			<div class="clear"></div>
-			<div class="line"></div>
-			<div class="easyui-panel">
-				<div id="ep"></div>
-			</div>
-			<script type="text/javascript" src="js/resourcehtml.js"></script>
 		</div>
 	</div>
 
-	<!-- The JavaScript -->
-	<script type="text/javascript"
-		src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+	<div class="easyui-panel">
+		<div id="ep"></div>
+	</div>
+	<script type="text/javascript" src="js/resourcehtml.js"></script>
+	<script type="text/javascript" src="js/bower.js"></script>
 	<script type="text/javascript" src="fancybox/jquery.easing-1.3.pack.js"></script>
 	<script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.js"></script>
 	<script type="text/javascript" src="cloud-zoom/cloud-zoom.1.0.2.js"></script>
-	<script type="text/javascript">
-		$(function() {
-			/*
-			fancybox init on each cloud-zoom element
-			 */
-			$("#content .cloud-zoom").fancybox({
-				'transitionIn' : 'elastic',
-				'transitionOut' : 'none',
-				'speedIn' : 600,
-				'speedOut' : 200,
-				'overlayShow' : true,
-				'overlayColor' : '#000',
-				'cyclic' : true,
-				'easingIn' : 'easeInOutExpo'
-			});
-
-			/*
-			because the cloud zoom plugin draws a mousetrap
-			div on top of the image, the fancybox click needs
-			to be changed. What we do here is to trigger the click
-			the fancybox expects, when we click the mousetrap div.
-			We know the mousetrap div is inserted after
-			the <a> we want to click:
-			 */
-			$("#content .mousetrap").live('click', function() {
-				$(this).prev().trigger('click');
-			});
-
-			/*
-			the content element;
-			each list item / group with several images
-			 */
-			var $content = $('#content'), $thumb_list = $content
-					.find('.thumb > ul');
-			/*
-			we need to set the width of each ul (sum of the children width);
-			we are also defining the click events on the right and left arrows
-			of each item.
-			 */
-			$thumb_list
-					.each(function() {
-						var $this_list = $(this), total_w = 0, loaded = 0,
-						//preload all the images first
-						$images = $this_list.find('img'), total_images = $images.length;
-						$images
-								.each(function() {
-									var $img = $(this);
-									$('<img/>')
-											.load(
-													function() {
-														++loaded;
-														if (loaded == total_images) {
-															$this_list
-																	.data(
-																			'current',
-																			0)
-																	.children()
-																	.each(
-																			function() {
-																				total_w += $(
-																						this)
-																						.width();
-																			});
-															$this_list
-																	.css(
-																			'width',
-																			total_w
-																					+ 'px');
-
-															//next / prev events
-
-															$this_list
-																	.parent()
-																	.siblings(
-																			'.next')
-																	.bind(
-																			'click',
-																			function(
-																					e) {
-																				var current = $this_list
-																						.data('current');
-																				if (current == $this_list
-																						.children().length - 1)
-																					return false;
-																				var next = ++current, ml = -next
-																						* $this_list
-																								.children(
-																										':first')
-																								.width();
-
-																				$this_list
-																						.data(
-																								'current',
-																								next)
-																						.stop()
-																						.animate(
-																								{
-																									'marginLeft' : ml
-																											+ 'px'
-																								},
-																								400);
-																				e
-																						.preventDefault();
-																			})
-																	.end()
-																	.siblings(
-																			'.prev')
-																	.bind(
-																			'click',
-																			function(
-																					e) {
-																				var current = $this_list
-																						.data('current');
-																				if (current == 0)
-																					return false;
-																				var prev = --current, ml = -prev
-																						* $this_list
-																								.children(
-																										':first')
-																								.width();
-
-																				$this_list
-																						.data(
-																								'current',
-																								prev)
-																						.stop()
-																						.animate(
-																								{
-																									'marginLeft' : ml
-																											+ 'px'
-																								},
-																								400);
-																				e
-																						.preventDefault();
-																			});
-														}
-													}).attr('src',
-													$img.attr('src'));
-								});
-					});
-		});
-	</script>
 </body>
 </html>
