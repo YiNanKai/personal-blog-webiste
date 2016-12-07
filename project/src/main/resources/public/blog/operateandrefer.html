@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+	<link href="css/prism.css" rel="stylesheet" />
+	<link rel='stylesheet' href='css/jquery.jqTOC.css' type='text/css' />
+    <script type="text/javascript" src="js/jquery-latest.js"></script>
+    <script type="text/javascript" src="js/jquery.jqTOC.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+         $('#content').jqTOC();
+      });
+    </script>
+</head>
+
+<body>
+
+<div id="content">
+<h1>
+	java操作符与引用
+</h1>
+<h2>
+	1.java引用
+</h2>
+<div>
+	<span style="font-size:14px;">java的函数调用与C的方式不一样，C语言默认的是传值操作，这样对于没有经验的程序员来说，他们编写的代码在调用函数的时候会进行对象值复制，有些不必要的这样做的时候会降低程序的效率，java默认的是传引用，下面的代码说明这一点：</span>
+</div>
+<div>
+	 
+	<pre><code class="language-java">
+	public class MyClass {
+		int i;
+    }
+    public static void fun(MyClass myClass){
+		myClass.i = 10;
+	}
+	public static void main(String[] args) {
+		MyClass myClass = new MyClass();
+		myClass.i = 100;
+		System.out.println("输入函数之前的myClass,i: " + myClass.i);
+		fun(myClass);
+		System.out.println("输入函数之后的myClass,i: " + myClass.i);
+	}</code></pre>
+	<span style="font-size:14px;">在函数里面改变了对象的属性，外面也跟着改变了，猜猜下面代码的输出：</span>
+</div>
+<div> 
+	<pre><code class="language-java">	
+	public static void fun(MyClass myClass){
+		myClass.i = 10;
+	}
+	public static void fun0(MyClass myClass){
+		myClass = new MyClass();
+		myClass.i = 10;
+	}
+	public static void main(String[] args) {
+		MyClass myClass = new MyClass();
+		myClass.i = 100;
+		System.out.println("输入函数之前的myClass,i: " + myClass.i);
+		fun(myClass);
+		System.out.println("输入函数之后的myClass,i: " + myClass.i);
+		myClass.i = 100;
+		System.out.println("输入函数fun0之前的myClass,i: " + myClass.i);
+		fun0(myClass);
+		System.out.println("输入函数fun0之后的myClass,i: " + myClass.i);
+	}</code></pre>
+	<span style="font-size:14px;">输出如下：</span>
+</div>
+<div>
+	 
+	<pre><code class="language-java">输入函数之前的myClass,i: 100
+输入函数之后的myClass,i: 10
+输入函数fun0之前的myClass,i: 100
+输入函数fun0之后的myClass,i: 100</code></pre>
+	<span style="font-size:14px;">我们发现明明改变了传入的参数，但是函数外面还是没有改变，其实是因为我们并没有改变传入的参数，改变的是传入的引用，我对java的内部存储也不是很了解，堆栈什么的，但是这个解释大概如下：</span>
+</div>
+<div>
+	<span style="font-size:18px"><strong>//11.png<br />
+	</strong></span>
+</div>
+<h2>2.逻辑操作符短路现象</h2>
+<div>
+	<span style="font-size:14px;">短路就是在能确定整个逻辑表达式的时候不再计算下面的代码值。</span>
+</div>
+<div>
+	<span style="font-size:14px;">下面的代码说明这个问题</span>
+</div>
+<div>
+	 
+	<pre><code class="language-java">
+	public static boolean test0() {
+		System.out.println("test0");
+		return true;
+	}
+
+	public static boolean test1() {
+		System.out.println("test1");
+		return true;
+	}
+
+	public static boolean test2() {
+		System.out.println("test2");
+		return false;
+	}</code></pre>
+	<br />
+	
+	<pre><code class="language-java">
+		int length = 100;
+		long start = System.currentTimeMillis();
+		for(int i = 0;i &lt; length;i++){
+			boolean a = test0() && test1() && test2();
+		}
+		long mid = System.currentTimeMillis();
+		for(int i = 0;i &lt; length;i++){
+			boolean b = test2() && test1() && test0();
+		}
+		long end = System.currentTimeMillis();
+		System.out.println("优化之前的结果是：" + (mid - start));
+		System.out.println("优化之后的结果是：" + (end - mid));</code></pre>
+	<br />
+	<div>
+        <span style="font-size:14px">输出如下：</span></div>
+	<pre><code class="language-java">优化之前的结果是：6
+优化之后的结果是：2</code></pre>
+	<br />
+	
+</div>
+<div>
+	<span style="font-size:14px;">这样的优化是有意义的，可以让程序的速度得到提升，当确定整个表达式的值的时候就不需要再计算了，而对于我们这些使用者来说，也可以将这个特性加以利用，比如把最有可能为false的值放在&&操作符的前面，这样可以比放在后面节省时间。</span>
+</div>
+</div>
+
+<script src="js/prism.js"></script>
+</body>
+</html>

@@ -42,7 +42,7 @@ $(document)
 											gameVideoTypeId:2
 										},
 										success : function(result) {
-											console.log(result);
+											//console.log(result);
 											size = result.length;
 											$("#content").empty();
 											for (var i = 0; i < size; i++) {
@@ -50,6 +50,7 @@ $(document)
 												title = result[i].game_video_name;
 												pics = result[i].game_video_pictures.split(";");
 												desc = result[i].game_video_desc;
+												//console.log(result);
 												str = '<div class="item"> '
 													+ '<div class="thumb_wrapper"> '
 													+ '<div class="thumb"> '

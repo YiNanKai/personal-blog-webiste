@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+	<link href="css/prism.css" rel="stylesheet" />
+	<link rel='stylesheet' href='css/jquery.jqTOC.css' type='text/css' />
+    <script type="text/javascript" src="js/jquery-latest.js"></script>
+    <script type="text/javascript" src="js/jquery.jqTOC.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+         $('#content').jqTOC();
+      });
+    </script>
+</head>
+
+<body>
+<div id="content">
+
+<h1>
+	初始化与清理
+</h1>
+<h2>
+	1.构造函数调用其他的构造函数
+</h2>
+<div>
+	<pre><code class="language-java">public class MyClass {
+
+	int a;
+	String b;
+	
+	MyClass(int a){
+		this.a = a;
+		System.out.println("call MyClass(int a)");
+	}
+	
+	MyClass(String b){
+		this.b = b;
+		System.out.println("call MyClass(String b)");
+	}
+	
+	MyClass(int a,String b){
+		this(a);
+		//this(b);//不行
+		this.b = b;
+		System.out.println("call MyClass(int a,String b)");
+	}
+}
+</code></pre>
+	<pre><code class="language-java">MyClass myClass = new MyClass(0, "0");</code></pre>
+	<span style="font-size:14px">输出如下：</span>
+</div>
+<div>
+	<pre><code class="language-java">call MyClass(int a)
+call MyClass(int a,String b)</code></pre>
+	<div>
+		<span style="font-size:14px">使用上要注意非构造函数不能调用this关键字的构造函数，this关键字的调用函数必须是在其他构造函数的第一行被调用，这样的话，调用第二个this会出错</span>
+	</div>
+	//20.png
+</div>
+<h2>
+	2.初始化顺序
+</h2>
+<div>
+	<span style="font-size:14px">其实我想了半天，不知道这个知识点应该不应该总结出来，因为我虽然写代码写得少，但是就日常工作来讲，类成员的初始化顺序大概了解到static只初始化一次，并且在普通变量之前就可以应付很多情况了，但是我觉得总结一下也是好的，等水平到了也许会用到，具体看代码：</span>
+</div>
+<div>
+	<pre><code class="language-java">public class InnerClass {
+
+	int i;
+	InnerClass(int i){
+		this.i = i;
+		System.out.println(i);
+	}
+}
+</code></pre>
+	<br />
+	
+	<pre><code class="language-java">public class TestInitialOrder {
+
+	TestInitialOrder() {
+		System.out.println("TestInitialOrder");
+	}
+	static InnerClass statici = new InnerClass(0);
+	static InnerClass statica;
+	static InnerClass staticb;
+	static {
+		statica = new InnerClass(1);
+		staticb = new InnerClass(2);
+	}
+	static InnerClass static0 = new InnerClass(3);
+	InnerClass i0 = new InnerClass(4);
+	InnerClass a, b;
+	{
+		a = new InnerClass(5);
+		b = new InnerClass(6);
+	}
+	InnerClass i1 = new InnerClass(7);
+	
+	public static void main(String[] args) {
+		System.out.println("main");
+		TestInitialOrder tio = new TestInitialOrder();
+		System.out.println("第二次创建对象");
+		TestInitialOrder tio0 = new TestInitialOrder();
+	}
+}
+</code></pre>
+	<br />
+	<span style="font-size:14px">输出如下：</span>
+	<pre><code class="language-java">0
+1
+2
+3
+main
+4
+5
+6
+7
+TestInitialOrder
+第二次创建对象
+4
+5
+6
+7
+TestInitialOrder
+</code></pre>
+</div>
+
+</div>
+<script src="js/prism.js"></script>
+</body>
+</html>

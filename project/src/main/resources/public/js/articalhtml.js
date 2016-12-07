@@ -61,17 +61,17 @@ $(document)
 															.append(
 																	'<li class="article-container">'
 																			+ '<div class="article-img">'
-																			+ '<img src="images/blogpicture/giveupjava.jpg">'
+																			+ '<img src="images/blogpicture/giveupjava.png">'
 																			+ '</div>'
 																			+ '<div class="article-content">'
-																			+ '<h3 class="article-header"><a href="'
+																			+ '<h3 class="article-header"><a href="blog/'
 																			+ result[i].blog_content
 																			+ '" target="_blank">'
 																			+ result[i].blog_title
 																			+ '</a></h3>'
 																			+ '<div class="article-info">'
 																			+ '<span class="article-author"> <a href="profile.html" target="_blank">'
-																			+ '<img class="article-author-avatar" src="images/lena.jpg">'
+																			+ '<img class="article-author-avatar" src="images/cologo.png">'
 																			+ '<span class="article-author-name">'
 																			+ result[i].blog_publisher
 																			+ '</span>'

@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+	<link href="css/prism.css" rel="stylesheet" />
+	<link rel='stylesheet' href='css/jquery.jqTOC.css' type='text/css' />
+    <script type="text/javascript" src="js/jquery-latest.js"></script>
+    <script type="text/javascript" src="js/jquery.jqTOC.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+         $('#content').jqTOC();
+      });
+    </script>
+</head>
+
+<body>
+
+<div id="content">
+
+<h1>
+	接口与多态
+</h1>
+<h2>
+	1.多态概念
+</h2>
+<p>
+	<span style="font-size:14px">什么是多态，大概就是A类，B类继承C类，写一个函数只接受C类型的参数，但是A类和B类也可以传过去。代码如下：</span>
+</p>
+<p>
+	<span style="font-size:14px"></span>
+</p>
+<pre><code class="language-java">public class C {
+
+	protected void print(){
+		System.out.println(generateString());
+	}
+	
+	protected String generateString(){
+		return "this is C";
+	}
+}
+</code></pre>
+<pre><code class="language-java">public class B extends C{
+	protected void print(){
+		System.out.println(generateString());
+	}
+	
+	protected String generateString(){
+		return "this is B";
+	}
+}</code></pre>
+<pre><code class="language-java">public class A extends C{
+	protected void print(){
+		System.out.println(generateString());
+	}
+	
+	protected String generateString(){
+		return "this is A";
+	}
+	
+	public static void print(final C c){
+		c.print();
+	}
+	public static void main(String[] args) {
+		print(new A());
+	}
+}
+</code></pre>
+输出如下：
+<p>
+</p>
+<p>
+	<span style="font-size:14px"></span>
+</p>
+<pre><code class="language-java">this is A</code></pre>
+<p>
+</p>
+<h2>
+	<span style="font-size:14px">2.不能覆盖私有方法</span>
+</h2>
+<div>
+	<span style="font-size:14px"></span>
+	<pre><code class="language-java">public class C {
+
+	protected void print(){
+		System.out.println(generateString());
+	}
+	
+	protected String generateString(){
+		return "this is C";
+	}
+	
+	private void printPrivate(){
+		System.out.println("C:private");
+	}
+	
+	public static void main(String[] args) {
+		C c = new A();
+		c.printPrivate();
+	}
+}</code></pre>
+	<pre><code class="language-java">public class A extends C{
+	protected void print(){
+		System.out.println(generateString());
+	}
+	
+	protected String generateString(){
+		return "this is A";
+	}
+	
+	public void printPrivate(){
+		System.out.println("A:public");
+	}
+	
+	public static void print(final C c){
+		c.print();
+	}
+	public static void main(String[] args) {
+		print(new A());
+	}
+}</code></pre>
+	输出如下：
+</div>
+<div>
+	<span style="font-size:14px"></span>
+	<pre><code class="language-java">C:private</code></pre>
+	也就是说本来A应该是覆盖C中的函数，但是现在反而是A被C覆盖了，但是这种情况不常见，很少有人会想在C类中调用他的继承类A的函数，正常的使用者都会把printPrivate的函数当成A类特有的，如果想调用这个函数，就不会向上转型了，而是直接
+</div>
+<div>
+	<span style="font-size:14px">A a = new A()了</span>
+</div>
+<h2>
+	<span style="font-size:14px">3.不能覆盖域</span>
+</h2>
+<div>
+	<span style="font-size:14px"></span>
+	<pre><code class="language-java">public class E {
+
+	public int i = 1;
+	public void print(){
+		System.out.println(i);
+	}
+}</code></pre>
+	<pre><code class="language-java">public class D extends E{
+
+	public int i = 100;
+	/*public void print(){
+		System.out.println(i);
+	}*/
+	public static void main(String[] args) {
+		E e = new D();
+		e.print();
+	}
+}</code></pre>
+	输入如下：
+</div>
+<div>
+	<span style="font-size:14px"></span>
+	<pre><code class="language-java">1</code></pre>
+	这个特性其实很出人意料，但是正如java编程思想所说的那样，一般人不会这么用，所以有个记录就好了
+</div>
+	<h2>
+		<span style="font-size:14px">4.static函数不会被覆盖</span>
+	</h2>
+	<div>
+		<span style="font-size:14px"></span>
+		<pre><code class="language-java">public class E {
+
+	public int i = 1;
+	public void print(){
+		System.out.println(i);
+	}
+	public static void printStatic(){
+		System.out.println("E class");
+	}
+}</code></pre>
+		<pre><code class="language-java">public class D extends E{
+
+	public int i = 100;
+	/*public void print(){
+		System.out.println(i);
+	}*/
+	public static void printStatic(){
+		System.out.println("D class");
+	}
+	public static void main(String[] args) {
+		E e = new D();
+		e.printStatic();
+	}
+}</code></pre>
+		输出如下：
+	</div>
+	<div>
+		<span style="font-size:14px"></span>
+		<pre><code class="language-java">E class</code></pre>
+		静态方法是属于类的，不是对象，所以不会被覆盖
+	</div>
+		<h2>
+			<span style="font-size:14px">5.构造器中多态方法</span>
+		</h2>
+		<div>
+			<span style="font-size:14px">当在基类G的构造函数中调用被子类F覆盖的函数print的时候，会发生什么事情？调用F的print？是的，这也确实是我们想得到的，但是却有着问题：</span>
+		</div>
+		<div>
+			<pre><code class="language-java">public class G {
+	
+	void print(){
+		System.out.println("G");
+	}
+	
+	G(){
+		System.out.println("G()");
+		print();
+	}
+}</code></pre>
+			<pre><code class="language-java">public class F extends G{
+
+	int i = 99;
+	F(int i){
+		this.i = i;
+		System.out.println("F():" + i);
+	}
+	void print(){
+		System.out.println("F:" + i);
+	}
+	
+	public static void main(String[] args) {
+		new F(100);
+	}
+}</code></pre>
+			<span style="font-size:14px">输出如下：</span>
+		</div>
+		<div>
+			<span style="font-size:14px"></span>
+			<pre><code class="language-java">G()
+F:0
+F():100</code></pre>
+			i变量在基类G构造的时候没有被初始化，所以是默认的值0，导致出现了以上的输出，这个我还没有遇到过类似错误，希望将来可以避免
+		</div>
+</div>
+<script src="js/prism.js"></script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+	<link href="css/prism.css" rel="stylesheet" />
+	<link rel='stylesheet' href='css/jquery.jqTOC.css' type='text/css' />
+    <script type="text/javascript" src="js/jquery-latest.js"></script>
+    <script type="text/javascript" src="js/jquery.jqTOC.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+         $('#content').jqTOC();
+      });
+    </script>
+</head>
+
+<body>
+
+<div id="content">
+
+<h1>
+	组合，继承和代理
+</h1>
+<h2>
+	1.什么是代理
+</h2>
+<div>
+	<span style="font-size:14px;">代理是组合和继承的中庸之道，类B包含类A（相当于组合），但是类B包含类A的所有方法（相当于继承），这个其实听起来觉得还挺乱，但其实真正写代码的时候，你觉得继承从理论上就说不通，自然会使用组合，然后你想将A类的方法也提供给客户端使用，自然就会使用代理这种方法。</span>
+</div>
+<div>
+	<span style="font-size:14px;">代码如下：</span>
+</div>
+<div>
+	<pre><code class="language-java">package cn.com.codog.third;
+
+public class A {
+
+	protected int i;
+
+	A(int i) {
+		this.i = i;
+	}
+	
+	protected void print(){
+		System.out.println("A" + this.i);
+	}
+	
+	@Override
+	public String toString() {
+		return "i = " + this.i;
+	}
+}</code></pre>
+	<pre><code class="language-java">package cn.com.codog.third;
+
+public class B {
+
+	private A a;
+
+	B(int i) {
+		a = new A(i);
+	}
+
+	public void print() {
+		a.print();
+	}
+	
+	public static void main(String[] args) {
+		B b = new B(89);
+		b.print();
+	}
+}</code></pre>
+	<span style="font-size:14px;">输出如下：</span>
+</div>
+
+	<pre><code class="language-java">A89</code></pre>
+	<h2>
+		2.尽量使用父类声明
+	</h2>
+	<div>
+		<span style="font-size:14px;">这里有一个小技巧，比如HashMap是Map的子类，当你没有特殊需求的时候，一般写作</span>
+	</div>
+	<div>
+		<span style="font-size:14px;">Map map = new HashMap();</span>
+	</div>
+	<div>
+		<span style="font-size:14px;">这样使得你的代码灵活性高</span>
+	</div>
+	<div>
+		<br />
+		
+	</div>
+	<h2>
+		3.final关键字
+	</h2>
+	<h3>
+		3.1 final属性
+	</h3>
+	<div>
+		<span style="font-size:14px;">当作用于属性或者局部变量的时候，分为final的属性和final的引用，当final是引用的时候，引用的对象内容是可以变化的，但是引用不可以变，如下代码：</span>
+	</div>
+		<pre><code class="language-java">package cn.com.codog.third;
+
+public class FinalTest {
+
+	final int i;
+	final int a = 100;
+	static final int b = 100;
+	//static final int c;//The blank final field c may not have been initialized
+	final A af = new A(100);
+	static final A saf = new A(100);
+	FinalTest(){
+		i = 100;
+		af.i =200;//af的引用是final的，但是类的内容是可以变化的
+		//af = new A(200);//The final field FinalTest.af cannot be assigned
+		//saf = new A(200);//The final field FinalTest.af cannot be assigned
+		//c = 100;//The final field FinalTest.c cannot be assigned
+	}
+}</code></pre>
+		<h3>
+			3.2 final参数
+		</h3>
+		<span style="font-size:14px;">final参数的意思是在方法内部不能改变这个参数：</span>
+		<pre><code class="language-java">public void withFinal(final int i){
+		i++;//The final local variable i cannot be assigned. It must be blank and not using a compound assignment
+	}</code></pre>
+		<h3>
+			3.3 final方法
+		</h3>
+		<div>
+			<pre><code class="language-java">public class A {
+
+	protected int i;
+
+	A(int i) {
+		this.i = i;
+	}
+	
+	protected void print(){
+		System.out.println("A" + this.i);
+	}
+	
+	final void printA(){
+		System.out.println("A");
+	}
+	@Override
+	public String toString() {
+		return "i = " + this.i;
+	}</code></pre>
+			<pre><code class="language-java">public class C extends A{
+	
+	C(int i){
+		super(i);
+	}
+	
+	/*final void printA(){
+		
+	}*///Cannot override the final method from A
+}</code></pre>
+			<span style="font-size:14px;">final方法是防止继承的，和private类似，但是final方法在子类中还可以访问，只是不能修改方法的实现</span>
+		</div>
+			<h3>
+				3.3 final类
+			</h3>
+			<div>
+				<pre><code class="language-java">public final class A {
+
+	protected int i;
+
+	A(int i) {
+		this.i = i;
+	}
+	
+	protected void print(){
+		System.out.println("A" + this.i);
+	}
+	
+	final void printA(){
+		System.out.println("A");
+	}
+	@Override
+	public String toString() {
+		return "i = " + this.i;
+	}
+}</code></pre>
+				<br />
+				
+				<pre><code class="language-java">/*public class C extends A{//The type C cannot subclass the final class A
+	
+	C(int i){
+		super(i);
+	}
+	
+	final void printA(){
+		
+	}//Cannot override the final method from A
+}*/</code></pre>
+				<span style="font-size:14px;">但是其实除了final域和final参数之外，其他的情况还是很少使用的。</span>
+			</div>
+			<div>
+				<br />
+				
+			</div>
+				<h2>
+					4.继承与初始化
+				</h2>
+				<div>
+					<span style="font-size:14px;">当继承与初始化放在一起是很有趣的，代码如下：</span>
+				</div>
+				<div>
+					<pre><code class="language-java">public class Father {
+
+	public Father() {
+		System.out.println("Father()");
+	}
+	private InnerClass b = new InnerClass(2);
+	private static InnerClass a = new InnerClass(0);
+}
+</code></pre>
+					<br />
+					
+					<pre><code class="language-java">public class Child extends Father{
+
+	public Child(){
+		System.out.println("Child()");
+	}
+	private InnerClass b = new InnerClass(3);
+	private static InnerClass a = new InnerClass(1);
+	
+	public static void main(String[] args) {
+		Father f = new Child();
+	}
+}</code></pre>
+					<div>
+						<br />
+						
+					</div>
+					<pre><code class="language-java">public class InnerClass {
+
+	private int i;
+	public InnerClass(int i) {
+		System.out.println(i);
+	}
+}</code></pre>
+					<br />
+					<span style="font-size:14px;">输出如下：</span>
+					<pre><code class="language-java">0
+1
+2
+Father()
+3
+Child()</code></pre>
+					<span style="font-size:14px;">所以总的顺序是先父类static-->子类的static-->父类的成员-->父类的构造函数-->子类的成员-->子类的构造函数</span><br />
+					<br />
+					<br />
+					
+				</div>
+		
+</div>
+
+<script src="js/prism.js"></script>
+</body>
+</html>
