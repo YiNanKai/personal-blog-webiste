@@ -40,13 +40,13 @@ public class BlogController {
 	@RequestMapping(value = "/getblogs", method = RequestMethod.POST)
 	public List<Blog> getBlogs(@RequestParam("start") Integer start,
 			@RequestParam("end") Integer end,
-			@RequestParam("isSchool") Integer isSchool) {
-		log.info("start:" + start + ",end:" + end + ",isSchool" + isSchool);
-		return blogService.getAllBlogs(start, end, isSchool);
+			@RequestParam("isSchool") Integer isSchool,@RequestParam("blogCategoryId") Integer blogCategoryId) {
+		log.info("start:" + start + ",end:" + end + ",isSchool:" + isSchool + ",blogCategoryId:" + blogCategoryId);
+		return blogService.getAllBlogsByCategory(start, end, isSchool, blogCategoryId);
 	}
 
 	@RequestMapping(value = "/getblogcount", method = RequestMethod.POST)
-	public Integer getBlogCount() {
-		return blogService.getBlogCount();
+	public Integer getBlogCount(@RequestParam("blogCategoryId") Integer blogCategoryId) {
+		return blogService.getBlogCountByCategory(blogCategoryId);
 	}
 }

@@ -4,7 +4,7 @@ $(document)
 					$(function() {
 
 						$.post("/gamevideo/getgamevideoscount", {
-							gameVideoTypeId:2
+							gameVideoTypeId:3
 						}, function(result) {
 							console.log(result);
 							$("#ep")
@@ -39,7 +39,7 @@ $(document)
 										data : {
 											start : start,
 											end : end,
-											gameVideoTypeId:2
+											gameVideoTypeId:3
 										},
 										success : function(result) {
 											console.log(result);
@@ -55,7 +55,7 @@ $(document)
 													+ '<div class="thumb"> '
 													+ '<ul> ';
 													for (var j = 0; j < pics.length; j++){
-														str += '<li><a rev="group1" rel="zoomHeight:200, zoomWidth:400, adjustX: 10, adjustY:-4, position:\'body\'" class="cloud-zoom" href="images/sanguoshapicture/' + pics[j] + '.png"><img src="images/sanguoshapicture/thumbs/' + pics[j] + 2 + '.png" alt="Formstack 1" /></a></li> '			
+														str += '<li><a rev="group1" rel="zoomHeight:200, zoomWidth:400, adjustX: 10, adjustY:-4, position:\'body\'" class="cloud-zoom" href="images/taiqiupicture/' + pics[j] + '.png"><img src="images/taiqiupicture/thumbs/' + pics[j] + 2 + '.png" alt="Formstack 1" /></a></li> '			
 													}
 													
 													str += '</ul> '

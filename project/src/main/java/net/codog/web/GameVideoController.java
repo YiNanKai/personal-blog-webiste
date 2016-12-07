@@ -21,14 +21,14 @@ public class GameVideoController {
 	private GameVideoService gameVideoService;
 	
 	@RequestMapping(value="/getgamevideos",method=RequestMethod.POST)
-	public List<GameVideo> getGameVideos(@RequestParam("start")Integer start,@RequestParam("end")Integer end){
+	public List<GameVideo> getGameVideos(@RequestParam("start")Integer start,@RequestParam("end")Integer end,@RequestParam("gameVideoTypeId") Integer gameVideoTypeId){
 		log.info("getgamevideos");
-		return gameVideoService.getAllGameVideos(start, end);
+		return gameVideoService.getAllGameVideosByType(start, end, gameVideoTypeId);
 	}
 	
 	@RequestMapping(value="/getgamevideoscount",method=RequestMethod.POST)
-	public Integer getGameVideosCount(){
+	public Integer getGameVideosCount(@RequestParam("gameVideoTypeId") Integer gameVideoTypeId){
 		log.info("getgamevideoscount");
-		return gameVideoService.getGameVideosCount();
+		return gameVideoService.getGameVideosCountByType(gameVideoTypeId);
 	}
 }

@@ -20,4 +20,12 @@ public class GameVideoService {
 	public Integer getGameVideosCount(){
 		return gameVideoMapper.selectCount();
 	}
+	
+	public List<GameVideo> getAllGameVideosByType(Integer start,Integer end,Integer gameVideoTypeId){
+		return gameVideoMapper.selectAllByType(start, end, gameVideoTypeId);
+	}
+	
+	public Integer getGameVideosCountByType(Integer gameVideoTypeId){
+		return gameVideoMapper.selectCountByType(gameVideoTypeId);
+	}
 }

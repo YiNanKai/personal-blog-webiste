@@ -22,7 +22,13 @@ public interface BlogMapper {
 	@Select("select count(*) from blog")
 	public int selectCount();
 	
+	@Select("select count(*) from blog where blog_category_id = #{blogCategoryId}")
+	public int selectCountByCategory(@Param("blogCategoryId") Integer blogCategoryId);
+	
 	@SelectProvider(type = SelectSqlProvider.class,method = "selectBlogs")
     public List<Blog> selectAll(@Param("start")Integer start,@Param("end")Integer end,@Param("isSchool") Integer isSchool);
+	
+	@SelectProvider(type = SelectSqlProvider.class,method = "selectBlogsByCategory")
+    public List<Blog> selectAllByCategory(@Param("start")Integer start,@Param("end")Integer end,@Param("isSchool") Integer isSchool,@Param("blogCategoryId")Integer blogCategoryId);
 	
 }

@@ -20,7 +20,7 @@ $(document)
 						});// .post
 
 						$.post("/blog/getblogcount", {
-							isSchool : 0
+							blogCategoryId:0
 						}, function(result) {
 							console.log(result);
 							// console.log(result.length)
@@ -28,7 +28,7 @@ $(document)
 							$("#ep").pagination(
 									{
 										total: result,
-										pageSize: 3,
+										pageSize: 2,
 										showPageList: false,
 					                    showRefresh: false,
 										onSelectPage : function(pageNumber,
@@ -36,7 +36,7 @@ $(document)
 											console.log('pageNumber:'
 													+ pageNumber + ',pageSize:'
 													+ pageSize);
-											 getblogs(pageNumber - 1,pageSize);
+											 getblogs((pageNumber - 1)*pageSize,pageSize);
 										}
 									});
 
@@ -48,7 +48,8 @@ $(document)
 											{
 												isSchool : 0,
 												start : start,
-												end : end
+												end : end,
+												blogCategoryId:0
 											},
 											function(result) {
 												console.log(result);
@@ -60,7 +61,7 @@ $(document)
 															.append(
 																	'<li class="article-container">'
 																			+ '<div class="article-img">'
-																			+ '<img src="images/aa.jpg">'
+																			+ '<img src="images/blogpicture/giveupjava.jpg">'
 																			+ '</div>'
 																			+ '<div class="article-content">'
 																			+ '<h3 class="article-header"><a href="'

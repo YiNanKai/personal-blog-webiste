@@ -27,13 +27,21 @@ public class BlogService {
     public List<Blog> getAllBlogs(Integer start,Integer end,Integer isSchool){
     	return blogMapper.selectAll(start, end,isSchool);
     }
-	
+    
+    public List<Blog> getAllBlogsByCategory(Integer start,Integer end,Integer isSchool,Integer blogCategoryId){
+    	return blogMapper.selectAllByCategory(start, end,isSchool,blogCategoryId);
+    }
+    
 	public Blog getBlogByBlogId(Integer blogId){
 		return blogMapper.selectBlogByBlogId(blogId);
 	}
 	
 	public int getBlogCount(){
 		return blogMapper.selectCount();
+	}
+	
+	public int getBlogCountByCategory(Integer blogCategoryId){
+		return blogMapper.selectCountByCategory(blogCategoryId);
 	}
 	
     public List<BlogComment> getAllBlogComments(Integer start,Integer end){
