@@ -1,0 +1,136 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8" /><link href="css/prism.css" rel="stylesheet" /><link rel="stylesheet" href="css/jquery.jqTOC.css" type="text/css" /><script type="text/javascript" src="js/jquery-latest.js"></script><script type="text/javascript" src="js/jquery.jqTOC.js"></script><script type="text/javascript">$(document).ready(function(){$("#content").jqTOC();});</script></head><body><div id="content"><h1>
+	接口与抽象类
+</h1>
+<h2>
+	1.接口函数特性
+</h2>
+
+	<span style="font-size:14px;">接口中的函数默认是public的，这和类中的函数默认是package权限的是不同的，并且不可以将public变成其他权限，代码如下：</span>
+<br />
+
+	<span style="font-size:14px"></span>
+	<pre><code class="language-java">public interface Father {
+
+	void print();
+	public void printPublic();
+	//Illegal modifier for the interface method printProtected; only public, abstract, default, static and strictfp are permitted
+	//protected void printProtected();
+	//private void printPrivate();
+}</code></pre>
+	<h2>
+		<span style="font-size:14px">2.接口属性特性</span>
+	</h2>
+	
+		<span style="font-size:14px;">接口与抽象类的一个区别是抽象类可以有属性，接口中的属性则受到很大限制，即使变量没有修饰符，默认也是public static final，</span>
+	<br />
+	
+		<span style="font-size:14px;">因为public static来保证接口中的变量被所有类共有，而接口是用于定义规范的，不定义为final的话，没有必要需要字段，不过接口中一般都没有属性。</span>
+	<br />
+	<h2>
+		<span style="font-size:14px">3.内部类访问外部类的成员变量</span>
+	</h2>
+	
+		<span style="font-size:14px"></span>
+		<pre><code class="language-java">public class Outer {
+
+	int outeri = 100;
+	class Inner{
+		public void print(){
+			System.out.println("i = " + outeri);
+		}
+	}
+	
+	public Inner getInner(){
+		return new Inner();
+	}
+	
+	public static void main(String[] args) {
+		Outer outer = new Outer();
+		outer.getInner().print();
+		outer.new Inner().print();
+	}
+}</code></pre>
+	<br />
+	
+		<span style="font-size:14px;">输出如下：</span>
+	<br />
+	
+		<span style="font-size:14px"></span>
+		<pre><code class="language-java">i = 100
+i = 100</code></pre>
+	<br />
+	
+		<p>
+			<span style="font-size:14px;">内部类可以访问外部类的成员</span>
+		</p>
+		<h2>
+			<span style="font-size:14px">4.匿名内部类</span>
+		</h2>
+		
+			<span style="font-size:14px"></span>
+			<pre><code class="language-java">public abstract class Abstract {
+	int i;
+	public abstract void print();
+}
+</code></pre>
+			<pre><code class="language-java">public class Caller {
+
+	public Abstract getAbstract(){
+		return new Abstract() {
+			@Override
+			public void print() {
+				System.out.println("this is in the abstract");
+			}
+		};
+	}
+	
+	public static void main(String[] args) {
+		Caller caller = new Caller();
+		caller.getAbstract().print();
+	}
+}</code></pre>
+			<span style="font-size:14px;">输出如下：</span>
+		<br />
+		
+			<span style="font-size:14px"></span>
+			<pre><code class="language-java">this is in the abstract</code></pre>
+			<h2>
+				<span style="font-size:14px">5.匿名内部类的参数默认是final的</span>
+			</h2>
+			
+				<span style="font-size:14px"></span>
+				<pre><code class="language-java">public class Caller {
+
+	public Abstract getAbstract(String haha){
+		return new Abstract() {
+			@Override
+			public void print() {
+				//Local variable haha defined in an enclosing scope must be final or effectively final
+				//haha = "innerclass";
+				System.out.println(haha);
+				System.out.println("this is in the abstract");
+			}
+		};
+	}
+	
+	public static void main(String[] args) {
+		Caller caller = new Caller();
+		caller.getAbstract("haha").print();
+	}
+}</code></pre>
+				
+					<span style="font-size:14px;">输出如下：</span>
+				<br />
+				
+					<span style="font-size:14px"></span>
+					<pre><code class="language-java">haha
+this is in the abstract</code></pre>
+				<br />
+				<span style="font-size:14px;">可以看到匿名内部类是可以使用参数的，但是参数默认是final的</span><br />
+				<br />
+				
+			<br />
+		<br />
+	<br />
+<br />
+<span style="font-size:14px">相关内容:</span><br /><a href="prefix.html">前言</a><br /><a href="objectandtype.html">对象和类型</a><br /><a href="operateandtype.html">操作符和引用</a><br /><a href="processcontrol.html">流程控制语句</a><br /><a href="initialandclear.html">初始化和清理</a><br /><a href="accesscontrol.html">访问控制</a><br /><a href="proxy.html">组合和继承</a><br /><a href="implementsinterface.html">接口和多态</a><br /><a href="interfaceandabstractclass.html">接口与抽象类</a><br /><a href="vector.html">容器</a><br /><a href="exception.html">异常</a><br /><a href="classinformation.html">类型信息</a><br /><a href="generictype.html">泛型</a><br /><a href="array.html">数组</a><br /><a href="io.html">IO系统</a><br /><a href="enum.html">枚举类型</a><br /><a href="annotation.html">注解</a><br /><a href="mutithread.html">多线程</a><br /><a href="summary.html">总结</a><br /></div><script src="js/prism.js"></script></body></html>

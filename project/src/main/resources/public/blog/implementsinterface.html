@@ -1,23 +1,4 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8" />
-	<link href="css/prism.css" rel="stylesheet" />
-	<link rel='stylesheet' href='css/jquery.jqTOC.css' type='text/css' />
-    <script type="text/javascript" src="js/jquery-latest.js"></script>
-    <script type="text/javascript" src="js/jquery.jqTOC.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-         $('#content').jqTOC();
-      });
-    </script>
-</head>
-
-<body>
-
-<div id="content">
-
-<h1>
+<!DOCTYPE html><html><head><meta charset="UTF-8" /><link href="css/prism.css" rel="stylesheet" /><link rel="stylesheet" href="css/jquery.jqTOC.css" type="text/css" /><script type="text/javascript" src="js/jquery-latest.js"></script><script type="text/javascript" src="js/jquery.jqTOC.js"></script><script type="text/javascript">$(document).ready(function(){$("#content").jqTOC();});</script></head><body><div id="content"><h1>
 	接口与多态
 </h1>
 <h2>
@@ -66,7 +47,7 @@
 	}
 }
 </code></pre>
-输出如下：
+<span style="font-size:14px;">输出如下：</span>
 <p>
 </p>
 <p>
@@ -78,7 +59,7 @@
 <h2>
 	<span style="font-size:14px">2.不能覆盖私有方法</span>
 </h2>
-<div>
+
 	<span style="font-size:14px"></span>
 	<pre><code class="language-java">public class C {
 
@@ -119,20 +100,20 @@
 		print(new A());
 	}
 }</code></pre>
-	输出如下：
-</div>
-<div>
+	<span style="font-size:14px;">输出如下：</span>
+<br />
+
 	<span style="font-size:14px"></span>
 	<pre><code class="language-java">C:private</code></pre>
-	也就是说本来A应该是覆盖C中的函数，但是现在反而是A被C覆盖了，但是这种情况不常见，很少有人会想在C类中调用他的继承类A的函数，正常的使用者都会把printPrivate的函数当成A类特有的，如果想调用这个函数，就不会向上转型了，而是直接
-</div>
-<div>
+	<span style="font-size:14px;">也就是说本来A应该是覆盖C中的函数，但是现在反而是A被C覆盖了，但是这种情况不常见，很少有人会想在C类中调用他的继承类A的函数，正常的使用者都会把printPrivate的函数当成A类特有的，如果想调用这个函数，就不会向上转型了，而是直接</span>
+<br />
+
 	<span style="font-size:14px">A a = new A()了</span>
-</div>
+<br />
 <h2>
 	<span style="font-size:14px">3.不能覆盖域</span>
 </h2>
-<div>
+
 	<span style="font-size:14px"></span>
 	<pre><code class="language-java">public class E {
 
@@ -152,17 +133,18 @@
 		e.print();
 	}
 }</code></pre>
-	输入如下：
-</div>
-<div>
+	<span style="font-size:14px;">输入如下：</span>
+<br />
+
 	<span style="font-size:14px"></span>
 	<pre><code class="language-java">1</code></pre>
-	这个特性其实很出人意料，但是正如java编程思想所说的那样，一般人不会这么用，所以有个记录就好了
-</div>
+	<span style="font-size:14px;">这个特性其实很出人意料，但是正如java编程思想所说的那样，一般人不会这么用，所以有个记录就好了</span>
+<br />
+
 	<h2>
 		<span style="font-size:14px">4.static函数不会被覆盖</span>
 	</h2>
-	<div>
+	
 		<span style="font-size:14px"></span>
 		<pre><code class="language-java">public class E {
 
@@ -188,20 +170,21 @@
 		e.printStatic();
 	}
 }</code></pre>
-		输出如下：
-	</div>
-	<div>
+		<span style="font-size:14px;">输出如下：</span>
+	<br />
+	
 		<span style="font-size:14px"></span>
 		<pre><code class="language-java">E class</code></pre>
-		静态方法是属于类的，不是对象，所以不会被覆盖
-	</div>
+		<span style="font-size:14px;">静态方法是属于类的，不是对象，所以不会被覆盖</span>
+	<br />
+	
 		<h2>
 			<span style="font-size:14px">5.构造器中多态方法</span>
 		</h2>
-		<div>
-			<span style="font-size:14px">当在基类G的构造函数中调用被子类F覆盖的函数print的时候，会发生什么事情？调用F的print？是的，这也确实是我们想得到的，但是却有着问题：</span>
-		</div>
-		<div>
+		
+			<span style="font-size:14px;">当在基类G的构造函数中调用被子类F覆盖的函数print的时候，会发生什么事情？调用F的print？是的，这也确实是我们想得到的，但是却有着问题：</span>
+		<br />
+		
 			<pre><code class="language-java">public class G {
 	
 	void print(){
@@ -228,16 +211,22 @@
 		new F(100);
 	}
 }</code></pre>
-			<span style="font-size:14px">输出如下：</span>
-		</div>
-		<div>
+			<span style="font-size:14px;">输出如下：</span>
+		<br />
+		
 			<span style="font-size:14px"></span>
 			<pre><code class="language-java">G()
 F:0
 F():100</code></pre>
-			i变量在基类G构造的时候没有被初始化，所以是默认的值0，导致出现了以上的输出，这个我还没有遇到过类似错误，希望将来可以避免
-		</div>
-</div>
-<script src="js/prism.js"></script>
-</body>
-</html>
+			<span style="font-size:14px;">i变量在基类G构造的时候没有被初始化，所以是默认的值0，导致出现了以上的输出，这个我还没有遇到过类似错误，希望将来可以避免</span>
+		<br />
+		<span style="font-size:14px"><br />
+		<br />
+		</span>
+	<br />
+	<span style="font-size:14px"><br />
+	<br />
+	<br />
+	</span>
+<br />
+<span style="font-size:14px">相关内容:</span><br /><a href="prefix.html">前言</a><br /><a href="objectandtype.html">对象和类型</a><br /><a href="operateandtype.html">操作符和引用</a><br /><a href="processcontrol.html">流程控制语句</a><br /><a href="initialandclear.html">初始化和清理</a><br /><a href="accesscontrol.html">访问控制</a><br /><a href="proxy.html">组合和继承</a><br /><a href="implementsinterface.html">接口和多态</a><br /><a href="interfaceandabstractclass.html">接口与抽象类</a><br /><a href="vector.html">容器</a><br /><a href="exception.html">异常</a><br /><a href="classinformation.html">类型信息</a><br /><a href="generictype.html">泛型</a><br /><a href="array.html">数组</a><br /><a href="io.html">IO系统</a><br /><a href="enum.html">枚举类型</a><br /><a href="annotation.html">注解</a><br /><a href="mutithread.html">多线程</a><br /><a href="summary.html">总结</a><br /></div><script src="js/prism.js"></script></body></html>

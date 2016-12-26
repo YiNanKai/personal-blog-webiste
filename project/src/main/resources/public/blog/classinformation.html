@@ -1,0 +1,272 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8" /><link href="css/prism.css" rel="stylesheet" /><link rel="stylesheet" href="css/jquery.jqTOC.css" type="text/css" /><script type="text/javascript" src="js/jquery-latest.js"></script><script type="text/javascript" src="js/jquery.jqTOC.js"></script><script type="text/javascript">$(document).ready(function(){$("#content").jqTOC();});</script></head><body><div id="content"><h1>
+	类型信息
+</h1>
+<h2>
+	1.Class对象
+</h2>
+
+	<span style="font-size:14px;">一个类对应的Class对象可以在运行时获得类的信息，包括函数和属性等等，代码如下：</span>
+<br />
+
+	<span style="font-size:14px"></span>
+	<pre><code class="language-java">package cn.com.codog.testclass;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+
+public class MyClass {
+
+	private int a;
+	protected String b;
+	public char c;
+	
+	public int getA() {
+		return a;
+	}
+	
+	protected String getB(){
+		return b;
+	}
+	
+	private char getC(){
+		return c;
+	}
+	
+	public static void main(String[] args) {
+		Class<MyClass> c = MyClass.class;
+		System.out.println("getDeclaredFields:");
+		for(Field field : c.getDeclaredFields()){
+			System.out.println(field);
+		}
+		System.out.println("getFields:");
+		for(Field field : c.getFields()){
+			System.out.println(field);
+		}
+		System.out.println("getDeclaredMethods:");
+		for(Method method : c.getDeclaredMethods()){
+			System.out.println(method);
+		}
+		System.out.println("getMethods:");
+		for(Method method : c.getMethods()){
+			System.out.println(method);
+		}
+	}
+}</code></pre>
+	<span style="font-size:14px;">输出如下：</span>
+<br />
+
+	<span style="font-size:14px"></span>
+	<pre><code class="language-java">getDeclaredFields:
+private int cn.com.codog.testclass.MyClass.a
+protected java.lang.String cn.com.codog.testclass.MyClass.b
+public char cn.com.codog.testclass.MyClass.c
+getFields:
+public char cn.com.codog.testclass.MyClass.c
+getDeclaredMethods:
+public static void cn.com.codog.testclass.MyClass.main(java.lang.String[])
+public int cn.com.codog.testclass.MyClass.getA()
+protected java.lang.String cn.com.codog.testclass.MyClass.getB()
+private char cn.com.codog.testclass.MyClass.getC()
+getMethods:
+public static void cn.com.codog.testclass.MyClass.main(java.lang.String[])
+public int cn.com.codog.testclass.MyClass.getA()
+public final void java.lang.Object.wait() throws java.lang.InterruptedException
+public final void java.lang.Object.wait(long,int) throws java.lang.InterruptedException
+public final native void java.lang.Object.wait(long) throws java.lang.InterruptedException
+public boolean java.lang.Object.equals(java.lang.Object)
+public java.lang.String java.lang.Object.toString()
+public native int java.lang.Object.hashCode()
+public final native java.lang.Class java.lang.Object.getClass()
+public final native void java.lang.Object.notify()
+public final native void java.lang.Object.notifyAll()</code></pre>
+	<h2>
+		<span style="font-size:14px">2.Class对象初始化的的时间</span>
+	</h2>
+	
+		<span style="font-size:14px;">类可以使用需要三步：加载-->链接-->初始化，java采用的是惰性初始化，当你获得Class对象的时候，不进行初始化，不到万不得已不会初始化Class对象：</span>
+	<br />
+	
+		<span style="font-size:14px"></span>
+		<pre><code class="language-java">package cn.com.codog.testclass;
+
+public class TestClassInitial {
+
+	static {
+		System.out.println("初始化TestClassInitial");
+	}
+}</code></pre>
+		<pre><code class="language-java">		Class<TestClassInitial> tc = TestClassInitial.class;
+		System.out.println("创建引用之后");
+		new TestClassInitial();
+		System.out.println("初始化完成");</code></pre>
+		<span style="font-size:14px;">输出如下：</span>
+	<br />
+	
+		<span style="font-size:14px"></span>
+		<pre><code class="language-java">创建引用之后
+初始化TestClassInitial
+初始化完成</code></pre>
+		<h2>
+			<span style="font-size:14px">3.根据Class创建对象实例</span>
+		</h2>
+		
+			<span style="font-size:14px"></span>
+			<pre><code class="language-java">package cn.com.codog.testclass;
+
+public class TestClassInitial {
+
+	static {
+		System.out.println("初始化TestClassInitial");
+	}
+	
+	public void print(){
+		System.out.println("print()");
+	}
+}</code></pre>
+			<pre><code class="language-java">		Class<TestClassInitial> tc = TestClassInitial.class;
+		System.out.println("创建引用之后");
+		try {
+			tc.newInstance().print();
+		} catch (InstantiationException | IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("初始化完成");</code></pre>
+			<span style="font-size:14px;">输出如下：</span>
+		<br />
+		
+			<span style="font-size:14px"></span>
+			<pre><code class="language-java">创建引用之后
+初始化TestClassInitial
+print()
+初始化完成</code></pre>
+			<h2>
+				<span style="font-size:14px">4.判断是否是某个确切类型时候equals和==和isInstance和instanceof的区别</span>
+			</h2>
+			
+				<span style="font-size:14px;">equals和==的结果是一样的，都是判断是不是确定的类的类型的，isInstance和instanceof的结果是一样的，都是判断是不是这个类及其基类。代码如下：</span>
+			<br />
+			
+				<span style="font-size:14px"></span>
+				<pre><code class="language-java">public class Child extends Father{
+
+	public static void test(Father object){
+		System.out.println("Father.class == object.getClass()? " + (Father.class == object.getClass()));
+		System.out.println("Child.class == object.getClass()? " + (Child.class == object.getClass()));
+		System.out.println("object instanceof Father? " + (object instanceof Father));
+		System.out.println("object instanceof Child? " + (object instanceof Child));
+		System.out.println("Father.class.isInstance(object)? " + Father.class.isInstance(object));
+		System.out.println("Child.class.isInstance(object)? " + Child.class.isInstance(object));
+		System.out.println("Father.class.equals(object.getClass())? " + ( Father.class.equals(object.getClass()) ) );
+		System.out.println("Child.class == object.getClass()? " + ( Child.class.equals(object.getClass()) ));
+	}
+	
+	public static void main(String[] args) {
+		test(new Father());
+		System.out.println();
+		test(new Child());
+	}</code></pre>
+			<br />
+			
+				<span style="font-size:14px;">输出如下：</span>
+			<br />
+			
+				<span style="font-size:14px"></span>
+				<pre><code class="language-java">Father.class == object.getClass()? true
+Child.class == object.getClass()? false
+object instanceof Father? true
+object instanceof Child? false
+Father.class.isInstance(object)? true
+Child.class.isInstance(object)? false
+Father.class.equals(object.getClass())? true
+Child.class == object.getClass()? false
+
+Father.class == object.getClass()? false
+Child.class == object.getClass()? true
+object instanceof Father? true
+object instanceof Child? true
+Father.class.isInstance(object)? true
+Child.class.isInstance(object)? true
+Father.class.equals(object.getClass())? false
+Child.class == object.getClass()? true</code></pre>
+				<h2>
+					<span style="font-size:14px">5.动态代理</span>
+				</h2>
+				
+					<span style="font-size:14px;">要明白动态代理，就要先明白静态代理，比如AChild和AProxy同时实现A接口，AProxy中有个成员AChild，A a = new AProxy()；这样调用a的函数的时候，做了AChild的函数，但是在AChild函数调用的前后做了其他事情，下面以计算函数运行时间来说明，代码如下：</span>
+				<br />
+				
+					<span style="font-size:14px"></span>
+					<pre><code class="language-java">public interface A {
+
+	public void print();
+}</code></pre>
+					<pre><code class="language-java">public class AChild implements A{
+
+	@Override
+	public void print() {
+		System.out.println("AChild.print()");
+	}
+
+}</code></pre>
+					<pre><code class="language-java">public class AProxy implements A{
+
+	private AChild a = new AChild();
+	
+	@Override
+	public void print() {
+		long start = System.currentTimeMillis();
+		a.print();
+		long end = System.currentTimeMillis();
+		System.out.println("所用时间：" + (end - start));
+	}
+	
+}</code></pre>
+					<pre><code class="language-java">public class AMain {
+
+	public static void main(String[] args) {
+		A a = new AProxy();
+		a.print();
+	}
+}</code></pre>
+					
+						<span style="font-size:14px;">输出如下：</span>
+					<br />
+					
+						<span style="font-size:14px"></span>
+						<pre><code class="language-java">AChild.print()
+所用时间：1</code></pre>
+					<br />
+					<span style="font-size:14px;">这样你就可以又执行了本身的函数逻辑又能统计所用的时间，而不改变AChild原来的代码，耦合性也变低了，这就是静态代理的好处，但是静态代理又存在着一个问题，比如还有个AChild0，AChild2等等，问题就突显了出来，要多很多的代理类，代码变得很庞杂，解决这问题的方法就是java的动态代理，代码如下：</span>
+				<br />
+				
+					<span style="font-size:14px"></span>
+					<pre><code class="language-java">public class ProxyHandler implements InvocationHandler
+{
+    private Object object;
+    public Object bind(Object object)
+    {
+        this.object = object; 
+        return Proxy.newProxyInstance(object.getClass().getClassLoader(),
+                                      object.getClass().getInterfaces(),
+                                      this);
+    }    
+
+    public Object invoke(Object proxy , Method method , Object[] args)throws Throwable
+    {
+        Object result = null;
+        long start = System.currentTimeMillis();
+        result = method.invoke(object,args);
+        long end = System.currentTimeMillis();
+        System.out.println("所用时间为" + (end - start));
+        return result;
+    }
+}</code></pre>
+					<pre><code class="language-java">		A pa = (A)(new ProxyHandler().bind(new AChild()));
+		pa.print();</code></pre>
+					<span style="font-size:14px;">输出如下：</span>
+					<pre><code class="language-java">AChild.print()
+所用时间为1</code></pre>
+					<span style="font-size:14px;">这样使用动态代理之后，就不需要新增加代理类了，节省了不少时间</span>
+				<br />
+<span style="font-size:14px">相关内容:</span><br /><a href="prefix.html">前言</a><br /><a href="objectandtype.html">对象和类型</a><br /><a href="operateandtype.html">操作符和引用</a><br /><a href="processcontrol.html">流程控制语句</a><br /><a href="initialandclear.html">初始化和清理</a><br /><a href="accesscontrol.html">访问控制</a><br /><a href="proxy.html">组合和继承</a><br /><a href="implementsinterface.html">接口和多态</a><br /><a href="interfaceandabstractclass.html">接口与抽象类</a><br /><a href="vector.html">容器</a><br /><a href="exception.html">异常</a><br /><a href="classinformation.html">类型信息</a><br /><a href="generictype.html">泛型</a><br /><a href="array.html">数组</a><br /><a href="io.html">IO系统</a><br /><a href="enum.html">枚举类型</a><br /><a href="annotation.html">注解</a><br /><a href="mutithread.html">多线程</a><br /><a href="summary.html">总结</a><br /></div><script src="js/prism.js"></script></body></html>

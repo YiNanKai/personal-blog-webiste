@@ -1,0 +1,207 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8" /><link href="css/prism.css" rel="stylesheet" /><link rel="stylesheet" href="css/jquery.jqTOC.css" type="text/css" /><script type="text/javascript" src="js/jquery-latest.js"></script><script type="text/javascript" src="js/jquery.jqTOC.js"></script><script type="text/javascript">$(document).ready(function(){$("#content").jqTOC();});</script></head><body><div id="content"><h1>
+	容器
+</h1>
+<h2>
+	1.Arrays.asList方法
+</h2>
+<h3>
+	1.1 返回值是固定大小的
+</h3>
+
+	<span style="font-size:14px;">Arrays.asList方法可以把数组变成Collection，但是其实效果受限，如下代码：</span>
+<br />
+
+	<span style="font-size:14px"></span>
+	<pre><code class="language-java">//List<int> error = new ArrayList<int>();//Syntax error on token "int", Dimensions expected after this token
+		List<Character> list = Arrays.asList('a','b','c');
+		list.add('d');</code></pre>
+	<span style="font-size:14px;">输出如下：</span>
+<br />
+
+	<span style="font-size:14px"></span>
+	<pre><code class="language-java">Exception in thread "main" java.lang.UnsupportedOperationException
+	at java.util.AbstractList.add(AbstractList.java:131)
+	at java.util.AbstractList.add(AbstractList.java:91)
+	at cn.com.codog.vector.main.TestToList.main(TestToList.java:12)</code></pre>
+	<span style="font-size:14px;">asList返回的list的大小是确定的，不能改变，所以会出现运行时异常，另外，容器里面是类，基本类型是不行的</span>
+<br />
+
+	<h3>
+		<span style="font-size:14px">1.2 向上转型行不通</span>
+	</h3>
+	
+		<span style="font-size:14px"></span>
+		<pre><code class="language-java">class A{}
+class AChild0 extends A{}
+class AChild0Child extends AChild0{}</code></pre>
+		<br />
+		
+		<pre><code class="language-java">List<A> lista = Arrays.asList(new AChild0Child(),new AChild0Child());//Type mismatch: cannot convert from List<AChild0Child> to List<A>
+List<AChild0> listachild0 = Arrays.asList(new AChild0Child(),new AChild0Child());//ype mismatch: cannot convert from List<AChild0Child> to List<AChild0>
+</code></pre>
+		<h2>
+			<span style="font-size:14px;font-weight: normal;">解决的办法是如下代码：</span>
+		</h2>
+		
+			<span style="font-size:14px"></span>
+			<pre><code class="language-java">List<A> asList = Arrays.<A>asList(new AChild0Child(),new AChild0Child());</code></pre>
+		<br />
+		<h2>
+			<span style="font-size:14px">2.Linked，Hash和Tree的区别</span>
+		</h2>
+		
+			<span style="font-size:14px;">一般来讲，Linked前缀的是按照元素被添加的顺序来存储元素，Hash则是采取hashcode的方式存储，顺序就不能保证了，Tree则是按照元素内容升序存储，如下代码：</span>
+		<br />
+		
+			<span style="font-size:14px"></span>
+			<pre><code class="language-java">	public static List<String> fillList(final String information,List<String> stringList){
+		System.out.println(information);
+		stringList.add("aaa");
+		stringList.add("ccc");
+		stringList.add("bbb");
+		stringList.add("ddd");
+		System.out.println(stringList);
+		return stringList;
+	}
+	
+	public static Set<String> fillSet(final String information,Set<String> stringSet){
+		System.out.println(information);
+		stringSet.add("aaa");
+		stringSet.add("aaa");
+		stringSet.add("ccc");
+		stringSet.add("bbb");
+		stringSet.add("ddd");
+		System.out.println(stringSet);
+		return stringSet;
+	}
+	
+	public static Map<Integer,String> fillMap(final String information,Map<Integer,String> map){
+		System.out.println(information);
+		map.put(1, "1");
+		map.put(3, "3");
+		map.put(2, "2");
+		map.put(4, "4");
+		System.out.println(map);
+		return map;
+	}</code></pre>
+			<br />
+			
+			<pre><code class="language-java">fillList("ArrayList:",new ArrayList<String>());
+		fillList("LinkedList:",new LinkedList<String>());
+		fillSet("HashSet:", new HashSet<String>());
+		fillSet("LinkedHashSet", new LinkedHashSet<String>());
+		fillSet("TreeSet",new TreeSet<String>());
+		fillMap("HashMap",new HashMap<Integer, String>());
+		fillMap("LinkedHashMap",new LinkedHashMap<Integer, String>());
+		fillMap("TreeMap", new TreeMap<Integer, String>());</code></pre>
+		<br />
+		
+			<span style="font-size:14px;">输出如下：</span>
+		<br />
+		<span style="font-size:14px"></span>
+		<pre><code class="language-java">ArrayList:
+[aaa, ccc, bbb, ddd]
+LinkedList:
+[aaa, ccc, bbb, ddd]
+HashSet:
+[aaa, ddd, ccc, bbb]
+LinkedHashSet
+[aaa, ccc, bbb, ddd]
+TreeSet
+[aaa, bbb, ccc, ddd]
+HashMap
+{1=1, 2=2, 3=3, 4=4}
+LinkedHashMap
+{1=1, 3=3, 2=2, 4=4}
+TreeMap
+{1=1, 2=2, 3=3, 4=4}
+</code></pre>
+		<h2>
+			<span style="font-size:14px">3.ArrayList和LinkedList</span>
+		</h2>
+	<br />
+	
+		<span style="font-size:14px;">ArrayList擅长访问，不适合太多插入和删除，LinkedList适合插入和删除，但是访问的效率差，这是因为ArrayList的本质是个数组，</span>
+	<br />
+	
+		<span style="font-size:14px;">访问的效率是O(1)，增删的效率是O(n)，而LinkedList的本质是个链表，访问的效率是O(n)，增删的效率是O(1)，查看jdk的源码就能看出二者的区别：</span>
+	<br />
+	
+		<span style="font-size:14px"></span>
+		<pre><code class="language-java"> public ArrayList(int initialCapacity) {
+	super();
+        if (initialCapacity < 0)
+            throw new IllegalArgumentException("Illegal Capacity: "+
+                                               initialCapacity);
+	this.elementData = new Object[initialCapacity];
+    }</code></pre>
+		<span style="font-size:14px;">而Linked的构造函数是：</span>
+	<br />
+	
+		<span style="font-size:14px"></span>
+		<pre><code class="language-java"> /**
+     * Constructs an empty list.
+     */
+    public LinkedList() {
+        header.next = header.previous = header;
+    }</code></pre>
+		<span style="font-size:14px;">ArrayList的默认初始容量是10，当你的容量达到你设定的容量的2/3的时候，容量就会扩大为现在容量的3/2,如下代码：</span>
+	<br />
+	
+		<span style="font-size:14px"></span>
+		<pre><code class="language-java"> public void ensureCapacity(int minCapacity) {
+	modCount++;
+	int oldCapacity = elementData.length;
+	if (minCapacity > oldCapacity) {
+	    Object oldData[] = elementData;
+	    int newCapacity = (oldCapacity * 3)/2 + 1;
+    	    if (newCapacity < minCapacity)
+		newCapacity = minCapacity;
+            // minCapacity is usually close to size, so this is a win:
+            elementData = Arrays.copyOf(elementData, newCapacity);
+	}
+    }</code></pre>
+		<h2>
+			<span style="font-size:14px">4.Set和Map的注意事项</span>
+		</h2>
+	<br />
+	
+		<span style="font-size:14px;">大多时候使用set和map的时候是要去重的，大多时候使用的是基本类型就没有什么问题，但是如果要使用自己定义的类型，会出现坑：</span>
+	<br />
+	
+		<span style="font-size:14px"></span>
+		<pre><code class="language-java">class MyClass {
+	private int i;
+	MyClass(int i){
+		this.i = i;
+	}
+	@Override
+	public String toString() {
+		return "i=" + i;
+	}
+}</code></pre>
+		<span style="font-size:14px;">输出如下：</span><br />
+		
+		<pre><code class="language-java">new MyClass(0).equals(new MyClass(0)): false
+[i=0, i=0, i=0, i=0, i=0, i=0, i=0, i=0, i=0, i=0]</code></pre>
+		<span style="font-size:14px;">这个时候就要像第一节讲Object的时候，重写equals方法就好了。</span>
+	<br />
+	
+		<h2>
+			<span style="font-size:14px">5.快速报错</span>
+		</h2>
+		
+			<span style="font-size:14px">j</span><span style="font-size:14px;">ava默认的容器虽然不是线程安全的，但是却有保护机制，如果有一个线程遍历这个容器，另外一个线程却改变了这个容器，就会发生异常：</span>
+		<br />
+		<span style="font-size:14px"></span>
+		<pre><code class="language-java">		Iterator<MyClass> iterator = mycalssSet.iterator();
+		mycalssSet.add(new MyClass(1));
+		iterator.next();</code></pre>
+		<pre><code class="language-java">Exception in thread "main" java.util.ConcurrentModificationException
+	at java.util.HashMap$HashIterator.nextEntry(HashMap.java:793)
+	at java.util.HashMap$KeyIterator.next(HashMap.java:828)
+	at cn.com.codog.set.main.SetTest.main(SetTest.java:33)</code></pre>
+		
+	<br />
+<br />
+<span style="font-size:14px">相关内容:</span><br /><a href="prefix.html">前言</a><br /><a href="objectandtype.html">对象和类型</a><br /><a href="operateandtype.html">操作符和引用</a><br /><a href="processcontrol.html">流程控制语句</a><br /><a href="initialandclear.html">初始化和清理</a><br /><a href="accesscontrol.html">访问控制</a><br /><a href="proxy.html">组合和继承</a><br /><a href="implementsinterface.html">接口和多态</a><br /><a href="interfaceandabstractclass.html">接口与抽象类</a><br /><a href="vector.html">容器</a><br /><a href="exception.html">异常</a><br /><a href="classinformation.html">类型信息</a><br /><a href="generictype.html">泛型</a><br /><a href="array.html">数组</a><br /><a href="io.html">IO系统</a><br /><a href="enum.html">枚举类型</a><br /><a href="annotation.html">注解</a><br /><a href="mutithread.html">多线程</a><br /><a href="summary.html">总结</a><br /></div><script src="js/prism.js"></script></body></html>

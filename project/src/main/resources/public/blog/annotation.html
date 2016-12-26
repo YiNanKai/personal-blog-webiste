@@ -1,0 +1,161 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8" /><link href="css/prism.css" rel="stylesheet" /><link rel="stylesheet" href="css/jquery.jqTOC.css" type="text/css" /><script type="text/javascript" src="js/jquery-latest.js"></script><script type="text/javascript" src="js/jquery.jqTOC.js"></script><script type="text/javascript">$(document).ready(function(){$("#content").jqTOC();});</script></head><body><div id="content"><h1>
+	注解
+</h1>
+<h2>
+	1.系统内置标准注解
+</h2>
+
+	<h3>
+		<span style="font-size:14px">　　　　1.1 @Override：用于修饰此方法覆盖了父类的方法;</span>
+	</h3>
+	<span style="font-size:14px"></span><span style="font-size:14px;">　　　　如果子类想覆盖父类的方法，就可以使用这个annotation，这样，如果子类中的函数名拼写错误，和想覆盖的父类不一样，这样就会提示出错误。</span><br />
+	
+	<h3>
+		<span style="font-size:14px">　　　　1.2 @Deprecated：用于修饰已经过时的方法;</span>
+	</h3>
+	<span style="font-size:14px"></span><span style="font-size:14px;">　　　　用于声明一个方法过期了，不推荐使用，当有人使用的时候就会出现警告，如果父类中的方法使用了这个annotation，子类中的这个函数即使没有被这个annotation标记，也会被相同的对待，使用的时候也会出现警告。</span><br />
+	
+	<h3>
+		<span style="font-size:14px">　　　　1.3 @SuppressWarnnings:用于通知java编译器禁止特定的编译警告。</span>
+	</h3>
+	<span style="font-size:14px"></span><span style="font-size:14px;">　　　　这个annotation是有参数的，参数主要有以下的类型：<br />
+	          　　　　 &nbsp;1.deprecation：使用了不赞成使用的类或方法时的警告；<br />
+	　　　　 &nbsp;2.unchecked：执行了未检查的转换时的警告，例如当使用集合时没有用泛型 (Generics) 来指定集合保存的类型;&nbsp;<br />
+	　　　　 &nbsp;3.fallthrough：当 Switch 程序块直接通往下一种情况而没有 Break 时的警告;<br />
+	　　　　 &nbsp;4.path：在类路径、源文件路径等中有不存在的路径时的警告;&nbsp;<br />
+	　　　　 &nbsp;5.serial：当在可序列化的类上缺少 serialVersionUID 定义时的警告;&nbsp;<br />
+	　　　　 &nbsp;6.finally：任何 finally 子句不能正常完成时的警告;&nbsp;<br />
+	　　　　 &nbsp;7.all：关于以上所有情况的警告。</span>
+<br />
+
+	<span style="font-size:14px;">这些注解不用特意记忆，写代码写多了，后二种编译器会让你加上什么的，第一种不是强制的，加上最好，有自信不加也可以，后二种出现的时候，要检查自己的代码，是不是需要加这种注解，还是改改代码，让他不出现警告。</span>
+<br />
+<h2>
+	<span style="font-size:14px">2.元注解</span>
+</h2>
+
+	<span style="font-size:14px;"><span style="white-space:pre"></span>元注解是负责注解的注解&nbsp;</span>
+<br />
+<h3>
+	<span style="font-size:14px">	2.1 @Target</span>
+</h3>
+
+	<span style="font-size:14px"></span>
+	<p>
+		<span style="font-size:14px;">作用：用于描述注解的使用范围（即：被描述的注解可以用在什么地方）<br />
+		取值(ElementType)有：<br />
+		　　　　 1.CONSTRUCTOR:用于描述构造器<br />
+		　　　　<span style="white-space:pre"> </span>2.FIELD:用于描述域<br />
+		　　　　<span style="white-space:pre"> </span>3.LOCAL_VARIABLE:用于描述局部变量<br />
+		　　　　<span style="white-space:pre"> </span>4.METHOD:用于描述方法<br />
+		　　　　<span style="white-space:pre"> </span>5.PACKAGE:用于描述包<br />
+		　　　　<span style="white-space:pre"> </span>6.PARAMETER:用于描述参数<br />
+		　　　　<span style="white-space:pre"> </span>7.TYPE:用于描述类、接口(包括注解类型) 或enum声明</span>
+	</p>
+	<p>
+		<span style="font-size:14px;">代码如下：</span>
+	</p>
+	<pre><code class="language-java">@Target(ElementType.CONSTRUCTOR)
+public @interface Test {
+
+}</code></pre>
+	<pre><code class="language-java">@Test//The annotation @Test is disallowed for this location
+public class MyClass {//类
+
+	@Test
+	private int i;//域
+	
+	@Test
+	MyClass(){//构造器
+		
+	}
+	@Test
+	public void print(){//方法
+		@Test
+		String str = "string";//局部变量
+		System.out.println("print()");
+	}
+	
+	public void print(@Test String param/*参数*/){
+		System.out.println(param);
+	}
+}</code></pre>
+	<image src="images/annotation0.png"></image>
+	<p>
+	</p>
+	<p>
+		<span style="font-size:14px;">关于包注解我觉得挺少见的：</span>
+	</p>
+	<pre><code class="language-java">@Test//Package annotations must be in file package-info.java
+package cn.com.codog.annotation;//包</code></pre>
+	<image src="images/annotation1.png"></image>
+	<p>
+	</p>
+	<p>
+		<span style="font-size:14px;">自从java8之后，又出现了几个新的注解：</span>
+	</p>
+	<p>
+	</p>
+	<pre><code class="language-java">		for(ElementType type : ElementType.values()){
+			System.out.println(type);
+		}</code></pre>
+	<span style="font-size:14px;">输出如下：</span>
+	<p>
+	</p>
+	<p>
+	</p>
+	<pre><code class="language-java">TYPE
+FIELD
+METHOD
+PARAMETER
+CONSTRUCTOR
+LOCAL_VARIABLE
+ANNOTATION_TYPE
+PACKAGE
+TYPE_PARAMETER
+TYPE_USE</code></pre>
+	<span style="font-size:14px;">也就是ANNOTATION_TYPE,TYPE_USE,TYPE_PARAMETER</span>
+	<p>
+	</p>
+	<p>
+		<span style="font-size:14px;">这个经过我的测试，ANNOTATION_TYPE代表只可以修饰注解类型，TYPE_PARAMETER这个我还没弄明白，希望有知道的小伙伴可以教我一下，TYPE_USE范围很广，除了包和普通函数，其他的都能修饰</span>
+		<image src="images/annotation2.png"></image>
+	</p>
+	<h2>
+		<span style="font-size:14px"><span style="font-size:14px"><span style="white-space:pre"></span>2.2 @Retention</span></span>
+	</h2>
+	
+		<span style="font-size:14px;"><span style="white-space:pre"></span>作用：表示需要在什么级别保存该注释信息，用于描述注解的生命周期（即：被描述的注解在什么范围内有效）<br />
+		<span style="white-space:pre"></span>&nbsp; &nbsp; &nbsp;取值（RetentionPoicy）有：<br />
+		<span style="white-space:pre"></span>　　　　 1.SOURCE:在源文件中有效（即源文件保留）<br />
+		　　　　<span style="white-space:pre"> </span>2.CLASS:在class文件中有效（即class保留）<br />
+		　　　　<span style="white-space:pre"> </span>3.RUNTIME:在运行时有效（即运行时保留）</span>
+	<br />
+	
+		<span style="font-size:14px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;这个一般自己编写的都是RUNTIME的</span>
+	<br />
+	
+		<h2>
+			<span style="font-size:14px">2.3 @Documented</span>
+		</h2>
+		<span style="white-space:pre"></span><span style="font-size:14px;">将注解添加到javadoc中</span>
+	<br />
+	
+		<h2>
+			<span style="font-size:14px"><span style="white-space:pre"></span>2.4 @Inherited</span>
+		</h2>
+		
+			<span style="font-size:14px;"><span style="white-space:pre"></span>子类继承父类的注解</span>
+		<br />
+		<h2>
+			3.注解处理器
+		</h2>
+		
+			<span style="font-size:14px">注解</span>
+		<br />
+		
+			<span style="white-space:pre"></span>
+		<br />
+	<br />
+<br />
+<span style="font-size:14px">相关内容:</span><br /><a href="prefix.html">前言</a><br /><a href="objectandtype.html">对象和类型</a><br /><a href="operateandtype.html">操作符和引用</a><br /><a href="processcontrol.html">流程控制语句</a><br /><a href="initialandclear.html">初始化和清理</a><br /><a href="accesscontrol.html">访问控制</a><br /><a href="proxy.html">组合和继承</a><br /><a href="implementsinterface.html">接口和多态</a><br /><a href="interfaceandabstractclass.html">接口与抽象类</a><br /><a href="vector.html">容器</a><br /><a href="exception.html">异常</a><br /><a href="classinformation.html">类型信息</a><br /><a href="generictype.html">泛型</a><br /><a href="array.html">数组</a><br /><a href="io.html">IO系统</a><br /><a href="enum.html">枚举类型</a><br /><a href="annotation.html">注解</a><br /><a href="mutithread.html">多线程</a><br /><a href="summary.html">总结</a><br /></div><script src="js/prism.js"></script></body></html>

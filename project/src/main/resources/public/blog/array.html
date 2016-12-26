@@ -1,0 +1,175 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8" /><link href="css/prism.css" rel="stylesheet" /><link rel="stylesheet" href="css/jquery.jqTOC.css" type="text/css" /><script type="text/javascript" src="js/jquery-latest.js"></script><script type="text/javascript" src="js/jquery.jqTOC.js"></script><script type="text/javascript">$(document).ready(function(){$("#content").jqTOC();});</script></head><body><div id="content"><h1>
+	数组
+</h1>
+<h2>
+	1.数组复制
+</h2>
+
+	<span style="font-size:14px;">数组复制除了使用for循环之外，还有更快的方式，就是调用System类的方法arraycopy()</span>
+<br />
+<h3>
+	1.1 System.arraycopy不会自动解包和打包
+</h3>
+
+	<pre><code class="language-java">		final int length = 10;
+		int[] a = new int[length];
+		Arrays.fill(a, 1);
+		int[] b = new int[length];
+		Arrays.fill(b, 2);
+		Integer[] c = new Integer[length];
+		Arrays.fill(c, 3);
+		System.out.println("a:" + Arrays.toString(a));
+		System.out.println("b:" + Arrays.toString(b));
+		System.out.println("c:" + Arrays.toString(c));
+		System.arraycopy(b, 0, a, 0, length);
+		System.out.println("复制之后a:" + Arrays.toString(a));
+		System.out.println("复制之后b:" + Arrays.toString(b));
+		System.arraycopy(b, 0, c, 0, length);
+		System.out.println("复制之后b:" + Arrays.toString(a));
+		System.out.println("复制之后c:" + Arrays.toString(b));</code></pre>
+	<span style="font-size:14px;">输出如下：</span>
+<br />
+
+	<pre><code class="language-java">Exception in thread "main" java.lang.ArrayStoreException
+	at java.lang.System.arraycopy(Native Method)
+	at cn.com.codog.array.TestSystemArrayCopy.main(TestSystemArrayCopy.java:22)
+a:[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+b:[2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+c:[3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+复制之后a:[2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+复制之后b:[2, 2, 2, 2, 2, 2, 2, 2, 2, 2]</code></pre>
+	<p>
+		<span style="font-size:14px;">但是for循环是可以解包和打包的。</span>
+	</p>
+	<h3>
+		1.2 System.arraycopy是浅复制
+	</h3>
+	
+		<pre><code class="language-java">public class A {
+
+	private int a;
+	public A(int a){
+		this.a = a;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof A){
+			return this.a == ((A)obj).a ;
+		}
+		return false;
+	}
+}</code></pre>
+		<pre><code class="language-java">		A[] as0 = new A[length];
+		Arrays.fill(as0, new A(1));
+		System.out.println("as0[0] == as0[1]? " + (as0[0] == as0[1]));
+		
+		A[] as1 = new A[length];
+		Arrays.fill(as1, new A(2));
+		System.arraycopy(as1, 0, as0, 0, length);
+		System.out.println("as0[0] == as1[0]? " + (as0[0] == as1[0]));</code></pre>
+		<span style="font-size:14px;">输出如下：</span>
+		<pre><code class="language-java">as0[0] == as0[1]? true
+as0[0] == as1[0]? true</code></pre>
+		<span style="font-size:14px;">这证明fill函数也是浅复制的，也就是复制了对象的引用，没有复制实际内容。for循环也是浅复制。</span>
+	<br />
+	<h3>
+		<span style="font-size:14px">&nbsp;1.3 for循环赋值的效率不如arraycopy函数</span>
+	</h3>
+	
+		<span style="font-size:14px;">代码如下：</span>
+	<br />
+	
+		<span style="font-size:14px"></span>
+		<pre><code class="language-java">		final int size = 10000;
+		int[][] is0 = new int[3][size];
+		for(int i = 0;i < 3;i++){
+			Arrays.fill(is0[i], i);
+		}
+		long start = System.currentTimeMillis();
+		System.arraycopy(is0[0], 0, is0[1], 0, size);
+		long mid = System.currentTimeMillis();
+		for(int i = 0;i < size;i++){
+			is0[0][i] = is0[2][i];
+		}
+		long end = System.currentTimeMillis();
+		System.out.println("arraycopy所用的时间是 " + ( mid - start ) );
+		System.out.println("for循环所用的时间是 " + (end - mid));</code></pre>
+		<span style="font-size:14px;">输出如下：</span>
+		<pre><code class="language-java">arraycopy所用的时间是 0
+for循环所用的时间是 1</code></pre>
+		<h2>
+			<span style="font-size:14px">2.结合Comparator实现数组排序</span>
+		</h2>
+		
+			<pre><code class="language-java">public class A {
+
+	private int a;
+
+	public A(int a){
+		this.a = a;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof A){
+			return this.a == ((A)obj).a ;
+		}
+		return false;
+	}
+	
+	@Override
+	public String toString() {
+		return "i: " + a;
+	}
+	
+	public int getA() {
+		return a;
+	}
+
+	public void setA(int a) {
+		this.a = a;
+	}
+}</code></pre>
+			<pre><code class="language-java">		A[] listA = new A[length];
+		for(int i = 0;i < length;i++){
+			listA[i] = new A(i);
+		}
+		System.out.println("排序前的listA:" + Arrays.toString(listA));
+		Arrays.sort(listA,new Comparator<A>() {
+
+			@Override
+			public int compare(A x, A y) {
+				<del>return -(x.getA() - y.getA());</del>
+			}
+		});
+		System.out.println("排序后的listA:" + Arrays.toString(listA));</code></pre>
+			<br />
+			
+		<br />
+		<span style="font-size:14px;">输出如下：</span>
+		<pre><code class="language-java">排序前的listA:[i: 0, i: 1, i: 2, i: 3, i: 4, i: 5, i: 6, i: 7, i: 8, i: 9]
+排序后的listA:[i: 9, i: 8, i: 7, i: 6, i: 5, i: 4, i: 3, i: 2, i: 1, i: 0]</code></pre>
+		<span style="font-size:14px;">java8下可以这么写，使用lambda，简洁一些：</span>
+		<pre><code class="language-java">Arrays.sort(listA,(x, y) -> {<del> return -(x.getA() - y.getA());</del> });</code></pre>
+		<p>
+			<span style="font-size:14px;">不好意思，虽然很多人，包括我自己经常这么写，但是实际上我写错了，虽然这个很简洁，但是，当x-y大于int的范围内会出现问题，正确的代码应该如下：</span>
+		</p>
+		<pre><code class="language-java">if(x.getA() > y.getA()){
+    return -1;
+}else if(x.getA() < y.getA()){
+    return 1;
+}esle{
+    return 0
+}</code></pre>
+		<p>
+		</p>
+		<h2>
+			<span style="font-size:14px">3.Comparable<T>接口</span>
+		</h2>
+	<br />
+	
+		<span style="font-size:14px;">上面的代码也可以通过让A继承Comparable<T>接口实现，这个挺简单的，不说了，有问题请联系我。</span>
+	<br />
+<br />
+<span style="font-size:14px">相关内容:</span><br /><a href="prefix.html">前言</a><br /><a href="objectandtype.html">对象和类型</a><br /><a href="operateandtype.html">操作符和引用</a><br /><a href="processcontrol.html">流程控制语句</a><br /><a href="initialandclear.html">初始化和清理</a><br /><a href="accesscontrol.html">访问控制</a><br /><a href="proxy.html">组合和继承</a><br /><a href="implementsinterface.html">接口和多态</a><br /><a href="interfaceandabstractclass.html">接口与抽象类</a><br /><a href="vector.html">容器</a><br /><a href="exception.html">异常</a><br /><a href="classinformation.html">类型信息</a><br /><a href="generictype.html">泛型</a><br /><a href="array.html">数组</a><br /><a href="io.html">IO系统</a><br /><a href="enum.html">枚举类型</a><br /><a href="annotation.html">注解</a><br /><a href="mutithread.html">多线程</a><br /><a href="summary.html">总结</a><br /></div><script src="js/prism.js"></script></body></html>

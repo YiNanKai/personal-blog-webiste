@@ -1,0 +1,455 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8" /><link href="css/prism.css" rel="stylesheet" /><link rel="stylesheet" href="css/jquery.jqTOC.css" type="text/css" /><script type="text/javascript" src="js/jquery-latest.js"></script><script type="text/javascript" src="js/jquery.jqTOC.js"></script><script type="text/javascript">$(document).ready(function(){$("#content").jqTOC();});</script></head><body><div id="content"><h1>
+	多线程
+</h1>
+<h2>
+	1.线程池
+</h2>
+
+	<span style="font-size:14px;">线程池可以避免执行多个线程的时候不断的创建新线程，可以节省时间，主要的线程池有CachedThreadPool，FixedThreadPool，SingleThreadExecutor，ScheduledThreadPool，使用方法都是相似的：</span>
+	<pre><code class="language-java">public class SysoutRunable implements Runnable{
+
+	private int i;
+	public SysoutRunable(int i) {
+		this.i = i;
+	}
+	@Override
+	public void run() {
+		System.out.print(i + " ");
+	}
+}</code></pre>
+	<pre><code class="language-java">		ExecutorService newCachedThreadPool = Executors.newCachedThreadPool();
+		for(int i = 0;i < 10;i++){
+			newCachedThreadPool.execute(new SysoutRunable(i));
+		}
+		
+		ExecutorService newFixedThreadPool = Executors.newFixedThreadPool(1);
+		for(int i = 0;i < 10;i++){
+			newFixedThreadPool.execute(new SysoutRunable(i));
+		}
+		ExecutorService newSingleThreadExecutor = Executors.newSingleThreadExecutor();
+		for(int i = 0;i < 10;i++){
+			newSingleThreadExecutor.execute(new SysoutRunable(i));
+		}
+		ScheduledExecutorService newScheduledThreadPool = Executors.newScheduledThreadPool(5);
+		for(int i = 0;i < 10;i++){
+			newScheduledThreadPool.execute(new SysoutRunable(i));
+			newScheduledThreadPool.schedule(new SysoutRunable(0), 5, TimeUnit.SECONDS);
+		}
+		newScheduledThreadPool.schedule(() -> { System.out.println("haha"); }, 1, TimeUnit.MINUTES);</code></pre>
+	<span style="font-size:14px;">输出如下：</span>
+<br />
+
+	<pre><code class="language-java">0 3 4 7 8 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 2 1 5 9 6 0 1 2 3 4 5 6 7 8 9 haha</code></pre>
+	<h2>
+		2.多线程返回值
+	</h2>
+<br />
+
+	<span style="font-size:14px;">多线程的Runnable不能返回值，要返回值可以采用Callable接口：</span>
+	<pre><code class="language-java">		ExecutorService newCachedThreadPool = Executors.newCachedThreadPool();
+		Future<String> result = newCachedThreadPool.submit(() -> {return "codog";});
+		try {
+			System.out.println(result.get());
+		} catch (InterruptedException | ExecutionException e) {
+			e.printStackTrace();
+		}</code></pre>
+	<span style="font-size:14px;">好像没看出是Callable接口，换一个如下：</span>
+<br />
+
+	<span style="font-size:14px"></span>
+	<pre><code class="language-java">		String str = newCachedThreadPool.submit(new Callable<String>() {
+			@Override
+			public String call() throws Exception {
+				return "www.codog.com.cn";
+			}	
+		}).get();
+		System.out.println(str);</code></pre>
+	<span style="font-size:14px;">输出如下：</span>
+<br />
+
+	<span style="font-size:14px"></span>
+	<pre><code class="language-java">www.codog.com.cn</code></pre>
+	<h2>
+		<span style="font-size:14px">3.后台线程</span>
+	</h2>
+<br />
+
+	<span style="font-size:14px;">后台线程会在所有非后台线程结束后结束，可以根据ThreadFactory定制线程池：</span>
+<br />
+
+	<span style="font-size:14px"></span>
+	<pre><code class="language-java">		ExecutorService newCachedThreadPool = Executors
+				.newCachedThreadPool((r) -> {
+					Thread t = new Thread(r);
+					t.setDaemon(true);
+					return t;
+				});
+		for (int i = 0; i < 10; i++) {
+			newCachedThreadPool.execute(() -> {
+				System.out.println(Thread.currentThread() + " : "
+						+ Thread.currentThread().isDaemon());
+			});
+		}</code></pre>
+	<span style="font-size:14px;">输出如下：</span>
+<br />
+
+	<span style="font-size:14px"></span>
+	<pre><code class="language-java">Thread[Thread-0,5,main] : true</code></pre>
+	<h2>
+		<span style="font-size:14px">4.join和interrupt</span>
+	</h2>
+<br />
+
+	<span style="font-size:14px;">join是指一个线程A调用join加入另一个线程B，知道A结束再继续执行B下面的内容，interrupt方法可以中断这一行为。</span>
+<br />
+
+	<span style="font-size:14px"></span>
+	<pre><code class="language-java">public class InnerThread extends Thread{
+
+	@Override
+	public void run() {
+		System.out.println("内部线程正在运行");
+	}
+
+}</code></pre>
+	
+		<span style="font-size:14px"></span>
+		<pre><code class="language-java">new OuterThread().start();</code></pre>
+	<br />
+	<span style="font-size:14px;">当代码如下的时候：</span>
+<br />
+
+	<span style="font-size:14px"></span>
+	<pre><code class="language-java">public class OuterThread extends Thread{
+
+	private InnerThread innerThread = new InnerThread();
+	@Override
+	public void run() {
+		System.out.println("外部线程开始执行");
+		//innerThread.join();
+		innerThread.start();
+		//innerThread.join();
+		System.out.println("外部线程结束执行");
+	}
+
+}</code></pre>
+<br />
+
+	<span style="font-size:14px;">输出如下：</span>
+<br />
+
+	<span style="font-size:14px"></span>
+	<pre><code class="language-java">外部线程开始执行
+外部线程结束执行
+内部线程正在运行</code></pre>
+<br />
+
+	<span style="font-size:14px;">当代码如下的时候：</span>
+<br />
+
+	<span style="font-size:14px"></span>
+	<pre><code class="language-java">public class OuterThread extends Thread{
+
+	private InnerThread innerThread = new InnerThread();
+	@Override
+	public void run() {
+		System.out.println("外部线程开始执行");
+		//innerThread.join();
+		innerThread.start();
+		try {
+			innerThread.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("外部线程结束执行");
+	}
+
+}</code></pre>
+<br />
+
+	<span style="font-size:14px;">输出如下：</span>
+<br />
+
+	<span style="font-size:14px"></span>
+	<pre><code class="language-java">外部线程开始执行
+内部线程正在运行
+外部线程结束执行</code></pre>
+	<span style="font-size:14px;">看完了有没有感觉我是在欺骗你，多线程怎么表现的这么乖</span>
+<br />
+<h2>
+	<span style="font-size:14px">5.原子类</span>
+</h2>
+
+	<span style="font-size:14px;">原子类是指多线程操作下还是同步的状态的基础类，比如AtomicInteger,AtomicLong,AtomicReference等。</span>
+<br />
+
+	<span style="font-size:14px;">代码如下：</span>
+<br />
+
+	<span style="font-size:14px"></span>
+	<pre><code class="language-java">public class OperateClass {
+
+	private int a = 0;
+	private AtomicInteger ai = new AtomicInteger(0);
+
+	public void increment() {
+		a++;
+		ai.addAndGet(1);
+	}
+
+	public int getA() {
+		return a;
+	}
+
+	public void setA(int a) {
+		this.a = a;
+	}
+
+	public AtomicInteger getAi() {
+		return ai;
+	}
+
+	public void setAi(AtomicInteger ai) {
+		this.ai = ai;
+	}
+}</code></pre>
+	<pre><code class="language-java">public class OperateThread implements Runnable{
+
+	private OperateClass operateClass;
+	
+	public OperateThread(OperateClass operateClass) {
+		super();
+		this.operateClass = operateClass;
+	}
+
+	@Override
+	public void run() {
+		operateClass.increment();
+	}
+}</code></pre>
+	<pre><code class="language-java">		OperateClass opc = new OperateClass();
+		ExecutorService newCachedThreadPool = Executors.newCachedThreadPool();
+		for(int i = 0;i < 1000;i++){
+			newCachedThreadPool.execute(new OperateThread(opc));
+		}
+		newCachedThreadPool.shutdown();
+		System.out.println("a:" + opc.getA() + ",ai: " + opc.getAi());</code></pre>
+	<span style="font-size:14px;">输出如下：</span>
+<br />
+
+	<span style="font-size:14px"></span>
+	<pre><code class="language-java">a:994,ai: 1000</code></pre>
+	<span style="font-size:14px;">可以看出同样是加了1000次，但是原子类是可以在多线程环境下工作的。</span>
+<br />
+
+	<span style="font-size:14px;">原子类包中还有很多可以参考，但是到需要的时候自然会用到。</span>
+<br />
+<h2>
+	<span style="font-size:14px">6.同步队列实现生产者和消费者</span>
+</h2>
+
+	<span style="font-size:14px;">生产者和消费者的编程模型是很出名的，可以利用wait和notify来实现，但是代码的复杂度还是有的，而且可读性差，java内置的同步队列可以满足需求，为了说明问题，我还增加了一个搬运者的角色，生产者负责生产，搬运者负责搬运生产者产生的产品，消费者负责消费搬运者搬运的产品，代码如下：</span>
+<br />
+
+	<span style="font-size:14px"></span>
+	<pre><code class="language-java">public abstract class Person {
+
+	protected LinkedBlockingQueue<Production> productions;
+
+	protected LinkedBlockingQueue<Production> targetProductions;
+
+	public Person(LinkedBlockingQueue<Production> productions,
+			LinkedBlockingQueue<Production> targetProductions) {
+		super();
+		this.productions = productions;
+		this.targetProductions = targetProductions;
+	}
+
+	public LinkedBlockingQueue<Production> getProductions() {
+		return productions;
+	}
+
+	public void setProductions(LinkedBlockingQueue<Production> productions) {
+		this.productions = productions;
+	}
+
+	public LinkedBlockingQueue<Production> getTargetProductions() {
+		return targetProductions;
+	}
+
+	public void setTargetProductions(
+			LinkedBlockingQueue<Production> targetProductions) {
+		this.targetProductions = targetProductions;
+	}
+
+	protected abstract void move() throws InterruptedException;
+}</code></pre>
+	<br />
+	
+	<pre><code class="language-java">public class Production {
+
+	private int id;
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public Production(int id) {
+		super();
+		this.setId(id);
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	@Override
+	public String toString() {
+		return "Production [id=" + id + "]";
+	}
+
+}</code></pre>
+	<br />
+	
+	<pre><code class="language-java">public class Producter extends Person implements Runnable {
+
+	public Producter(LinkedBlockingQueue<Production> productions,
+			LinkedBlockingQueue<Production> targetProductions) {
+		super(productions, targetProductions);
+	}
+
+	@Override
+	public void run() {
+		for(int i = 0;i < 10;i++){
+			try {
+				move();
+				Thread.sleep(10);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	@Override
+	protected void move() throws InterruptedException {
+		if(targetProductions == null){
+			System.out.println("生产者的目标队列不能为空");
+			return;
+		}
+		int id = (int)(Math.random() * 100);
+		Production production = new Production(id);
+		targetProductions.put(production);
+		System.out.println("生产了" + production.toString());
+	}
+
+}</code></pre>
+	<br />
+	
+	<pre><code class="language-java">public class Mover extends Person implements Runnable{
+
+	public Mover(LinkedBlockingQueue<Production> productions,
+			LinkedBlockingQueue<Production> targetProductions) {
+		super(productions, targetProductions);
+	}
+
+	@Override
+	public void run() {
+		while(true){
+			try {
+				move();
+				Thread.sleep(35);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	@Override
+	protected void move() throws InterruptedException {
+		if(targetProductions == null || productions == null){
+			System.out.println("搬运者的源队列和目标队列都不能为空");
+			return;
+		}
+		Production production = productions.take();
+		targetProductions.put(production);
+		System.out.println("移动了" + production.toString());
+	}
+
+	
+}</code></pre>
+	<br />
+	
+	<pre><code class="language-java">public class Consumer extends Person implements Runnable{
+
+	public Consumer(LinkedBlockingQueue<Production> productions,
+			LinkedBlockingQueue<Production> targetProductions) {
+		super(productions, targetProductions);
+	}
+
+	@Override
+	public void run() {
+		while(true){
+			try {
+				move();
+				Thread.sleep(31);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	@Override
+	protected void move() throws InterruptedException {
+		if(productions == null){
+			System.out.println("消费者的源队列不能为空");
+			return;
+		}
+		System.out.println("消费了" + productions.take().toString());		
+	}
+
+}</code></pre>
+	<pre><code class="language-java">	public static void main(String[] args) {
+		ExecutorService newCachedThreadPool = Executors.newCachedThreadPool();
+		LinkedBlockingQueue<Production> productions = new LinkedBlockingQueue<>();
+		LinkedBlockingQueue<Production> targetProductions = new LinkedBlockingQueue<>();
+		newCachedThreadPool.execute(new Producter(null, productions));
+		newCachedThreadPool.execute(new Mover(productions, targetProductions));
+		newCachedThreadPool.execute(new Consumer(targetProductions, null));
+	}</code></pre>
+	<span style="font-size:14px;">输出如下：</span>
+<br />
+
+	<span style="font-size:14px"></span>
+	<pre><code class="language-java">生产了Production [id=65]
+移动了Production [id=65]
+消费了Production [id=65]
+生产了Production [id=19]
+生产了Production [id=44]
+生产了Production [id=76]
+移动了Production [id=19]
+消费了Production [id=19]
+生产了Production [id=2]
+生产了Production [id=6]
+生产了Production [id=12]
+生产了Production [id=40]
+移动了Production [id=44]
+消费了Production [id=44]
+生产了Production [id=54]
+生产了Production [id=3]
+移动了Production [id=76]
+消费了Production [id=76]
+移动了Production [id=2]
+消费了Production [id=2]
+移动了Production [id=6]
+消费了Production [id=6]
+移动了Production [id=12]
+消费了Production [id=12]
+移动了Production [id=40]
+消费了Production [id=40]
+移动了Production [id=54]
+消费了Production [id=54]
+移动了Production [id=3]
+消费了Production [id=3]</code></pre>
+<br />
+<span style="font-size:14px">相关内容:</span><br /><a href="prefix.html">前言</a><br /><a href="objectandtype.html">对象和类型</a><br /><a href="operateandtype.html">操作符和引用</a><br /><a href="processcontrol.html">流程控制语句</a><br /><a href="initialandclear.html">初始化和清理</a><br /><a href="accesscontrol.html">访问控制</a><br /><a href="proxy.html">组合和继承</a><br /><a href="implementsinterface.html">接口和多态</a><br /><a href="interfaceandabstractclass.html">接口与抽象类</a><br /><a href="vector.html">容器</a><br /><a href="exception.html">异常</a><br /><a href="classinformation.html">类型信息</a><br /><a href="generictype.html">泛型</a><br /><a href="array.html">数组</a><br /><a href="io.html">IO系统</a><br /><a href="enum.html">枚举类型</a><br /><a href="annotation.html">注解</a><br /><a href="mutithread.html">多线程</a><br /><a href="summary.html">总结</a><br /></div><script src="js/prism.js"></script></body></html>

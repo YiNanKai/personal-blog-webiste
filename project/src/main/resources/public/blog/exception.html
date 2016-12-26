@@ -1,0 +1,190 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8" /><link href="css/prism.css" rel="stylesheet" /><link rel="stylesheet" href="css/jquery.jqTOC.css" type="text/css" /><script type="text/javascript" src="js/jquery-latest.js"></script><script type="text/javascript" src="js/jquery.jqTOC.js"></script><script type="text/javascript">$(document).ready(function(){$("#content").jqTOC();});</script></head><body><div id="content"><h1>
+	异常
+</h1>
+<h2>
+	1.异常与return
+</h2>
+
+	<span style="font-size:14px;">大家都知道return不再会执行函数，但是finally语句不管出现没出现异常都会被执行，那么当try或者catch语句有return的时候，finally还是否会执行呢？</span>
+<br />
+
+	<pre><code class="language-java">	public static void testReturnAndException(){
+		try {
+			System.out.println("try");
+			return;
+		} catch (Exception e) {
+			System.out.println("catch");
+		}finally{
+			System.out.println("finally");
+		}
+	}
+	
+	public static void main(String[] args) {
+		testReturnAndException();
+	}</code></pre>
+	<span style="font-size:14px;">输出如下：</span>
+<br />
+
+	<span style="font-size:14px"></span>
+	<pre><code class="language-java">try
+finally</code></pre>
+	<span style="font-size:14px;">结论就是还是会执行的，finally大法好</span>
+<br />
+
+	<h2>
+		<span style="font-size:14px">2.异常缺失</span>
+	</h2>
+	
+		<span style="font-size:14px;">java编程思想里面还说了个异常缺失的问题，就是在finally语句块中使用会抛出异常的函数和return语句，会使try中的异常失效，但是我发现编译器可以发现这个错误，所以我就把这个问题略过。</span>
+	<br />
+	<h2>
+		<span style="font-size:14px">3.异常限制</span>
+	</h2>
+	
+		<span style="font-size:14px;">在基类和接口中声明的异常，在子类中不可以增加异常，可以减少异常种类，因为如果子类增加了异常种类，就会失去基类的统一性。但是又分为很多种情况：</span>
+	<br />
+	<h3>
+		<span style="font-size:14px">3.1 构造函数不适合异常限制</span>
+	</h3>
+	
+		<span style="font-size:14px;">子类的构造函数需要调用父类的构造函数，所以需要捕获父类的异常，但是可以添加自己的异常：</span>
+	<br />
+	
+		<span style="font-size:14px"></span>
+		<pre><code class="language-java">class CException extends Exception{}
+class C0Exception extends CException{}
+class DException extends Exception{}
+class D0Exception extends DException{}
+
+class Father{
+	Father() throws CException{
+		
+	}
+}
+
+class Child extends Father{
+	Child() throws CException,DException{
+		
+	}
+}</code></pre>
+		<h3>
+			<span style="font-size:14px">3.2 普通函数不能添加异常类型</span>
+		</h3>
+		
+			<span style="font-size:14px"></span>
+			<pre><code class="language-java">class Father{
+	Father() throws CException{
+		
+	}
+	
+	public void print() throws CException{
+	}
+}
+
+class Child extends Father{
+	Child() throws CException,DException{
+		
+	}
+	
+	public void print() throws CException,DException{//Exception DException is not compatible with throws clause in Father.print()
+	}
+}</code></pre>
+			<h3>
+				<span style="font-size:14px">3.3 普通函数可以减少异常类型</span>
+			</h3>
+			
+				<span style="font-size:14px"></span>
+				<pre><code class="language-java">class Father{
+	Father() throws CException{
+		
+	}
+	
+	public void print() throws CException{
+	}
+	public void display() throws C0Exception{
+	}
+}
+
+class Child extends Father{
+	Child() throws CException,DException{
+		
+	}
+	public void display(){
+	}
+}</code></pre>
+				<h3>
+					<span style="font-size:14px">3.4 函数可以抛出异常的子类</span>
+				</h3>
+				
+					<span style="font-size:14px"></span>
+					<pre><code class="language-java">class Father{
+	Father() throws CException{
+		
+	}
+	
+	public void print() throws CException{
+	}
+	public void display() throws C0Exception{
+	}
+}
+
+class Child extends Father{
+	Child() throws CException,DException{
+		
+	}
+	
+	/*public void print() throws CException,DException{//Exception DException is not compatible with throws clause in Father.print()
+	}*/
+	
+	public void print() throws C0Exception{
+		
+	}
+	/*public void display() throws CException{//Exception CException is not compatible with throws clause in Father.display()
+	}*/
+	/*public void display(){
+	}*/
+}</code></pre>
+					<h3>
+						<span style="font-size:14px">3.5 像上转型的时候，捕获父类的异常</span>
+					</h3>
+					
+						<span style="font-size:14px"></span>
+						<pre><code class="language-java">Child child = null;
+		try {
+			child = new Child();
+		} catch (CException e) {
+			e.printStackTrace();
+		} catch (DException e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			child.print();
+		} catch (C0Exception e1) {
+			e1.printStackTrace();
+		}
+		
+		Father father = null;
+		try {
+			father = new Child();
+		} catch (CException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (DException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		try {
+			father.print();
+		} catch (CException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}</code></pre>		
+					<br />
+				<br />
+			<br />
+		<br />
+	<br />
+<br />
+<span style="font-size:14px">相关内容:</span><br /><a href="prefix.html">前言</a><br /><a href="objectandtype.html">对象和类型</a><br /><a href="operateandtype.html">操作符和引用</a><br /><a href="processcontrol.html">流程控制语句</a><br /><a href="initialandclear.html">初始化和清理</a><br /><a href="accesscontrol.html">访问控制</a><br /><a href="proxy.html">组合和继承</a><br /><a href="implementsinterface.html">接口和多态</a><br /><a href="interfaceandabstractclass.html">接口与抽象类</a><br /><a href="vector.html">容器</a><br /><a href="exception.html">异常</a><br /><a href="classinformation.html">类型信息</a><br /><a href="generictype.html">泛型</a><br /><a href="array.html">数组</a><br /><a href="io.html">IO系统</a><br /><a href="enum.html">枚举类型</a><br /><a href="annotation.html">注解</a><br /><a href="mutithread.html">多线程</a><br /><a href="summary.html">总结</a><br /></div><script src="js/prism.js"></script></body></html>

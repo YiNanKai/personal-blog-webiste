@@ -1,35 +1,16 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8" />
-	<link href="css/prism.css" rel="stylesheet" />
-	<link rel='stylesheet' href='css/jquery.jqTOC.css' type='text/css' />
-    <script type="text/javascript" src="js/jquery-latest.js"></script>
-    <script type="text/javascript" src="js/jquery.jqTOC.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-         $('#content').jqTOC();
-      });
-    </script>
-</head>
-
-<body>
-
-<div id="content">
-
-<h1>
+<!DOCTYPE html><html><head><meta charset="UTF-8" /><link href="css/prism.css" rel="stylesheet" /><link rel="stylesheet" href="css/jquery.jqTOC.css" type="text/css" /><script type="text/javascript" src="js/jquery-latest.js"></script><script type="text/javascript" src="js/jquery.jqTOC.js"></script><script type="text/javascript">$(document).ready(function(){$("#content").jqTOC();});</script></head><body><div id="content"><h1>
 	组合，继承和代理
 </h1>
 <h2>
 	1.什么是代理
 </h2>
-<div>
-	<span style="font-size:14px;">代理是组合和继承的中庸之道，类B包含类A（相当于组合），但是类B包含类A的所有方法（相当于继承），这个其实听起来觉得还挺乱，但其实真正写代码的时候，你觉得继承从理论上就说不通，自然会使用组合，然后你想将A类的方法也提供给客户端使用，自然就会使用代理这种方法。</span>
-</div>
-<div>
-	<span style="font-size:14px;">代码如下：</span>
-</div>
-<div>
+
+	<span style="font-size:14px">代理是组合和继承的中庸之道，类B包含类A（相当于组合），但是类B包含类A的所有方法（相当于继承），这个其实听起来觉得还挺乱，但其实真正写代码的时候，你觉得继承从理论上就说不通，自然会使用组合，然后你想将A类的方法也提供给客户端使用，自然就会使用代理这种方法。</span>
+<br />
+
+	<span style="font-size:14px">代码如下：</span>
+<br />
+
 	<pre><code class="language-java">package cn.com.codog.third;
 
 public class A {
@@ -68,35 +49,36 @@ public class B {
 		b.print();
 	}
 }</code></pre>
-	<span style="font-size:14px;">输出如下：</span>
-</div>
+	<span style="font-size:14px">输出如下：</span>
+<br />
 
 	<pre><code class="language-java">A89</code></pre>
 	<h2>
 		2.尽量使用父类声明
 	</h2>
-	<div>
-		<span style="font-size:14px;">这里有一个小技巧，比如HashMap是Map的子类，当你没有特殊需求的时候，一般写作</span>
-	</div>
-	<div>
-		<span style="font-size:14px;">Map map = new HashMap();</span>
-	</div>
-	<div>
-		<span style="font-size:14px;">这样使得你的代码灵活性高</span>
-	</div>
-	<div>
+	
+		<span style="font-size:14px">这里有一个小技巧，比如HashMap是Map的子类，当你没有特殊需求的时候，一般写作</span>
+	<br />
+	
+		<span style="font-size:14px">Map map = new HashMap();</span>
+	<br />
+	
+		<span style="font-size:14px">这样使得你的代码灵活性高</span>
+	<br />
+	
 		<br />
 		
-	</div>
+	<br />
 	<h2>
 		3.final关键字
 	</h2>
 	<h3>
 		3.1 final属性
 	</h3>
-	<div>
-		<span style="font-size:14px;">当作用于属性或者局部变量的时候，分为final的属性和final的引用，当final是引用的时候，引用的对象内容是可以变化的，但是引用不可以变，如下代码：</span>
-	</div>
+	
+		<span style="font-size:14px">当作用于属性或者局部变量的时候，分为final的属性和final的引用，当final是引用的时候，引用的对象内容是可以变化的，但是引用不可以变，如下代码：</span>
+	<br />
+	
 		<pre><code class="language-java">package cn.com.codog.third;
 
 public class FinalTest {
@@ -118,14 +100,16 @@ public class FinalTest {
 		<h3>
 			3.2 final参数
 		</h3>
-		<span style="font-size:14px;">final参数的意思是在方法内部不能改变这个参数：</span>
+		<span style="font-size:14px">final参数的意思是在方法内部不能改变这个参数：</span>
+	<br />
+	
 		<pre><code class="language-java">public void withFinal(final int i){
 		i++;//The final local variable i cannot be assigned. It must be blank and not using a compound assignment
 	}</code></pre>
 		<h3>
 			3.3 final方法
 		</h3>
-		<div>
+		
 			<pre><code class="language-java">public class A {
 
 	protected int i;
@@ -155,12 +139,13 @@ public class FinalTest {
 		
 	}*///Cannot override the final method from A
 }</code></pre>
-			<span style="font-size:14px;">final方法是防止继承的，和private类似，但是final方法在子类中还可以访问，只是不能修改方法的实现</span>
-		</div>
+			<span style="font-size:14px">final方法是防止继承的，和private类似，但是final方法在子类中还可以访问，只是不能修改方法的实现</span>
+		<br />
+		
 			<h3>
 				3.3 final类
 			</h3>
-			<div>
+			
 				<pre><code class="language-java">public final class A {
 
 	protected int i;
@@ -193,19 +178,20 @@ public class FinalTest {
 		
 	}//Cannot override the final method from A
 }*/</code></pre>
-				<span style="font-size:14px;">但是其实除了final域和final参数之外，其他的情况还是很少使用的。</span>
-			</div>
-			<div>
+				<span style="font-size:14px">但是其实除了final域和final参数之外，其他的情况还是很少使用的。</span>
+			<br />
+			
 				<br />
 				
-			</div>
+			<br />
+			
 				<h2>
 					4.继承与初始化
 				</h2>
-				<div>
-					<span style="font-size:14px;">当继承与初始化放在一起是很有趣的，代码如下：</span>
-				</div>
-				<div>
+				
+					<span style="font-size:14px">当继承与初始化放在一起是很有趣的，代码如下：</span>
+				<br />
+				
 					<pre><code class="language-java">public class Father {
 
 	public Father() {
@@ -229,10 +215,6 @@ public class FinalTest {
 		Father f = new Child();
 	}
 }</code></pre>
-					<div>
-						<br />
-						
-					</div>
 					<pre><code class="language-java">public class InnerClass {
 
 	private int i;
@@ -240,22 +222,18 @@ public class FinalTest {
 		System.out.println(i);
 	}
 }</code></pre>
-					<br />
-					<span style="font-size:14px;">输出如下：</span>
 					<pre><code class="language-java">0
 1
 2
 Father()
 3
 Child()</code></pre>
-					<span style="font-size:14px;">所以总的顺序是先父类static-->子类的static-->父类的成员-->父类的构造函数-->子类的成员-->子类的构造函数</span><br />
-					<br />
-					<br />
-					
-				</div>
-		
-</div>
+					<span style="font-size:14px">所以总的顺序是先父类static-->子类的static-->父类的成员-->父类的构造函数-->子类的成员-->子类的构造函数</span><br />
+				<br />
+			<br />
+		<br />
+	<br />
 
-<script src="js/prism.js"></script>
-</body>
-</html>
+	
+<br />
+<span style="font-size:14px">相关内容:</span><br /><a href="prefix.html">前言</a><br /><a href="objectandtype.html">对象和类型</a><br /><a href="operateandtype.html">操作符和引用</a><br /><a href="processcontrol.html">流程控制语句</a><br /><a href="initialandclear.html">初始化和清理</a><br /><a href="accesscontrol.html">访问控制</a><br /><a href="proxy.html">组合和继承</a><br /><a href="implementsinterface.html">接口和多态</a><br /><a href="interfaceandabstractclass.html">接口与抽象类</a><br /><a href="vector.html">容器</a><br /><a href="exception.html">异常</a><br /><a href="classinformation.html">类型信息</a><br /><a href="generictype.html">泛型</a><br /><a href="array.html">数组</a><br /><a href="io.html">IO系统</a><br /><a href="enum.html">枚举类型</a><br /><a href="annotation.html">注解</a><br /><a href="mutithread.html">多线程</a><br /><a href="summary.html">总结</a><br /></div><script src="js/prism.js"></script></body></html>
