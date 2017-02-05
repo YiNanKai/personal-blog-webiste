@@ -17,9 +17,13 @@ import lombok.ToString;
 @Getter
 public class UserfulUrl {
 	//网址链接
-    private String userfulUrlLink;
+    private String userful_url_link;
     //网址的名称
-    private String userfulUrlName;
+    private String userful_url_name;
     //网址的作用描述
-    private String userfulUrlDesc;
+    private String userful_url_desc;
+    
+    private String url_type_name;
+    
+    private String userful_url_picture;
 }

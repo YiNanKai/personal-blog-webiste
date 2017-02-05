@@ -2,11 +2,11 @@
 	font-weight: normal;
 	font-style: normal;
 	font-family: 'codropsicons';
-	src:url('../fonts/codropsicons/codropsicons.eot');
-	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
-		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
-		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+	src:url('../font/codropsicons/codropsicons.eot');
+	src:url('../font/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+		url('../font/codropsicons/codropsicons.woff') format('woff'),
+		url('../font/codropsicons/codropsicons.ttf') format('truetype'),
+		url('../font/codropsicons/codropsicons.svg#codropsicons') format('svg');
 }
 
 *, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -45,7 +45,6 @@ p.ref {
 	padding: 2em 1em;
 }
 
-/* Header */
 .codrops-header {
 	margin: 0 auto;
 	padding: 2em;
@@ -68,7 +67,6 @@ p.ref {
 	line-height: 1.4;
 }
 
-/* To Navigation Style */
 .codrops-top {
 	width: 100%;
 	text-transform: uppercase;
@@ -149,7 +147,6 @@ p.ref {
 	border-color: initial;
 }
 
-/* Related demos */
 .related {
 	padding: 10em 0;
 }

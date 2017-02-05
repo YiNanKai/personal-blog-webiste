@@ -6,8 +6,6 @@ $(document)
 						$.post("/blog/getblogcategories", {
 							isSchool : 0
 						}, function(result) {
-							console.log(result);
-							// console.log(result.length)
 							size = result.length;
 							$('#ec').combobox({
 								data : result,
@@ -22,9 +20,6 @@ $(document)
 						$.post("/blog/getblogcount", {
 							blogCategoryId:0
 						}, function(result) {
-							console.log(result);
-							// console.log(result.length)
-							// size = result.length;
 							$("#ep").pagination(
 									{
 										total: result,
@@ -53,17 +48,16 @@ $(document)
 											},
 											function(result) {
 												console.log(result);
-												// console.log(result.length)
 												size = result.length;
 												$("#articallist").empty();
 												for (var i = 0; i < size; i++) {
 													$("#articallist")
 															.append(
-																	'<li class="article-container">'
-																			+ '<div class="article-img">'
-																			+ '<img src="images/blogpicture/giveupjava.png">'
+																	'<li class="article-container row">'
+																			+ '<div class="col-md-3">'
+																			+ '<img src="images/blogpicture/giveupjava.png" class="img-responsive">'
 																			+ '</div>'
-																			+ '<div class="article-content">'
+																			+ '<div class="article-content col-md-9">'
 																			+ '<h3 class="article-header"><a href="blog/'
 																			+ result[i].blog_content
 																			+ '" target="_blank">'
@@ -99,7 +93,6 @@ $(document)
 								function() {
 									var $this = $(this), _clickTab = $this
 											.find('a').attr('target');
-									//console.log(_clickTab);
 									$("#realcontent object").attr("data",
 											_clickTab);
 								});

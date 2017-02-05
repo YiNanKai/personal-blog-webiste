@@ -4,7 +4,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>首页</title>
+<title>编程狗</title>
+<meta name="description" content="95后女程序员的个人网站" />
+<meta name="keywords" content="女程序员, 个人网站, 编程, java, Shell, 教学, 脚本, 爬虫 , 娱乐" />
+<meta name="author" content="Wangwenhan" />
 <script src="js/otherhelp.js"></script>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/bootstrap-reset.css" rel="stylesheet">
@@ -15,7 +18,7 @@
 <link rel="shortcut icon" href="images/icon.ico">
 <!--login-->
 <link rel="stylesheet" type="text/css" href="css/styleforlogin.css" />
-<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.js"></script>
 <script>
 	function showLoginForm() {
 		$("#loginform").toggle(600)
@@ -26,7 +29,6 @@
 <link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
 <link rel="stylesheet" type="text/css" href="themes/icon.css">
 <link rel="stylesheet" type="text/css" href="css/demoforeasyui.css">
-<!--<script type="text/javascript" src="js/jquery.min.js"></script>-->
 <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
 </head>
 
@@ -94,23 +96,15 @@
 							</a></li>
 							<li><a target="#"> See all notifications </a></li>
 						</ul></li>
-					<!-- END NOTIFY NOTIFICATION BAR -->
 				</ul>
 			</nav>
-			<!-- END HEADER NAV -->
-			<!-- START USER LOGIN DROPDOWN  -->
 			<div class="top-nav ">
 				<ul class="nav pull-right top-menu">
-					<input id="ss" style="width: 400vw"></input>
+					<!-- <input id="ss" style="width: 400vw"></input>
 					<div id="mm">
 						<div id="allcategories"
 							data-options="name:'all',iconCls:'icon-ok'">所有</div>
-					</div>
-					<!-- <script>
-			function doSearch(value,name){
-				alert('You input: ' + value+'('+name+')');
-			}
-		  </script> -->
+					</div> -->
 					<li class="dropdown" style="float: none; display: inline-block;">
 						<a data-toggle="dropdown" class="dropdown-toggle" target="#">
 							<img alt="" src="images/cologo.png"> <span
@@ -128,10 +122,7 @@
 					</li>
 				</ul>
 			</div>
-			<!-- END USER LOGIN DROPDOWN  -->
 		</header>
-		<!-- END HEADER -->
-		<!-- BEGIN SIDEBAR -->
 		<aside>
 			<div id="sidebar" class="nav-collapse">
 				<ul class="sidebar-menu" id="nav-accordion">
@@ -171,23 +162,25 @@
 
 					<li class="sub-menu"><a target="javascript:;"> <i
 							class="fa fa-gamepad"> </i> <span> 娱乐 </span> <span
-							class="label label-success span-sidebar"> 3 </span>
+							class="label label-success span-sidebar"> 4 </span>
 					</a>
 						<ul class="sub">
 							<li><a target="listvideos.html"> 游戏试玩 </a></li>
 							<li><a target="listvideos.html"> 三国杀视频 </a></li>
 							<li><a target="listtaiqiuvideos.html"> 台球视频 </a></li>
+							<li><a target="listhealtharticle.html"> 健康养生 </a></li>
 						</ul></li>
 
 					<li class="sub-menu"><a target="javascript:;"> <i
 							class="fa fa-cloud-download"> </i> <span> 有用连接 </span> <span
-							class="label label-warning span-sidebar"> 4 </span>
+							class="label label-warning span-sidebar"> 5 </span>
 					</a>
 						<ul class="sub">
-							<li><a target="404.html"> 软件下载 </a></li>
-							<li><a target="404.html"> 源码下载 </a></li>
-							<li><a target="404.html"> 电子书下载 </a></li>
-							<li><a target="404.html"> 教学视频下载 </a></li>
+							<li><a target="shareresourcesoftware.html"> 软件下载 </a></li>
+							<li><a target="shareresourcecode.html"> 源码下载 </a></li>
+							<li><a target="shareresourceebook.html"> 电子书下载 </a></li>
+							<li><a target="shareresourcevideo.html"> 教学视频下载 </a></li>
+							<li><a target="shareresourcelink.html"> 相关连接  </a></li>
 						</ul></li>
 
 					<li class="sub-menu"><a target="javascript:;"> <i
@@ -195,10 +188,10 @@
 							class="label label-warning span-sidebar"> 4 </span>
 					</a>
 						<ul class="sub">
-							<li><a href="mailto:1633675284@qq.com"> 投稿 </a></li>
-							<li><a href="mailto:1633675284@qq.com"> 推荐网址 </a></li>
+							<li><a target="submitarticle.html"> 投稿 </a></li>
+							<li><a target="recommandwebsite.html"> 推荐网址 </a></li>
 							<li><a target="epay.html"> 基情赞助 </a></li>
-							<li><a href="mailto:1633675284@qq.com"> 发表需求 </a></li>
+							<li><a target="submitrequest.html"> 发表需求 </a></li>
 						</ul></li>
 
 
@@ -217,8 +210,8 @@
 							class="label label-success span-sidebar"> 4 </span>
 					</a>
 						<ul class="sub">
-							<li><a href="mailto:1633675284@qq.com"> 留言板 </a></li>
-							<li><a href="mailto:1633675284@qq.com"> 意见反馈 </a></li>
+							<li><a target="leavemessage.html"> 留言板 </a></li>
+							<li><a target="suggestionfeedback.html"> 意见反馈 </a></li>
 							<li><a href="#" onclick="javascript:addFavorite2()">
 									加入收藏 </a></li>
 							<li><a href="#" onclick="SetHome(this,window.location)">
@@ -229,22 +222,6 @@
 				</ul>
 			</div>
 		</aside>
-
-		<!--<section id="main-content">
-      <section class="wrapper">
-      </section>
-    </section>
-	<div id="iframe">
-	</div>-->
-		<!-- <section id="main-content">
-      <section class="wrapper">
-	  <div id="iframe" style="all:initial">
-		hehehehehe
-	  </div>
-      </section>
-    </section> -->
-
-
 
 		<div class="container" id="login">
 			<section class="main" id="loginform" style="display: none">
@@ -265,7 +242,7 @@
 				</form>
 			</section>
 		</div>
-		<section id="main-content">
+		<section id="main-content" style="margin-left:210px">
 			<section class="wrapper">
 				<div id="realcontent">
 					<object data="indexpage.html" type="text/html"
@@ -275,8 +252,6 @@
 			</section>
 		</section>
 
-
-		<!-- <image src="images/1.jpg" width="100%" heigth="100%"></image> -->
 		<footer class="site-footer">
 			<div class="text-center">
 				2016 &copy; <a href="www.codog.com.cn"> www.codog.com.cn </a> <a href="#"
@@ -298,7 +273,7 @@
 	<script src="js/common-scripts.js"></script>
 	<script src="js/underscore-min.js"></script>
 	<script src="assets/jquery-knob/js/jquery.knob.js"></script>
-	<script src="js/modernizr.custom.63321forlogin.js"></script>
+	<script src="js/modernizr.custom.js"></script>
 	<script src="js/jquery.bootstrap.newsbox.min.js"></script>
 	<script>
 		$(".knob").knob();

@@ -12,7 +12,10 @@
 		limit 		: 140,
 		position 	: 'topright',
 		showtext  	: false,
-		message     : 'characters left'
+		message     : 'characters left',
+		submitFun   : function(){
+			alert('haha');
+		}
 	};
 	$.fn.limit = function(o,obj){
 			if(!$('.jMax-text',obj).length){
@@ -37,14 +40,19 @@
 					obj.append(_jMaxtext).append(_jMaxtextarea).append(_jMaxsubmit);
 				
 				_jMaxinput.click(function(e){
-					alert(jQuery.trim(_jMaxtextarea.val()));
+					o.submitFun(jQuery.trim(_jMaxtextarea.val()));
 				})
 				if(o.showtext)
 					$(document.createElement('span')).html(' '+o.message).insertAfter(_jMaxtext.find('span:first'));
-					
 			}
 			var currlength = $('textarea',obj).val().length ;
-			$('.jMax-text span:first',obj).html(o.limit - currlength);
+			if(o.limit - currlength < 0){
+				$('textarea',obj).val($('textarea',obj).val().substring(0,o.limit));
+				$('.jMax-text span:first',obj).html(0);
+				currlength = o.limit;
+			}else{
+				$('.jMax-text span:first',obj).html(o.limit - currlength);
+			}
 			if((currlength > 0)&&(currlength <= o.limit))
 				$('input',obj).removeAttr('disabled').removeClass('disabled').addClass('enabled');
 			else

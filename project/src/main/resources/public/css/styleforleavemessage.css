@@ -16,22 +16,6 @@ h1{
 	text-align: center;
 	color: #0099FF;
 }
-
-#div1{
-	width: 800px;
-	margin: 0px auto;
-	padding: 20px;
-	border: 1px solid #ccc;	
-}
-
-#div2{
-	width: 800px;
-	line-height: 100px;
-	clear: both;
-	/*border: 1px solid #ccc;*/
-	text-align: center;
-}
-
 #txt{
 	width: 780px;
 	height: 180px;
@@ -43,10 +27,8 @@ h1{
 }
 
 .jMax{
-    width:530px;
-    height:150px;
+    height:50%;
     float:left;
-
 }
 .jMax textarea{
     border:1px solid #ccc;
@@ -57,7 +39,7 @@ h1{
     font-family:Arial;
     color:#999;
     width:100%;
-    height:100px;
+    height:100%;
     font-size:24px;
     padding:10px;
 	resize:none;
@@ -103,7 +85,7 @@ h1{
     background-color: #ccc;
     color: #fff;
 }
-/*my style*/
+
 #demo1{
 	padding:20px;
 	box-sizing:border-box;

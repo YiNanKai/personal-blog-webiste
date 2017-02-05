@@ -18,7 +18,7 @@ function Chip(chipname,width,height){
  this.named=chipname;
  this.vx=vmin+vmax*Math.random();
  this.vy=vmin+vmax*Math.random();
- this.w=width+20;
+ this.w=width+200;
  this.h=height;
  this.xx=0;
  this.yy=0;

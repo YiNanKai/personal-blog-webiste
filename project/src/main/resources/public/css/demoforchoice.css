@@ -1,4 +1,4 @@
-﻿/* General Demo Style */
+﻿
 body{
 	font-family: 'Open Sans Condensed','Arial Narrow', serif;
 	background: #ddd url(../images/bg.jpg) repeat top left;
@@ -55,7 +55,7 @@ a{
 	font-style: italic;
 	text-shadow: 1px 1px 1px rgba(255,255,255,0.9);
 }
-/* Header Style */
+
 .codrops-top{
 	line-height: 24px;
 	font-size: 11px;

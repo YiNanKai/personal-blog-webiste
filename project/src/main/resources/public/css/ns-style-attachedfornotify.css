@@ -1,4 +1,4 @@
-/* Growl-style notifications */
+
 .ns-attached {
     left: 30px;
     max-width: 300px;
@@ -10,9 +10,6 @@
     animation-direction: reverse;
 }
 
-/* Individual effects */
-
-/* Flip */
 .ns-effect-flip {
     background: #9bd1a2;
     -webkit-transform-origin: 50% 100%;

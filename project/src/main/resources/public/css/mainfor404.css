@@ -1,8 +1,4 @@
 ﻿@charset "utf-8";
-/* CSS Document */
-
-/* === Custom font === */
-
 @font-face {
     font-family: 'SingleSleeveRegular';
     src: url('../font/sing-webfont.eot');
@@ -14,37 +10,22 @@
     font-style: normal;
 
 }
-
-/* === General stuff === */
-
 html, body{
-	
 	height:100%;
 	background:#186aa9 url(../images/sky-background.png) top repeat-x;	
 	overflow:hidden;
 	padding:0;
 	margin:0;
-	font-family:Arial, Helvetica, sans-serif;
-	
+	font-family:Arial, Helvetica, sans-serif;	
 }
-
-a{
-	
+a{	
 	color:#3680b1;	
-	
 }
-
-img, a img{
-	
+img, a img{	
 	border:0px none;	
 	outline:none;
-	
 }
-
-/* === Preloader === */
-
-#universal-preloader{
-	
+#universal-preloader{	
 	position:fixed;
 	top:0px;
 	left:0px;
@@ -53,61 +34,41 @@ img, a img{
 	opacity:0.96;
 	background:url(../images/sky-background.png) repeat;
 	z-index:999999999;
-	
 }
-
-#universal-preloader>.preloader{
-	
+#universal-preloader>.preloader{	
 	width:24px;
 	height:24px;
 	position:absolute;
 	top:50%;
 	left:50%;
 	text-align:center;
-	
 }
-
-.universal-preloader-preloader{
-	
+.universal-preloader-preloader{	
 	position:absolute; 
 	top:0px; 
 	left:0px;	
-	
 }
-
-/* === Main Section === */
-
-#wrapper{
-	
+#wrapper{	
 	width:980px;
 	margin:0px auto;
 	position:relative;
 	height:100%;
 	background:url(../images/sky-shine.jpg) top left no-repeat;
-	
 }
-
-h1.not-found-text{
-	
+h1.not-found-text{	
 	font-size:35px;
 	color:#fff;
 	font-family:"SingleSleeveRegular", cursive;
 	letter-spacing:2px;
 	margin-bottom:20px;
-	
 }
-
-div.not-found-text{
-	
+div.not-found-text{	
 	position:absolute;
 	top:35px;
 	right:0px;
 	width:430px;
-	
 }
-
-div.graphic{
-	
+div.graphic{	
 	position:absolute;
 	top:80px;
 	left:0px;
@@ -116,9 +77,7 @@ div.graphic{
 	height:331px;
 	
 }
-
 div.planet{
-
 	position:absolute;
 	bottom:-1100px;
 	margin:0px auto;
@@ -126,19 +85,13 @@ div.planet{
 	background:url(../images/planet.png) center no-repeat;
 	height:1920px;
 	z-index:0;
-	
 }
-
-div.dog-wrapper{
-	
+div.dog-wrapper{	
 	position:absolute;
 	bottom:300px;
 	left:440px;
-	
 }
-
-div.dog{
-	
+div.dog{	
 	position:absolute;
 	bottom:0px;
 	left:0px;
@@ -146,11 +99,8 @@ div.dog{
 	height:80px;
 	z-index:999;
 	background:url(../images/dog.png) 0px 0px no-repeat;
-	
 }
-
 div.search{
-	
 	position:absolute;
 	top:145px;
 	right:0px;
@@ -162,19 +112,13 @@ div.search{
 	text-shadow:1px 1px 0 #ffffff;
 	border-radius:30px;
 	padding:10px;
-	z-index:999;
-	
+	z-index:999;	
 }
-
-div.search input[type=submit]:hover{
-	
+div.search input[type=submit]:hover{	
 	background:#ffffff url(../images/search.png) center center no-repeat;	
 	cursor:pointer;
-	
 }
-
-div.search input[type=submit]{
-	
+div.search input[type=submit]{	
 	box-shadow:1px 1px 0 #ffffff inset, 5px 5px 0px #3680b1;
 	background:#eeeeee url(../images/search.png) center center no-repeat;
 	border-radius:50px;
@@ -184,48 +128,32 @@ div.search input[type=submit]{
 	width:50px;
 	height:40px;
 	border:none;
-	
-	
 }
-
-div.search input[type=text]{
-	
+div.search input[type=text]{	
 	padding:0px 10px;
 	border:0px none;
 	background:none;
 	color:#999999;
 	width:300px;
 	height:20px;
-	
 }
-
-div.top-menu{
-	
+div.top-menu{	
 	position:absolute;
 	top:200px;
 	right:0px;
 	color:#ffffff;
 	z-index:998;
-	
 }
-
-div.top-menu a{
-	
+div.top-menu a{	
 	#text-decoration:none;
 	color:#eeeeee;
 	margin:0px 5px;
 	font-size:30px;
-	
 }
-
-div.top-menu a:hover{
-	
+div.top-menu a:hover{	
 	color:#abd7fa;	
-	
 }
-
-div.dog-bubble{
-	
+div.dog-bubble{	
 	font-size:14px;
 	line-height:1.5;
 	font-style:italic;
@@ -241,20 +169,13 @@ div.dog-bubble{
 	color:#555555;
 	font-size:14px;
 	text-shadow:1px 1px 0 #ffffff;
-	
 }
-
-div.dog-bubble>p{
-	
+div.dog-bubble>p{	
 	text-align:center;
-	padding:0px 35px;	
-	
+	padding:0px 35px;
 }
-
 div.bubble-options{
-
 	opacity:0;
 	visibility:hidden;
 	display:none;
-	
 }

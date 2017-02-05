@@ -7,7 +7,6 @@ $(document).ready(function() {
 				account_user_name : 0,
 				account_password : 0
 			}, function(result) {
-				console.log("register success");
 			});// .post
 		});
 

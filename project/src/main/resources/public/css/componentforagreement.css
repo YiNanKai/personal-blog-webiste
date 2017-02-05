@@ -1,6 +1,4 @@
-﻿/* Morph Button: Default Styles */
-
-.morph-button {
+﻿.morph-button {
 	position: relative;
 	display: block;
 	margin: 0 auto;
@@ -31,7 +29,6 @@
 	pointer-events: auto;
 }
 
-/* Common styles for overlay and modal type (fixed morph) */
 .morph-button-fixed,
 .morph-button-fixed .morph-content {
 	width: 300px;
@@ -88,7 +85,6 @@
 	z-index: 1900;
 }
 
-/* Transitions for overlay button and sidebar button */
 .morph-button-overlay .morph-content,
 .morph-button-sidebar .morph-content {
 	-webkit-transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;
@@ -101,7 +97,6 @@
 	transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;	
 }
 
-/* Morph Button Style: Overlay */
 .morph-button.morph-button-overlay {
 	margin: 50px auto;
 }
@@ -118,7 +113,6 @@
 	height: 100%;
 }
 
-/* Morph Button Style: Modal */
 .morph-button-modal::before {
 	position: fixed;
 	top: 0;
@@ -159,7 +153,6 @@
 	transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
 }
 
-/* Colors and sizes for individual modals */
 .morph-button.morph-button-modal-1 {
 	float: left;
 }
@@ -369,7 +362,6 @@
 	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 }
 
-/* Helper classes */
 .noscroll {
 	overflow: hidden;
 }
@@ -382,7 +374,6 @@
 	overflow: auto;
 }
 
-/* No JS fallback: let's hide the button and show the content */
 .no-js .morph-button > button {
 	display: none;
 }
@@ -426,8 +417,6 @@
 	-webkit-transition: none !important;
 	transition: none !important;
 }
-
-/* Media Queries */
 
 @media screen and (max-width: 600px) {
 	.morph-button-modal.open .morph-content {

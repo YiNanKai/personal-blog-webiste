@@ -1,8 +1,6 @@
 ﻿@import url('normalizeforchoice.css');
 @import url('demoforchoice.css');
 
-/* GLOBALS */
-
 *,
 *:after,
 *:before {
@@ -38,8 +36,6 @@
   height: 100%;
   cursor: pointer;
 }
-
-/* DEMO 1 */
 
 .switch.demo1 {
   width: 100px;

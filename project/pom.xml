@@ -5,7 +5,7 @@
 
 	<groupId>net.codog</groupId>
 	<artifactId>project</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<packaging>jar</packaging>
 
 	<name>project</name>
@@ -83,6 +83,12 @@
 			<artifactId>spring-boot-starter-cache</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+			<version>4.1.0</version>
+		</dependency>
+		
 	</dependencies>
 
 	<build>

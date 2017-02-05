@@ -1,0 +1,44 @@
+h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; color: #36393d; font-weight: bold; }
+h2 { font-size: 14px; line-height: 20px; height: 20px; }
+.logo-right{position:absolute;left:270px;top:27px;}
+.bdaddtocitebtn{margin-top:5px}
+.index .box { margin: 30px 0 }
+/* .index .box .resources { float: left; width: 650px } */
+.index .box .resources .title h2 { font-family: Microsoft Yahei; font-size: 20px; font-weight: normal; }
+.index .box .resources .title h2 a { color: #4183c4; }
+.index .box .resources .title h2 a:hover { color: #d7292b; text-decoration: none; }
+.index .box .resources .title em { font-size: 12px; font-style: normal; font-weight: normal; margin-left: 5px; color: #666 }
+.index .box .resources ul.topics { margin-top: 10px }
+.index .box .resources ul.topics li { float: left; margin-right: 10px; margin-bottom: 20px; width: 122px }
+.index .box .resources ul.topics li.cr { margin-right: 0; float: right }
+.index .box .resources ul.topics li .rate { position: absolute; margin-left: 0; background: url(/images/boxgrid_stars.png) no-repeat; width: 34px; height: 30px }
+.index .box .resources ul.topics li .star1 { background-position: 0 -252px }
+.index .box .resources ul.topics li .star2 { background-position: 0 -189px }
+.index .box .resources ul.topics li .star3 { background-position: 0 -126px }
+.index .box .resources ul.topics li .star4 { background-position: 0 -63px }
+.index .box .resources ul.topics .boxgrid { border: #dedede solid 1px; background: #f4f4f4 url(/static/images/no_pic.png) no-repeat center; width: 120px; height: 140px; overflow: hidden; vertical-align: middle; text-align: center; position: relative; }
+.index .box .resources ul.topics h3 { font-weight: normal; overflow: hidden; height: 20px; line-height: 20px; margin-top: 5px; font-size: 14px; text-align: center }
+.index .box .resources ul.topics h3 a, .index .box .resources ul.topics h3 a: VISITED { color: #333 }
+/* .index .box .right { float: right; width: 280px } */
+.index .box .right h2 { border-bottom: 1px solid #dedede; height: 24px; margin-bottom: 10px }
+.index .box .right h2 span { float: left; width: 3px; height: 15px; background-color: #da2d17; margin-top: 3px; margin-right: 10px }
+.index .box .right .ranks li { height: 25px; line-height: 25px; overflow: hidden; border-bottom: 1px dotted #DFDFDF }
+.index .box .right .ranks li a { display: block; float: left; width: 215px;overflow:hidden;}
+.index .box .right .ranks li b { display: block; float: right; font-weight: normal; color: #DA2D17 }
+.index .box .right .ranks li b span { color: #666 }
+.index .box .right .ranks li a, .index .box .right .ranks li a: VISITED { color: #333 }
+.index .box .right .ranks li em { display: block; float: left; width: 20px; text-align: center; background-color: #8A8A8A; color: #fff; font-style: normal; margin-right: 8px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; height: 15px; line-height: 16px; font-size: 10px; margin-top: 5px }
+.index .box .right .ranks li em.hot { background-color: #DA2D17 }
+.index .box .right .category { height: 60px }
+.index .box .right .category li { float: left; width: 70px; overflow: hidden; height: 20px; line-height: 20px }
+.index .box .right .category li a, .index .box .right .category li a: VISITED { color: #333 }
+.index .box-last { margin-bottom: 0px; }
+.boxgrid img { position: absolute; top: 0; left: 0; border: 0; }
+.boxgrid p { padding: 0 10px; color: #afafaf; font-weight: bold; font: 10pt "Lucida Grande", Arial, sans-serif; }
+.boxcaption { float: left; position: absolute; background: #000; height: 140px; width: 100%; opacity: .8; 	/* For IE 5-7*/
+	filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=80);
+/* For IE 8*/
+	-MS-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=80)"; }
+.captionfull .boxcaption { top: 160px; left: 0; }
+.captionfull .boxcaption p { line-height: 20px !important; }
+.caption .boxcaption { top: 160px; left: 0; }.flink,.flink a{color:#666;}

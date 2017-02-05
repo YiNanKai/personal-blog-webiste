@@ -1,13 +1,12 @@
-﻿/* Icons */
-@font-face {
+﻿@font-face {
 	font-weight: normal;
 	font-style: normal;
 	font-family: 'icomoon';
-	src:url('../fonts/icomoon/icomoon.eot?i64fx9');
-	src:url('../fonts/icomoon/icomoon.eot?#iefixi64fx9') format('embedded-opentype'),
-		url('../fonts/icomoon/icomoon.woff?i64fx9') format('woff'),
-		url('../fonts/icomoon/icomoon.ttf?i64fx9') format('truetype'),
-		url('../fonts/icomoon/icomoon.svg?i64fx9#icomoon') format('svg');
+	src:url('../font/icomoon/icomoon.eot?i64fx9');
+	src:url('../font/icomoon/icomoon.eot?#iefixi64fx9') format('embedded-opentype'),
+		url('../font/icomoon/icomoon.woff?i64fx9') format('woff'),
+		url('../font/icomoon/icomoon.ttf?i64fx9') format('truetype'),
+		url('../font/icomoon/icomoon.svg?i64fx9#icomoon') format('svg');
 }
 
 .icon-close {
@@ -97,11 +96,6 @@
 .icon-close:hover {
 	color: #a50a05;
 }
-
-/* Styles for dummy content */
-
-/* Style for overlay */
-
 .content-style-overlay {
 	padding: 100px 50px;
 	text-align: center;
@@ -133,7 +127,6 @@
 	border-color: #a50a05;	
 }
 
-/* Style for text modal */
 .content-style-text {
 	padding: 60px;
 	text-align: left;
@@ -168,7 +161,6 @@
 	color: #f9e1c9;
 }
 
-/* Style for form modal */
 .content-style-form {
 	position: relative;
 	text-align: left;
@@ -553,20 +545,3 @@
 		right: 5px;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -6,7 +6,6 @@ $(document)
 						$.post("/gamevideo/getgamevideoscount", {
 
 						}, function(result) {
-							console.log(result);
 							$("#ep")
 									.pagination(
 											{
@@ -16,10 +15,6 @@ $(document)
 												showRefresh : false,
 												onSelectPage : function(
 														pageNumber, pageSize) {
-													console.log("pageNumber: "
-															+ pageNumber
-															+ ",pageSize: "
-															+ pageSize);
 													getgamevideos(
 															pageNumber - 1,
 															pageSize);
@@ -29,8 +24,6 @@ $(document)
 						});// .post
 
 						function getgamevideos(start, end) {
-							console.log("getgamevideos");
-
 							$
 									.ajax({
 										type : "post",
@@ -41,9 +34,7 @@ $(document)
 											end : end
 										},
 										success : function(result) {
-											console.log(result);
 											size = result.length;
-											// $("#content").empty();
 											for (var i = 0; i < size; i++) {
 												$("#content")
 														.append(
@@ -112,7 +103,6 @@ $(document)
 						 */
 						$thumb_list
 								.each(function() {
-									console.log("yes,execute function")
 									var $this_list = $(this), total_w = 0, loaded = 0,
 									//preload all the images first
 									$images = $this_list.find('img'), total_images = $images.length;
@@ -209,8 +199,6 @@ $(document)
 											});
 								});
 //////////////////////////////e//////////////////////////						
-
-						console.log("cloud-zoom:videohtml.js");
 				        $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
 				        
 					    function format(str) {
@@ -350,8 +338,7 @@ $(document)
 
 					        this.init2 = function (img, id) {
 
-					            filesLoaded++;
-					            //console.log(img.src + ' ' + id + ' ' + img.width);	
+					            filesLoaded++;	
 					            if (id === 1) {
 					                zoomImage = img;
 					            }
@@ -597,6 +584,5 @@ $(document)
 						
 						
 //////////////////////////////e//////////////////////////
-						console.log("after")
 					});
 				});

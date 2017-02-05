@@ -19,15 +19,12 @@ public class UserfulUrlService {
 	@Autowired
 	private UserfulUrlMapper userfulUrlMapper;
 	
-	public List<UserfulUrl> getAllUserfulUrl(Integer start,Integer end){
-		return userfulUrlMapper.selectAll("userful_url", start, end);
-	}
-		
-	public void addAUserfulUrl(UserfulUrl userfulUrl){
-		userfulUrlMapper.insertOne(userfulUrl);
+	public List<UserfulUrl> getAllUserfulUrl(int type){
+		return userfulUrlMapper.selectAll(type);
 	}
 	
-	public int getUserfulUrlCount(){
-		return userfulUrlMapper.selectCount();
+	public int getUserfulUrlCount(int type){
+		return userfulUrlMapper.selectCount(type);
 	}
+	
 }

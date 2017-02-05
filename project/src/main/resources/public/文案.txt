@@ -1,26 +1,37 @@
-���ҽ��ܣ�
+﻿自我介绍：
 
-����������zi�������Ա�Ů�������У���ҵ�ڼ���ش�ѧ��
-��������ḻ����΢�����ٶȣ��ȸ裬facebook�������Ѷ��sun��Щ��˾���Ҷ�ûȥ����
-��̾���ḻ�������ó�mysql��notepad++��power designer��firefox�������İ�װ��ж�أ�
-��ͨCSS3��HTML5��Javascript��PHP��C��C++��Java��Ruby��Perl��LISP��Python��objective-C��ActionScript�ȵ��ʵ�ƴд��
-����Spring��Mybatis��Hadoop��Spark��Storm��Bootstrap��AngularJS��JQuery�ȿ�ܵķ�����
-��ϤWindows��Linux��Mac��android��ios��ϵͳ�Ŀ��ػ���ѧУ��֧�ֱ�����ѧ�����˲�֧�ֱ������ҳ��ߣ�Ů���Ѳ�֧�ֱ���ѷ�����
-�����Ѳ�֧�ֱ���Ѷϵ�
+本人李梓（zi）涵，性别女，爱好男，毕业于加里敦大学，
+工作经验丰富，像微软，百度，谷歌，facebook，阿里，腾讯，sun这些公司，我都没去过，
+编程经验丰富，本人擅长mysql，notepad++，power designer，firefox等软件的安装和卸载，
+精通CSS3、HTML5、Javascript、PHP、C、C++、Java、Ruby、Perl、LISP、Python、objective-C、ActionScript等单词的拼写，
+掌握Spring、Mybatis、Hadoop、Spark、Storm、Bootstrap、AngularJS，JQuery等框架的发音，
+熟悉Windows、Linux、Mac、android、ios等系统的开关机，学校不支持编程已辍学，家人不支持编程已离家出走，女朋友不支持编程已放气，
+男朋友不支持编程已断电
 
-��վЭ�飺
-    ����վ��Ϊ�˼�¼�Լ���ѧ�ļ����ͱ���һЩ���õĹ��ߣ�Ҳϣ�����԰�������ң�����ܲ�����ռ��������Ǯ�����˾ͺ��ˣ�
-	���Ǳ��˼���ˮƽ���ߣ�ϣ������ש��������ã�Ҳϣ���ܹ��ʹ��һ����������������Ȥ�Ķ�������ʲô����Ͳ���ϣ�����ָ����
-	���⣬���ת���Լ�CV����������ע��������лл
+网站协议：
+    本网站是为了记录自己所学的技术和保存一些有用的工具，也希望可以帮助到大家，如果能不把买空间和域名的钱都赔了就好了，
+	但是本人技术水平不高，希望起到抛砖引玉的作用，也希望能够和大家一起交流技术和其他有趣的东西，有什么错误和不足希望大家指正，
+	另外，如果转载以及CV操作，尽量注明出处，谢谢
 
-�뷨��
+想法：
     
-	˧�����Ѿ�������˻�����ԥ����˵���ҵ���Ů���ѣ��꺮��ů�������ʾ޿�
-	����ɱ��java��python���棬��Ϸ����	���ṩ�����������
+	帅的人已经，丑的人还在犹豫，听说都找到了女朋友，嘘寒问暖，不如打笔巨款
+	三国杀，java，python爬虫，游戏制作	，提供软件制作外包
 	
-	�ٶȷ�����QQ΢�ŵ�������¼����д���ģ�����Ӫ����������Ϸ�����������ʱ�����ı�ѧϰ��������ģ����ʵ�û������Դ�ȵ�
-	�������������շ����ݣ������棬΢�Ŷ��ĺ�
+	百度分享，QQ微信第三方登录，编写软文，线下营销，增加游戏功能提高在线时长，改变学习，教育，模拟真实用户自问自答等等
+	用于宣传其他收费内容，引入广告，微信订阅号
 	
-	��������ĵ����ܽἼ���鼮��java���˼��ȵȣ���������Ӫ������Ϣ�����ģ�ͨ��������ѽ����¹��ܣ��ڸ�����̳����
-	,���������ʾӢ��
+	翻译国外文档，总结技术书籍，java编程思想等等，传播有利营销的消息和软文，通过邀请好友解锁新功能，在各个论坛传播
+	,点击中文显示英文
+	
+//Back-end
+1.页面中间添加悬浮不动的阅读列表
+2.转换视频或者录制视频
+3.资源文件，代码，软件安装包等放在百度云上提供链接
+4.讲故事，自传体
+
+
+//Front-end
+1.编写留言列表模板及样式
+2.编写文章列表模板及样式	
 

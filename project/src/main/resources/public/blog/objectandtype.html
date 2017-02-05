@@ -1,0 +1,354 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8" /><link href="css/prism.css" rel="stylesheet" /><link rel="stylesheet" href="css/jquery.jqTOC.css" type="text/css" /><script type="text/javascript" src="js/jquery-latest.js"></script><script type="text/javascript" src="js/jquery.jqTOC.js"></script><script type="text/javascript">$(document).ready(function(){$("#content").jqTOC();});</script></head><body><div id="content"><h1>
+	一. 对象和类型
+</h1>
+<h2>
+	<span style="font-size:18px">1.基本类型</span>
+</h2>
+	<span style="font-weight:normal"><span style="font-size:14px">java里面基本上全是对象，但是有8种基本类型，这些基本类型不是对象，但是都有对应的对象类型，使用这些基本类型的效率比使用他们的对象的效率要高，如下代码</span></span>
+
+	<span style="font-size:18px"></span>
+	<pre><code class="language-java">final int size = 10000;
+		long start = System.currentTimeMillis();
+		
+		for(int i = 0;i < size;i++){
+			int a = 0;
+		}
+		long mid = System.currentTimeMillis();
+		for(int i = 0;i < size;i++){
+			int b = new Integer(0);
+		}
+		long end = System.currentTimeMillis();
+		System.out.println("创建基本类型所用的时间是" + (mid - start) + ",创建对象所用的时间是" + (end - mid));
+</code></pre>
+	<br />
+	
+	<pre><code class="language-java">创建基本类型所用的时间是0,创建对象所用的时间是2</code></pre>
+<br />
+
+	<span style="font-weight:normal"><span style="font-size:14px">并且他们存储空间是不变的，不管是32还是64的电脑，这是java代码易于移植的原因之一，列表如下：</span></span>
+
+
+	<span style="font-size:18px"></span>
+	<table border="1" width="200" cellspacing="1" cellpadding="1">
+		<tbody>
+			<tr>
+				<td>
+					boolean
+				</td>
+				<td>
+					无
+				</td>
+				<td>
+					Boolean
+				</td>
+			</tr>
+			<tr>
+				<td>
+					char
+				</td>
+				<td>
+					16 &nbsp;bit
+				</td>
+				<td>
+					Character
+				</td>
+			</tr>
+			<tr>
+				<td>
+					byte
+				</td>
+				<td>
+					8 bit
+				</td>
+				<td>
+					Byte
+				</td>
+			</tr>
+			<tr>
+				<td>
+					short
+				</td>
+				<td>
+					16 bit
+				</td>
+				<td>
+					Short
+				</td>
+			</tr>
+			<tr>
+				<td>
+					int
+				</td>
+				<td>
+					32 bit
+				</td>
+				<td>
+					Integer
+				</td>
+			</tr>
+			<tr>
+				<td>
+					long
+				</td>
+				<td>
+					64 bit
+				</td>
+				<td>
+					Long
+				</td>
+			</tr>
+			<tr>
+				<td>
+					float
+				</td>
+				<td>
+					32 bit
+				</td>
+				<td>
+					Float
+				</td>
+			</tr>
+			<tr>
+				<td>
+					double
+				</td>
+				<td>
+					64 bit
+				</td>
+				<td>
+					Double
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<span style="font-size:14px">基本类型和它对应的对象可以互相转化，基本类型转化成对象称作打包，对象转化成基本类型称作解包</span>
+<br />
+
+	<span style="font-size:18px"><br />
+	</span>
+<br />
+
+	<span style="font-size:18px"></span>
+	<pre><code class="language-java">int c = 100;
+		System.out.println(c);
+		Integer cobject = c;
+		System.out.println(cobject);
+		Integer dobject = new Integer(100);
+		System.out.println(dobject);
+		int d = dobject;
+		System.out.println(d);</code></pre>
+	
+		<span style="font-size:18px"><br />
+		</span>
+	<br />
+	<pre><code class="language-java">100
+100
+100
+100</code></pre>
+	
+		<span style="font-size:18px"><br />
+		</span>
+	<br />
+	<span style="font-size:14px">在这个转化这里还有一个很有意思的事情，java中判断二个对象是否“相等”有二种办法，==和equals方法，二者的区别是==是判断二个对象的地址是否相同，equals则是判断对象里面的内容是否相同，</span>
+<br />
+
+	<span style="font-size:18px"><strong></strong></span>
+	<pre><code class="language-java">Integer cobject = new Integer(100);
+		Integer dobject = new Integer(100);
+		System.out.println("cobject==dobject:" + (cobject == dobject));
+		System.out.println("cobject.equals(dobject):" + (cobject.equals(dobject)));
+		
+		Integer cobject0 = 100;
+		Integer dobject0 = 100;
+		System.out.println("cobject0==dobject0:" + (cobject0 == dobject0));
+		System.out.println("cobject0.equals(dobject0):" + (cobject0.equals(dobject0)));</code></pre>
+	<br />
+	
+	<pre><code class="language-java">cobject==dobject:false
+cobject.equals(dobject):true
+cobject0==dobject0:true
+cobject0.equals(dobject0):true</code></pre>
+	<span style="font-size:14px">可以看到相同值的基本类型的地址是相同的，下面一个程序输出供思考：</span>
+<br />
+
+	<span style="font-size:18px"><strong></strong></span>
+	<pre><code class="language-java">Integer cobject0 = 100;
+		Integer dobject0 = 100;
+		int eobject = 100;
+		System.out.println("cobject0==dobject0:" + (cobject0 == dobject0));
+		System.out.println("cobject0.equals(dobject0):" + (cobject0.equals(dobject0)));
+		System.out.println("cobject0==eobject:" + (cobject0 == eobject));
+		System.out.println("cobject0.equals(eobject):" + (cobject0.equals(eobject)));</code></pre>
+	<h2>
+		<span style="font-size:18px">2.其他常用类型String</span>
+	</h2>
+	
+		<span style="font-size:14px">另一个虽然不是基本类型，但是确是最常用的类型，也就是String，提到String就不得不提到StringBuilder和StringBuffer，这二种类型的主要是提高String的连接速度，代码如下：</span>
+	<br />
+	
+		<span style="font-size:18px"><strong></strong></span>
+		<pre><code class="language-java">String str = "aaaaa";
+		String stra = "bbbbb";
+		final int length = 10000;
+		StringBuffer strBuffer = new StringBuffer(str);
+		StringBuilder strBuilder = new StringBuilder(str);
+		long start0 = System.currentTimeMillis();
+		for(int i = 0;i < length;i++){
+			str += stra;
+		}
+		long mid0 = System.currentTimeMillis();
+		for(int i = 0;i < length;i++){
+			strBuffer.append(stra);
+		}
+		long mid1 = System.currentTimeMillis();
+		for(int i = 0;i < length;i++){
+			strBuilder.append(stra);
+		}
+		long end0 = System.currentTimeMillis();</code></pre>
+		<pre><code class="language-java"><span style="font-family: Arial, Helvetica, sans-serif;">                                 System.out.println("String+所用的时间是" + (mid0 - start0));</span></code></pre>
+		<pre><code class="language-java">		System.out.println("StringBuffer所用的时间是" + (mid1 - mid0));
+		System.out.println("StringBuilder所用的时间是" + (end0 - mid1));</code></pre>
+		<pre><code class="language-java">                String str1 = "aaaaa";
+<span style="white-space:pre">		</span>String stra1 = "bbbbb";
+<span style="white-space:pre">		</span>//final int length = 10000;
+<span style="white-space:pre">		</span>long start1 = System.currentTimeMillis();
+<span style="white-space:pre">		</span>for(int i = 0;i < length;i++){
+<span style="white-space:pre">			</span>str1.concat(stra1);
+<span style="white-space:pre">		</span>}
+<span style="white-space:pre">		</span>long end1 = System.currentTimeMillis();
+<span style="white-space:pre">		</span>System.out.println("String.concat所用的时间是" + (end1 - start1));
+</code></pre>
+		<br />
+		
+		<pre><code class="language-java">String+所用的时间是301
+StringBuffer所用的时间是1
+StringBuilder所用的时间是0</code></pre>
+		<pre><code class="language-java">String.concat所用的时间是0
+</code></pre>
+		
+			<span style="font-size:18px"><strong><br />
+			</strong></span>
+		<br />
+		<span style="font-size:14px">可以看到效率相差的比较大，因为String的+操作是新建一个String对象，然后传值过去，StringBuilder和StringBuffer都是直接在当前String后面添加字符串，不会创建新字符串，那么问题来了，StringBuffer和StringBuilder的区别是什么呢？具体如下图：</span>
+	<br />
+	
+		<span style="font-size:18px"><strong>//01.png,02.png</strong></span>
+	<br />
+	
+		<span style="font-size:14px">StringBuffer的效率差一点，但是线程安全的</span>
+	<br />
+	
+		<span style="font-size:18px"><strong><br />
+		</strong></span>
+	<br />
+	<h2>
+		<span style="font-size:18px"><strong>3.其他常用类型BigInteger和BigDecimal</strong></span>
+	</h2>
+	
+		<span style="font-size:14px">这二种类型其实也不是很常见，但是我最近在公司做项目总是用到，因为公司数据仓库的主键很多都是BigInteger类型的，涉及金钱的类型都是Decimal类型的，也就是对应的java类型BigDecimal，这二种类型的出现是因为Integer类型的大小受限，某些情况加使用Integer会出现越界的情况，Float和Double也有同样的限制，所以出现了BigDecimal</span>
+	<br />
+	
+		<span style="font-size:18px"><strong><br />
+		</strong></span>
+	<br />
+	<h2>
+		<span style="font-size:18px"><strong>4.基本类型作为局部变量和类成员的区别</strong></span>
+	</h2>
+	<br />
+	
+		<span style="font-size:14px">如果你编写一个int a;这样的代码，那么它的值是多少，其实这取决于这行代码的位置，如果是类的成员，会被设置成默认值0，如果是函数内的变量，a现在还没有值，下面的代码说明这个问题：</span>
+	<br />
+	
+		<span style="font-size:18px"><strong>//03.png</strong></span>
+	<br />
+	
+		<span style="font-size:18px"><strong><br />
+		</strong></span>
+	<br />
+	<h2>
+		<span style="font-size:18px"><strong>5.对象的equals方法</strong></span>
+	</h2>
+	
+		<span style="font-size:14px">在知道了equals方法和==的区别之后，可以预测一下下面代码的输出：</span>
+	<br />
+	
+		<span style="font-size:18px"><strong></strong></span>
+		<pre><code class="language-java">public class Dog {
+
+	private String name;
+	private String say;
+	
+	public Dog(String name,String say){
+		this.name = name;
+		this.say = say;
+	}
+	
+	public static void main(String[] args) {
+		Dog spot = new Dog("spot", "Ruff");
+		Dog scruffy = new Dog("spot","Ruff");
+		System.out.println("spot==scruffy?" + (spot == scruffy));
+		System.out.println("spot.equals(scruffy)?" + spot.equals(scruffy));
+	}
+}</code></pre>
+		<br />
+		<span style="font-size:14px">输出如下：</span>
+	<br />
+	
+		<span style="font-size:18px"><strong></strong></span>
+		<pre><code class="language-java">spot==scruffy?false
+spot.equals(scruffy)?false
+</code></pre>
+		<span style="font-size:14px">你这不是在逗我么，二个变量地址不同==不同，这可以理解，但是内容明明是相同的，但是java默认的equals方法其实也是对比地址是否相同，想要改变这个，需要自己重写equals方法才可以，如下：</span>
+	<br />
+	
+		<span style="font-size:18px"><strong><br />
+		</strong></span>
+	<br />
+	
+		<span style="font-size:18px"><strong></strong></span>
+		<pre><code class="language-java">public class Dog {
+
+	private String name;
+	
+	private String say;
+	
+	public Dog(String name,String say){
+		this.name = name;
+		this.say = say;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		if(!(obj  instanceof Dog)){
+			return false;
+		}
+		
+		return this.name.equals( ((Dog)(obj)).getName() ) &&&& this.say.equals( ((Dog)(obj)).getSay() );
+	}
+	public static void main(String[] args) {
+		Dog spot = new Dog("spot", "Ruff");
+		Dog scruffy = new Dog("spot","Ruff");
+		System.out.println("spot==scruffy?" + (spot == scruffy));
+		System.out.println("spot.equals(scruffy)?" + spot.equals(scruffy));
+	}
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getSay() {
+		return say;
+	}
+
+	public void setSay(String say) {
+		this.say = say;
+	}
+}</code></pre>
+	<br />
+<br />
+<span style="font-size:14px">相关内容:</span><br /><a href="prefix.html">前言</a><br /><a href="objectandtype.html">对象和类型</a><br /><a href="operateandtype.html">操作符和引用</a><br /><a href="processcontrol.html">流程控制语句</a><br /><a href="initialandclear.html">初始化和清理</a><br /><a href="accesscontrol.html">访问控制</a><br /><a href="proxy.html">组合和继承</a><br /><a href="implementsinterface.html">接口和多态</a><br /><a href="interfaceandabstractclass.html">接口与抽象类</a><br /><a href="vector.html">容器</a><br /><a href="exception.html">异常</a><br /><a href="classinformation.html">类型信息</a><br /><a href="generictype.html">泛型</a><br /><a href="array.html">数组</a><br /><a href="io.html">IO系统</a><br /><a href="enum.html">枚举类型</a><br /><a href="annotation.html">注解</a><br /><a href="mutithread.html">多线程</a><br /><a href="summary.html">总结</a><br /></div><script src="js/prism.js"></script></body></html>
