@@ -1,0 +1,13 @@
+.DS_Store
+Thumbs.db
+*.iml
+.idea
+.project
+.classpath
+.settings
+.apt_generated
+.tmp
+
+/logs
+/target
+
