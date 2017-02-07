@@ -22,9 +22,7 @@ public class UserfulFileController {
 	
 	@RequestMapping(value="/test",method=RequestMethod.GET)
 	public ResponseVO<List<UserfulFile>> test(){
-		int start = 0;
-		int end = 2;
-		ResponseVO<List<UserfulFile>> userfulFileList = new ResponseVO<List<UserfulFile>>(true, "", userfulFileService.getAllUserfulFile(start, end));
+		ResponseVO<List<UserfulFile>> userfulFileList = new ResponseVO<List<UserfulFile>>(true, "", userfulFileService.getAllUserfulFile());
 		userfulFileService.getUserfulFileCount();
 		log.info("userfulFile测试通过");
 		return userfulFileList;

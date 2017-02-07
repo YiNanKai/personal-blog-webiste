@@ -22,10 +22,8 @@ public class MessageController {
 	
 	@RequestMapping(value="/test",method=RequestMethod.GET)
 	public ResponseVO<List<Message>> test(){
-		int start = 0;
-		int end = 2;
-		ResponseVO<List<Message>> result = new ResponseVO<List<Message>>(true,"",messageService.getAllMessages(start, end));
-		messageService.getMessageByIsRead(start, end, 0, 0);
+		ResponseVO<List<Message>> result = new ResponseVO<List<Message>>(true,"",messageService.getAllMessages());
+		messageService.getMessageByIsRead(0, 0);
 		messageService.getMessageCount(0);
 		log.info("message测试通过");
 		return result;

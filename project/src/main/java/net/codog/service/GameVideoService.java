@@ -13,16 +13,16 @@ public class GameVideoService {
 	@Autowired
 	private GameVideoMapper gameVideoMapper;
 	
-	public List<GameVideo> getAllGameVideos(Integer start,Integer end){
-		return gameVideoMapper.selectAll(start, end);
+	public List<GameVideo> getAllGameVideos(){
+		return gameVideoMapper.selectAll();
 	}
 	
 	public Integer getGameVideosCount(){
 		return gameVideoMapper.selectCount();
 	}
 	
-	public List<GameVideo> getAllGameVideosByType(Integer start,Integer end,Integer gameVideoTypeId){
-		return gameVideoMapper.selectAllByType(start, end, gameVideoTypeId);
+	public List<GameVideo> getAllGameVideosByType(Integer gameVideoTypeId){
+		return gameVideoMapper.selectAllByType(gameVideoTypeId);
 	}
 	
 	public Integer getGameVideosCountByType(Integer gameVideoTypeId){

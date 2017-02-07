@@ -22,9 +22,7 @@ public class GuestbookController {
 	
 	@RequestMapping(value="/test",method=RequestMethod.GET)
 	public ResponseVO<List<Guestbook>> test(){
-		int start = 0;
-		int end = 4;
-		ResponseVO<List<Guestbook>> guestbookList = new ResponseVO<List<Guestbook>>(true,"",guestbookService.getAllGuestbook(start, end));
+		ResponseVO<List<Guestbook>> guestbookList = new ResponseVO<List<Guestbook>>(true,"",guestbookService.getAllGuestbook());
 		guestbookService.getGuestbookCount();
 		log.info("guestbook测试通过");
 		return guestbookList;

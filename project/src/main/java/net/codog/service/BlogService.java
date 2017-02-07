@@ -24,12 +24,12 @@ public class BlogService {
 	@Autowired
 	private BlogCommentMapper blogCommentMapper;
 	
-    public List<Blog> getAllBlogs(Integer start,Integer end,Integer isSchool){
-    	return blogMapper.selectAll(start, end,isSchool);
+    public List<Blog> getAllBlogs(Integer isSchool){
+    	return blogMapper.selectAll(isSchool);
     }
     
-    public List<Blog> getAllBlogsByCategory(Integer start,Integer end,Integer isSchool,Integer blogCategoryId){
-    	return blogMapper.selectAllByCategory(start, end,isSchool,blogCategoryId);
+    public List<Blog> getAllBlogsByCategory(Integer isSchool,Integer blogCategoryId){
+    	return blogMapper.selectAllByCategory(isSchool,blogCategoryId);
     }
     
 	public Blog getBlogByBlogId(Integer blogId){
@@ -44,8 +44,8 @@ public class BlogService {
 		return blogMapper.selectCountByCategory(blogCategoryId);
 	}
 	
-    public List<BlogComment> getAllBlogComments(Integer start,Integer end){
-    	return blogCommentMapper.selectAll("blog_comment", start, end);
+    public List<BlogComment> getAllBlogComments(){
+    	return blogCommentMapper.selectAll();
     }
     
     public int getBlogCommentCount(){

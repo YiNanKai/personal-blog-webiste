@@ -19,8 +19,8 @@ public class UserfulFileService {
 	@Autowired
 	private UserfulFileMapper userfulFileMapper;
 	
-    public List<UserfulFile> getAllUserfulFile(Integer start,Integer end){
-    	return userfulFileMapper.selectAll("userful_file", start, end);
+    public List<UserfulFile> getAllUserfulFile(){
+    	return userfulFileMapper.selectAll();
     }
 	
     public void addAUserfulFile(UserfulFile userfulfile){

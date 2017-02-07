@@ -18,8 +18,8 @@ public class GuestbookService {
 	@Autowired
 	private GuestBookMapper guestBookMapper;
 	
-	public List<Guestbook> getAllGuestbook(Integer start,Integer end){
-		return guestBookMapper.selectAll("guestbook", start, end);
+	public List<Guestbook> getAllGuestbook(){
+		return guestBookMapper.selectAll();
 	}
 	
 	public int getGuestbookCount(){

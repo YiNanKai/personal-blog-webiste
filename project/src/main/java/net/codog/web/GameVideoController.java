@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.github.pagehelper.PageHelper;
+
 @RestController
 @RequestMapping("/gamevideo")
 @Slf4j
@@ -21,9 +23,12 @@ public class GameVideoController {
 	private GameVideoService gameVideoService;
 	
 	@RequestMapping(value="/getgamevideos",method=RequestMethod.POST)
-	public List<GameVideo> getGameVideos(@RequestParam("start")Integer start,@RequestParam("end")Integer end,@RequestParam("gameVideoTypeId") Integer gameVideoTypeId){
+	public List<GameVideo> getGameVideos(Integer start,Integer end,@RequestParam("gameVideoTypeId") Integer gameVideoTypeId){
 		log.info("getgamevideos");
-		return gameVideoService.getAllGameVideosByType(start, end, gameVideoTypeId);
+		if(start != null || end != null){
+			PageHelper.startPage(start,end);
+		}
+		return gameVideoService.getAllGameVideosByType(gameVideoTypeId);
 	}
 	
 	@RequestMapping(value="/getgamevideoscount",method=RequestMethod.POST)
