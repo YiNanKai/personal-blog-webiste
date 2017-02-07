@@ -68,7 +68,7 @@ var Script = function () {
         cursorborder: '',
 		zindex: '1000'
     });
-    $("html").niceScroll({
+    $("body").niceScroll({
         styler: "fb",
         cursorcolor: "#72d0eb",
         cursorwidth: '6',
