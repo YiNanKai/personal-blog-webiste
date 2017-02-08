@@ -1398,3 +1398,1198 @@
 2017-02-08 10:17:57 [http-nio-80-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
 2017-02-08 10:17:57 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
 2017-02-08 10:17:57 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms
+2017-02-08 10:30:24 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [net.codog.ProjectApplicationTests], using SpringBootContextLoader
+2017-02-08 10:30:24 [main] INFO  org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [net.codog.ProjectApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-02-08 10:30:24 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [net.codog.ProjectApplicationTests]: ProjectApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2017-02-08 10:30:24 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration net.codog.ProjectApplication for test class net.codog.ProjectApplicationTests
+2017-02-08 10:30:24 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-02-08 10:30:25 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@378542de, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3738449f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@69e1dd28, org.springframework.test.context.support.DirtiesContextTestExecutionListener@11bd0f3b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@c333c60, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@79da8dc5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1eb5174b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@67080771, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@72cde7cc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5fd4f8f5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@696da30b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4e7912d8]
+2017-02-08 10:30:25 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [net.codog.ProjectApplicationTests], using SpringBootContextLoader
+2017-02-08 10:30:25 [main] INFO  org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [net.codog.ProjectApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-02-08 10:30:25 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [net.codog.ProjectApplicationTests]: ProjectApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2017-02-08 10:30:25 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration net.codog.ProjectApplication for test class net.codog.ProjectApplicationTests
+2017-02-08 10:30:25 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-02-08 10:30:25 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3c73951, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3d5c822d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6f46426d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@73700b80, org.springframework.test.context.transaction.TransactionalTestExecutionListener@49c7b90e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@10d307f1, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4d5b6aac, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3e84448c, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4a7f959b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@429bffaa, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5403f35f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@483f6d77]
+2017-02-08 10:30:25 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2017-02-08 10:30:26 [main] INFO  net.codog.ProjectApplicationTests - Starting ProjectApplicationTests on wenhanwang with PID 6260 (started by CreditEase in E:\�ҵ���Ŀ\GitHub\personal-blog-webiste\project)
+2017-02-08 10:30:26 [main] INFO  net.codog.ProjectApplicationTests - The following profiles are active: prod
+2017-02-08 10:30:26 [main] INFO  org.springframework.web.context.support.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@36cda2c2: startup date [Wed Feb 08 10:30:26 CST 2017]; root of context hierarchy
+2017-02-08 10:30:28 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e84a5104] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 10:30:28 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [class org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$315c8722] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 10:30:28 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration' of type [class org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$$EnhancerBySpringCGLIB$$25d04bc6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 10:30:28 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.cache-org.springframework.boot.autoconfigure.cache.CacheProperties' of type [class org.springframework.boot.autoconfigure.cache.CacheProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 10:30:28 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers' of type [class org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 10:30:28 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration' of type [class org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration$$EnhancerBySpringCGLIB$$c76bbea7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 10:30:28 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheManager' of type [class org.springframework.cache.concurrent.ConcurrentMapCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 10:30:28 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheAutoConfigurationValidator' of type [class org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheManagerValidator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 10:30:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@36cda2c2: startup date [Wed Feb 08 10:30:26 CST 2017]; root of context hierarchy
+2017-02-08 10:30:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/advertise/getadvertises],methods=[POST]}" onto public java.util.List<net.codog.domain.Advertise> net.codog.web.AdvertiseController.getAdvertise()
+2017-02-08 10:30:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/getblogcategories],methods=[POST]}" onto public java.util.List<net.codog.domain.BlogCategory> net.codog.web.BlogController.getBlogCategories(java.lang.Integer)
+2017-02-08 10:30:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/getblogcount],methods=[POST]}" onto public java.lang.Integer net.codog.web.BlogController.getBlogCount(java.lang.Integer)
+2017-02-08 10:30:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/getblogs],methods=[POST]}" onto public java.util.List<net.codog.domain.Blog> net.codog.web.BlogController.getBlogs(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer)
+2017-02-08 10:30:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/email/sendmail],methods=[POST]}" onto public net.codog.vo.ResponseVO<java.lang.String> net.codog.web.EmailController.sendMail(net.codog.vo.ValidateInputEmailContent)
+2017-02-08 10:30:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/gamevideo/getgamevideoscount],methods=[POST]}" onto public java.lang.Integer net.codog.web.GameVideoController.getGameVideosCount(java.lang.Integer)
+2017-02-08 10:30:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/gamevideo/getgamevideos],methods=[POST]}" onto public java.util.List<net.codog.domain.GameVideo> net.codog.web.GameVideoController.getGameVideos(java.lang.Integer,java.lang.Integer,java.lang.Integer)
+2017-02-08 10:30:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/guestbook/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Guestbook>> net.codog.web.GuestbookController.test()
+2017-02-08 10:30:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Message>> net.codog.web.MessageController.test()
+2017-02-08 10:30:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.test()
+2017-02-08 10:30:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewscount],methods=[POST]}" onto public int net.codog.web.NewsController.getNewsCount()
+2017-02-08 10:30:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewslist],methods=[POST]}" onto public java.util.List<net.codog.domain.News> net.codog.web.NewsController.getNewsList()
+2017-02-08 10:30:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/recommand/getrecommands],methods=[POST]}" onto public java.util.List<net.codog.domain.Recommand> net.codog.web.RecommandController.getRecommands()
+2017-02-08 10:30:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/searchcategory/getsearchcategories],methods=[POST]}" onto public java.util.List<net.codog.domain.SearchCategory> net.codog.web.SearchCategoryController.getSearchCategories()
+2017-02-08 10:30:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/register],methods=[POST]}" onto public net.codog.vo.ResponseVO<java.lang.String> net.codog.web.UserController.register(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)
+2017-02-08 10:30:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<net.codog.view.UserShowDetail> net.codog.web.UserController.test()
+2017-02-08 10:30:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userfile/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulFile>> net.codog.web.UserfulFileController.test()
+2017-02-08 10:30:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userurl/getuserfulurlbytype],methods=[POST]}" onto public java.util.List<net.codog.domain.UserfulUrl> net.codog.web.UserfulUrlController.getUserfulUrlByType(int,java.lang.Integer,java.lang.Integer)
+2017-02-08 10:30:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-02-08 10:30:30 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-02-08 10:30:30 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-08 10:30:30 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-08 10:30:31 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-08 10:30:31 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2017-02-08 10:30:31 [main] INFO  org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2017-02-08 10:30:31 [main] INFO  net.codog.ProjectApplicationTests - Started ProjectApplicationTests in 6.865 seconds (JVM running for 8.154)
+2017-02-08 10:30:32 [Thread-1] INFO  org.springframework.web.context.support.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@36cda2c2: startup date [Wed Feb 08 10:30:26 CST 2017]; root of context hierarchy
+2017-02-08 10:35:20 [main] INFO  net.codog.ProjectApplication - Starting ProjectApplication on wenhanwang with PID 5504 (started by CreditEase in E:\我的项目\GitHub\personal-blog-webiste\project)
+2017-02-08 10:35:20 [main] INFO  net.codog.ProjectApplication - The following profiles are active: dev
+2017-02-08 10:35:20 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2017-02-08 10:35:21 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fb3536e: startup date [Wed Feb 08 10:35:21 CST 2017]; root of context hierarchy
+2017-02-08 10:35:23 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ff82c620] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 10:35:23 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [class org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$4894fc3e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 10:35:23 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration' of type [class org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$$EnhancerBySpringCGLIB$$3d08c0e2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 10:35:23 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.cache-org.springframework.boot.autoconfigure.cache.CacheProperties' of type [class org.springframework.boot.autoconfigure.cache.CacheProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 10:35:23 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers' of type [class org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 10:35:23 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration' of type [class org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration$$EnhancerBySpringCGLIB$$dea433c3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 10:35:23 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheManager' of type [class org.springframework.cache.concurrent.ConcurrentMapCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 10:35:23 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheAutoConfigurationValidator' of type [class org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheManagerValidator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 10:35:25 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 80 (http)
+2017-02-08 10:35:25 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2017-02-08 10:35:25 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.5
+2017-02-08 10:35:25 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2017-02-08 10:35:25 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3825 ms
+2017-02-08 10:35:25 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2017-02-08 10:35:25 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-02-08 10:35:25 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-02-08 10:35:25 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-02-08 10:35:25 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2017-02-08 10:35:27 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fb3536e: startup date [Wed Feb 08 10:35:21 CST 2017]; root of context hierarchy
+2017-02-08 10:35:27 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/advertise/getadvertises],methods=[POST]}" onto public java.util.List<net.codog.domain.Advertise> net.codog.web.AdvertiseController.getAdvertise()
+2017-02-08 10:35:27 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/getblogcount],methods=[POST]}" onto public java.lang.Integer net.codog.web.BlogController.getBlogCount(java.lang.Integer)
+2017-02-08 10:35:27 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/getblogs],methods=[POST]}" onto public java.util.List<net.codog.domain.Blog> net.codog.web.BlogController.getBlogs(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer)
+2017-02-08 10:35:27 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/getblogcategories],methods=[POST]}" onto public java.util.List<net.codog.domain.BlogCategory> net.codog.web.BlogController.getBlogCategories(java.lang.Integer)
+2017-02-08 10:35:27 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/email/sendmail],methods=[POST]}" onto public net.codog.vo.ResponseVO<java.lang.String> net.codog.web.EmailController.sendMail(net.codog.vo.ValidateInputEmailContent)
+2017-02-08 10:35:27 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/gamevideo/getgamevideos],methods=[POST]}" onto public java.util.List<net.codog.domain.GameVideo> net.codog.web.GameVideoController.getGameVideos(java.lang.Integer,java.lang.Integer,java.lang.Integer)
+2017-02-08 10:35:27 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/gamevideo/getgamevideoscount],methods=[POST]}" onto public java.lang.Integer net.codog.web.GameVideoController.getGameVideosCount(java.lang.Integer)
+2017-02-08 10:35:27 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/guestbook/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Guestbook>> net.codog.web.GuestbookController.test()
+2017-02-08 10:35:27 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Message>> net.codog.web.MessageController.test()
+2017-02-08 10:35:27 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.test()
+2017-02-08 10:35:27 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewscount],methods=[POST]}" onto public int net.codog.web.NewsController.getNewsCount()
+2017-02-08 10:35:27 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewslist],methods=[POST]}" onto public java.util.List<net.codog.domain.News> net.codog.web.NewsController.getNewsList()
+2017-02-08 10:35:27 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/recommand/getrecommands],methods=[POST]}" onto public java.util.List<net.codog.domain.Recommand> net.codog.web.RecommandController.getRecommands()
+2017-02-08 10:35:27 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/searchcategory/getsearchcategories],methods=[POST]}" onto public java.util.List<net.codog.domain.SearchCategory> net.codog.web.SearchCategoryController.getSearchCategories()
+2017-02-08 10:35:27 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/register],methods=[POST]}" onto public net.codog.vo.ResponseVO<java.lang.String> net.codog.web.UserController.register(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)
+2017-02-08 10:35:27 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<net.codog.view.UserShowDetail> net.codog.web.UserController.test()
+2017-02-08 10:35:27 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userfile/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulFile>> net.codog.web.UserfulFileController.test()
+2017-02-08 10:35:27 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userurl/getuserfulurlbytype],methods=[POST]}" onto public java.util.List<net.codog.domain.UserfulUrl> net.codog.web.UserfulUrlController.getUserfulUrlByType(int,java.lang.Integer,java.lang.Integer)
+2017-02-08 10:35:27 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-02-08 10:35:27 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-02-08 10:35:27 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-08 10:35:27 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-08 10:35:27 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-08 10:35:27 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2017-02-08 10:35:27 [main] INFO  org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2017-02-08 10:35:28 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2017-02-08 10:35:28 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2017-02-08 10:35:28 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-80]
+2017-02-08 10:35:28 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2017-02-08 10:35:28 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 80 (http)
+2017-02-08 10:35:28 [main] INFO  net.codog.ProjectApplication - Started ProjectApplication in 9.8 seconds (JVM running for 10.638)
+2017-02-08 10:35:45 [http-nio-80-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-02-08 10:35:45 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2017-02-08 10:35:45 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 36 ms
+2017-02-08 10:35:46 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 10:35:46 [http-nio-80-exec-10] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 10:35:46 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - URL : http://localhost/news/getnewslist
+2017-02-08 10:35:46 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 10:35:46 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 10:35:46 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.NewsController.getNewsList
+2017-02-08 10:35:46 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 10:35:46 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 10:35:46 [http-nio-80-exec-3] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 10:35:46 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - URL : http://localhost/advertise/getadvertises
+2017-02-08 10:35:46 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 10:35:46 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 10:35:46 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.AdvertiseController.getAdvertise
+2017-02-08 10:35:46 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 10:35:46 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 10:35:46 [http-nio-80-exec-5] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 10:35:46 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - URL : http://localhost/recommand/getrecommands
+2017-02-08 10:35:46 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 10:35:46 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 10:35:46 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.RecommandController.getRecommands
+2017-02-08 10:35:46 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 10:35:46 [http-nio-80-exec-3] INFO  net.codog.service.AdvertiseService - AdvertiseService
+2017-02-08 10:35:46 [http-nio-80-exec-5] INFO  net.codog.service.RecommandService - recommandService
+2017-02-08 10:35:47 [http-nio-80-exec-5] INFO  net.codog.web.RecommandController - 全部数据是[Recommand(recommand_link=www.baidu.com, recommand_picture=001), Recommand(recommand_link=www.baidu.com2, recommand_picture=002), Recommand(recommand_link=www.baidu.com3, recommand_picture=003)]
+2017-02-08 10:35:47 [http-nio-80-exec-10] INFO  net.codog.web.NewsController - 获取的全部新闻是[News(news_id=1, news_title=news1, news_content=this is news, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null), News(news_id=2, news_title=news2, news_content=this is news2, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null)]
+2017-02-08 10:35:47 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 10:35:47 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 637
+2017-02-08 10:35:47 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 10:35:47 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 445
+2017-02-08 10:35:47 [http-nio-80-exec-3] INFO  net.codog.web.AdvertiseController - 全部数据是[Advertise(advertise_link=blog.csdn.net, advertise_picture=images/inc/1.gif), Advertise(advertise_link=www.baidu.com, advertise_picture=images/inc/1.gif)]
+2017-02-08 10:35:47 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 10:35:47 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 449
+2017-02-08 10:36:17 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 10:36:17 [http-nio-80-exec-1] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 10:36:17 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - URL : http://localhost/blog/getblogcount
+2017-02-08 10:36:17 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 10:36:17 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 10:36:17 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.BlogController.getBlogCount
+2017-02-08 10:36:17 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - ARGS : [0]
+2017-02-08 10:36:17 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - blogCategoryId: 0
+2017-02-08 10:36:17 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 10:36:17 [http-nio-80-exec-5] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 10:36:17 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - URL : http://localhost/blog/getblogcategories
+2017-02-08 10:36:17 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 10:36:17 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 10:36:17 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.BlogController.getBlogCategories
+2017-02-08 10:36:17 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - ARGS : [0]
+2017-02-08 10:36:17 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 10:36:17 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - isSchool: 0
+2017-02-08 10:36:17 [http-nio-80-exec-10] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 10:36:17 [http-nio-80-exec-5] INFO  net.codog.service.BlogCategoryService - isSchool:0
+2017-02-08 10:36:17 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - URL : http://localhost/blog/getblogs
+2017-02-08 10:36:17 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 10:36:17 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 10:36:17 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.BlogController.getBlogs
+2017-02-08 10:36:17 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - ARGS : [0, 2, 0, 0]
+2017-02-08 10:36:17 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - isSchool: 0
+2017-02-08 10:36:17 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - start: 0
+2017-02-08 10:36:17 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - end: 2
+2017-02-08 10:36:17 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - blogCategoryId: 0
+2017-02-08 10:36:17 [http-nio-80-exec-10] INFO  net.codog.web.BlogController - start:0,end:2,isSchool:0,blogCategoryId:0
+2017-02-08 10:36:17 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 10:36:17 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 39
+2017-02-08 10:36:17 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 10:36:17 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 41
+2017-02-08 10:36:17 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 10:36:17 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 100
+2017-02-08 14:03:45 [main] INFO  net.codog.ProjectApplication - Starting ProjectApplication on wenhanwang with PID 6312 (started by CreditEase in E:\我的项目\GitHub\personal-blog-webiste\project)
+2017-02-08 14:03:45 [main] INFO  net.codog.ProjectApplication - The following profiles are active: dev
+2017-02-08 14:03:45 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2017-02-08 14:03:46 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fb3536e: startup date [Wed Feb 08 14:03:46 CST 2017]; root of context hierarchy
+2017-02-08 14:03:47 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2da1ec95] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 14:03:47 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [class org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$76b422b3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 14:03:47 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration' of type [class org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$$EnhancerBySpringCGLIB$$6b27e757] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 14:03:48 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.cache-org.springframework.boot.autoconfigure.cache.CacheProperties' of type [class org.springframework.boot.autoconfigure.cache.CacheProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 14:03:48 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers' of type [class org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 14:03:48 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration' of type [class org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration$$EnhancerBySpringCGLIB$$cc35a38] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 14:03:48 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheManager' of type [class org.springframework.cache.concurrent.ConcurrentMapCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 14:03:48 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheAutoConfigurationValidator' of type [class org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheManagerValidator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 14:03:48 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 80 (http)
+2017-02-08 14:03:49 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2017-02-08 14:03:49 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.5
+2017-02-08 14:03:49 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2017-02-08 14:03:49 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3148 ms
+2017-02-08 14:03:49 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2017-02-08 14:03:49 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-02-08 14:03:49 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-02-08 14:03:49 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-02-08 14:03:49 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2017-02-08 14:03:50 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fb3536e: startup date [Wed Feb 08 14:03:46 CST 2017]; root of context hierarchy
+2017-02-08 14:03:50 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/advertise/getadvertises],methods=[POST]}" onto public java.util.List<net.codog.domain.Advertise> net.codog.web.AdvertiseController.getAdvertise()
+2017-02-08 14:03:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/getblogcategories],methods=[POST]}" onto public java.util.List<net.codog.domain.BlogCategory> net.codog.web.BlogController.getBlogCategories(java.lang.Integer)
+2017-02-08 14:03:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/getblogcount],methods=[POST]}" onto public java.lang.Integer net.codog.web.BlogController.getBlogCount(java.lang.Integer)
+2017-02-08 14:03:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/getblogs],methods=[POST]}" onto public java.util.List<net.codog.domain.Blog> net.codog.web.BlogController.getBlogs(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer)
+2017-02-08 14:03:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/email/sendmail],methods=[POST]}" onto public net.codog.vo.ResponseVO<java.lang.String> net.codog.web.EmailController.sendMail(net.codog.vo.ValidateInputEmailContent)
+2017-02-08 14:03:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/gamevideo/getgamevideoscount],methods=[POST]}" onto public java.lang.Integer net.codog.web.GameVideoController.getGameVideosCount(java.lang.Integer)
+2017-02-08 14:03:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/gamevideo/getgamevideos],methods=[POST]}" onto public java.util.List<net.codog.domain.GameVideo> net.codog.web.GameVideoController.getGameVideos(java.lang.Integer,java.lang.Integer,java.lang.Integer)
+2017-02-08 14:03:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/guestbook/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Guestbook>> net.codog.web.GuestbookController.test()
+2017-02-08 14:03:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Message>> net.codog.web.MessageController.test()
+2017-02-08 14:03:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.test()
+2017-02-08 14:03:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewscount],methods=[POST]}" onto public int net.codog.web.NewsController.getNewsCount()
+2017-02-08 14:03:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewslist],methods=[POST]}" onto public java.util.List<net.codog.domain.News> net.codog.web.NewsController.getNewsList()
+2017-02-08 14:03:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/recommand/getrecommands],methods=[POST]}" onto public java.util.List<net.codog.domain.Recommand> net.codog.web.RecommandController.getRecommands()
+2017-02-08 14:03:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/searchcategory/getsearchcategories],methods=[POST]}" onto public java.util.List<net.codog.domain.SearchCategory> net.codog.web.SearchCategoryController.getSearchCategories()
+2017-02-08 14:03:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/register],methods=[POST]}" onto public net.codog.vo.ResponseVO<java.lang.String> net.codog.web.UserController.register(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)
+2017-02-08 14:03:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<net.codog.view.UserShowDetail> net.codog.web.UserController.test()
+2017-02-08 14:03:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userfile/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulFile>> net.codog.web.UserfulFileController.test()
+2017-02-08 14:03:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userurl/getuserfulurlbytype],methods=[POST]}" onto public java.util.List<net.codog.domain.UserfulUrl> net.codog.web.UserfulUrlController.getUserfulUrlByType(int,java.lang.Integer,java.lang.Integer)
+2017-02-08 14:03:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-02-08 14:03:51 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-02-08 14:03:51 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-08 14:03:51 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-08 14:03:51 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-08 14:03:51 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2017-02-08 14:03:51 [main] INFO  org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2017-02-08 14:03:52 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2017-02-08 14:03:52 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2017-02-08 14:03:52 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-80]
+2017-02-08 14:03:52 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2017-02-08 14:03:52 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 80 (http)
+2017-02-08 14:03:52 [main] INFO  net.codog.ProjectApplication - Started ProjectApplication in 7.041 seconds (JVM running for 8.284)
+2017-02-08 14:04:05 [http-nio-80-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-02-08 14:04:05 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2017-02-08 14:04:05 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 61 ms
+2017-02-08 14:04:05 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:04:05 [http-nio-80-exec-4] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:04:05 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - URL : http://localhost/news/getnewslist
+2017-02-08 14:04:05 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:04:05 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:04:05 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.NewsController.getNewsList
+2017-02-08 14:04:05 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 14:04:06 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:04:06 [http-nio-80-exec-7] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:04:06 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - URL : http://localhost/recommand/getrecommands
+2017-02-08 14:04:06 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:04:06 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:04:06 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.RecommandController.getRecommands
+2017-02-08 14:04:06 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 14:04:06 [http-nio-80-exec-7] INFO  net.codog.service.RecommandService - recommandService
+2017-02-08 14:04:06 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:04:06 [http-nio-80-exec-9] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:04:06 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - URL : http://localhost/advertise/getadvertises
+2017-02-08 14:04:06 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:04:06 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:04:06 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.AdvertiseController.getAdvertise
+2017-02-08 14:04:06 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 14:04:06 [http-nio-80-exec-9] INFO  net.codog.service.AdvertiseService - AdvertiseService
+2017-02-08 14:04:07 [http-nio-80-exec-9] INFO  net.codog.web.AdvertiseController - 全部数据是[Advertise(advertise_link=blog.csdn.net, advertise_picture=images/inc/1.gif), Advertise(advertise_link=www.baidu.com, advertise_picture=images/inc/1.gif)]
+2017-02-08 14:04:07 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:04:07 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 891
+2017-02-08 14:04:07 [http-nio-80-exec-4] INFO  net.codog.web.NewsController - 获取的全部新闻是[News(news_id=1, news_title=news1, news_content=this is news, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null), News(news_id=2, news_title=news2, news_content=this is news2, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null)]
+2017-02-08 14:04:07 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:04:07 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 1985
+2017-02-08 14:04:07 [http-nio-80-exec-7] INFO  net.codog.web.RecommandController - 全部数据是[Recommand(recommand_link=www.baidu.com, recommand_picture=001), Recommand(recommand_link=www.baidu.com2, recommand_picture=002), Recommand(recommand_link=www.baidu.com3, recommand_picture=003)]
+2017-02-08 14:04:07 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:04:07 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 897
+2017-02-08 14:10:49 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:10:49 [http-nio-80-exec-5] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:10:49 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:10:49 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:10:49 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:10:49 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:10:49 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - ARGS : [0, null, null]
+2017-02-08 14:10:49 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - type: 0
+2017-02-08 14:10:49 [http-nio-80-exec-5] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:10:49 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:10:49 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 33
+2017-02-08 14:10:58 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:10:58 [http-nio-80-exec-10] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:10:58 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:10:58 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:10:58 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:10:58 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:10:58 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - ARGS : [1, null, null]
+2017-02-08 14:10:58 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - type: 1
+2017-02-08 14:10:58 [http-nio-80-exec-10] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:10:58 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:10:58 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 4
+2017-02-08 14:11:05 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:11:05 [http-nio-80-exec-9] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:11:05 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:11:05 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:11:05 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:11:05 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:11:05 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - ARGS : [2, null, null]
+2017-02-08 14:11:05 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - type: 2
+2017-02-08 14:11:05 [http-nio-80-exec-9] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:11:05 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:11:05 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 5
+2017-02-08 14:11:06 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:11:06 [http-nio-80-exec-5] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:11:06 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:11:06 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:11:06 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:11:06 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:11:06 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - ARGS : [0, null, null]
+2017-02-08 14:11:06 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - type: 0
+2017-02-08 14:11:06 [http-nio-80-exec-5] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:11:06 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:11:06 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 4
+2017-02-08 14:11:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:11:09 [http-nio-80-exec-7] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:11:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:11:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:11:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:11:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:11:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - ARGS : [1, null, null]
+2017-02-08 14:11:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - type: 1
+2017-02-08 14:11:09 [http-nio-80-exec-7] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:11:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:11:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 10
+2017-02-08 14:11:12 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:11:12 [http-nio-80-exec-2] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:11:12 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:11:12 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:11:12 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:11:12 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:11:12 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - ARGS : [0, null, null]
+2017-02-08 14:11:12 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - type: 0
+2017-02-08 14:11:12 [http-nio-80-exec-2] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:11:12 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:11:12 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 4
+2017-02-08 14:21:14 [main] INFO  net.codog.ProjectApplication - Starting ProjectApplication on wenhanwang with PID 9160 (started by CreditEase in E:\我的项目\GitHub\personal-blog-webiste\project)
+2017-02-08 14:21:14 [main] INFO  net.codog.ProjectApplication - The following profiles are active: dev
+2017-02-08 14:21:14 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fb3536e: startup date [Wed Feb 08 14:21:14 CST 2017]; root of context hierarchy
+2017-02-08 14:21:16 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dd92bfc6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 14:21:16 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [class org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$26a4f5e4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 14:21:16 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration' of type [class org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$$EnhancerBySpringCGLIB$$1b18ba88] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 14:21:16 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2017-02-08 14:21:16 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.cache-org.springframework.boot.autoconfigure.cache.CacheProperties' of type [class org.springframework.boot.autoconfigure.cache.CacheProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 14:21:16 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers' of type [class org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 14:21:16 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration' of type [class org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration$$EnhancerBySpringCGLIB$$bcb42d69] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 14:21:16 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheManager' of type [class org.springframework.cache.concurrent.ConcurrentMapCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 14:21:16 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheAutoConfigurationValidator' of type [class org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheManagerValidator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 14:21:17 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 80 (http)
+2017-02-08 14:21:17 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2017-02-08 14:21:17 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.5
+2017-02-08 14:21:17 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2017-02-08 14:21:17 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3217 ms
+2017-02-08 14:21:18 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2017-02-08 14:21:18 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-02-08 14:21:18 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-02-08 14:21:18 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-02-08 14:21:18 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2017-02-08 14:21:19 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fb3536e: startup date [Wed Feb 08 14:21:14 CST 2017]; root of context hierarchy
+2017-02-08 14:21:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/advertise/getadvertises],methods=[POST]}" onto public java.util.List<net.codog.domain.Advertise> net.codog.web.AdvertiseController.getAdvertise()
+2017-02-08 14:21:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/getblogcount],methods=[POST]}" onto public java.lang.Integer net.codog.web.BlogController.getBlogCount(java.lang.Integer)
+2017-02-08 14:21:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/getblogs],methods=[POST]}" onto public java.util.List<net.codog.domain.Blog> net.codog.web.BlogController.getBlogs(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer)
+2017-02-08 14:21:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/getblogcategories],methods=[POST]}" onto public java.util.List<net.codog.domain.BlogCategory> net.codog.web.BlogController.getBlogCategories(java.lang.Integer)
+2017-02-08 14:21:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/email/sendmail],methods=[POST]}" onto public net.codog.vo.ResponseVO<java.lang.String> net.codog.web.EmailController.sendMail(net.codog.vo.ValidateInputEmailContent)
+2017-02-08 14:21:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/gamevideo/getgamevideos],methods=[POST]}" onto public java.util.List<net.codog.domain.GameVideo> net.codog.web.GameVideoController.getGameVideos(java.lang.Integer,java.lang.Integer,java.lang.Integer)
+2017-02-08 14:21:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/gamevideo/getgamevideoscount],methods=[POST]}" onto public java.lang.Integer net.codog.web.GameVideoController.getGameVideosCount(java.lang.Integer)
+2017-02-08 14:21:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/guestbook/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Guestbook>> net.codog.web.GuestbookController.test()
+2017-02-08 14:21:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Message>> net.codog.web.MessageController.test()
+2017-02-08 14:21:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.test()
+2017-02-08 14:21:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewscount],methods=[POST]}" onto public int net.codog.web.NewsController.getNewsCount()
+2017-02-08 14:21:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewslist],methods=[POST]}" onto public java.util.List<net.codog.domain.News> net.codog.web.NewsController.getNewsList()
+2017-02-08 14:21:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/recommand/getrecommands],methods=[POST]}" onto public java.util.List<net.codog.domain.Recommand> net.codog.web.RecommandController.getRecommands()
+2017-02-08 14:21:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/searchcategory/getsearchcategories],methods=[POST]}" onto public java.util.List<net.codog.domain.SearchCategory> net.codog.web.SearchCategoryController.getSearchCategories()
+2017-02-08 14:21:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/register],methods=[POST]}" onto public net.codog.vo.ResponseVO<java.lang.String> net.codog.web.UserController.register(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)
+2017-02-08 14:21:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<net.codog.view.UserShowDetail> net.codog.web.UserController.test()
+2017-02-08 14:21:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userfile/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulFile>> net.codog.web.UserfulFileController.test()
+2017-02-08 14:21:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userurl/getuserfulurlbytype],methods=[POST]}" onto public java.util.List<net.codog.domain.UserfulUrl> net.codog.web.UserfulUrlController.getUserfulUrlByType(int,java.lang.Integer,java.lang.Integer)
+2017-02-08 14:21:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-02-08 14:21:20 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-02-08 14:21:20 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-08 14:21:20 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-08 14:21:20 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-08 14:21:20 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2017-02-08 14:21:20 [main] INFO  org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2017-02-08 14:21:21 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2017-02-08 14:21:21 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2017-02-08 14:21:21 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-80]
+2017-02-08 14:21:21 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2017-02-08 14:21:21 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 80 (http)
+2017-02-08 14:21:21 [main] INFO  net.codog.ProjectApplication - Started ProjectApplication in 7.041 seconds (JVM running for 7.858)
+2017-02-08 14:21:25 [http-nio-80-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-02-08 14:21:25 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2017-02-08 14:21:25 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2017-02-08 14:21:25 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:21:25 [http-nio-80-exec-2] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:21:25 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - URL : http://localhost/news/getnewslist
+2017-02-08 14:21:25 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:21:25 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:21:25 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.NewsController.getNewsList
+2017-02-08 14:21:25 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 14:21:25 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:21:25 [http-nio-80-exec-3] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:21:25 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - URL : http://localhost/advertise/getadvertises
+2017-02-08 14:21:25 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:21:25 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:21:25 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.AdvertiseController.getAdvertise
+2017-02-08 14:21:25 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 14:21:25 [http-nio-80-exec-3] INFO  net.codog.service.AdvertiseService - AdvertiseService
+2017-02-08 14:21:25 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:21:25 [http-nio-80-exec-4] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:21:25 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - URL : http://localhost/recommand/getrecommands
+2017-02-08 14:21:25 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:21:25 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:21:25 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.RecommandController.getRecommands
+2017-02-08 14:21:25 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 14:21:25 [http-nio-80-exec-4] INFO  net.codog.service.RecommandService - recommandService
+2017-02-08 14:21:26 [http-nio-80-exec-3] INFO  net.codog.web.AdvertiseController - 全部数据是[Advertise(advertise_link=blog.csdn.net, advertise_picture=images/inc/1.gif), Advertise(advertise_link=www.baidu.com, advertise_picture=images/inc/1.gif)]
+2017-02-08 14:21:26 [http-nio-80-exec-4] INFO  net.codog.web.RecommandController - 全部数据是[Recommand(recommand_link=www.baidu.com, recommand_picture=001), Recommand(recommand_link=www.baidu.com2, recommand_picture=002), Recommand(recommand_link=www.baidu.com3, recommand_picture=003)]
+2017-02-08 14:21:26 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:21:26 [http-nio-80-exec-2] INFO  net.codog.web.NewsController - 获取的全部新闻是[News(news_id=1, news_title=news1, news_content=this is news, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null), News(news_id=2, news_title=news2, news_content=this is news2, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null)]
+2017-02-08 14:21:26 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 415
+2017-02-08 14:21:26 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:21:26 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 525
+2017-02-08 14:21:26 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:21:26 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 397
+2017-02-08 14:21:50 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:21:50 [http-nio-80-exec-10] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:21:50 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:21:50 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:21:50 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:21:50 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:21:50 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - ARGS : [0, null, null]
+2017-02-08 14:21:50 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - type: 0
+2017-02-08 14:21:50 [http-nio-80-exec-10] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:21:50 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:21:50 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 13
+2017-02-08 14:21:53 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:21:53 [http-nio-80-exec-1] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:21:53 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:21:53 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:21:53 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:21:53 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:21:53 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - ARGS : [1, null, null]
+2017-02-08 14:21:53 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - type: 1
+2017-02-08 14:21:53 [http-nio-80-exec-1] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:21:53 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:21:53 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 3
+2017-02-08 14:21:58 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:21:58 [http-nio-80-exec-4] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:21:58 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:21:58 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:21:58 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:21:58 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:21:58 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - ARGS : [2, null, null]
+2017-02-08 14:21:58 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - type: 2
+2017-02-08 14:21:58 [http-nio-80-exec-4] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:21:58 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:21:58 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 4
+2017-02-08 14:21:59 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:21:59 [http-nio-80-exec-8] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:21:59 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:21:59 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:21:59 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:21:59 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:21:59 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - ARGS : [3, null, null]
+2017-02-08 14:21:59 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - type: 3
+2017-02-08 14:21:59 [http-nio-80-exec-8] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:21:59 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:21:59 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 4
+2017-02-08 14:22:00 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:22:00 [http-nio-80-exec-3] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:22:00 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:22:00 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:22:00 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:22:00 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:22:00 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - ARGS : [4, null, null]
+2017-02-08 14:22:00 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - type: 4
+2017-02-08 14:22:00 [http-nio-80-exec-3] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:22:00 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:22:00 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 6
+2017-02-08 14:22:02 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:22:02 [http-nio-80-exec-1] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:22:02 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:22:02 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:22:02 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:22:02 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:22:02 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - ARGS : [0, null, null]
+2017-02-08 14:22:02 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - type: 0
+2017-02-08 14:22:02 [http-nio-80-exec-1] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:22:02 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:22:02 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 6
+2017-02-08 14:22:45 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:22:45 [http-nio-80-exec-6] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:22:45 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:22:45 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:22:45 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:22:45 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:22:45 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - ARGS : [1, null, null]
+2017-02-08 14:22:45 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - type: 1
+2017-02-08 14:22:45 [http-nio-80-exec-6] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:22:45 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:22:45 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 4
+2017-02-08 14:23:30 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:23:30 [http-nio-80-exec-8] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:23:30 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:23:30 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:23:30 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:23:30 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:23:30 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - ARGS : [1, null, null]
+2017-02-08 14:23:30 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - type: 1
+2017-02-08 14:23:30 [http-nio-80-exec-8] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:23:30 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:23:30 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 5
+2017-02-08 14:25:57 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:25:57 [http-nio-80-exec-1] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:25:57 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:25:57 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:25:57 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:25:57 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:25:57 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - ARGS : [0, null, null]
+2017-02-08 14:25:57 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - type: 0
+2017-02-08 14:25:57 [http-nio-80-exec-1] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:25:57 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:25:57 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 5
+2017-02-08 14:29:09 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:29:09 [http-nio-80-exec-4] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:29:09 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - URL : http://localhost/news/getnewslist
+2017-02-08 14:29:09 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:29:09 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:29:09 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.NewsController.getNewsList
+2017-02-08 14:29:09 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 14:29:09 [http-nio-80-exec-4] INFO  net.codog.web.NewsController - 获取的全部新闻是[News(news_id=1, news_title=news1, news_content=this is news, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null), News(news_id=2, news_title=news2, news_content=this is news2, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null)]
+2017-02-08 14:29:09 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:29:09 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 4
+2017-02-08 14:29:09 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:29:09 [http-nio-80-exec-3] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:29:09 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - URL : http://localhost/advertise/getadvertises
+2017-02-08 14:29:09 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:29:09 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:29:09 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.AdvertiseController.getAdvertise
+2017-02-08 14:29:09 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 14:29:09 [http-nio-80-exec-3] INFO  net.codog.service.AdvertiseService - AdvertiseService
+2017-02-08 14:29:09 [http-nio-80-exec-3] INFO  net.codog.web.AdvertiseController - 全部数据是[Advertise(advertise_link=blog.csdn.net, advertise_picture=images/inc/1.gif), Advertise(advertise_link=www.baidu.com, advertise_picture=images/inc/1.gif)]
+2017-02-08 14:29:09 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:29:09 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 3
+2017-02-08 14:29:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:29:09 [http-nio-80-exec-7] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:29:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - URL : http://localhost/recommand/getrecommands
+2017-02-08 14:29:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:29:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:29:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.RecommandController.getRecommands
+2017-02-08 14:29:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 14:29:09 [http-nio-80-exec-7] INFO  net.codog.service.RecommandService - recommandService
+2017-02-08 14:29:09 [http-nio-80-exec-7] INFO  net.codog.web.RecommandController - 全部数据是[Recommand(recommand_link=www.baidu.com, recommand_picture=001), Recommand(recommand_link=www.baidu.com2, recommand_picture=002), Recommand(recommand_link=www.baidu.com3, recommand_picture=003)]
+2017-02-08 14:29:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:29:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 4
+2017-02-08 14:29:16 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:29:16 [http-nio-80-exec-6] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:29:16 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:29:16 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:29:16 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:29:16 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:29:16 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - ARGS : [0, null, null]
+2017-02-08 14:29:16 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - type: 0
+2017-02-08 14:29:16 [http-nio-80-exec-6] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:29:16 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:29:16 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 6
+2017-02-08 14:29:16 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:29:16 [http-nio-80-exec-8] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:29:16 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:29:16 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:29:16 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:29:16 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:29:16 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - ARGS : [1, null, null]
+2017-02-08 14:29:16 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - type: 1
+2017-02-08 14:29:16 [http-nio-80-exec-8] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:29:16 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:29:16 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 4
+2017-02-08 14:29:18 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:29:18 [http-nio-80-exec-4] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:29:18 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:29:18 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:29:18 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:29:18 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:29:18 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - ARGS : [2, null, null]
+2017-02-08 14:29:18 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - type: 2
+2017-02-08 14:29:18 [http-nio-80-exec-4] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:29:18 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:29:18 [http-nio-80-exec-4] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 4
+2017-02-08 14:29:19 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:29:19 [http-nio-80-exec-3] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:29:19 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:29:19 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:29:19 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:29:19 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:29:19 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - ARGS : [3, null, null]
+2017-02-08 14:29:19 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - type: 3
+2017-02-08 14:29:19 [http-nio-80-exec-3] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:29:19 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:29:19 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 4
+2017-02-08 14:29:20 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:29:20 [http-nio-80-exec-5] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:29:20 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:29:20 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:29:20 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:29:20 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:29:20 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - ARGS : [4, null, null]
+2017-02-08 14:29:20 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - type: 4
+2017-02-08 14:29:20 [http-nio-80-exec-5] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:29:20 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:29:20 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 4
+2017-02-08 14:29:29 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:29:29 [http-nio-80-exec-6] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:29:29 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:29:29 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:29:29 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:29:29 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:29:29 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - ARGS : [4, null, null]
+2017-02-08 14:29:29 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - type: 4
+2017-02-08 14:29:29 [http-nio-80-exec-6] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:29:29 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:29:29 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 3
+2017-02-08 14:29:49 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:29:49 [http-nio-80-exec-9] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:29:49 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:29:49 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:29:49 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:29:49 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:29:49 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - ARGS : [0, null, null]
+2017-02-08 14:29:49 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - type: 0
+2017-02-08 14:29:49 [http-nio-80-exec-9] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:29:49 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:29:49 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 4
+2017-02-08 14:29:51 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:29:51 [http-nio-80-exec-10] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:29:51 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:29:51 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:29:51 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:29:51 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:29:51 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - ARGS : [1, null, null]
+2017-02-08 14:29:51 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - type: 1
+2017-02-08 14:29:51 [http-nio-80-exec-10] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:29:51 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:29:51 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 4
+2017-02-08 14:30:06 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:30:06 [http-nio-80-exec-5] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:30:06 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - URL : http://localhost/news/getnewslist
+2017-02-08 14:30:06 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:30:06 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:30:06 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.NewsController.getNewsList
+2017-02-08 14:30:06 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 14:30:06 [http-nio-80-exec-5] INFO  net.codog.web.NewsController - 获取的全部新闻是[News(news_id=1, news_title=news1, news_content=this is news, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null), News(news_id=2, news_title=news2, news_content=this is news2, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null)]
+2017-02-08 14:30:06 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:30:06 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 9
+2017-02-08 14:30:06 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:30:06 [http-nio-80-exec-1] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:30:06 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - URL : http://localhost/recommand/getrecommands
+2017-02-08 14:30:06 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:30:06 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:30:06 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.RecommandController.getRecommands
+2017-02-08 14:30:06 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 14:30:06 [http-nio-80-exec-1] INFO  net.codog.service.RecommandService - recommandService
+2017-02-08 14:30:06 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:30:06 [http-nio-80-exec-6] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:30:06 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - URL : http://localhost/advertise/getadvertises
+2017-02-08 14:30:06 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:30:06 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:30:06 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.AdvertiseController.getAdvertise
+2017-02-08 14:30:06 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 14:30:06 [http-nio-80-exec-6] INFO  net.codog.service.AdvertiseService - AdvertiseService
+2017-02-08 14:30:06 [http-nio-80-exec-1] INFO  net.codog.web.RecommandController - 全部数据是[Recommand(recommand_link=www.baidu.com, recommand_picture=001), Recommand(recommand_link=www.baidu.com2, recommand_picture=002), Recommand(recommand_link=www.baidu.com3, recommand_picture=003)]
+2017-02-08 14:30:06 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:30:06 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 5
+2017-02-08 14:30:06 [http-nio-80-exec-6] INFO  net.codog.web.AdvertiseController - 全部数据是[Advertise(advertise_link=blog.csdn.net, advertise_picture=images/inc/1.gif), Advertise(advertise_link=www.baidu.com, advertise_picture=images/inc/1.gif)]
+2017-02-08 14:30:06 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:30:06 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 4
+2017-02-08 14:30:18 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:30:18 [http-nio-80-exec-10] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:30:18 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:30:18 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:30:18 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:30:18 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:30:18 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - ARGS : [0, null, null]
+2017-02-08 14:30:18 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - type: 0
+2017-02-08 14:30:18 [http-nio-80-exec-10] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:30:18 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:30:18 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 4
+2017-02-08 14:30:18 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:30:18 [http-nio-80-exec-7] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:30:18 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:30:18 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:30:18 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:30:18 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:30:18 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - ARGS : [2, null, null]
+2017-02-08 14:30:18 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - type: 2
+2017-02-08 14:30:18 [http-nio-80-exec-7] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:30:18 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:30:18 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 3
+2017-02-08 14:30:19 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:30:19 [http-nio-80-exec-2] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:30:19 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 14:30:19 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:30:19 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:30:19 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 14:30:19 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - ARGS : [2, null, null]
+2017-02-08 14:30:19 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - type: 2
+2017-02-08 14:30:19 [http-nio-80-exec-2] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 14:30:19 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:30:19 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 2
+2017-02-08 14:30:40 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:30:40 [http-nio-80-exec-5] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:30:40 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - URL : http://localhost/news/getnewslist
+2017-02-08 14:30:40 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:30:40 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:30:40 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.NewsController.getNewsList
+2017-02-08 14:30:40 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 14:30:40 [http-nio-80-exec-5] INFO  net.codog.web.NewsController - 获取的全部新闻是[News(news_id=1, news_title=news1, news_content=this is news, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null), News(news_id=2, news_title=news2, news_content=this is news2, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null)]
+2017-02-08 14:30:40 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:30:40 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 5
+2017-02-08 14:30:40 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:30:40 [http-nio-80-exec-1] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:30:40 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - URL : http://localhost/advertise/getadvertises
+2017-02-08 14:30:40 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:30:40 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:30:40 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.AdvertiseController.getAdvertise
+2017-02-08 14:30:40 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 14:30:40 [http-nio-80-exec-1] INFO  net.codog.service.AdvertiseService - AdvertiseService
+2017-02-08 14:30:40 [http-nio-80-exec-1] INFO  net.codog.web.AdvertiseController - 全部数据是[Advertise(advertise_link=blog.csdn.net, advertise_picture=images/inc/1.gif), Advertise(advertise_link=www.baidu.com, advertise_picture=images/inc/1.gif)]
+2017-02-08 14:30:40 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:30:40 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 3
+2017-02-08 14:30:40 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:30:40 [http-nio-80-exec-9] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:30:40 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - URL : http://localhost/recommand/getrecommands
+2017-02-08 14:30:40 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:30:40 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:30:40 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.RecommandController.getRecommands
+2017-02-08 14:30:40 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 14:30:40 [http-nio-80-exec-9] INFO  net.codog.service.RecommandService - recommandService
+2017-02-08 14:30:40 [http-nio-80-exec-9] INFO  net.codog.web.RecommandController - 全部数据是[Recommand(recommand_link=www.baidu.com, recommand_picture=001), Recommand(recommand_link=www.baidu.com2, recommand_picture=002), Recommand(recommand_link=www.baidu.com3, recommand_picture=003)]
+2017-02-08 14:30:40 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:30:40 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 13
+2017-02-08 14:57:17 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:57:17 [http-nio-80-exec-6] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:57:17 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - URL : http://localhost/advertise/getadvertises
+2017-02-08 14:57:17 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:57:17 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:57:17 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.AdvertiseController.getAdvertise
+2017-02-08 14:57:17 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 14:57:17 [http-nio-80-exec-6] INFO  net.codog.service.AdvertiseService - AdvertiseService
+2017-02-08 14:57:17 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:57:17 [http-nio-80-exec-10] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:57:17 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - URL : http://localhost/recommand/getrecommands
+2017-02-08 14:57:17 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:57:17 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:57:17 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.RecommandController.getRecommands
+2017-02-08 14:57:17 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 14:57:17 [http-nio-80-exec-10] INFO  net.codog.service.RecommandService - recommandService
+2017-02-08 14:57:17 [http-nio-80-exec-6] INFO  net.codog.web.AdvertiseController - 全部数据是[Advertise(advertise_link=blog.csdn.net, advertise_picture=images/inc/1.gif), Advertise(advertise_link=www.baidu.com, advertise_picture=images/inc/1.gif)]
+2017-02-08 14:57:17 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:57:17 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 7
+2017-02-08 14:57:17 [http-nio-80-exec-10] INFO  net.codog.web.RecommandController - 全部数据是[Recommand(recommand_link=www.baidu.com, recommand_picture=001), Recommand(recommand_link=www.baidu.com2, recommand_picture=002), Recommand(recommand_link=www.baidu.com3, recommand_picture=003)]
+2017-02-08 14:57:17 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:57:17 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 15
+2017-02-08 14:57:17 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 14:57:17 [http-nio-80-exec-5] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 14:57:17 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - URL : http://localhost/news/getnewslist
+2017-02-08 14:57:17 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 14:57:17 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 14:57:17 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.NewsController.getNewsList
+2017-02-08 14:57:17 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 14:57:17 [http-nio-80-exec-5] INFO  net.codog.web.NewsController - 获取的全部新闻是[News(news_id=1, news_title=news1, news_content=this is news, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null), News(news_id=2, news_title=news2, news_content=this is news2, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null)]
+2017-02-08 14:57:17 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 14:57:17 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 5
+2017-02-08 15:00:32 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 15:00:32 [http-nio-80-exec-6] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 15:00:32 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 15:00:32 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 15:00:32 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 15:00:32 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 15:00:32 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - ARGS : [1, null, null]
+2017-02-08 15:00:32 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - type: 1
+2017-02-08 15:00:32 [http-nio-80-exec-6] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 15:00:32 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 15:00:32 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 3
+2017-02-08 15:00:33 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 15:00:33 [http-nio-80-exec-1] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 15:00:33 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 15:00:33 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 15:00:33 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 15:00:33 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 15:00:33 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - ARGS : [2, null, null]
+2017-02-08 15:00:33 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - type: 2
+2017-02-08 15:00:33 [http-nio-80-exec-1] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 15:00:33 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 15:00:33 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 2
+2017-02-08 15:00:36 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 15:00:36 [http-nio-80-exec-9] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 15:00:36 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 15:00:36 [http-nio-80-exec-5] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 15:00:36 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - URL : http://localhost/recommand/getrecommands
+2017-02-08 15:00:36 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 15:00:36 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 15:00:36 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.RecommandController.getRecommands
+2017-02-08 15:00:36 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 15:00:36 [http-nio-80-exec-5] INFO  net.codog.service.RecommandService - recommandService
+2017-02-08 15:00:36 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - URL : http://localhost/advertise/getadvertises
+2017-02-08 15:00:36 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 15:00:36 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 15:00:36 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.AdvertiseController.getAdvertise
+2017-02-08 15:00:36 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 15:00:36 [http-nio-80-exec-9] INFO  net.codog.service.AdvertiseService - AdvertiseService
+2017-02-08 15:00:36 [http-nio-80-exec-5] INFO  net.codog.web.RecommandController - 全部数据是[Recommand(recommand_link=www.baidu.com, recommand_picture=001), Recommand(recommand_link=www.baidu.com2, recommand_picture=002), Recommand(recommand_link=www.baidu.com3, recommand_picture=003)]
+2017-02-08 15:00:36 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 15:00:36 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 10
+2017-02-08 15:00:36 [http-nio-80-exec-9] INFO  net.codog.web.AdvertiseController - 全部数据是[Advertise(advertise_link=blog.csdn.net, advertise_picture=images/inc/1.gif), Advertise(advertise_link=www.baidu.com, advertise_picture=images/inc/1.gif)]
+2017-02-08 15:00:36 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 15:00:36 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 14
+2017-02-08 15:02:44 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 15:02:44 [http-nio-80-exec-5] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 15:02:44 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - URL : http://localhost/userurl/getuserfulurlbytype
+2017-02-08 15:02:44 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 15:02:44 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 15:02:44 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.UserfulUrlController.getUserfulUrlByType
+2017-02-08 15:02:44 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - ARGS : [4, null, null]
+2017-02-08 15:02:44 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - type: 4
+2017-02-08 15:02:44 [http-nio-80-exec-5] INFO  net.codog.web.UserfulUrlController - getUserfulUrlByType
+2017-02-08 15:02:44 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 15:02:44 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 4
+2017-02-08 15:50:22 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2017-02-08 15:50:23 [main] INFO  net.codog.ProjectApplication - Starting ProjectApplication on wenhanwang with PID 7012 (started by CreditEase in E:\我的项目\GitHub\personal-blog-webiste\project)
+2017-02-08 15:50:23 [main] INFO  net.codog.ProjectApplication - The following profiles are active: dev
+2017-02-08 15:50:23 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fb3536e: startup date [Wed Feb 08 15:50:23 CST 2017]; root of context hierarchy
+2017-02-08 15:50:25 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b71e33da] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 15:50:25 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [class org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$3069f8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 15:50:25 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration' of type [class org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$$EnhancerBySpringCGLIB$$f4a42e9c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 15:50:25 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.cache-org.springframework.boot.autoconfigure.cache.CacheProperties' of type [class org.springframework.boot.autoconfigure.cache.CacheProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 15:50:25 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers' of type [class org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 15:50:25 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration' of type [class org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration$$EnhancerBySpringCGLIB$$963fa17d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 15:50:25 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheManager' of type [class org.springframework.cache.concurrent.ConcurrentMapCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 15:50:25 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheAutoConfigurationValidator' of type [class org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheManagerValidator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 15:50:26 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 80 (http)
+2017-02-08 15:50:26 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2017-02-08 15:50:26 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.5
+2017-02-08 15:50:26 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2017-02-08 15:50:26 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2726 ms
+2017-02-08 15:50:26 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2017-02-08 15:50:26 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-02-08 15:50:26 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-02-08 15:50:26 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-02-08 15:50:26 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2017-02-08 15:50:28 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fb3536e: startup date [Wed Feb 08 15:50:23 CST 2017]; root of context hierarchy
+2017-02-08 15:50:28 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/advertise/getadvertises],methods=[POST]}" onto public java.util.List<net.codog.domain.Advertise> net.codog.web.AdvertiseController.getAdvertise()
+2017-02-08 15:50:28 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/getblogcount],methods=[POST]}" onto public java.lang.Integer net.codog.web.BlogController.getBlogCount(java.lang.Integer)
+2017-02-08 15:50:28 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/getblogcategories],methods=[POST]}" onto public java.util.List<net.codog.domain.BlogCategory> net.codog.web.BlogController.getBlogCategories(java.lang.Integer)
+2017-02-08 15:50:28 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/getblogs],methods=[POST]}" onto public java.util.List<net.codog.domain.Blog> net.codog.web.BlogController.getBlogs(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer)
+2017-02-08 15:50:28 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/email/sendmail],methods=[POST]}" onto public net.codog.vo.ResponseVO<java.lang.String> net.codog.web.EmailController.sendMail(net.codog.vo.ValidateInputEmailContent)
+2017-02-08 15:50:28 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/gamevideo/getgamevideoscount],methods=[POST]}" onto public java.lang.Integer net.codog.web.GameVideoController.getGameVideosCount(java.lang.Integer)
+2017-02-08 15:50:28 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/gamevideo/getgamevideos],methods=[POST]}" onto public java.util.List<net.codog.domain.GameVideo> net.codog.web.GameVideoController.getGameVideos(java.lang.Integer,java.lang.Integer,java.lang.Integer)
+2017-02-08 15:50:28 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/guestbook/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Guestbook>> net.codog.web.GuestbookController.test()
+2017-02-08 15:50:28 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Message>> net.codog.web.MessageController.test()
+2017-02-08 15:50:28 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.test()
+2017-02-08 15:50:28 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewscount],methods=[POST]}" onto public int net.codog.web.NewsController.getNewsCount()
+2017-02-08 15:50:28 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewslist],methods=[POST]}" onto public java.util.List<net.codog.domain.News> net.codog.web.NewsController.getNewsList()
+2017-02-08 15:50:28 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/recommand/getrecommands],methods=[POST]}" onto public java.util.List<net.codog.domain.Recommand> net.codog.web.RecommandController.getRecommands()
+2017-02-08 15:50:28 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/searchcategory/getsearchcategories],methods=[POST]}" onto public java.util.List<net.codog.domain.SearchCategory> net.codog.web.SearchCategoryController.getSearchCategories()
+2017-02-08 15:50:28 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/register],methods=[POST]}" onto public net.codog.vo.ResponseVO<java.lang.String> net.codog.web.UserController.register(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)
+2017-02-08 15:50:28 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<net.codog.view.UserShowDetail> net.codog.web.UserController.test()
+2017-02-08 15:50:28 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userfile/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulFile>> net.codog.web.UserfulFileController.test()
+2017-02-08 15:50:28 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userurl/getuserfulurlbytype],methods=[POST]}" onto public java.util.List<net.codog.domain.UserfulUrl> net.codog.web.UserfulUrlController.getUserfulUrlByType(int,java.lang.Integer,java.lang.Integer)
+2017-02-08 15:50:28 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-02-08 15:50:28 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-02-08 15:50:28 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-08 15:50:28 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-08 15:50:28 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-08 15:50:28 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2017-02-08 15:50:28 [main] INFO  org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2017-02-08 15:50:29 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2017-02-08 15:50:29 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2017-02-08 15:50:29 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-80]
+2017-02-08 15:50:29 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2017-02-08 15:50:29 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 80 (http)
+2017-02-08 15:50:29 [main] INFO  net.codog.ProjectApplication - Started ProjectApplication in 7.428 seconds (JVM running for 8.244)
+2017-02-08 15:51:55 [http-nio-80-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-02-08 15:51:55 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2017-02-08 15:51:55 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 36 ms
+2017-02-08 15:51:56 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 15:51:56 [http-nio-80-exec-5] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 15:51:56 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - URL : http://localhost/news/getnewslist
+2017-02-08 15:51:56 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 15:51:56 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 15:51:56 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.NewsController.getNewsList
+2017-02-08 15:51:56 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 15:51:56 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 15:51:56 [http-nio-80-exec-6] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 15:51:56 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - URL : http://localhost/advertise/getadvertises
+2017-02-08 15:51:56 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 15:51:56 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 15:51:56 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.AdvertiseController.getAdvertise
+2017-02-08 15:51:56 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 15:51:56 [http-nio-80-exec-9] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 15:51:56 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - URL : http://localhost/recommand/getrecommands
+2017-02-08 15:51:56 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 15:51:56 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 15:51:56 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 15:51:56 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.RecommandController.getRecommands
+2017-02-08 15:51:56 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 15:51:56 [http-nio-80-exec-6] INFO  net.codog.service.AdvertiseService - AdvertiseService
+2017-02-08 15:51:56 [http-nio-80-exec-9] INFO  net.codog.service.RecommandService - recommandService
+2017-02-08 15:51:56 [http-nio-80-exec-6] INFO  net.codog.web.AdvertiseController - 全部数据是[Advertise(advertise_link=blog.csdn.net, advertise_picture=images/inc/1.gif), Advertise(advertise_link=www.baidu.com, advertise_picture=images/inc/1.gif)]
+2017-02-08 15:51:56 [http-nio-80-exec-9] INFO  net.codog.web.RecommandController - 全部数据是[Recommand(recommand_link=www.baidu.com, recommand_picture=001), Recommand(recommand_link=www.baidu.com2, recommand_picture=002), Recommand(recommand_link=www.baidu.com3, recommand_picture=003)]
+2017-02-08 15:51:56 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 15:51:56 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 209
+2017-02-08 15:51:56 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 15:51:56 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 214
+2017-02-08 15:51:56 [http-nio-80-exec-5] INFO  net.codog.web.NewsController - 获取的全部新闻是[News(news_id=1, news_title=news1, news_content=this is news, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null), News(news_id=2, news_title=news2, news_content=this is news2, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null)]
+2017-02-08 15:51:56 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 15:51:56 [http-nio-80-exec-5] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 563
+2017-02-08 15:53:36 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 15:53:36 [http-nio-80-exec-10] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 15:53:36 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - URL : http://localhost/news/getnewslist
+2017-02-08 15:53:36 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 15:53:36 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 15:53:36 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.NewsController.getNewsList
+2017-02-08 15:53:36 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 15:53:36 [http-nio-80-exec-10] INFO  net.codog.web.NewsController - 获取的全部新闻是[News(news_id=1, news_title=news1, news_content=this is news, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null), News(news_id=2, news_title=news2, news_content=this is news2, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null)]
+2017-02-08 15:53:36 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 15:53:36 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 5
+2017-02-08 15:53:38 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 15:53:38 [http-nio-80-exec-6] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 15:53:38 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - URL : http://localhost/advertise/getadvertises
+2017-02-08 15:53:38 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 15:53:38 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 15:53:38 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.AdvertiseController.getAdvertise
+2017-02-08 15:53:38 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 15:53:38 [http-nio-80-exec-6] INFO  net.codog.service.AdvertiseService - AdvertiseService
+2017-02-08 15:53:38 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 15:53:38 [http-nio-80-exec-9] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 15:53:38 [http-nio-80-exec-6] INFO  net.codog.web.AdvertiseController - 全部数据是[Advertise(advertise_link=blog.csdn.net, advertise_picture=images/inc/1.gif), Advertise(advertise_link=www.baidu.com, advertise_picture=images/inc/1.gif)]
+2017-02-08 15:53:38 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - URL : http://localhost/recommand/getrecommands
+2017-02-08 15:53:38 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 15:53:38 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 15:53:38 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.RecommandController.getRecommands
+2017-02-08 15:53:38 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 15:53:38 [http-nio-80-exec-9] INFO  net.codog.service.RecommandService - recommandService
+2017-02-08 15:53:38 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 15:53:38 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 6
+2017-02-08 15:53:38 [http-nio-80-exec-9] INFO  net.codog.web.RecommandController - 全部数据是[Recommand(recommand_link=www.baidu.com, recommand_picture=001), Recommand(recommand_link=www.baidu.com2, recommand_picture=002), Recommand(recommand_link=www.baidu.com3, recommand_picture=003)]
+2017-02-08 15:53:38 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 15:53:38 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 11
+2017-02-08 16:59:32 [main] INFO  net.codog.ProjectApplication - Starting ProjectApplication on wenhanwang with PID 440 (started by CreditEase in E:\我的项目\GitHub\personal-blog-webiste\project)
+2017-02-08 16:59:32 [main] INFO  net.codog.ProjectApplication - The following profiles are active: dev
+2017-02-08 16:59:32 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fb3536e: startup date [Wed Feb 08 16:59:32 CST 2017]; root of context hierarchy
+2017-02-08 16:59:34 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2017-02-08 16:59:35 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dd92bfc6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 16:59:35 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [class org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$26a4f5e4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 16:59:35 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration' of type [class org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$$EnhancerBySpringCGLIB$$1b18ba88] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 16:59:35 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.cache-org.springframework.boot.autoconfigure.cache.CacheProperties' of type [class org.springframework.boot.autoconfigure.cache.CacheProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 16:59:35 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers' of type [class org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 16:59:35 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration' of type [class org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration$$EnhancerBySpringCGLIB$$bcb42d69] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 16:59:35 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheManager' of type [class org.springframework.cache.concurrent.ConcurrentMapCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 16:59:35 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheAutoConfigurationValidator' of type [class org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheManagerValidator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 16:59:37 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 80 (http)
+2017-02-08 16:59:37 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2017-02-08 16:59:37 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.5
+2017-02-08 16:59:37 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2017-02-08 16:59:37 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4702 ms
+2017-02-08 16:59:37 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2017-02-08 16:59:37 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-02-08 16:59:37 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-02-08 16:59:37 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-02-08 16:59:37 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2017-02-08 16:59:39 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fb3536e: startup date [Wed Feb 08 16:59:32 CST 2017]; root of context hierarchy
+2017-02-08 16:59:39 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/advertise/getadvertises],methods=[POST]}" onto public java.util.List<net.codog.domain.Advertise> net.codog.web.AdvertiseController.getAdvertise()
+2017-02-08 16:59:39 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/getblogcategories],methods=[POST]}" onto public java.util.List<net.codog.domain.BlogCategory> net.codog.web.BlogController.getBlogCategories(java.lang.Integer)
+2017-02-08 16:59:39 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/getblogcount],methods=[POST]}" onto public java.lang.Integer net.codog.web.BlogController.getBlogCount(java.lang.Integer)
+2017-02-08 16:59:39 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/getblogs],methods=[POST]}" onto public java.util.List<net.codog.domain.Blog> net.codog.web.BlogController.getBlogs(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer)
+2017-02-08 16:59:39 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/email/sendmail],methods=[POST]}" onto public net.codog.vo.ResponseVO<java.lang.String> net.codog.web.EmailController.sendMail(net.codog.vo.ValidateInputEmailContent)
+2017-02-08 16:59:39 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/gamevideo/getgamevideoscount],methods=[POST]}" onto public java.lang.Integer net.codog.web.GameVideoController.getGameVideosCount(java.lang.Integer)
+2017-02-08 16:59:39 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/gamevideo/getgamevideos],methods=[POST]}" onto public java.util.List<net.codog.domain.GameVideo> net.codog.web.GameVideoController.getGameVideos(java.lang.Integer,java.lang.Integer,java.lang.Integer)
+2017-02-08 16:59:39 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/guestbook/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Guestbook>> net.codog.web.GuestbookController.test()
+2017-02-08 16:59:39 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Message>> net.codog.web.MessageController.test()
+2017-02-08 16:59:39 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.test()
+2017-02-08 16:59:39 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewscount],methods=[POST]}" onto public int net.codog.web.NewsController.getNewsCount()
+2017-02-08 16:59:39 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewslist],methods=[POST]}" onto public java.util.List<net.codog.domain.News> net.codog.web.NewsController.getNewsList()
+2017-02-08 16:59:39 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/recommand/getrecommands],methods=[POST]}" onto public java.util.List<net.codog.domain.Recommand> net.codog.web.RecommandController.getRecommands()
+2017-02-08 16:59:39 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/searchcategory/getsearchcategories],methods=[POST]}" onto public java.util.List<net.codog.domain.SearchCategory> net.codog.web.SearchCategoryController.getSearchCategories()
+2017-02-08 16:59:39 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/register],methods=[POST]}" onto public net.codog.vo.ResponseVO<java.lang.String> net.codog.web.UserController.register(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)
+2017-02-08 16:59:39 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<net.codog.view.UserShowDetail> net.codog.web.UserController.test()
+2017-02-08 16:59:39 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userfile/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulFile>> net.codog.web.UserfulFileController.test()
+2017-02-08 16:59:39 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userurl/getuserfulurlbytype],methods=[POST]}" onto public java.util.List<net.codog.domain.UserfulUrl> net.codog.web.UserfulUrlController.getUserfulUrlByType(int,java.lang.Integer,java.lang.Integer)
+2017-02-08 16:59:39 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-02-08 16:59:39 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-02-08 16:59:39 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-08 16:59:39 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-08 16:59:39 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-08 16:59:39 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2017-02-08 16:59:40 [main] INFO  org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2017-02-08 16:59:40 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2017-02-08 16:59:40 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2017-02-08 16:59:40 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-80]
+2017-02-08 16:59:40 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2017-02-08 16:59:40 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 80 (http)
+2017-02-08 16:59:40 [main] INFO  net.codog.ProjectApplication - Started ProjectApplication in 9.215 seconds (JVM running for 10.308)
+2017-02-08 17:03:50 [http-nio-80-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-02-08 17:03:50 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2017-02-08 17:03:50 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 74 ms
+2017-02-08 17:03:53 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 17:03:53 [http-nio-80-exec-6] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 17:03:53 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - URL : http://localhost/news/getnewslist
+2017-02-08 17:03:53 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 17:03:53 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 17:03:53 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.NewsController.getNewsList
+2017-02-08 17:03:53 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 17:03:53 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 17:03:53 [http-nio-80-exec-2] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 17:03:53 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - URL : http://localhost/recommand/getrecommands
+2017-02-08 17:03:53 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 17:03:53 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 17:03:53 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.RecommandController.getRecommands
+2017-02-08 17:03:53 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 17:03:53 [http-nio-80-exec-2] INFO  net.codog.service.RecommandService - recommandService
+2017-02-08 17:03:53 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 17:03:53 [http-nio-80-exec-8] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 17:03:53 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - URL : http://localhost/advertise/getadvertises
+2017-02-08 17:03:53 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 17:03:53 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 17:03:53 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.AdvertiseController.getAdvertise
+2017-02-08 17:03:53 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 17:03:53 [http-nio-80-exec-8] INFO  net.codog.service.AdvertiseService - AdvertiseService
+2017-02-08 17:03:54 [http-nio-80-exec-8] INFO  net.codog.web.AdvertiseController - 全部数据是[Advertise(advertise_link=blog.csdn.net, advertise_picture=images/inc/1.gif), Advertise(advertise_link=www.baidu.com, advertise_picture=images/inc/1.gif)]
+2017-02-08 17:03:54 [http-nio-80-exec-6] INFO  net.codog.web.NewsController - 获取的全部新闻是[News(news_id=1, news_title=news1, news_content=this is news, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null), News(news_id=2, news_title=news2, news_content=this is news2, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null)]
+2017-02-08 17:03:54 [http-nio-80-exec-2] INFO  net.codog.web.RecommandController - 全部数据是[Recommand(recommand_link=www.baidu.com, recommand_picture=001), Recommand(recommand_link=www.baidu.com2, recommand_picture=002), Recommand(recommand_link=www.baidu.com3, recommand_picture=003)]
+2017-02-08 17:03:54 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 17:03:54 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 430
+2017-02-08 17:03:54 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 17:03:54 [http-nio-80-exec-8] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 324
+2017-02-08 17:03:54 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 17:03:54 [http-nio-80-exec-6] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 556
+2017-02-08 17:20:40 [main] INFO  net.codog.ProjectApplication - Starting ProjectApplication on wenhanwang with PID 11140 (started by CreditEase in E:\我的项目\GitHub\personal-blog-webiste\project)
+2017-02-08 17:20:40 [main] INFO  net.codog.ProjectApplication - The following profiles are active: dev
+2017-02-08 17:20:41 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2017-02-08 17:20:41 [main] INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fb3536e: startup date [Wed Feb 08 17:20:41 CST 2017]; root of context hierarchy
+2017-02-08 17:20:42 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$91af4365] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 17:20:43 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [class org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$dac17983] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 17:20:43 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration' of type [class org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$$EnhancerBySpringCGLIB$$cf353e27] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 17:20:43 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.cache-org.springframework.boot.autoconfigure.cache.CacheProperties' of type [class org.springframework.boot.autoconfigure.cache.CacheProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 17:20:43 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers' of type [class org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 17:20:43 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration' of type [class org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration$$EnhancerBySpringCGLIB$$70d0b108] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 17:20:43 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheManager' of type [class org.springframework.cache.concurrent.ConcurrentMapCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 17:20:43 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheAutoConfigurationValidator' of type [class org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheManagerValidator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-08 17:20:44 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 80 (http)
+2017-02-08 17:20:44 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2017-02-08 17:20:44 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.5
+2017-02-08 17:20:44 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2017-02-08 17:20:44 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3272 ms
+2017-02-08 17:20:44 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2017-02-08 17:20:44 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-02-08 17:20:44 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-02-08 17:20:44 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-02-08 17:20:44 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2017-02-08 17:20:46 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fb3536e: startup date [Wed Feb 08 17:20:41 CST 2017]; root of context hierarchy
+2017-02-08 17:20:46 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/advertise/getadvertises],methods=[POST]}" onto public java.util.List<net.codog.domain.Advertise> net.codog.web.AdvertiseController.getAdvertise()
+2017-02-08 17:20:46 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/getblogcategories],methods=[POST]}" onto public java.util.List<net.codog.domain.BlogCategory> net.codog.web.BlogController.getBlogCategories(java.lang.Integer)
+2017-02-08 17:20:46 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/getblogcount],methods=[POST]}" onto public java.lang.Integer net.codog.web.BlogController.getBlogCount(java.lang.Integer)
+2017-02-08 17:20:46 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/blog/getblogs],methods=[POST]}" onto public java.util.List<net.codog.domain.Blog> net.codog.web.BlogController.getBlogs(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer)
+2017-02-08 17:20:46 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/email/sendmail],methods=[POST]}" onto public net.codog.vo.ResponseVO<java.lang.String> net.codog.web.EmailController.sendMail(net.codog.vo.ValidateInputEmailContent)
+2017-02-08 17:20:46 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/gamevideo/getgamevideoscount],methods=[POST]}" onto public java.lang.Integer net.codog.web.GameVideoController.getGameVideosCount(java.lang.Integer)
+2017-02-08 17:20:46 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/gamevideo/getgamevideos],methods=[POST]}" onto public java.util.List<net.codog.domain.GameVideo> net.codog.web.GameVideoController.getGameVideos(java.lang.Integer,java.lang.Integer,java.lang.Integer)
+2017-02-08 17:20:46 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/guestbook/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Guestbook>> net.codog.web.GuestbookController.test()
+2017-02-08 17:20:46 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.Message>> net.codog.web.MessageController.test()
+2017-02-08 17:20:46 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.News>> net.codog.web.NewsController.test()
+2017-02-08 17:20:46 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewscount],methods=[POST]}" onto public int net.codog.web.NewsController.getNewsCount()
+2017-02-08 17:20:46 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/news/getnewslist],methods=[POST]}" onto public java.util.List<net.codog.domain.News> net.codog.web.NewsController.getNewsList()
+2017-02-08 17:20:46 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/recommand/getrecommands],methods=[POST]}" onto public java.util.List<net.codog.domain.Recommand> net.codog.web.RecommandController.getRecommands()
+2017-02-08 17:20:46 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/searchcategory/getsearchcategories],methods=[POST]}" onto public java.util.List<net.codog.domain.SearchCategory> net.codog.web.SearchCategoryController.getSearchCategories()
+2017-02-08 17:20:46 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/register],methods=[POST]}" onto public net.codog.vo.ResponseVO<java.lang.String> net.codog.web.UserController.register(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)
+2017-02-08 17:20:46 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<net.codog.view.UserShowDetail> net.codog.web.UserController.test()
+2017-02-08 17:20:46 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userfile/test],methods=[GET]}" onto public net.codog.vo.ResponseVO<java.util.List<net.codog.domain.UserfulFile>> net.codog.web.UserfulFileController.test()
+2017-02-08 17:20:46 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userurl/getuserfulurlbytype],methods=[POST]}" onto public java.util.List<net.codog.domain.UserfulUrl> net.codog.web.UserfulUrlController.getUserfulUrlByType(int,java.lang.Integer,java.lang.Integer)
+2017-02-08 17:20:46 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-02-08 17:20:46 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-02-08 17:20:46 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-08 17:20:46 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-08 17:20:46 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-08 17:20:46 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2017-02-08 17:20:47 [main] INFO  org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2017-02-08 17:20:47 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2017-02-08 17:20:47 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2017-02-08 17:20:47 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-80]
+2017-02-08 17:20:48 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2017-02-08 17:20:48 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 80 (http)
+2017-02-08 17:20:48 [main] INFO  net.codog.ProjectApplication - Started ProjectApplication in 7.753 seconds (JVM running for 8.559)
+2017-02-08 17:20:48 [http-nio-80-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-02-08 17:20:48 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2017-02-08 17:20:48 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 43 ms
+2017-02-08 17:20:49 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 17:20:49 [http-nio-80-exec-3] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 17:20:49 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - URL : http://localhost/news/getnewslist
+2017-02-08 17:20:49 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 17:20:49 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 17:20:49 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.NewsController.getNewsList
+2017-02-08 17:20:49 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 17:20:50 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 17:20:50 [http-nio-80-exec-2] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 17:20:50 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - URL : http://localhost/advertise/getadvertises
+2017-02-08 17:20:50 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 17:20:50 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 17:20:50 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.AdvertiseController.getAdvertise
+2017-02-08 17:20:50 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 17:20:50 [http-nio-80-exec-2] INFO  net.codog.service.AdvertiseService - AdvertiseService
+2017-02-08 17:20:50 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 17:20:50 [http-nio-80-exec-1] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 17:20:50 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - URL : http://localhost/recommand/getrecommands
+2017-02-08 17:20:50 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 17:20:50 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 17:20:50 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.RecommandController.getRecommands
+2017-02-08 17:20:50 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - ARGS : []
+2017-02-08 17:20:50 [http-nio-80-exec-1] INFO  net.codog.service.RecommandService - recommandService
+2017-02-08 17:20:50 [http-nio-80-exec-3] INFO  net.codog.web.NewsController - 获取的全部新闻是[News(news_id=1, news_title=news1, news_content=this is news, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null), News(news_id=2, news_title=news2, news_content=this is news2, news_publish_time=Sat Nov 26 00:00:00 CST 2016, news_modify_time=Sat Nov 26 00:00:00 CST 2016, news_url=www.baidu.com, news_type=null)]
+2017-02-08 17:20:50 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 17:20:50 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 687
+2017-02-08 17:20:50 [http-nio-80-exec-1] INFO  net.codog.web.RecommandController - 全部数据是[Recommand(recommand_link=www.baidu.com, recommand_picture=001), Recommand(recommand_link=www.baidu.com2, recommand_picture=002), Recommand(recommand_link=www.baidu.com3, recommand_picture=003)]
+2017-02-08 17:20:50 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 17:20:50 [http-nio-80-exec-1] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 197
+2017-02-08 17:20:50 [http-nio-80-exec-2] INFO  net.codog.web.AdvertiseController - 全部数据是[Advertise(advertise_link=blog.csdn.net, advertise_picture=images/inc/1.gif), Advertise(advertise_link=www.baidu.com, advertise_picture=images/inc/1.gif)]
+2017-02-08 17:20:50 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 17:20:50 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 233
+2017-02-08 17:21:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 17:21:09 [http-nio-80-exec-7] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 17:21:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - URL : http://localhost/blog/getblogcategories
+2017-02-08 17:21:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 17:21:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 17:21:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.BlogController.getBlogCategories
+2017-02-08 17:21:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - ARGS : [0]
+2017-02-08 17:21:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - isSchool: 0
+2017-02-08 17:21:09 [http-nio-80-exec-7] INFO  net.codog.service.BlogCategoryService - isSchool:0
+2017-02-08 17:21:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 17:21:09 [http-nio-80-exec-7] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 40
+2017-02-08 17:21:09 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 17:21:09 [http-nio-80-exec-9] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 17:21:09 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - URL : http://localhost/blog/getblogcount
+2017-02-08 17:21:09 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 17:21:09 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 17:21:09 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.BlogController.getBlogCount
+2017-02-08 17:21:09 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - ARGS : [0]
+2017-02-08 17:21:09 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - blogCategoryId: 0
+2017-02-08 17:21:09 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 17:21:09 [http-nio-80-exec-9] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 4
+2017-02-08 17:21:09 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 17:21:09 [http-nio-80-exec-2] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 17:21:09 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - URL : http://localhost/blog/getblogs
+2017-02-08 17:21:09 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 17:21:09 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 17:21:09 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.BlogController.getBlogs
+2017-02-08 17:21:09 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - ARGS : [0, 2, 0, 0]
+2017-02-08 17:21:09 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - isSchool: 0
+2017-02-08 17:21:09 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - start: 0
+2017-02-08 17:21:09 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - end: 2
+2017-02-08 17:21:09 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - blogCategoryId: 0
+2017-02-08 17:21:09 [http-nio-80-exec-2] INFO  net.codog.web.BlogController - start:0,end:2,isSchool:0,blogCategoryId:0
+2017-02-08 17:21:10 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 17:21:10 [http-nio-80-exec-2] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 60
+2017-02-08 17:21:20 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 17:21:20 [http-nio-80-exec-10] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 17:21:20 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - URL : http://localhost/blog/getblogs
+2017-02-08 17:21:20 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 17:21:20 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 17:21:20 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.BlogController.getBlogs
+2017-02-08 17:21:20 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - ARGS : [2, 2, 0, 0]
+2017-02-08 17:21:20 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - isSchool: 0
+2017-02-08 17:21:20 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - start: 2
+2017-02-08 17:21:20 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - end: 2
+2017-02-08 17:21:20 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - blogCategoryId: 0
+2017-02-08 17:21:20 [http-nio-80-exec-10] INFO  net.codog.web.BlogController - start:2,end:2,isSchool:0,blogCategoryId:0
+2017-02-08 17:21:20 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 17:21:20 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 12
+2017-02-08 17:21:28 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 17:21:28 [http-nio-80-exec-3] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 17:21:28 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - URL : http://localhost/gamevideo/getgamevideos
+2017-02-08 17:21:28 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 17:21:28 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 17:21:28 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.GameVideoController.getGameVideos
+2017-02-08 17:21:28 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - ARGS : [0, 2, 2]
+2017-02-08 17:21:28 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - start: 0
+2017-02-08 17:21:28 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - end: 2
+2017-02-08 17:21:28 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - gameVideoTypeId: 2
+2017-02-08 17:21:28 [http-nio-80-exec-3] INFO  net.codog.web.GameVideoController - getgamevideos
+2017-02-08 17:21:28 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 17:21:28 [http-nio-80-exec-3] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 57
+2017-02-08 17:21:28 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - doBefore()
+2017-02-08 17:21:28 [http-nio-80-exec-10] ERROR net.codog.log.WebLogAspect - test
+2017-02-08 17:21:28 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - URL : http://localhost/gamevideo/getgamevideoscount
+2017-02-08 17:21:28 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - HTTP_METHOD : POST
+2017-02-08 17:21:28 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2017-02-08 17:21:28 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - CLASS_METHOD : net.codog.web.GameVideoController.getGameVideosCount
+2017-02-08 17:21:28 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - ARGS : [2]
+2017-02-08 17:21:28 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - gameVideoTypeId: 2
+2017-02-08 17:21:28 [http-nio-80-exec-10] INFO  net.codog.web.GameVideoController - getgamevideoscount
+2017-02-08 17:21:28 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - WebLogAspect.doAfterReturning()
+2017-02-08 17:21:28 [http-nio-80-exec-10] INFO  net.codog.log.WebLogAspect - 耗时（毫秒） : 10

@@ -8,30 +8,33 @@
 	content="女程序员, 个人网站, 编程, java, Shell, 教学, 脚本, 爬虫 , 娱乐" />
 <meta name="author" content="Wangwenhan" />
 <link rel="stylesheet" href="css/styleforleavemessage.css" />
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/jquery.MaxInput.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.MaxInput.js"></script>
 <link rel="stylesheet" href="css/listmessages.css">
 </head>
 <body>
-	<div class="row" style="height:100vh">
+	<div class="row" style="height: 100vh">
 		<div class="col-md-4 col-md-offset-4">在下面输入你想做的软件系统要求</div>
 		<div id="demo1" class="jMax col-md-8 col-md-offset-2"></div>
 	</div>
-	<script type="text/javascript">
+	<script>
 		$(function() {
-			
+
 			$("#demo1").maxinput({
-				position	: 'topleft',
-				showtext 	: true,
-				limit		: 100,
-				submitFun   : function(content){
-					$.post("/email/sendmail",{title:'提交软件制作需求',content:content},function(data){
+				position : 'topleft',
+				showtext : true,
+				limit : 100,
+				submitFun : function(content) {
+					$.post("/email/sendmail", {
+						title : '提交软件制作需求',
+						content : content
+					}, function(data) {
 						console.log(data);
 					})
 				}
 			});
 		});
-		</script>
+	</script>
 	<!-- bootstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-reset.css" rel="stylesheet">
