@@ -89,6 +89,19 @@
 	font-weight: 200;
 }
 
+.y-main-title{
+	font-size: 24px;
+	position: absolute;
+    top: 20%;
+    left: 10%;
+    color: white;
+}
+.y-main-title a{
+	color: white;
+    text-decoration: underline;
+    font-style: oblique;
+}
+
 @media only screen and (max-width : 768px) {
 	.demo-1 .main-title, 
 	.demo-3 .main-title,
