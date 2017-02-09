@@ -7,8 +7,6 @@ Thumbs.db
 .settings
 .apt_generated
 .tmp
-/project/src/main/resources/application-prod.properties
-/project/src/main/resources/application.properties
 
 /logs
 /target
