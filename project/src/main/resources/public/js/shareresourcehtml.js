@@ -16,7 +16,7 @@
 						                '<p>' + result[i].userful_url_desc + '</p>'+
 						              '</div>'+
 						            '</div>'+
-						            '<h3><a href="#" target="_blank" title="' + result[i].userful_url_name + '">' + result[i].userful_url_name + '</a></h3>'+
+						            '<h3><a href="' + result[i].userful_url_link + '" target="_blank" title="' + result[i].userful_url_name + '">' + result[i].userful_url_name + '</a></h3>'+
 						          '</li>'
 								$("#userfulurllist").append(str);
 							}
