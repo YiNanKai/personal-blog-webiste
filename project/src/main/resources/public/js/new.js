@@ -28,9 +28,10 @@ $(function() {
     });
     
     $.post("/recommand/getrecommands",{},function(result){
-        	size = result.length;
-        	for(var i = 0;i < size;i++){
-        		$("#recommandfirst").after('<li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr26,tr27,tr29,tr32,tr34,tr35,tr53,tr54,tr62,tr63,tr4,tr13" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr39,tr41"><img  src="images/bg/blank.png" data-src="images/001/' + result[i].recommand_picture + '.jpg" data-thumb="images/001/' + result[i].recommand_picture + 'a.png"><a data-type="link" href="' + result[i].recommand_link + '" target="_blank"></a></li>');
+        	$("#recommandlist").empty();
+        	for(var i = 0;i < result.length;i++){
+        		$("#recommandlist").append('<li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr26,tr27,tr29,tr32,tr34,tr35,tr53,tr54,tr62,tr63,tr4,tr13" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr39,tr41"><img  src="images/bg/blank.png" data-src="images/001/' + result[i].recommand_picture + '.jpg" data-thumb="images/001/' + result[i].recommand_picture + 'a.png"><a data-type="link" href="' + result[i].recommand_link + '" target="_blank"></a></li>');
+        		//$("#recommandfirst").after('<li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr26,tr27,tr29,tr32,tr34,tr35,tr53,tr54,tr62,tr63,tr4,tr13" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr39,tr41"><img  src="images/bg/blank.png" data-src="images/001/' + result[i].recommand_picture + '.jpg" data-thumb="images/001/' + result[i].recommand_picture + 'a.png"><a data-type="link" href="' + result[i].recommand_link + '" target="_blank"></a></li>');
         	}
         	var cuteslider3 = new Cute.Slider();
 			cuteslider3.setup("cuteslider_3", "cuteslider_3_wrapper",

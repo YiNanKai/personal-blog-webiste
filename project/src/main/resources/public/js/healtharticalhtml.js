@@ -51,7 +51,7 @@ $(document)
 															.append(
 																	'<li class="article-container">'
 																			+ '<div class="article-img">'
-																			+ '<img src="images/blogpicture/giveupjava.png">'
+																			+ '<img src="images/blogpicture/paobu.jpg">'
 																			+ '</div>'
 																			+ '<div class="article-content">'
 																			+ '<h3 class="article-header"><a href="health/'
