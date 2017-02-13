@@ -20,8 +20,8 @@
 }
 
 .form-1 {
-    width: 300px;
-    margin: 60px auto 30px;
+/*     width: 300px;
+    margin: 60px auto 30px; */
     padding: 10px;
     position: relative; /* For the submit button positioning */
 

@@ -19,12 +19,11 @@
 <!--login-->
 <link rel="stylesheet" href="/css/styleforlogin.css" />
 <script src="/js/jquery.js"></script>
-<script>
-	function showLoginForm() {
-		$("#loginform").toggle(600)
-
-	}
-</script>
+<link rel="stylesheet" href="/css/vueindex.css">
+<!-- 先引入 Vue -->
+<script src="/js/vue.js"></script>
+<!-- 引入组件库 -->
+<script src="/js/vueindex.js"></script>
 <!--login-->
 <link rel="stylesheet" href="/themes/default/easyui.css">
 <link rel="stylesheet" href="/themes/icon.css">
@@ -98,7 +97,7 @@
 						</ul></li>
 				</ul>
 			</nav>
-			<div class="top-nav ">
+			<div class="top-nav " id="top">
 				<ul class="nav pull-right top-menu">
 					<!-- <input id="ss" style="width: 400vw"></input>
 					<div id="mm">
@@ -112,15 +111,19 @@
 					</a>
 						<ul class="dropdown-menu extended logout" id="registerli">
 							<li class="log-arrow-up"></li>
-							<li><a href="javascript:showLoginForm()"> <i
+							<li><a @click="visible = true"> <i
 									class="fa fa-bell-o"> </i> 登录
 							</a></li>
-							<li><a target="/register.html"> <i class="fa fa-key">
+							<li><a href="/register.html"target="_blank"> <i class="fa fa-key">
 								</i> 注册
 							</a></li>
+
 						</ul>
 					</li>
 				</ul>
+				<el-dialog v-model="visible" title="登录页面">
+					<login-form :userplaceholder="userplaceholder" :passwordplaceholder="passwordplaceholder"></login-form>		
+				</el-dialog>
 			</div>
 		</header>
 		<aside>
@@ -222,26 +225,7 @@
 				</ul>
 			</div>
 		</aside>
-
-		<div class="container" id="login">
-			<section class="main" id="loginform" style="display: none">
-				<form class="form-1">
-					<p class="field">
-						<input type="text" name="login" placeholder="Username or email">
-						<i class="icon-user icon-large"></i>
-					</p>
-					<p class="field">
-						<input type="password" name="password" placeholder="Password">
-						<i class="icon-lock icon-large"></i>
-					</p>
-					<p class="submit">
-						<button type="submit" name="submit">
-							<i class="icon-arrow-right icon-large"></i>
-						</button>
-					</p>
-				</form>
-			</section>
-		</div>
+		
 		<section id="main-content" style="margin-left: 210px">
 			<section class="wrapper">
 				<div id="realcontent">
@@ -273,5 +257,8 @@
 	<script>
 		$(".knob").knob();
 	</script>
+	<script src="/js/body.nicescroll.js"></script>
+	<script src="js/mycomponment.js"></script>
+	<script src="js/init.js"></script>
 </body>
 </html>

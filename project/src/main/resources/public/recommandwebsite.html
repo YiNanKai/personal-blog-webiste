@@ -11,13 +11,32 @@
 <script src="/js/jquery.js"></script>
 <script src="/js/jquery.MaxInput.js"></script>
 <link rel="stylesheet" href="/css/listmessages.css">
+<link rel="stylesheet" href="/css/vueindex.css">
+<!-- 先引入 Vue -->
+<script src="/js/vue.js"></script>
+<!-- 引入组件库 -->
+<script src="/js/vueindex.js"></script>
+<link rel="stylesheet" href="/css/styleforlogin.css" />
 </head>
 <body>
+    <div id="per">
+    <single-permission :level=12 :threshold=getThreshold()>
+    <p>请<a  @click="visible = true">登录</a>或者<a href="/register.html" target="_blank">注册</a>，
+             或者直接发送邮件到<a href="mailto:1633675284@qq.com">1633675284@qq.com</a>,         
+              谢谢合作！</p>
+    </single-permission>
+    <el-dialog v-model="visible" title="登录页面">
+		<login-form :userplaceholder="userplaceholder" :passwordplaceholder="passwordplaceholder"></login-form>		
+	</el-dialog>          
+    <single-permission :level=13 :threshold=getThreshold()>
 	<div class="row" style="height:100vh">
 		<div class="col-md-4 col-md-offset-4">在下面输入你要推荐的网址地址</div>
 		<div id="demo1" class="jMax col-md-8 col-md-offset-2"></div>
 	</div>
-	<script type="text/javascript">
+	</single-permission>
+	</div>
+	
+	<script>
 		$(function() {
 			
 			$("#demo1").maxinput({
@@ -33,9 +52,14 @@
 		});
 		</script>
 	<!-- bootstrap -->
-	<link href="/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="/css/bootstrap-reset.css" rel="stylesheet" />
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-reset.css" rel="stylesheet">
 	<script src="/js/bootstrap.min.js"></script>
 	<!-- bootstrap -->
+	<script src="/js/jquery.nicescroll.js"></script>
+	<script src="/js/body.nicescroll.js"></script>
+	<script src="/js/permission.js"></script>
+	<script src="js/mycomponment.js"></script>
+	<script src="js/init.js"></script>
 </body>
 </html>
