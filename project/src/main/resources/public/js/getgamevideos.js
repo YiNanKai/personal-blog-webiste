@@ -22,15 +22,15 @@ function getgamevideos(start, end,type) {
 													+ '<div class="thumb"> '
 													+ '<ul> ';
 													for (var j = 0; j < pics.length; j++){
-														if(type===3){
-															str += '<li><a rev="group1" rel="zoomHeight:200, zoomWidth:400, adjustX: 10, adjustY:-4, position:\'body\'" class="cloud-zoom" href="images/taiqiupicture/' + pics[j] + '.png"><img src="images/taiqiupicture/thumbs/' + pics[j] + 2 + '.png" alt="Formstack 1" /></a></li> '			
+														if(type==3){
+															str += '<li><a rev="group1" rel="zoomHeight:200, zoomWidth:400, adjustX: 10, adjustY:-4, position:\'body\'" class="cloud-zoom" href="/images/taiqiupicture/' + pics[j] + '.png"><img src="/images/taiqiupicture/thumbs/' + pics[j] + 2 + '.png" alt="Formstack 1" /></a></li> '			
 														}
-														else if(type===2){
-															str += '<li><a rev="group1" rel="zoomHeight:200, zoomWidth:400, adjustX: 10, adjustY:-4, position:\'body\'" class="cloud-zoom" href="images/sanguoshapicture/' + pics[j] + '.png"><img src="images/sanguoshapicture/thumbs/' + pics[j] + 2 + '.png" alt="Formstack 1" /></a></li> '			
-														}else if(type===4){
-															str += '<li><a rev="group1" rel="zoomHeight:200, zoomWidth:400, adjustX: 10, adjustY:-4, position:\'body\'" class="cloud-zoom" href="images/lifepicture/' + pics[j] + '.png"><img src="images/lifepicture/thumbs/' + pics[j] + 2 + '.png" alt="Formstack 1" /></a></li> '			
-														}else if(type===5){
-															str += '<li><a rev="group1" rel="zoomHeight:200, zoomWidth:400, adjustX: 10, adjustY:-4, position:\'body\'" class="cloud-zoom" href="images/avpicture/' + pics[j] + '.jpg"><img src="images/avpicture/thumbs/' + pics[j] + 2 + '.jpg" alt="Formstack 1" /></a></li> '			
+														else if(type==2){
+															str += '<li><a rev="group1" rel="zoomHeight:200, zoomWidth:400, adjustX: 10, adjustY:-4, position:\'body\'" class="cloud-zoom" href="/images/sanguoshapicture/' + pics[j] + '.png"><img src="/images/sanguoshapicture/thumbs/' + pics[j] + 2 + '.png" alt="Formstack 1" /></a></li> '			
+														}else if(type==4){
+															str += '<li><a rev="group1" rel="zoomHeight:200, zoomWidth:400, adjustX: 10, adjustY:-4, position:\'body\'" class="cloud-zoom" href="/images/lifepicture/' + pics[j] + '.png"><img src="/images/lifepicture/thumbs/' + pics[j] + 2 + '.png" alt="Formstack 1" /></a></li> '			
+														}else if(type==5){
+															str += '<li><a rev="group1" rel="zoomHeight:200, zoomWidth:400, adjustX: 10, adjustY:-4, position:\'body\'" class="cloud-zoom" href="/images/avpicture/' + pics[j] + '.jpg"><img src="/images/avpicture/thumbs/' + pics[j] + 2 + '.jpg" alt="Formstack 1" /></a></li> '			
 														}
 													}
 													
