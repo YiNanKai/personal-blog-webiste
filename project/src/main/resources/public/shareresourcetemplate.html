@@ -9,13 +9,14 @@
 <link href="/css/base.css" rel="stylesheet" />
 <link href="/css/index.css" rel="stylesheet" />
 <script src="/js/jquery.js"></script>
+<script src="/js/get-query-string.js"></script>
 <script src="/js/shareresourcehtml.js"></script>
 <script>
 	$(document).ready(function() {
-		getUserfulURLByType(3);
+		getUserfulURLByType(getQueryString('type'));
 	});
 </script>
-<script src="js/index.js"></script>
+<script src="/js/index.js"></script>
 </head>
 <body class="index">
 
@@ -87,9 +88,9 @@
 
 	<!-- bootstrap -->
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
-		<link href="/css/bootstrap-reset.css" rel="stylesheet">
-			<script src="/js/bootstrap.min.js"></script>
-			<!-- bootstrap -->
+	<link href="/css/bootstrap-reset.css" rel="stylesheet">
+	<script src="/js/bootstrap.min.js"></script>
+	<!-- bootstrap -->
 	<script src="/js/jquery.nicescroll.js"></script>
 	<script src="/js/body.nicescroll.js"></script>
 </body>

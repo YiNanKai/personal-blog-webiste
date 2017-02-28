@@ -25,7 +25,25 @@
 	<!-- <div class="easyui-panel" style="padding:1px;"> -->
 	<div id="ep"></div>
 	<!-- </div> -->
-	<script src="/js/articalhtml.js"></script>
+	<script src="/js/get-query-string.js"></script>
+	<script src="/js/getblogs.js"></script>
+	<script>
+	$(document)
+	.ready(
+			function() {
+					var blogType =  getQueryString('type');
+					var isSchool = getQueryString('isSchool');
+					getblogs(isSchool,blogType,getQueryString('start'),getQueryString('end'));
+					getBlogPager(isSchool,blogType);
+					$('#articallist li').click(
+							function() {
+								var $this = $(this), _clickTab = $this
+										.find('a').attr('target');
+								$("#realcontent object").attr("data",
+										_clickTab);
+					});
+    });
+	</script>
 	<!-- bootstrap -->
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-reset.css" rel="stylesheet">
