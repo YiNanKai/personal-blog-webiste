@@ -15,6 +15,7 @@ ul{
 	zoom: 1;
 	padding: 5px;
 	position: relative;
+	transition: all 0.2s linear;
 }
 
 .article-container:hover {
