@@ -73,7 +73,7 @@ function getBlogPager(isSchool,blogCategoryId){
 						console.log('pageNumber:'
 								+ pageNumber + ',pageSize:'
 								+ pageSize);
-						 getblogs(isSchool,blogCategoryId,(pageNumber - 1)*pageSize,pageSize);
+						 getblogs(isSchool,blogCategoryId,pageNumber,pageSize);
 					}
 				});
 

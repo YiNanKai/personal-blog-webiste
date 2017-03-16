@@ -68,7 +68,7 @@ function getGameVideoPager(type){
 							onSelectPage : function(
 									pageNumber, pageSize) {
 								getgamevideos(
-										(pageNumber - 1)*pageSize,
+										pageNumber,
 										pageSize,type);
 								zoom();
 							}
