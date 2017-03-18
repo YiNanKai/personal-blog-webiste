@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>lombok的用法</title>
+<link rel="stylesheet" href="/markdown/css/base.css" />
+<script type="text/javascript" src="/markdown/js/MathJax.js"></script>
+</head>
+<body><div class="container"><p><div class="toc"><div class="toc">
+<ul>
+<li><a href="#lombok的使用">lombok的使用</a><ul>
+<li><a href="#1-前言">前言</a></li>
+<li><a href="#2-下载">下载</a></li>
+<li><a href="#3-安装">安装</a></li>
+<li><a href="#4-使用">使用</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</p>
+
+<h1 id="lombok的使用">lombok的使用</h1>
+
+<h2 id="1-前言">1. 前言</h2>
+
+<p>lombok我是从一位同事那里学来的, 为的是简化一些代码, 是个实实在在的语法糖, 不使用对自己的编码水平也没啥影响, 但是要是使用完了之后就不舍得不使了, 官方网址: <a href="https://projectlombok.org/">lombok</a></p>
+
+<h2 id="2-下载">2. 下载</h2>
+
+<p><a href="https://projectlombok.org/download.html">download lombok</a></p>
+
+<h2 id="3-安装">3. 安装</h2>
+
+<p>lombok 必须安装到eclipse上之后才能使用 lombok 带的注解来简化代码. <br>
+运行如下代码:</p>
+
+
+
+<pre class="prettyprint"><code class=" hljs avrasm">java -jar lombok<span class="hljs-preprocessor">.jar</span></code></pre>
+
+<p><img src="http://jnb.ociweb.com/jnb/jnbJan2010_files/jnbJan2010-LombokInstaller.png" alt="lombok安装" title=""> <br>
+如果打开之后是这样, 那么点击安装就好了, 如果没发现eclipse, 则点击 Specify location 按钮, windows 系统下找到 eclipse.exe 文件的路径, mac 下找到 eclipse.ini 的路径(右键-&gt;显示包内容-&gt;Contents-&gt;Eclipse-&gt;eclipse.ini)</p>
+
+<h2 id="4-使用">4. 使用</h2>
+
+<p>我经常用到的就是 lombok 的日志和实体类代码简化功能. <br>
+ 1.在 pom.xml 中添加 lombok 依赖</p>
+
+<pre class="prettyprint"><code class="language-xml hljs ">        <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>org.projectlombok<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>lombok<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>1.16.10<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span></code></pre>
+
+<p>2.使用日志注解 <br>
+ 日志注解很简单, 只需要在需要输出日志的前面加上 注解 @Slf4j 就可以了, 例如:</p>
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-annotation">@Slf</span>4j
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span>{</span>
+    <span class="hljs-comment">//log.info("codog info");</span>
+}</code></pre>
+
+<p>3.使用实体类注解 <br>
+ 实体类比较灵活, 但是一般这么使用可以满足大部分需求:</p>
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-annotation">@Data</span>
+<span class="hljs-annotation">@Builder</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span> {</span>
+    <span class="hljs-keyword">private</span> String userName;
+    <span class="hljs-keyword">private</span> Integer userId;
+}</code></pre>
+
+<p>@Data 能够生成包括构造函数, 每个属性的 getter 和 setter, 还有实体类的 toString 方法, <br>
+@Builder 使用的是 Builder 设计模式, 这个模式的好处就是当你想构造一个很多参数的类的时候, 可读性变强并且当你只想传入一部分而其他参数传 null 的时候, 能方便不少, 使用方法如下:</p>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs ">User codog = User.builder()
+            .userName(<span class="hljs-string">"codog"</span>)
+            .userId(<span class="hljs-number">1</span>).build();</code></pre></div></body>
+</html>
