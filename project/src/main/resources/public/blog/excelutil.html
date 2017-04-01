@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>java 解析和写入 Excel</title>
+<link rel="stylesheet" href="/markdown/css/base.css" />
+<script type="text/javascript" src="/markdown/js/MathJax.js"></script>
+</head>
+<body><div class="container"><p><div class="toc"><div class="toc">
+<ul>
+<li><a href="#java-解析和写入-excel">java 解析和写入 excel</a><ul>
+<li><a href="#一-前言">一 前言</a></li>
+<li><a href="#二-代码">二 代码</a></li>
+<li><a href="#三-使用">三 使用</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</p>
+
+
+
+<h1 id="java-解析和写入-excel">java 解析和写入 excel</h1>
+
+<h2 id="一-前言">一 前言</h2>
+
+<p>在做数据相关的项目的时候, 常常要导入导出 excel , 经常做也就得总结出一个工具类, 这个工具类是我编写的, 只适合二维的 excel , 我觉得能满足大部分时候的需求了</p>
+
+<h2 id="二-代码">二 代码</h2>
+
+<p>1.pom.xml 中加入依赖</p>
+
+<pre class="prettyprint"><code class="language-xml hljs ">        <span class="hljs-comment">&lt;!-- https://mvnrepository.com/artifact/org.apache.poi/poi --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>org.apache.poi<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>poi<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>3.15<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>org.apache.poi<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>poi-ooxml<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>3.15<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>commons-beanutils<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>commons-beanutils<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>1.9.3<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span></code></pre>
+
+<p>2.编写 java 代码</p>
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-keyword">import</span> java.io.FileInputStream;
+<span class="hljs-keyword">import</span> java.io.FileOutputStream;
+<span class="hljs-keyword">import</span> java.io.IOException;
+<span class="hljs-keyword">import</span> java.io.InputStream;
+<span class="hljs-keyword">import</span> java.lang.reflect.InvocationTargetException;
+<span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.HashMap;
+<span class="hljs-keyword">import</span> java.util.Iterator;
+<span class="hljs-keyword">import</span> java.util.List;
+<span class="hljs-keyword">import</span> java.util.Map;
+<span class="hljs-keyword">import</span> java.util.Set;
+
+<span class="hljs-keyword">import</span> org.apache.commons.beanutils.BeanMap;
+<span class="hljs-keyword">import</span> org.apache.commons.beanutils.BeanUtils;
+<span class="hljs-keyword">import</span> org.apache.poi.hssf.usermodel.HSSFWorkbook;
+<span class="hljs-keyword">import</span> org.apache.poi.ss.usermodel.Cell;
+<span class="hljs-keyword">import</span> org.apache.poi.ss.usermodel.Row;
+<span class="hljs-keyword">import</span> org.apache.poi.ss.usermodel.Sheet;
+<span class="hljs-keyword">import</span> org.apache.poi.ss.usermodel.Workbook;
+<span class="hljs-keyword">import</span> org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ExcelUtil</span>&lt;<span class="hljs-title">T</span>&gt; {</span>
+
+    <span class="hljs-comment">/*
+     * 得到excel单元格的值
+     * 
+     * @param cell 单元格
+     * 
+     * @return 单元格中的值
+     */</span>
+    <span class="hljs-annotation">@SuppressWarnings</span>(<span class="hljs-string">"deprecation"</span>)
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Object <span class="hljs-title">getCellValueByType</span>(Cell cell) {
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">null</span> == cell) {
+            <span class="hljs-keyword">return</span> <span class="hljs-string">""</span>;
+        }
+        <span class="hljs-keyword">switch</span> (cell.getCellType()) {
+        <span class="hljs-keyword">case</span> Cell.CELL_TYPE_NUMERIC: <span class="hljs-comment">// 数字</span>
+            <span class="hljs-keyword">return</span> cell.getNumericCellValue();
+        <span class="hljs-keyword">case</span> Cell.CELL_TYPE_STRING: <span class="hljs-comment">// 字符串</span>
+            <span class="hljs-keyword">return</span> cell.getStringCellValue();
+        <span class="hljs-keyword">case</span> Cell.CELL_TYPE_BOOLEAN: <span class="hljs-comment">// Boolean</span>
+            <span class="hljs-keyword">return</span> cell.getBooleanCellValue();
+        <span class="hljs-keyword">case</span> Cell.CELL_TYPE_FORMULA: <span class="hljs-comment">// 公式</span>
+            <span class="hljs-keyword">return</span> cell.getCellFormula();
+        <span class="hljs-keyword">case</span> Cell.CELL_TYPE_BLANK: <span class="hljs-comment">// 空值</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-string">""</span>;
+        <span class="hljs-keyword">case</span> Cell.CELL_TYPE_ERROR: <span class="hljs-comment">// 故障</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-string">""</span>;
+        <span class="hljs-keyword">default</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">""</span>;
+        }
+    }
+
+    <span class="hljs-comment">/*
+     * 得到一行的值
+     * 
+     * @param row 行
+     * 
+     * @return 每行单元格数值的list
+     */</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> List&lt;Object&gt; <span class="hljs-title">getRowValues</span>(Row row) {
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">null</span> == row) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+        }
+        <span class="hljs-keyword">int</span> cellStart = row.getFirstCellNum();
+        <span class="hljs-keyword">int</span> cellEnd = row.getLastCellNum();
+        List&lt;Object&gt; rowValues = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(cellEnd * <span class="hljs-number">2</span>);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = cellStart; i &lt; cellEnd; i++) {
+            Cell cell = row.getCell(i);
+            rowValues.add(getCellValueByType(cell));
+        }
+        <span class="hljs-keyword">return</span> rowValues;
+    }
+
+    <span class="hljs-javadoc">/**
+     * 读取excel的值
+     * 
+     *<span class="hljs-javadoctag"> @param</span> excelFileName
+     *            文件名称
+     *<span class="hljs-javadoctag"> @return</span> List&lt;Map&gt;格式的文件内容
+     *<span class="hljs-javadoctag"> @throws</span> IOException
+     */</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> List&lt;Map&lt;String, Object&gt;&gt; <span class="hljs-title">readExcel</span>(String excelFileName) <span class="hljs-keyword">throws</span> IOException {
+        List&lt;Map&lt;String, Object&gt;&gt; objects = <span class="hljs-keyword">new</span> ArrayList&lt;Map&lt;String, Object&gt;&gt;();
+        InputStream stream = <span class="hljs-keyword">new</span> FileInputStream(excelFileName);
+        Workbook workBook = <span class="hljs-keyword">null</span>;
+        <span class="hljs-keyword">if</span> (excelFileName.endsWith(<span class="hljs-string">"xlsx"</span>)) {
+            workBook = <span class="hljs-keyword">new</span> XSSFWorkbook(stream);
+            ;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (excelFileName.endsWith(<span class="hljs-string">"xls"</span>)) {
+            workBook = <span class="hljs-keyword">new</span> HSSFWorkbook(stream);
+        } <span class="hljs-keyword">else</span> {
+            stream.close();
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+        }
+        Sheet sheet = workBook.getSheetAt(<span class="hljs-number">0</span>);
+
+        <span class="hljs-keyword">int</span> rowStart = sheet.getFirstRowNum();
+        <span class="hljs-keyword">int</span> rowEnd = sheet.getLastRowNum();
+        <span class="hljs-comment">// 文件没有内容的时候返回</span>
+        <span class="hljs-keyword">if</span> (rowStart &lt; <span class="hljs-number">0</span> || rowEnd &lt; <span class="hljs-number">1</span>) {
+            workBook.close();
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+        }
+        List&lt;Object&gt; titles = getRowValues(sheet.getRow(rowStart));
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = rowStart + <span class="hljs-number">1</span>; i &lt;= rowEnd; i++) {
+            List&lt;Object&gt; values = getRowValues(sheet.getRow(i));
+            Map&lt;String, Object&gt; rowMap = <span class="hljs-keyword">new</span> HashMap&lt;String, Object&gt;(titles.size() * <span class="hljs-number">2</span>);
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; titles.size(); j++) {
+                rowMap.put(titles.get(j).toString(), values.get(j));
+            }
+            objects.add(rowMap);
+        }
+
+        workBook.close();
+        <span class="hljs-keyword">return</span> objects;
+    }
+
+    <span class="hljs-javadoc">/**
+     * 读取excel的值
+     * 
+     *<span class="hljs-javadoctag"> @param</span> excelFileName
+     *            excel文件内容
+     *<span class="hljs-javadoctag"> @param</span> excelClass
+     *            要转化的对象类型的class信息
+     *<span class="hljs-javadoctag"> @return</span> List&lt;Object&gt;文件内容
+     *<span class="hljs-javadoctag"> @throws</span> IOException
+     *<span class="hljs-javadoctag"> @throws</span> InstantiationException
+     *<span class="hljs-javadoctag"> @throws</span> IllegalAccessException
+     *<span class="hljs-javadoctag"> @throws</span> InvocationTargetException
+     */</span>
+    <span class="hljs-keyword">public</span> List&lt;T&gt; <span class="hljs-title">readExcel</span>(String excelFileName, Class&lt;T&gt; excelClass)
+            <span class="hljs-keyword">throws</span> IOException, InstantiationException, IllegalAccessException, InvocationTargetException {
+        List&lt;Map&lt;String, Object&gt;&gt; maps = readExcel(excelFileName);
+        List&lt;T&gt; objects = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(maps.size() * <span class="hljs-number">2</span>);
+        <span class="hljs-keyword">for</span> (Map&lt;String, Object&gt; map : maps) {
+            T object = excelClass.newInstance();
+            BeanUtils.populate(object, map);
+            objects.add(object);
+        }
+        <span class="hljs-keyword">return</span> objects;
+    }
+
+    <span class="hljs-comment">/*
+     * 去除map的class key
+     * 
+     * @param map 转化之前的map
+     * 
+     * @return 转化之后的map
+     */</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Map&lt;Object, Object&gt; <span class="hljs-title">getNoClassMap</span>(Map&lt;Object, Object&gt; map) {
+
+        Map&lt;Object, Object&gt; result = <span class="hljs-keyword">new</span> HashMap&lt;Object, Object&gt;(map.size());
+        <span class="hljs-keyword">for</span> (Object key : map.keySet()) {
+            <span class="hljs-keyword">if</span> (<span class="hljs-string">"class"</span>.equals(key.toString())) {
+                <span class="hljs-keyword">continue</span>;
+            }
+            result.put(key, map.get(key));
+        }
+        <span class="hljs-keyword">return</span> result;
+    }
+
+    <span class="hljs-javadoc">/**
+     * 向excel写入文件
+     *<span class="hljs-javadoctag"> @param</span> excelFileName 要写入的excel文件名
+     *<span class="hljs-javadoctag"> @param</span> objects 要写入的对象列表,也可以是List&lt;Map格式&gt;
+     *<span class="hljs-javadoctag"> @throws</span> IOException
+     */</span>
+    <span class="hljs-annotation">@SuppressWarnings</span>(<span class="hljs-string">"unchecked"</span>)
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeExcel</span>(String excelFileName, List&lt;? extends Object&gt; objects) <span class="hljs-keyword">throws</span> IOException {
+        <span class="hljs-keyword">if</span> (objects.size() &lt; <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span>;
+        }
+        <span class="hljs-keyword">int</span> objectSize = objects.size();
+        List&lt;Map&lt;Object, Object&gt;&gt; maps = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(objectSize * <span class="hljs-number">2</span>);
+
+        <span class="hljs-keyword">if</span> (objects.get(<span class="hljs-number">0</span>) <span class="hljs-keyword">instanceof</span> Map&lt;?, ?&gt;) {
+            maps = (List&lt;Map&lt;Object, Object&gt;&gt;) objects;
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; objectSize; i++) {
+                Map&lt;Object, Object&gt; objectMap = <span class="hljs-keyword">new</span> BeanMap(objects.get(i));
+                <span class="hljs-comment">// objectMap.remove("class");</span>
+                maps.add(getNoClassMap(objectMap));
+            }
+        }
+        Workbook workBook = <span class="hljs-keyword">null</span>;
+        <span class="hljs-keyword">if</span> (excelFileName.endsWith(<span class="hljs-string">"xlsx"</span>)) {
+            workBook = <span class="hljs-keyword">new</span> XSSFWorkbook();
+            ;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (excelFileName.endsWith(<span class="hljs-string">"xls"</span>)) {
+            workBook = <span class="hljs-keyword">new</span> HSSFWorkbook();
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">return</span>;
+        }
+        <span class="hljs-comment">// 数据是空</span>
+        <span class="hljs-keyword">if</span> (maps.size() &lt; <span class="hljs-number">1</span>) {
+            workBook.close();
+            <span class="hljs-keyword">return</span>;
+        }
+        Sheet sheet = workBook.createSheet();
+        Set&lt;Object&gt; titles = maps.get(<span class="hljs-number">0</span>).keySet();
+        Row titleRow = sheet.createRow(<span class="hljs-number">0</span>);
+        Iterator&lt;Object&gt; iterator = titles.iterator();
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; titles.size(); i++) {
+            titleRow.createCell(i);
+            titleRow.getCell(i).setCellValue(iterator.next().toString());
+        }
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; maps.size(); i++) {
+            Row row = sheet.createRow(i + <span class="hljs-number">1</span>);
+            Iterator&lt;Object&gt; contentIterator = maps.get(i).keySet().iterator();
+            <span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;
+            <span class="hljs-keyword">while</span> (contentIterator.hasNext()) {
+                row.createCell(j);
+                Object next = contentIterator.next();
+                Object object = maps.get(i).get(next);
+                row.getCell(j).setCellValue(object == <span class="hljs-keyword">null</span> ? <span class="hljs-string">""</span> : object.toString());
+                j++;
+            }
+        }
+        FileOutputStream excelWriter = <span class="hljs-keyword">new</span> FileOutputStream(excelFileName);
+        workBook.write(excelWriter);
+        workBook.close();
+        excelWriter.close();
+
+    }
+}</code></pre>
+
+
+
+<h2 id="三-使用">三 使用</h2>
+
+<pre class="prettyprint"><code class="language-java hljs ">        <span class="hljs-comment">//List&lt;ExcelObject&gt; objects = new ExcelUtil&lt;ExcelObject&gt;().readExcel("/Users/wangwenhan/bigdata.xlsx",ExcelObject.class);</span>
+
+        List&lt;Map&lt;String, Object&gt;&gt; lists = ExcelUtil.readExcel(<span class="hljs-string">"/Users/wangwenhan/bigdata.xlsx"</span>);
+        ExcelUtil.writeExcel(<span class="hljs-string">"/Users/wangwenhan/bigdata2.xlsx"</span>, lists);</code></pre></div>
+        
+	<!-- UY BEGIN -->
+	<div id="uyan_frame"></div>
+	<script type="text/javascript"
+		src="http://v2.uyan.cc/code/uyan.js?uid=2126382"></script>
+	<!-- UY END -->        
+        
+        </body>
+</html>

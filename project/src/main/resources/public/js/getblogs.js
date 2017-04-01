@@ -27,6 +27,9 @@ function getblogs(isSchool,blogCategoryId,start, end) {
 							}else if(blogCategoryId == 4){
 								bigPicture = '<img src="images/blogpicture/spring.png">';
 							    contentHref = '<h3 class="article-header"><a href="springblog/';
+							}else if(blogCategoryId == 12){
+								bigPicture = '<img src="images/blogpicture/js.png">';
+							    contentHref = '<h3 class="article-header"><a href="jsblog/';
 							}
 							
 							$("#articallist")

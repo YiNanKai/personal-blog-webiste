@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>纯JS导出excel</title>
+<link rel="stylesheet" href="/markdown/css/base.css" />
+<script type="text/javascript" src="/markdown/js/MathJax.js"></script>
+</head>
+<body><div class="container"><p><div class="toc"><div class="toc">
+<ul>
+<li><a href="#纯js导出excel">纯JS导出excel</a><ul>
+<li><a href="#前言">前言</a></li>
+<li><a href="#js代码实现">JS代码实现</a></li>
+<li><a href="#解释">解释</a></li>
+<li><a href="#使用">使用</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</p>
+
+
+
+<h1 id="纯js导出excel">纯JS导出excel</h1>
+
+<h2 id="前言">前言##</h2>
+
+<p>之前我在 CSDN 上写了一个类似的文章, 结果不少人加我的 QQ 询问各种问题, 所以我打算再重新写一个版本,说明: <br>
+1. 其实这个是导出 CSV 文件,外观看起来和 excel 也差不多, <br>
+2. 另外这个是我在 StackOverflow 上看到的,为了适应中文什么的改了改,具体的网址的忘了</p>
+
+<h2 id="js代码实现">JS代码实现</h2>
+
+
+
+<pre class="prettyprint"><code class="language-javascript hljs "><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">JSONToCSVConvertor</span><span class="hljs-params">(JSONData, ReportTitle, ShowLabel)</span> {</span>  
+            <span class="hljs-comment">//If JSONData is not an object then JSON.parse will parse the JSON string in an Object  </span>
+            <span class="hljs-keyword">var</span> arrData = <span class="hljs-keyword">typeof</span> JSONData != <span class="hljs-string">'object'</span> ? <span class="hljs-built_in">JSON</span>.parse(JSONData)  
+                    : JSONData;  
+            <span class="hljs-keyword">var</span> CSV = <span class="hljs-string">''</span>;  
+            <span class="hljs-comment">//Set Report title in first row or line  </span>
+            CSV += ReportTitle + <span class="hljs-string">'\r\n\n'</span>;   
+            <span class="hljs-comment">//This condition will generate the Label/Header  </span>
+            <span class="hljs-keyword">if</span> (ShowLabel) {  
+                <span class="hljs-keyword">var</span> row = <span class="hljs-string">""</span>;  
+                <span class="hljs-comment">//This loop will extract the label from 1st index of on array  </span>
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">var</span> index <span class="hljs-keyword">in</span> arrData[<span class="hljs-number">0</span>]) {  
+                    <span class="hljs-comment">//Now convert each value to string and comma-seprated  </span>
+                    row += index + <span class="hljs-string">','</span>;  
+                }  
+                row = row.slice(<span class="hljs-number">0</span>, -<span class="hljs-number">1</span>);  
+                <span class="hljs-comment">//append Label row with line break  </span>
+                CSV += row + <span class="hljs-string">'\r\n'</span>;  
+            }  
+            <span class="hljs-comment">//1st loop is to extract each row  </span>
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; arrData.length; i++) {  
+                <span class="hljs-keyword">var</span> row = <span class="hljs-string">""</span>;  
+                <span class="hljs-comment">//2nd loop will extract each column and convert it in string comma-seprated  </span>
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">var</span> index <span class="hljs-keyword">in</span> arrData[i]) {  
+                    row += <span class="hljs-string">'"'</span> + arrData[i][index] + <span class="hljs-string">'",'</span>;  
+                }  
+                row.slice(<span class="hljs-number">0</span>, row.length - <span class="hljs-number">1</span>);  
+                <span class="hljs-comment">//add a line break after each row  </span>
+                CSV += row + <span class="hljs-string">'\r\n'</span>;  
+            }  
+            <span class="hljs-keyword">if</span> (CSV == <span class="hljs-string">''</span>) {  
+                alert(<span class="hljs-string">"Invalid data"</span>);  
+                <span class="hljs-keyword">return</span>;  
+            }  
+            <span class="hljs-comment">//Generate a file name  </span>
+            <span class="hljs-keyword">var</span> fileName = <span class="hljs-string">"MyReport_"</span>;  
+            <span class="hljs-comment">//this will remove the blank-spaces from the title and replace it with an underscore  </span>
+            fileName += ReportTitle.replace(<span class="hljs-regexp">/ /g</span>, <span class="hljs-string">"_"</span>);  
+            <span class="hljs-comment">//Initialize file format you want csv or xls  </span>
+            <span class="hljs-keyword">var</span> uri = <span class="hljs-string">'data:text/csv;charset=utf-8,'</span> + <span class="hljs-built_in">encodeURI</span>(CSV);  
+            <span class="hljs-comment">// Now the little tricky part.  </span>
+            <span class="hljs-comment">// you can use either&gt;&gt; window.open(uri);  </span>
+            <span class="hljs-comment">// but this will not work in some browsers  </span>
+            <span class="hljs-comment">// or you will not get the correct file extension      </span>
+            <span class="hljs-comment">//this trick will generate a temp &lt;a /&gt; tag  </span>
+            <span class="hljs-keyword">var</span> link = document.createElement(<span class="hljs-string">"a"</span>);  
+            link.href = uri;  
+            <span class="hljs-comment">//set the visibility hidden so it will not effect on your web-layout  </span>
+            link.style = <span class="hljs-string">"visibility:hidden"</span>;  
+            link.download = fileName + <span class="hljs-string">".csv"</span>;  
+            <span class="hljs-comment">//this part will append the anchor tag and remove it after automatic click  </span>
+            document.body.appendChild(link);  
+            link.click();  
+            document.body.removeChild(link);  
+        }  </code></pre>
+
+
+
+<h2 id="解释">解释</h2>
+
+<p>传入的参数是个 json 串, 根据 json 串解析出表头, <br>
+然后定义一个<code>&lt;a&gt;</code>标签,链接 href 就是 excel 文件, <br>
+再js模拟点击, 最后删除<code>&lt;a&gt;</code>标签</p>
+
+<h2 id="使用">使用</h2>
+
+
+
+<pre class="prettyprint"><code class=" hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"utf-8"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://apps.bdimg.com/libs/jquery/1.6.4/jquery.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"btnExport"</span>&gt;</span>下载<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+ $(<span class="hljs-string">"#btnExport"</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>  
+            <span class="hljs-keyword">var</span> data = [{<span class="hljs-string">"id"</span>:<span class="hljs-number">1</span>,<span class="hljs-string">"name"</span>:<span class="hljs-string">"codog"</span>},{<span class="hljs-string">"id"</span>:<span class="hljs-number">2</span>,<span class="hljs-string">"name"</span>:<span class="hljs-string">"编程狗"</span>},{<span class="hljs-string">"id"</span>:<span class="hljs-number">3</span>,<span class="hljs-string">"name"</span>:<span class="hljs-string">"变成狗"</span>}]  
+            console.log(data); 
+            <span class="hljs-keyword">if</span> (data == <span class="hljs-string">''</span>)  
+                <span class="hljs-keyword">return</span>;  
+            JSONToCSVConvertor(data, <span class="hljs-string">"Download"</span>, <span class="hljs-literal">true</span>);  
+        }); 
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code></pre></div>
+<!-- UY BEGIN -->
+	<div id="uyan_frame"></div>
+	<script type="text/javascript"
+		src="http://v2.uyan.cc/code/uyan.js?uid=2126382"></script>
+	<!-- UY END -->
+</body>
+</html>
